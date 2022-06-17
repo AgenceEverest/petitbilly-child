@@ -1,0 +1,45 @@
+//typos
+$light : 'Arial';
+$regular : 'Arial';
+$bold : 'Arial';
+$black : 'Adelion';
+
+//couleurs
+$dark:#333333;
+$medium:#777777;
+$orange:#666666;
+
+$gris:#000;  // < Couleur des textes de base = du noir ou presque
+
+$clair:#FAF5F5 !default;   // < Couleur qui peut découler de la couleur primaire, ou être complètement différente
+$clair2:#F0EAEA !default;   // < Couleur $clair mais en peu plus foncé
+
+$primaire1:#B894EA !default;   
+$primaire:#6149AF !default;
+$primaire2:#311150 !default;
+
+$secondaire1:#7FE0F2 !default;
+$secondaire:#028EA0 !default;
+$secondaire2:#012C43 !default;
+
+//alertes
+$red:#ff0000; 
+$redlight:#ffbfbf;
+$green:#6ae04a;
+
+//padding
+$paddingsection:3.5rem;
+
+//margin-top au dessus de .cta_btn_lead
+$cta_btn_lead_top:2.5rem;
+
+$radiusimage:0.5rem;
+
+// header
+$headerheight:100px;
+$headerheightscroll:60px;
+$transitionscroll:0s height ease-in-out;
+
+//opacity
+$opacitybg:0.3;
+
