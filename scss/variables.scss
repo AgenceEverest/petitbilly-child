@@ -1,3 +1,5 @@
+//Attention, ce fichier sert à générer les CSS du thème parent (main.css) et du thème enfant (mainchild.css)
+
 //typos
 $light : 'Arial';
 $regular : 'Arial';
@@ -14,13 +16,13 @@ $gris:#000;  // < Couleur des textes de base = du noir ou presque
 $clair:#FAF5F5 !default;   // < Couleur qui peut découler de la couleur primaire, ou être complètement différente
 $clair2:#F0EAEA !default;   // < Couleur $clair mais en peu plus foncé
 
-$primaire1:#B894EA !default;   
-$primaire:#6149AF !default;
-$primaire2:#311150 !default;
+$primaire1:#4C73DD !default;   
+$primaire:#1E3288 !default;
+$primaire2:#0D0A33 !default;
 
-$secondaire1:#7FE0F2 !default;
-$secondaire:#028EA0 !default;
-$secondaire2:#012C43 !default;
+$secondaire1:#39C474 !default;
+$secondaire:#047C4E !default;
+$secondaire2:#193C2B !default;
 
 //alertes
 $red:#ff0000; 
