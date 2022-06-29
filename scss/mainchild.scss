@@ -1,5 +1,8 @@
 //On utilise les variables SCSS présentes dans le thème enfant
 @import 'variables';
 
+//@font-face  --> customisation des fonts du Nanosite
+@import 'layout/font-face';
+
 //Customisation
 @import 'layout/customisation';
