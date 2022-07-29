@@ -1,1 +1,12 @@
-@font-face {font-family:"Gilroy-Black";src:url("../fonts/subset-AlwynNewRounded-Bold.woff2") format("woff2"), url("../fonts/subset-AlwynNewRounded-Bold.woff") format("woff");font-weight:normal;font-style:normal;font-display:swap;}
+@font-face {
+  font-family: "Gilroy-Black";
+  src: url("../fonts/subset-AlwynNewRounded-Bold.woff2") format("woff2"), url("../fonts/subset-AlwynNewRounded-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*
+Fichier de customisation du CSS
+*/
+/*# sourceMappingURL=/Applications/MAMP/htdocs/nanosite-child/wp-content/themes/nanosite-proefficace-child/css/mainchild.css.map */
+/*# sourceMappingURL=mainchild.css.map */

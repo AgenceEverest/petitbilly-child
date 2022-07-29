@@ -1,4 +1,5 @@
-//Attention, ce fichier sert à générer les CSS du thème parent (main.css) et du thème enfant (mainchild.css)
+//Attention, ce fichier sert à générer les CSS du thème parent (main.css) et du thème enfant (mainchild.css). Il ne faut pas les supprimer ni modifier leur nom. 
+// Leur valeur peut être modifiée. Il est possible d'en créer de nouvelles.
 
 //typos
 $light : 'Arial';
@@ -7,41 +8,40 @@ $bold : 'Arial';
 $black : 'Gilroy-Black';
 
 //couleurs
-$dark:#333333;
-$medium:#777777;
-$orange:#666666;
+$dark: #333333;
+$medium: #777777;
+$orange: #666666;
 
-$gris:#000;  // < Couleur des textes de base = du noir ou presque
+$gris: #000; // < Couleur des textes de base = du noir ou presque
 
-$clair:#FAF5F5 !default;   // < Couleur qui peut découler de la couleur primaire, ou être complètement différente
-$clair2:#F0EAEA !default;   // < Couleur $clair mais en peu plus foncé
+$clair: #FAF5F5 !default; // < Couleur qui peut découler de la couleur primaire, ou être complètement différente
+$clair2: #F0EAEA !default; // < Couleur $clair mais en peu plus foncé
 
-$primaire1:#4C73DD !default;   
-$primaire:#1E3288 !default;
-$primaire2:#0D0A33 !default;
+$primaire1: #4C73DD !default;
+$primaire: #1E3288 !default;
+$primaire2: #0D0A33 !default;
 
-$secondaire1:#39C474 !default;
-$secondaire:#047C4E !default;
-$secondaire2:#193C2B !default;
+$secondaire1: #39C474 !default;
+$secondaire: #047C4E !default;
+$secondaire2: #193C2B !default;
 
 //alertes
-$red:#ff0000; 
-$redlight:#ffbfbf;
-$green:#6ae04a;
+$red: #ff0000;
+$redlight: #ffbfbf;
+$green: #6ae04a;
 
 //padding
-$paddingsection:3.5rem;
+$paddingsection: 3.5rem;
 
 //margin-top au dessus de .cta_btn_lead
-$cta_btn_lead_top:2.5rem;
+$cta_btn_lead_top: 2.5rem;
 
-$radiusimage:0.5rem;
+$radiusimage: 0.5rem;
 
 // header
-$headerheight:100px;
-$headerheightscroll:60px;
-$transitionscroll:0s height ease-in-out;
+$headerheight: 100px;
+$headerheightscroll: 60px;
+$transitionscroll: 0s height ease-in-out;
 
 //opacity
-$opacitybg:0.3;
-
+$opacitybg: 0.3;

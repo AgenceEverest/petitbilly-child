@@ -14,9 +14,6 @@ function styles2_css()
 //la priorité à 99, c'est pour que main2.css soit chargé après main.css, de cette manière les règles CSS du thème enfant peuvent écraser celles du thème parent.
 add_action('wp_enqueue_scripts', 'styles2_css', 99);
 
-
-
-
 /**
  * Si vous avez besoin d'ajouter des blocs ACF dans le thème enfant d'un site, il faut les ajouter ici, il su
  */
