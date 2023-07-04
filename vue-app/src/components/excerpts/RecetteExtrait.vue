@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "formationExtrait",
+  name: "RecetteExtrait",
   props: {
     cpt: {
       type: Object,
@@ -95,5 +95,4 @@ export default {
     </div>
   </div>
 </template>
-
 <style></style>

@@ -5,7 +5,7 @@ dans le thème enfant, et redéclarez un bloc avec l'app copiée -->
 -->
 <script>
 import FiltersCpts from "./FiltersCpts.vue";
-import FormationExtrait from "./excerpts/formationExtrait.vue";
+import RecetteExtrait from "./excerpts/RecetteExtrait.vue";
 import dataProperties from "../helpers/dataProperties";
 import he from "he";
 import { getApiData } from "../helpers/getApi";
@@ -14,7 +14,7 @@ export default {
   name: "ShowCpt",
   components: {
     FiltersCpts,
-    FormationExtrait,
+    RecetteExtrait,
   },
   data() {
     return {
@@ -362,7 +362,7 @@ export default {
 </script>
 
 <template>
-  <FiltersCpts
+  <RecetteExtrait
     v-show="isLoaded"
     @handleClick="handleClick"
     @filterElementsByKeyword="filterElementsByKeyword"
@@ -380,7 +380,7 @@ export default {
   />
   <div v-show="isLoaded" :class="extraitPaddingTop">
     <div class="results">
-      <FormationExtrait
+      <RecetteExtrait
         v-show="cpt.show && cpt.display"
         class="cpt-extrait"
         v-for="cpt in cpts"
