@@ -1,0 +1,28 @@
+#block-app {
+    .results {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;    
+        .cpt-extrait {
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            width: 32%;
+            -webkit-box-shadow: 0px 6px 23px 8px rgba(0,0,0,0.27); 
+            box-shadow: 0px 6px 23px 8px rgba(0,0,0,0.27);
+        }
+
+        @media (max-width: 1280px) {
+            .cpt-extrait {
+                width: 48%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cpt-extrait {
+                margin-right: 0;
+                width: 100%;
+            }
+        }
+    }
+
+}
