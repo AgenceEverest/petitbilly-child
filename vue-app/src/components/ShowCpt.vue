@@ -362,7 +362,7 @@ export default {
 </script>
 
 <template>
-  <RecetteExtrait
+  <FiltersCpts
     v-show="isLoaded"
     @handleClick="handleClick"
     @filterElementsByKeyword="filterElementsByKeyword"
