@@ -5,9 +5,6 @@ export default {
     cpt: {
       type: Object,
     },
-    afficherBoutonFicheDePoste: {
-      type: String,
-    },
     texte_en_savoir_plus: {
       type: String,
     },
