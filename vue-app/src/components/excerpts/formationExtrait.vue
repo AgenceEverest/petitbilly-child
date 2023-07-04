@@ -1,15 +1,7 @@
 <script>
 export default {
   name: "formationExtrait",
-  data() {
-    return {
-      termsArray: [],
-    };
-  },
   props: {
-    activeTerms: {
-      type: Array,
-    },
     cpt: {
       type: Object,
     },
@@ -25,6 +17,9 @@ export default {
     texte_pour_le_bandeau_de_nouvelle_formation: {
       type: String,
     },
+    filters: {
+      type: Array,
+    },
   },
   methods: {
     convertToFrenchDate(dateString) {
@@ -38,16 +33,6 @@ export default {
         return new Intl.DateTimeFormat("fr-FR", options).format(date);
       }
     },
-  },
-  watch: {
-    activeTerms(newVal) {
-      console.log(newVal);
-    },
-  },
-  mounted() {
-    this.cpt.terms.forEach((term) => {
-      this.termsArray.push(term.name);
-    });
   },
 };
 </script>
