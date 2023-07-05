@@ -32,6 +32,9 @@
             display: flex;
             .button {
                 margin-right: 1rem;
+                &:hover {
+                    cursor: pointer;
+                }
                 &.active {
                     color: white;
                     background-color: black;
