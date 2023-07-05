@@ -25,4 +25,20 @@
         }
     }
 
+    .filters{
+        display: flex;
+        flex-direction: column;
+        .buttons {
+            display: flex;
+            .button {
+                margin-right: 1rem;
+                &:active {
+                    color: white;
+                    background-color: black;
+                }
+            }
+            margin-bottom: 1rem;
+        }
+    }
+
 }
