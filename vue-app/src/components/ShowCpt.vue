@@ -298,7 +298,10 @@ export default {
         this.lastKeyword = keyword;
         if (keyword === "") {
           console.log("le champ est de nouveau vide");
-          if (this.activeTerms.length > 0) {
+
+          const isAnyTermActive = this.isAnyTermActive();
+
+          if (isAnyTermActive) {
             this.cpts = JSON.parse(JSON.stringify(this.filteredCpts));
           } else {
             this.cpts = JSON.parse(JSON.stringify(this.originalCpts));
@@ -317,6 +320,11 @@ export default {
           this.userSearchOrDeleteKeyword(keyword);
         }
       }
+    },
+    isAnyTermActive() {
+      return this.filters.some((filter) => {
+        return filter.terms.some((term) => term.active === true);
+      });
     },
     filterCpts(filter) {
       this.displayablePosts = 0;
