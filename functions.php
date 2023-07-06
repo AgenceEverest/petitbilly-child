@@ -32,7 +32,7 @@ function my_acf_init_child()
             'icon'                => 'image-flip-vertical',
             'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
         )); */
-                // register block test
+        // register block test
         acf_register_block(array(
             'name' => 'block-app',
             'title' => __('Bloc App pour filtrer les posts'),
@@ -41,7 +41,169 @@ function my_acf_init_child()
             'category' => 'layout',
             'icon' => 'image-flip-vertical',
             'mode' => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
-        )); 
+        ));
+
+
+        acf_register_block(array(
+            'name'                => 'block-dernieres-offres',
+            'title'                => __('Bloc dernires offres'),
+            'description'        => __('Un bloc listant les dernières offres.'),
+            'render_callback'    => 'block_callback_child',
+            'category'            => 'layout',
+            'icon'                => 'image-flip-vertical',
+            'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
+        ));
+        acf_register_block(array(
+            'name'                => 'block-1-colonne-custom',
+            'title'                => __('block 1 colonne custom'),
+            'description'        => __('Un bloc affichant une colonne.'),
+            'render_callback'    => 'block_callback_child',
+            'category'            => 'layout',
+            'icon'                => 'image-flip-vertical',
+            'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
+        ));
+        acf_register_block(array(
+            'name'                => 'block-2-colonnes-custom',
+            'title'                => __('block 2 colonnes flexibles custom'),
+            'description'        => __('Un bloc affichant deux colonnes.'),
+            'render_callback'    => 'block_callback_child',
+            'category'            => 'layout',
+            'icon'                => 'image-flip-vertical',
+            'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
+        ));
+        acf_register_block(array(
+            'name'                => 'block-3-colonnes-custom',
+            'title'                => __('block 3 colonnes flexibles custom'),
+            'description'        => __('Un bloc affichant trois colonnes.'),
+            'render_callback'    => 'block_callback_child',
+            'category'            => 'layout',
+            'icon'                => 'image-flip-vertical',
+            'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
+        ));
+        acf_register_block(array(
+            'name'                => 'block-2-colonnes-textevisuel-custom',
+            'title'                => __('block 2 colonne texte visuel custom'),
+            'description'        => __('Un bloc affichant un texte et un visuel'),
+            'render_callback'    => 'block_callback_child',
+            'category'            => 'layout',
+            'icon'                => 'image-flip-vertical',
+            'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
+        ));
+        acf_register_block(array(
+            'name'                => 'block-2-colonnes-textevisuel-large-custom',
+            'title'                => __('block 2 colonne texte visuel large custom'),
+            'description'        => __('Un bloc affichant un texte et un visuel prenant toute la largeur'),
+            'render_callback'    => 'block_callback_child',
+            'category'            => 'layout',
+            'icon'                => 'image-flip-vertical',
+            'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
+        ));
+
+        // register block-multicolonnes
+        acf_register_block(array(
+            'name'                => 'block-multicolonnes-custom',
+            'title'                => __('Multicolonnes (liste d\'éléments) (custom)'),
+            'description'        => __('Plusieurs colonnes de textes avec ou sans vignettes. Idéal pour présenter les membres d\'une équipe ou des références.'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
+
+  /*       // register block-multicolonnes
+        acf_register_block(array(
+            'name'                => 'block-grabuge-vous-accompagne',
+            'title'                => __('Bloc grabuge vous accompagne'),
+            'description'        => __('Permet de générer une liste des éléments "Grabuge vous accompagne" avec une icône, un titre et un rapide descriptif'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
+
+        // register block-multicolonnes
+        acf_register_block(array(
+            'name'                => 'block-beneficiez-du-reseau',
+            'title'                => __('Bloc bénéficiez du réseau'),
+            'description'        => __('Génère le bloc de l\'accueil "Bénéficiez du réseau"'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
+
+        // register block-multicolonnes
+        acf_register_block(array(
+            'name'                => 'block-contact-form-jquery',
+            'title'                => __('Bloc formulaire de contact'),
+            'description'        => __('Bloc contenant le formulaire de contact + jQuery"'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        )); */
+/* 
+        // register block-multicolonnes
+        acf_register_block(array(
+            'name'                => 'block-iframe-async',
+            'title'                => __('Bloc IFrame asynchrone'),
+            'description'        => __('Bloc contenant un iframe chargé de façon asynchrone"'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        )); */
+
+        // register block-multicolonnes
+        acf_register_block(array(
+            'name'                => 'block-more-informations',
+            'title'                => __('Bloc plus d\'informations'),
+            'description'        => __('Bloc montrant le texte "Plus d\'informations" et un lien vers la page "Contact""'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
+
+        
+        acf_register_block(array(
+            'name'                => 'block-pourquoi-produits-differents',
+            'title'                => __('Bloc Pourquoi nos produits sont différents ?'),
+            'description'        => __('Bloc Pourquoi nos produits sont différents'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
+        
+        acf_register_block(array(
+            'name'                => 'block-nos-valeurs',
+            'title'                => __('Bloc nos valeurs'),
+            'description'        => __('Bloc Nos valeurs'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
+
+        acf_register_block(array(
+            'name'                => 'block-nos-recettes-gourmandes',
+            'title'                => __('Bloc nos recettes gourmandes'),
+            'description'        => __('Bloc Nos recettes gourmandes'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
+        acf_register_block(array(
+            'name'                => 'block-la-recette-du-moment',
+            'title'                => __('Bloc La recette du moment'),
+            'description'        => __('Bloc La recette du moment'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
     }
 }
 function block_callback_child($block)
@@ -58,10 +220,40 @@ function block_callback_child($block)
 // Il faut rajouter le bloc de notre thème enfant dans cette liste 
 function my_plugin_allowed_block_types_child($allowed_block_types_all, $post)
 {
-    return array('core/paragraph', 'acf/block-separateur', 'acf/block-2-colonnes-textevisuel', 'acf/block-2-colonnes-textevisuel-large', 'acf/block-multicolonnes', 'acf/block-2-colonnes', 'acf/block-3-colonnes', 'acf/block-1-colonne', 'acf/block-ancres', 'acf/block-cpt-list-filterable', 'acf/block-liste-de-termes', 'acf/block-app');
+    $allowed_block_types = array(
+        'core/paragraph',
+        'acf/block-separateur',
+        'acf/block-2-colonnes-textevisuel-custom',
+        'acf/block-2-colonnes-textevisuel-large-custom',
+        'acf/block-multicolonnes-custom',
+        'acf/block-2-colonnes-custom',
+        'acf/block-3-colonnes-custom',
+        'acf/block-1-colonne-custom',
+        'acf/block-nos-recettes-gourmandes',
+/*         'acf/block-beneficiez-du-reseau',
+        'acf/block-contact-form-jquery',
+        'acf/block-grabuge-vous-accompagne',
+        'acf/block-dernieres-offres', 
+        'acf/block-ancres',*/
+        'acf/block-cpt-list-filterable',
+        'acf/block-liste-de-termes',
+        'acf/block-app',
+        'acf/block-pourquoi-produits-differents',
+        'acf/block-nos-valeurs',
+        'acf/block-la-recette-du-moment',
+    );
+
+    return $allowed_block_types;
 }
+
 add_filter('allowed_block_types_all', 'my_plugin_allowed_block_types_child', 11, 3);
 
 
-
-
+function showSvg($url)
+{
+    $response = wp_remote_get($url);
+    if (is_array($response) && !is_wp_error($response)) {
+        $svg = $response['body']; // use the content
+    }
+    return $svg;
+}

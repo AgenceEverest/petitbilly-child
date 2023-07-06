@@ -21,6 +21,24 @@
     width: 100%;
   }
 }
+#block-app .filters {
+  display: flex;
+  flex-direction: column;
+}
+#block-app .filters .buttons {
+  display: flex;
+  margin-bottom: 1rem;
+}
+#block-app .filters .buttons .button {
+  margin-right: 1rem;
+}
+#block-app .filters .buttons .button:hover {
+  cursor: pointer;
+}
+#block-app .filters .buttons .button.active {
+  color: white;
+  background-color: black;
+}
 @font-face {
   font-family: "Gilroy-Black";
   src: url("../fonts/subset-AlwynNewRounded-Bold.woff2") format("woff2"), url("../fonts/subset-AlwynNewRounded-Bold.woff") format("woff");
