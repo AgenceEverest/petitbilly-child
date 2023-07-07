@@ -52,7 +52,7 @@ endif;
             endif;
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
-            echo " block'"; ?>>
+            echo " block block-pourquoi-differents'"; ?>>
 
         <!-- titre avant les colonnes-->
         <?php $titre_avant_les_colonnes = get_sub_field('titre_avant_les_colonnes');
@@ -64,47 +64,38 @@ endif;
                     <?php echo $titre_avant_les_colonnes; ?>
                 </div>
             </div>
-            <?php
-            if (have_rows('repeteur_differences')) :
-                while (have_rows('repeteur_differences')) : the_row();
-                    // Champ icone_differences (image)
-                    $icone_differences = get_sub_field('icone_differences');
-
-                    // Champ texte_differences (texte)
-                    $texte_differences = get_sub_field('texte_differences');
-            ?>
-
-                    <div class="repeteur-item">
-                        <img src="<?php echo esc_url($icone_differences); ?>" alt="Icône différences">
-                        <p><?php echo esc_html($texte_differences); ?></p>
-                    </div>
-
-            <?php
-                endwhile;
-            else :
-            // Aucun élément trouvé dans le répéteur
-            endif;
-            ?>
         <?php endif; ?>
+        <div class="differences content_width">
+            <?php if (have_rows('repeteur_differences')) :
+                while (have_rows('repeteur_differences')) : the_row();
+                    $icone_differences = get_sub_field('icone_differences');
+                    $texte_differences = get_sub_field('texte_differences'); ?>
+                    <div class="difference">
+                        <div class="img-difference-wrapper"> 
+                            <img src="<?php echo esc_url($icone_differences); ?>" alt="Icône différences">
+                        </div>
+                        <h3 class="difference-titre"><?php echo esc_html($texte_differences); ?></h3>
+                    </div>
+            <?php endwhile;
+            endif; ?>
+            <!-- colonnes -->
+            <div class="content_width col_flexible col_flexible_1">
+                <?php $largeur_de_la_colonne_contenu = get_sub_field('largeur_de_la_colonne_contenu'); ?>
+                <!-- Les 2 colonnes -->
+                <div class="col_flexible_wrapper <?php echo $largeur_de_la_colonne_contenu; ?>">
+                    <!-- Colonne 1 -->
+                    <?php if (have_rows('colonne_1_colonne_flexible_clonable')) : ?>
+                        <?php while (have_rows('colonne_1_colonne_flexible_clonable')) : the_row(); ?>
+                            <?php get_template_part('inc/content-builder-inc/col-flexible-block'); ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
 
-        <!-- colonnes -->
-        <div class="content_width col_flexible col_flexible_1">
-            <?php $largeur_de_la_colonne_contenu = get_sub_field('largeur_de_la_colonne_contenu'); ?>
-            <!-- Les 2 colonnes -->
-            <div class="col_flexible_wrapper <?php echo $largeur_de_la_colonne_contenu; ?>">
-                <!-- Colonne 1 -->
-                <?php if (have_rows('colonne_1_colonne_flexible_clonable')) : ?>
-                    <?php while (have_rows('colonne_1_colonne_flexible_clonable')) : the_row(); ?>
-                        <?php get_template_part('inc/content-builder-inc/col-flexible-block'); ?>
-                    <?php endwhile; ?>
-                <?php endif; ?>
+
+                <?php get_template_part('cta/cta-flex') ?>
             </div>
-
-
-            <?php get_template_part('cta/cta-flex') ?>
         </div>
+        <?php if ($vague_au_dessous_du_bloc) : ?>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/marge_basse.svg') ?>
+        <?php endif; ?>
     </div>
-    <?php if ($vague_au_dessous_du_bloc) : ?>
-        <?= showSvg(get_stylesheet_directory_uri() . '/svg/marge_basse.svg') ?>
-    <?php endif; ?>
-</div>

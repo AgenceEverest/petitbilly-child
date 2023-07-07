@@ -52,7 +52,7 @@ endif;
             endif;
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
-            echo " block'"; ?>>
+            echo " block block-nos-valeurs'"; ?>>
 
         <!-- titre avant les colonnes-->
         <?php $titre_avant_les_colonnes = get_sub_field('titre_avant_les_colonnes');
@@ -64,25 +64,27 @@ endif;
                     <?php echo $titre_avant_les_colonnes; ?>
                 </div>
             </div>
-            <?php
-            if (have_rows('repeteur_valeurs')) :
+        <?php endif; ?>
+
+        <div class="valeurs content_width">
+            <?php if (have_rows('repeteur_valeurs')) :
+                $i = 0;
                 while (have_rows('repeteur_valeurs')) : the_row();
-
-                    // Champ texte_differences (texte)
                     $nos_valeurs = get_sub_field('texte_valeurs');
-            ?>
-
-                    <div class="repeteur-item">
-                        <p><?php echo esc_html($nos_valeurs); ?></p>
+                    $image_link = ($i % 2 === 0) ? '/img/valeur-vert-clair.png' : '/img/valeur-vert-fonce.png';
+                    $image_link = get_stylesheet_directory_uri() . $image_link; ?>
+                    <div class="valeur">
+                        <img src="<?php echo $image_link; ?>">
+                        <h3><?php echo esc_html($nos_valeurs); ?></h3>
                     </div>
-
-            <?php
+            <?php $i++;
                 endwhile;
-            else :
-            // Aucun élément trouvé dans le répéteur
             endif;
             ?>
-        <?php endif; ?>
+
+
+        </div>
+
 
         <!-- colonnes -->
         <div class="content_width col_flexible col_flexible_1">

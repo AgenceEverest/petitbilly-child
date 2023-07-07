@@ -55,7 +55,7 @@ function my_acf_init_child()
         ));
         acf_register_block(array(
             'name'                => 'block-1-colonne-custom',
-            'title'                => __('block 1 colonne custom'),
+            'title'                => __('block 1 colonne'),
             'description'        => __('Un bloc affichant une colonne.'),
             'render_callback'    => 'block_callback_child',
             'category'            => 'layout',
@@ -64,7 +64,7 @@ function my_acf_init_child()
         ));
         acf_register_block(array(
             'name'                => 'block-2-colonnes-custom',
-            'title'                => __('block 2 colonnes flexibles custom'),
+            'title'                => __('block 2 colonnes flexibles'),
             'description'        => __('Un bloc affichant deux colonnes.'),
             'render_callback'    => 'block_callback_child',
             'category'            => 'layout',
@@ -73,7 +73,7 @@ function my_acf_init_child()
         ));
         acf_register_block(array(
             'name'                => 'block-3-colonnes-custom',
-            'title'                => __('block 3 colonnes flexibles custom'),
+            'title'                => __('block 3 colonnes flexibles'),
             'description'        => __('Un bloc affichant trois colonnes.'),
             'render_callback'    => 'block_callback_child',
             'category'            => 'layout',
@@ -82,7 +82,7 @@ function my_acf_init_child()
         ));
         acf_register_block(array(
             'name'                => 'block-2-colonnes-textevisuel-custom',
-            'title'                => __('block 2 colonne texte visuel custom'),
+            'title'                => __('block 2 colonne texte visuel'),
             'description'        => __('Un bloc affichant un texte et un visuel'),
             'render_callback'    => 'block_callback_child',
             'category'            => 'layout',
@@ -91,7 +91,7 @@ function my_acf_init_child()
         ));
         acf_register_block(array(
             'name'                => 'block-2-colonnes-textevisuel-large-custom',
-            'title'                => __('block 2 colonne texte visuel large custom'),
+            'title'                => __('block 2 colonne texte visuel large'),
             'description'        => __('Un bloc affichant un texte et un visuel prenant toute la largeur'),
             'render_callback'    => 'block_callback_child',
             'category'            => 'layout',
@@ -204,6 +204,16 @@ function my_acf_init_child()
             'icon'                => 'editor-table',
             'mode'                => 'edit',
         ));
+
+        acf_register_block(array(
+            'name'                => 'block-equipes-metiers',
+            'title'                => __('Bloc Nos équipes / Nos métiers'),
+            'description'        => __('Bloc Nos équipes / Nos métiers'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
     }
 }
 function block_callback_child($block)
@@ -241,6 +251,7 @@ function my_plugin_allowed_block_types_child($allowed_block_types_all, $post)
         'acf/block-pourquoi-produits-differents',
         'acf/block-nos-valeurs',
         'acf/block-la-recette-du-moment',
+        'acf/block-equipes-metiers',
     );
 
     return $allowed_block_types;

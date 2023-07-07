@@ -1,3 +1,51 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cafeteria-Bold" !important;
+}
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+  font-family: "Cafeteria-Bold" !important;
+}
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+  font-family: "Cafeteria-Bold" !important;
+}
+.entry-content h1 strong, .entry-content h2 strong, .entry-content h3 strong, .entry-content h4 strong, .entry-content h5 strong, .entry-content h6 strong {
+  font-family: "Cafeteria-Bold" !important;
+}
+.fond_blanc h1, .fond_blanc h2, .fond_blanc h3, .fond_blanc h4, .fond_blanc h5, .fond_blanc h6 {
+  color: #8CC751;
+}
+.fond_blanc h1 strong, .fond_blanc h2 strong, .fond_blanc h3 strong, .fond_blanc h4 strong, .fond_blanc h5 strong, .fond_blanc h6 strong {
+  color: #00693E;
+}
+.fond_blanc .entry-content h1, .fond_blanc .entry-content h2, .fond_blanc .entry-content h3, .fond_blanc .entry-content h4, .fond_blanc .entry-content h5, .fond_blanc .entry-content h6 {
+  color: #8CC751;
+}
+.fond_blanc .entry-content h1 strong, .fond_blanc .entry-content h2 strong, .fond_blanc .entry-content h3 strong, .fond_blanc .entry-content h4 strong, .fond_blanc .entry-content h5 strong, .fond_blanc .entry-content h6 strong {
+  color: #00693E;
+}
+.fond_clair h1, .fond_clair h2, .fond_clair h3, .fond_clair h4, .fond_clair h5, .fond_clair h6 {
+  color: white;
+}
+.fond_clair h1 strong, .fond_clair h2 strong, .fond_clair h3 strong, .fond_clair h4 strong, .fond_clair h5 strong, .fond_clair h6 strong {
+  color: white;
+}
+.fond_clair .entry-content h1, .fond_clair .entry-content h2, .fond_clair .entry-content h3, .fond_clair .entry-content h4, .fond_clair .entry-content h5, .fond_clair .entry-content h6 {
+  color: white;
+}
+.fond_clair .entry-content h1 strong, .fond_clair .entry-content h2 strong, .fond_clair .entry-content h3 strong, .fond_clair .entry-content h4 strong, .fond_clair .entry-content h5 strong, .fond_clair .entry-content h6 strong {
+  color: white;
+}
+.fond_clair2 h1, .fond_clair2 h2, .fond_clair2 h3, .fond_clair2 h4, .fond_clair2 h5, .fond_clair2 h6 {
+  color: white;
+}
+.fond_clair2 h1 strong, .fond_clair2 h2 strong, .fond_clair2 h3 strong, .fond_clair2 h4 strong, .fond_clair2 h5 strong, .fond_clair2 h6 strong {
+  color: white;
+}
+.fond_clair2 .entry-content h1, .fond_clair2 .entry-content h2, .fond_clair2 .entry-content h3, .fond_clair2 .entry-content h4, .fond_clair2 .entry-content h5, .fond_clair2 .entry-content h6 {
+  color: white;
+}
+.fond_clair2 .entry-content h1 strong, .fond_clair2 .entry-content h2 strong, .fond_clair2 .entry-content h3 strong, .fond_clair2 .entry-content h4 strong, .fond_clair2 .entry-content h5 strong, .fond_clair2 .entry-content h6 strong {
+  color: white;
+}
 #block-app .results {
   display: flex;
   justify-content: center;
@@ -39,9 +87,119 @@
   color: white;
   background-color: black;
 }
+.block-pourquoi-differents {
+  background-color: #00693E;
+  padding-bottom: 280px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+@media (max-width: 980px) {
+  .block-pourquoi-differents {
+    margin-bottom: inherit;
+    padding-bottom: inherit;
+    flex-direction: column;
+  }
+}
+.block-pourquoi-differents h2, .block-pourquoi-differents p {
+  color: white;
+}
+.block-pourquoi-differents .differences {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: absolute;
+  bottom: -20%;
+}
+@media (max-width: 980px) {
+  .block-pourquoi-differents .differences {
+    position: relative;
+    bottom: inherit;
+  }
+}
+.block-pourquoi-differents .differences .difference {
+  width: 22%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 980px) {
+  .block-pourquoi-differents .differences .difference {
+    width: 48%;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 780px) {
+  .block-pourquoi-differents .differences .difference {
+    width: 100%;
+  }
+}
+.block-pourquoi-differents .differences .difference .difference-titre {
+  padding-bottom: 2rem;
+}
+.block-pourquoi-differents .differences .difference:nth-child(even) {
+  background-color: white;
+  color: #00693E;
+}
+.block-pourquoi-differents .differences .difference:nth-child(odd) {
+  background-color: #8CC751;
+  color: white;
+}
+.block-pourquoi-differents .differences .difference .img-difference-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.block-pourquoi-differents .differences .difference .img-difference-wrapper img {
+  height: auto;
+  width: auto;
+}
+.block-nos-valeurs .valeurs {
+  display: flex;
+  justify-content: space-between;
+}
+.block-nos-valeurs .valeurs .valeur {
+  width: 20%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block-nos-valeurs .valeurs .valeur img {
+  width: 100%;
+}
+.block-nos-valeurs .valeurs .valeur h3 {
+  position: absolute;
+  color: white;
+}
+.block-recette-du-moment .col_flexible_wrapper .col-1, .block-recette-du-moment .col_flexible_wrapper .col-2 {
+  width: 50%;
+}
+.block-recette-du-moment .col_flexible_wrapper .col-1 h3, .block-recette-du-moment .col_flexible_wrapper .col-1 p {
+  padding-left: 20%;
+}
+.block-recette-du-moment .col_flexible_wrapper .col-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block-recette-du-moment .col_flexible_wrapper .col-2 img {
+  width: 60%;
+}
 @font-face {
-  font-family: "Gilroy-Black";
-  src: url("../fonts/subset-AlwynNewRounded-Bold.woff2") format("woff2"), url("../fonts/subset-AlwynNewRounded-Bold.woff") format("woff");
+  font-family: "Cafeteria-Regular";
+  src: url("../fonts/Cafeteria-Regular.woff2") format("woff2"), url("../fonts/Cafeteria-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cafeteria-Bold";
+  src: url("../fonts/subset-Cafeteria-Bold.woff2") format("woff2"), url("../fonts/subset-Cafeteria-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -49,5 +207,8 @@
 /*
 Fichier de customisation du CSS
 */
+figure {
+  background-color: transparent !important;
+}
 /*# sourceMappingURL=D:\wamp64\www\petitbilly/wp-content/themes/nanosite-proefficace-child/css/mainchild.css.map */
 /*# sourceMappingURL=mainchild.css.map */

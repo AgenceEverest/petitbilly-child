@@ -1,0 +1,21 @@
+.block-recette-du-moment {
+    .col_flexible_wrapper {
+        .col-1, .col-2 {
+            width: 50%;
+        }
+        .col-1 {
+            h3, p {
+                padding-left: 20%;
+            }
+        }
+        .col-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 60%;
+            }
+            
+        }
+    }
+}

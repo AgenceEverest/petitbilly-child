@@ -54,7 +54,7 @@ endif;
             endif;
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
-            echo " block'"; ?>>
+            echo " block block-recette-du-moment'"; ?>>
         <?php get_template_part('inc/dessin-en-fond'); ?>
 
         <!-- titre avant les colonnes-->

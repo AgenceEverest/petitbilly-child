@@ -1,0 +1,20 @@
+.block-nos-valeurs {
+    .valeurs {
+        display: flex;
+        justify-content: space-between;
+        .valeur {
+            width: 20%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 100%;
+            }
+            h3 {
+                position: absolute;
+                color: white;
+            }
+        }
+    }
+}

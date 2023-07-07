@@ -1,0 +1,71 @@
+$heightDifferences: 280px;
+
+.block-pourquoi-differents {
+    background-color: $darkGreenBilly;
+    padding-bottom: $heightDifferences;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    @media (max-width: 980px) {
+        margin-bottom: inherit;
+        padding-bottom: inherit;
+        flex-direction: column;
+    }
+    h2, p {
+        color: white;
+    }
+    .differences {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: absolute;
+        bottom: -20%;
+        @media (max-width: 980px) {
+            position: relative;
+            bottom: inherit;
+        }
+
+        .difference {
+            width: 22%;
+            height: $heightDifferences;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @media (max-width: 980px) {
+                width: 48%;
+                margin-bottom: 1rem;
+            }
+            @media (max-width: 780px) {
+                width: 100%;
+            }
+            .difference-titre {
+                padding-bottom: 2rem;
+            }
+
+            &:nth-child(even) {
+                background-color: white;
+                color: $darkGreenBilly;
+            }
+
+            &:nth-child(odd) {
+                background-color: $clearGreenBilly;
+                color: white;
+            }
+
+            .img-difference-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+
+                img {
+                    height: auto;
+                    width: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,12 @@
-@import './layout/block-app.scss';
 
 //On utilise les variables SCSS présentes dans le thème enfant
 @import 'variables';
+@import './layout/fonts.scss';
+
+@import './blocks/block-app.scss';
+@import './blocks/block-pourquoi-produits-differents.scss';
+@import './blocks/block-nos-valeurs.scss';
+@import './blocks/block-recette-du-moment.scss';
 
 //@font-face  --> customisation des fonts du Nanosite
 @import 'layout/font-face';
