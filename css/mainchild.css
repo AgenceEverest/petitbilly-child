@@ -1,14 +1,21 @@
+h2 {
+  font-size: 38px;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: "Cafeteria-Bold" !important;
+  color: #8CC751;
 }
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   font-family: "Cafeteria-Bold" !important;
+  color: #00693E;
 }
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
   font-family: "Cafeteria-Bold" !important;
+  color: #8CC751;
 }
 .entry-content h1 strong, .entry-content h2 strong, .entry-content h3 strong, .entry-content h4 strong, .entry-content h5 strong, .entry-content h6 strong {
   font-family: "Cafeteria-Bold" !important;
+  color: #00693E;
 }
 .fond_blanc h1, .fond_blanc h2, .fond_blanc h3, .fond_blanc h4, .fond_blanc h5, .fond_blanc h6 {
   color: #8CC751;
@@ -176,11 +183,39 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   position: absolute;
   color: white;
 }
+.block-recette-du-moment .content_width {
+  position: relative;
+}
+.block-recette-du-moment #liseret-encadrement, .block-recette-du-moment #recette-moment-bas-droit, .block-recette-du-moment #recette-moment-haut-gauche {
+  position: absolute;
+}
+.block-recette-du-moment #recette-moment-bas-droit {
+  bottom: -10%;
+  left: 35%;
+  z-index: 0;
+}
+.block-recette-du-moment #recette-moment-haut-gauche {
+  top: -10%;
+  left: -3%;
+  z-index: 0;
+}
+.block-recette-du-moment #liseret-encadrement {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.block-recette-du-moment .col_flexible_wrapper {
+  z-index: 2;
+  position: relative;
+}
 .block-recette-du-moment .col_flexible_wrapper .col-1, .block-recette-du-moment .col_flexible_wrapper .col-2 {
   width: 50%;
 }
-.block-recette-du-moment .col_flexible_wrapper .col-1 h3, .block-recette-du-moment .col_flexible_wrapper .col-1 p {
-  padding-left: 20%;
+.block-recette-du-moment .col_flexible_wrapper .col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10%;
 }
 .block-recette-du-moment .col_flexible_wrapper .col-2 {
   display: flex;
@@ -188,7 +223,68 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   align-items: center;
 }
 .block-recette-du-moment .col_flexible_wrapper .col-2 img {
-  width: 60%;
+  width: 70%;
+  border-radius: 5%;
+}
+.cta-header-container {
+  display: flex;
+  justify-content: flex-start;
+}
+/* .cta_btn_lead, .cta_primaire, .cta_secondaire {
+    position: relative;
+    display: inline-block !important;
+    #fond-cta-wrapper {
+        position: relative;
+        z-index: 0;
+        #fond-cta {
+            position: absolute;
+        }
+        a {
+            position: absolute;
+            z-index: 1;
+            font-family: 'Cafeteria-Bold' !important;
+            background-color:transparent !important;
+         
+            &:hover {
+                background-color: transparent !important;
+            }
+        }
+    }
+   
+} */
+.cta-container {
+  display: flex;
+}
+.cta-container.cta_align_left {
+  justify-content: flex-start;
+}
+.cta-container.cta_align_right {
+  justify-content: flex-end;
+}
+.cta-container.cta_align_center {
+  justify-content: center;
+}
+.cta-container .cta-bloc-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cta-container .cta-bloc-flex a {
+  position: absolute;
+  font-family: "Cafeteria-Bold" !important;
+  color: white;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.cta-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cta-header a {
+  position: absolute;
+  font-family: "Cafeteria-Bold";
+  color: white;
 }
 @font-face {
   font-family: "Cafeteria-Regular";

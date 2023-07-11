@@ -7,8 +7,10 @@
 @import './blocks/block-pourquoi-produits-differents.scss';
 @import './blocks/block-nos-valeurs.scss';
 @import './blocks/block-recette-du-moment.scss';
+@import './layout/header.scss';
 
 //@font-face  --> customisation des fonts du Nanosite
+@import 'layout/cta.scss';
 @import 'layout/font-face';
 
 //Customisation

@@ -101,7 +101,7 @@ endif;
             </div>
 
     
-                <?php get_template_part('cta/cta-flex') ?>
+                <?php get_template_part('inc/content-builder-inc/cta-flex') ?>
         </div>
     </div>
 

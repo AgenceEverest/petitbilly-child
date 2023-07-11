@@ -123,7 +123,7 @@ endif;
                 <div>
                     <h3><?= $colonne_droite_titre ?></h3>
                     <p><?= $colonne_droite_texte ?></p>
-                    <?php get_template_part('cta/cta-col') ?>
+                    <?php get_template_part('inc/content-builder-inc/cta-col') ?>
                 </div>
             </div>
 

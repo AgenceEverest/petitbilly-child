@@ -1,0 +1,58 @@
+/* .cta_btn_lead, .cta_primaire, .cta_secondaire {
+    position: relative;
+    display: inline-block !important;
+    #fond-cta-wrapper {
+        position: relative;
+        z-index: 0;
+        #fond-cta {
+            position: absolute;
+        }
+        a {
+            position: absolute;
+            z-index: 1;
+            font-family: 'Cafeteria-Bold' !important;
+            background-color:transparent !important;
+         
+            &:hover {
+                background-color: transparent !important;
+            }
+        }
+    }
+   
+} */
+.cta-container {
+    display: flex;
+    &.cta_align_left {
+        justify-content: flex-start;
+    }
+    &.cta_align_right {
+        justify-content: flex-end;
+    }
+    &.cta_align_center {
+        justify-content: center;
+    }
+    .cta-bloc-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            position: absolute;
+            font-family: 'Cafeteria-Bold' !important;
+            color: white;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.cta-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        position: absolute;
+        font-family: 'Cafeteria-Bold';
+        color: white;
+    }
+}

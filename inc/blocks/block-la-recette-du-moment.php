@@ -55,37 +55,23 @@ endif;
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
             echo " block block-recette-du-moment'"; ?>>
-        <?php get_template_part('inc/dessin-en-fond'); ?>
 
         <!-- titre avant les colonnes-->
         <?php $titre_avant_les_colonnes = get_sub_field('titre_avant_les_colonnes');
         $largeur_de_la_colonne_titre = get_sub_field('largeur_de_la_colonne_titre');
         $separateur_de_la_colonne_titre = get_sub_field('separateur_de_la_colonne_titre');
-        $colonne1 = get_sub_field('colonne_1');
-        if ($titre_avant_les_colonnes) : ?>
-            <div class="content_width zone_texte_avant_colonnes<?php if (!$colonne1 and $separateur_de_la_colonne_titre == 'pas_de_separateur_titre') : ?> zone_texte_avant_colonnes_nopadding<?php endif; ?>">
-                <div class="<?php echo $largeur_de_la_colonne_titre; ?> entry-content">
-                    <?php echo $titre_avant_les_colonnes; ?>
-                </div>
-            </div>
-
-            <?php if ($separateur_de_la_colonne_titre != 'pas_de_separateur_titre') : ?>
-                <div class="content_width separateur_de_la_colonne_titre_wrapper_wrapper<?php if ($colonne1) : ?> separateur_de_la_colonne_titre_space<?php endif; ?>">
-                    <div class="separateur_de_la_colonne_titre_wrapper">
-                        <div class="separateur_de_la_colonne_titre <?php echo $separateur_de_la_colonne_titre; ?>"></div>
-                    </div>
-                </div>
-            <?php endif; ?>
-        <?php endif; ?>
-
+        $colonne1 = get_sub_field('colonne_1'); ?>
         <!-- colonnes -->
         <div class="content_width col_flexible col_flexible_2">
             <!-- Les 2 colonnes -->
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/liseret-encadrement') ?>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/recette-moment-haut-gauche') ?>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/recette-moment-bas-droit') ?>
             <div class="col_flexible_wrapper">
                 <div class="col-1">
-                    <h3><?= $titre_recette_du_moment ?></h3>
-                    <p><?= $nom_de_la_recette ?></p>
-                    <?php get_template_part('cta/cta-col') ?>
+                    <?= $titre_recette_du_moment ?> <!-- champ ACF wysiwygf -->
+                    <h3><strong><?= $nom_de_la_recette ?></strong></h3>
+                    <?php get_template_part('inc/content-builder-inc/cta-col') ?>
                 </div>
                 <div class="col-2">
                     <img src="<?= $visuel_recette_du_moment ?>" alt="<?= $nom_de_la_recette ?>">

@@ -1,3 +1,7 @@
+h2 {
+    font-size: 38px;
+}
+
 h1,
 h2,
 h3,
@@ -5,9 +9,10 @@ h4,
 h5,
 h6 {
     font-family: 'Cafeteria-Bold' !important;
-
+    color: $clearGreenBilly;
     strong {
         font-family: 'Cafeteria-Bold' !important;
+        color: $darkGreenBilly;
     }
 }
 
@@ -20,9 +25,10 @@ h6 {
     h5,
     h6 {
         font-family: 'Cafeteria-Bold' !important;
-
+        color: $clearGreenBilly;
         strong {
             font-family: 'Cafeteria-Bold' !important;
+            color: $darkGreenBilly;
         }
     }
 }

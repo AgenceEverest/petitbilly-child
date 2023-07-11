@@ -268,3 +268,8 @@ function showSvg($url)
     }
     return $svg;
 }
+
+
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_script('main-child', get_stylesheet_directory_uri() . '/js/main-child.js');
+});

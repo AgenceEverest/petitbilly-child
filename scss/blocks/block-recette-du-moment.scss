@@ -1,21 +1,58 @@
 .block-recette-du-moment {
+    .content_width {
+        position: relative;
+    }
+
+    #liseret-encadrement,
+    #recette-moment-bas-droit,
+    #recette-moment-haut-gauche {
+        position: absolute;
+    }
+
+    #recette-moment-bas-droit {
+        bottom: -10%;
+        left: 35%;
+        z-index: 0;
+    }
+
+    #recette-moment-haut-gauche {
+        top: -10%;
+        left: -3%;
+        z-index: 0;
+    }
+
+    #liseret-encadrement {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+
     .col_flexible_wrapper {
-        .col-1, .col-2 {
+        z-index: 2;
+        position: relative;
+
+        .col-1,
+        .col-2 {
             width: 50%;
         }
+
         .col-1 {
-            h3, p {
-                padding-left: 20%;
-            }
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 10%;
         }
+
         .col-2 {
             display: flex;
             justify-content: center;
             align-items: center;
+
             img {
-                width: 60%;
+                width: 70%;
+                border-radius: 5%;
             }
-            
+
         }
     }
 }
