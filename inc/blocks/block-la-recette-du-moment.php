@@ -64,7 +64,8 @@ endif;
         <!-- colonnes -->
         <div class="content_width col_flexible col_flexible_2">
             <!-- Les 2 colonnes -->
-            <?= showSvg(get_stylesheet_directory_uri() . '/svg/liseret-encadrement') ?>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge') ?>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge-mobile') ?>
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/recette-moment-haut-gauche') ?>
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/recette-moment-bas-droit') ?>
             <div class="col_flexible_wrapper">

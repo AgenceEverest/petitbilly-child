@@ -26,6 +26,8 @@ if (have_rows('block_multicolonnes_custom')) : the_row(); // il s'agit du nom du
 	$padding_en_haut_du_bloc = get_sub_field('padding_en_haut_du_bloc');
 	$padding_en_bas_du_bloc = get_sub_field('padding_en_bas_du_bloc');
 	$faire_passer_le_bloc_au_dessus_des_autres = get_sub_field('faire_passer_le_bloc_au_dessus_des_autres');
+	$liseret_vert_autour_du_bloc = get_sub_field('liseret_vert_autour_du_bloc');
+
 endif;
 ?>
 
@@ -60,9 +62,15 @@ endif;
 			if ($faire_passer_le_bloc_au_dessus_des_autres) : 
 				echo " z-index-1";
 			endif;
+			if ($liseret_vert_autour_du_bloc) : echo " has-edge ";
+		endif;
 			echo " block'"; ?>>
 		<?php get_template_part('inc/dessin-en-fond'); ?>
 
+        <?php if ($liseret_vert_autour_du_bloc) : ?>
+			<?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge-desktop-tall') ?>
+			<?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge') ?>
+		<?php endif; ?>
 		<!-- titre avant les colonnes-->
 		<?php $titre_avant_les_colonnes = get_sub_field('ajouter_un_titre_multicolonnes');
 		$largeur_de_la_colonne_titre = get_sub_field('largeur_de_la_colonne_titre');

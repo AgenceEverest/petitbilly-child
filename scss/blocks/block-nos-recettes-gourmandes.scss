@@ -1,0 +1,55 @@
+.block-nos-recettes-gourmandes {
+    display: flex;
+    position: relative;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    h2,
+    h3,
+    p, 
+    a {
+        color: white;
+    }
+
+    .bg-block-nos-recettes-gourmandes {
+        background-color: $darkGreenBilly;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 10%;
+        z-index: 0;
+    }
+
+    .col_flexible {
+        z-index: 1;
+    }
+
+    .nos-recettes-col-1 {
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+
+        .recette-item {
+            width: 31%;
+        }
+
+        .recette-img-container {
+            height: 350px;
+            overflow: hidden;
+            margin: 0;
+            border-radius: 5%;
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+
+    .nos-recettes-col-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+        padding-top: 5%;
+        padding-left: 5%;
+    }
+}

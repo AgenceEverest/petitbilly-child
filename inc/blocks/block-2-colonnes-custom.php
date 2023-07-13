@@ -25,6 +25,8 @@ if (have_rows('block_2_colonnes_custom')) : the_row(); // il s'agit du nom du ch
     $padding_en_haut_du_bloc = get_sub_field('padding_en_haut_du_bloc');
     $padding_en_bas_du_bloc = get_sub_field('padding_en_bas_du_bloc');
     $faire_passer_le_bloc_au_dessus_des_autres = get_sub_field('faire_passer_le_bloc_au_dessus_des_autres');
+    $liseret_vert_autour_du_bloc = get_sub_field('liseret_vert_autour_du_bloc');
+
 endif;
 ?>
 <div class="<?php if ($couleur_de_fond_bloc) :
@@ -57,7 +59,13 @@ endif;
             endif;
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
+            if ($liseret_vert_autour_du_bloc) : echo " has-edge ";
+            endif;
             echo " block'"; ?>>
+        <?php if ($liseret_vert_autour_du_bloc) : ?>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge-desktop-tall') ?>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge') ?>
+        <?php endif; ?>
         <?php get_template_part('inc/dessin-en-fond'); ?>
 
         <!-- titre avant les colonnes-->
@@ -100,8 +108,8 @@ endif;
                 <?php endif; ?>
             </div>
 
-    
-                <?php get_template_part('inc/content-builder-inc/cta-flex') ?>
+
+            <?php get_template_part('inc/content-builder-inc/cta-flex') ?>
         </div>
     </div>
 

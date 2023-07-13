@@ -25,9 +25,11 @@ if (have_rows('block_nos_recettes_gourmandes')) : the_row(); // il s'agit du nom
     $padding_en_haut_du_bloc = get_sub_field('padding_en_haut_du_bloc');
     $padding_en_bas_du_bloc = get_sub_field('padding_en_bas_du_bloc');
     $faire_passer_le_bloc_au_dessus_des_autres = get_sub_field('faire_passer_le_bloc_au_dessus_des_autres');
-
+    $texte_bouton_lire_la_la_suite = get_sub_field('texte_bouton_lire_la_la_suite');
     $colonne_droite_titre = get_sub_field('colonne_droite_titre');
     $colonne_droite_texte = get_sub_field('colonne_droite_texte');
+    $liseret_vert_autour_du_bloc = get_sub_field('liseret_vert_autour_du_bloc');
+
 endif;
 ?>
 <div class="<?php if ($couleur_de_fond_bloc) :
@@ -60,9 +62,15 @@ endif;
             endif;
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
-            echo " block'"; ?>>
+            if ($liseret_vert_autour_du_bloc) : echo " has-edge ";
+        endif;
+            echo " block block-nos-recettes-gourmandes'"; ?>>
         <?php get_template_part('inc/dessin-en-fond'); ?>
-
+        <?php if ($liseret_vert_autour_du_bloc) : ?>
+			<?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge-desktop-tall') ?>
+			<?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge') ?>
+		<?php endif; ?>
+        <div class="bg-block-nos-recettes-gourmandes"></div>
         <!-- titre avant les colonnes-->
         <?php $titre_avant_les_colonnes = get_sub_field('titre_avant_les_colonnes');
         $largeur_de_la_colonne_titre = get_sub_field('largeur_de_la_colonne_titre');
@@ -89,39 +97,43 @@ endif;
             <?php $proportions_des_colonnes = get_sub_field('proportions_des_colonnes'); ?>
             <div class="col_flexible_wrapper <?php echo $proportions_des_colonnes; ?>">
                 <!-- Colonne 1 -->
-                <?php
-                $args = array(
-                    'post_type'      => 'recettes',
-                    'posts_per_page' => 3,
-                    'orderby'        => 'date',
-                    'order'          => 'DESC'
-                );
+                <div class="nos-recettes-col-1">
+                    <?php
+                    $args = array(
+                        'post_type'      => 'recettes',
+                        'posts_per_page' => 3,
+                        'orderby'        => 'date',
+                        'order'          => 'DESC'
+                    );
 
-                $query = new WP_Query($args);
+                    $query = new WP_Query($args);
 
-                if ($query->have_posts()) :
-                    while ($query->have_posts()) : $query->the_post();
-                        $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail');
-                        $title = get_the_title();
-                        $permalink = get_permalink();
-                ?>
+                    if ($query->have_posts()) :
+                        while ($query->have_posts()) : $query->the_post();
+                            $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail');
+                            $title = get_the_title();
+                            $permalink = get_permalink();
+                    ?>
 
-                        <div class="recette-item">
-                            <img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php echo esc_attr($title); ?>">
-                            <h2><?php echo esc_html($title); ?></h2>
-                            <a href="<?php echo esc_url($permalink); ?>">Lire la recette</a>
-                        </div>
+                            <div class="recette-item">
+                                <figure class="recette-img-container">
+                                    <img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php echo esc_attr($title); ?>">
+                                </figure>
+                                <h3><?php echo esc_html($title); ?></h3>
+                                <a href="<?php echo esc_url($permalink); ?>"><?= $texte_bouton_lire_la_la_suite ?></a>
+                            </div>
 
-                <?php
-                    endwhile;
-                    wp_reset_postdata();
-                else :
-                // Aucune recette trouvée
-                endif;
-                ?>
+                    <?php
+                        endwhile;
+                        wp_reset_postdata();
+                    else :
+                    // Aucune recette trouvée
+                    endif;
+                    ?>
+                </div>
                 <!-- Colonne 2 -->
-                <div>
-                    <h3><?= $colonne_droite_titre ?></h3>
+                <div class="nos-recettes-col-2">
+                    <h2><?= $colonne_droite_titre ?></h2>
                     <p><?= $colonne_droite_texte ?></p>
                     <?php get_template_part('inc/content-builder-inc/cta-col') ?>
                 </div>

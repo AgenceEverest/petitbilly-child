@@ -1,0 +1,151 @@
+$heightDifferences: 280px;
+.block-fromages-uniques {
+    background-color: white;
+    padding-bottom: $heightDifferences;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+
+    #recette-moment-bas-droit,
+    #recette-moment-haut-gauche {
+        position: absolute;
+        width: 15%;
+        z-index: 1;
+    }
+
+    #recette-moment-bas-droit {
+        bottom: -25%;
+        right: -5%;
+        z-index: 0;
+        @media (max-width: 780px) {
+            width: 20%;
+        }
+    }
+
+    #recette-moment-haut-gauche {
+        top: -15%;
+        left: -3%;
+        z-index: 0;
+        @media (max-width: 780px) {
+            width: 20%;
+        }
+    }
+
+    @media (max-width: 980px) {
+        margin-bottom: inherit;
+        padding-bottom: inherit;
+        flex-direction: column;
+    }
+  
+    &.has-edge {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        @media (max-width: $mobileBreakpoint) {
+            margin-top: 15%;
+            margin-bottom: 15%;
+        }
+    
+    }
+    @media (max-width: $mobileBreakpoint) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .block {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 5%;
+        padding-bottom: 10%;
+        display: flex;
+        justify-content: center;
+    }
+    .green-edge,
+    .green-edge-desktop-tall {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        height: 110%;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        margin: auto;
+        @media (max-width: $mobileBreakpoint) {
+            width: 150%;
+            height: 110%;
+        }
+    }
+    .cartes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 15%;
+        z-index: 1;
+        width: 70%;
+        @media (max-width: 980px) {
+            position: relative;
+            bottom: inherit;
+        }
+
+        .carte {
+            width: 22%;
+            height: $heightDifferences;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0px 49px 46px 32px rgba(0,0,0,0.1);
+            padding: 4% 2% 2% 2%;
+        
+            @media (max-width: 980px) {
+                width: 48%;
+                margin-bottom: 1rem;
+            }
+            @media (max-width: 780px) {
+                width: 100%;
+            }
+            .carte-titre {
+                padding-bottom: 2rem;
+                text-align: center;
+            }
+            p {
+                line-height: 1.3rem;
+            }
+            &:nth-child(even) {
+                background-color: white;
+                h3 {
+                    color: $darkGreenBilly;
+                }
+                p {
+                    color: black;
+                }
+            }
+
+            &:nth-child(odd) {
+                background-color: $clearGreenBilly;
+                h3 {
+                    color: white;
+                }
+                p {
+                    color: white;
+                }
+            }
+
+            .img-difference-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+
+                img {
+                    height: auto;
+                    width: auto;
+                }
+            }
+        }
+    }
+}

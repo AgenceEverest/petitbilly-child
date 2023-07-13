@@ -110,50 +110,6 @@ function my_acf_init_child()
             'mode'                => 'edit',
         ));
 
-  /*       // register block-multicolonnes
-        acf_register_block(array(
-            'name'                => 'block-grabuge-vous-accompagne',
-            'title'                => __('Bloc grabuge vous accompagne'),
-            'description'        => __('Permet de générer une liste des éléments "Grabuge vous accompagne" avec une icône, un titre et un rapide descriptif'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode'                => 'edit',
-        ));
-
-        // register block-multicolonnes
-        acf_register_block(array(
-            'name'                => 'block-beneficiez-du-reseau',
-            'title'                => __('Bloc bénéficiez du réseau'),
-            'description'        => __('Génère le bloc de l\'accueil "Bénéficiez du réseau"'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode'                => 'edit',
-        ));
-
-        // register block-multicolonnes
-        acf_register_block(array(
-            'name'                => 'block-contact-form-jquery',
-            'title'                => __('Bloc formulaire de contact'),
-            'description'        => __('Bloc contenant le formulaire de contact + jQuery"'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode'                => 'edit',
-        )); */
-/* 
-        // register block-multicolonnes
-        acf_register_block(array(
-            'name'                => 'block-iframe-async',
-            'title'                => __('Bloc IFrame asynchrone'),
-            'description'        => __('Bloc contenant un iframe chargé de façon asynchrone"'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode'                => 'edit',
-        )); */
-
         // register block-multicolonnes
         acf_register_block(array(
             'name'                => 'block-more-informations',
@@ -164,7 +120,6 @@ function my_acf_init_child()
             'icon'                => 'editor-table',
             'mode'                => 'edit',
         ));
-
         
         acf_register_block(array(
             'name'                => 'block-pourquoi-produits-differents',
@@ -214,6 +169,26 @@ function my_acf_init_child()
             'icon'                => 'editor-table',
             'mode'                => 'edit',
         ));
+
+        acf_register_block(array(
+            'name'                => 'block-dernieres-recettes',
+            'title'                => __('Bloc Dernières recettes liées au produit'),
+            'description'        => __('Bloc Dernières recettes liées au produit'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
+
+        acf_register_block(array(
+            'name'                => 'block-petit-billy-pour-des-fromages-uniques',
+            'title'                => __('Bloc - Petit Billy pour des fromages uniques'),
+            'description'        => __('Bloc - Petit Billy pour des fromages uniques'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
     }
 }
 function block_callback_child($block)
@@ -240,11 +215,6 @@ function my_plugin_allowed_block_types_child($allowed_block_types_all, $post)
         'acf/block-3-colonnes-custom',
         'acf/block-1-colonne-custom',
         'acf/block-nos-recettes-gourmandes',
-/*         'acf/block-beneficiez-du-reseau',
-        'acf/block-contact-form-jquery',
-        'acf/block-grabuge-vous-accompagne',
-        'acf/block-dernieres-offres', 
-        'acf/block-ancres',*/
         'acf/block-cpt-list-filterable',
         'acf/block-liste-de-termes',
         'acf/block-app',
@@ -252,6 +222,8 @@ function my_plugin_allowed_block_types_child($allowed_block_types_all, $post)
         'acf/block-nos-valeurs',
         'acf/block-la-recette-du-moment',
         'acf/block-equipes-metiers',
+        'acf/block-dernieres-recettes',
+        'acf/block-petit-billy-pour-des-fromages-uniques',
     );
 
     return $allowed_block_types;

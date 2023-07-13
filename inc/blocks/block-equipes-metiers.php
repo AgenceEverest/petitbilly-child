@@ -32,6 +32,9 @@ if (have_rows('block_equipes_metiers')) : the_row(); // il s'agit du nom du cham
     $texte_rejoignez_nos_equipes = get_sub_field('texte_rejoignez_nos_equipes');
     $titre_les_metiers_de_petit_billy = get_sub_field('titre_les_metiers_de_petit_billy');
     $les_metiers_de_petit_billy = get_sub_field('les_metiers_de_petit_billy');
+
+    $liseret_vert_autour_du_bloc = get_sub_field('liseret_vert_autour_du_bloc');
+
 endif;
 ?>azeaze
 <div class="<?php if ($couleur_de_fond_bloc) :
@@ -64,8 +67,15 @@ endif;
             endif;
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
+            if ($liseret_vert_autour_du_bloc) : echo " has-edge ";
+            endif;
             echo " block'"; ?>>
         <?php get_template_part('inc/dessin-en-fond'); ?>
+
+        <?php if ($liseret_vert_autour_du_bloc) : ?>
+			<?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge-desktop-tall') ?>
+			<?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge') ?>
+		<?php endif; ?>
 
         <!-- titre avant les colonnes-->
 

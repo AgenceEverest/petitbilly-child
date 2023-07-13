@@ -2,7 +2,17 @@
     .valeurs {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width: 480px) {
+            justify-content: center;
+        }
         .valeur {
+            @media (max-width: 980px) {
+                width: 40%;
+            }
+            @media (max-width: 480px) {
+                width: 60%;
+            }
             width: 20%;
             position: relative;
             display: flex;
