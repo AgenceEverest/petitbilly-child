@@ -36,6 +36,12 @@
     #figure-logo-header {
         width: 100px;
         height: auto;
+        img {
+            position: absolute;
+            top: 50%;
+            background: white;
+            border-radius: 50%;
+        }
     }
 }
 
