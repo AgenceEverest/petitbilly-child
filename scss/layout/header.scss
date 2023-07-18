@@ -30,3 +30,12 @@
         position: relative;
     }
 }
+
+#menu-menu-principal, #menu-menu-mobile {
+    li {
+        a {
+            font-family: 'Cafeteria-Bold';
+            color: $clearGreenBilly;
+        }
+    }
+}
