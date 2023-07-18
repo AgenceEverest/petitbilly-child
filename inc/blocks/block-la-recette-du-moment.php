@@ -54,7 +54,7 @@ endif;
             endif;
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
-            echo " block block-recette-du-moment'"; ?>>
+            echo " block-recette-du-moment'"; ?>>
 
         <!-- titre avant les colonnes-->
         <?php $titre_avant_les_colonnes = get_sub_field('titre_avant_les_colonnes');
