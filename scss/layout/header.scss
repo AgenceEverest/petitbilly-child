@@ -41,6 +41,16 @@
             top: 50%;
             background: white;
             border-radius: 50%;
+            height: 112px;
+        }
+    }
+    #branding {
+        #content_header {
+            height: 100%;
+            a {
+               display: block;
+               height: 100%; 
+            }
         }
     }
 }
