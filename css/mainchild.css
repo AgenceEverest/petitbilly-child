@@ -603,6 +603,42 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   width: 50%;
   position: relative;
 }
+#header {
+  height: 80px;
+}
+#header #figure-logo-header {
+  width: 100px;
+  height: auto;
+}
+#header #figure-logo-header img {
+  position: absolute;
+  top: 20%;
+  background: white;
+  border-radius: 50%;
+  height: 112px;
+}
+#header #branding #content_header {
+  height: 100%;
+}
+#header #branding #content_header a {
+  display: block;
+  height: 100%;
+}
+#header #branding #content_header a #figure-logo-header {
+  height: 100%;
+  position: relative;
+}
+#menu-menu-principal li a, #menu-menu-mobile li a {
+  font-family: "Cafeteria-Bold";
+  color: #8CC751;
+  font-size: 20px;
+}
+#header_contact a {
+  font-size: 18px;
+}
+#header_contact svg {
+  height: 40px;
+}
 /* .cta_btn_lead, .cta_primaire, .cta_secondaire {
     position: relative;
     display: inline-block !important;

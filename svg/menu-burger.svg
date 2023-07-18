@@ -1,0 +1,24 @@
+<svg id="burger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.012" height="14.311" viewBox="0 0 21.012 14.311">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_693" data-name="Rectangle 693" width="20.784" height="3.227" fill="#106637"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_1587" data-name="Groupe 1587" transform="translate(-1262.041 -34)">
+    <g id="Groupe_1431" data-name="Groupe 1431" transform="translate(1262.297 33.998) rotate(3)">
+      <g id="Groupe_1430" data-name="Groupe 1430" transform="translate(0 0.002)" clip-path="url(#clip-path)">
+        <path id="Tracé_199" data-name="Tracé 199" d="M13.4.29C6.837.639,2.706.889,0,1.248v1.98c2.5-.349,6.578-.6,13.475-.973,3.259-.172,5.6-.29,7.31-.285V0c-1.821,0-4.2.123-7.386.29" transform="translate(0 0)" fill="#106637"/>
+      </g>
+    </g>
+    <g id="Groupe_1432" data-name="Groupe 1432" transform="translate(1262.21 38.998) rotate(3)">
+      <g id="Groupe_1430-2" data-name="Groupe 1430" transform="translate(0 0.002)" clip-path="url(#clip-path)">
+        <path id="Tracé_199-2" data-name="Tracé 199" d="M13.4.29C6.837.639,2.706.889,0,1.248v1.98c2.5-.349,6.578-.6,13.475-.973,3.259-.172,5.6-.29,7.31-.285V0c-1.821,0-4.2.123-7.386.29" transform="translate(0 0)" fill="#106637"/>
+      </g>
+    </g>
+    <g id="Groupe_1433" data-name="Groupe 1433" transform="translate(1262.211 43.998) rotate(3)">
+      <g id="Groupe_1430-3" data-name="Groupe 1430" transform="translate(0 0.002)" clip-path="url(#clip-path)">
+        <path id="Tracé_199-3" data-name="Tracé 199" d="M13.4.29C6.837.639,2.706.889,0,1.248v1.98c2.5-.349,6.578-.6,13.475-.973,3.259-.172,5.6-.29,7.31-.285V0c-1.821,0-4.2.123-7.386.29" transform="translate(0 0)" fill="#106637"/>
+      </g>
+    </g>
+  </g>
+</svg>
