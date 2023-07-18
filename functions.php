@@ -203,8 +203,7 @@ function block_callback_child($block)
 
 // filtre les blocs : seuls les blocs déclarés par cette fonction seront affichés 
 // Il faut rajouter le bloc de notre thème enfant dans cette liste 
-function my_plugin_allowed_block_types_child($allowed_block_types_all, $post)
-{
+function my_plugin_allowed_block_types_child($allowed_block_types_all, $post) {
     $allowed_block_types = array(
         'core/paragraph',
         'acf/block-separateur',
@@ -231,16 +230,13 @@ function my_plugin_allowed_block_types_child($allowed_block_types_all, $post)
 
 add_filter('allowed_block_types_all', 'my_plugin_allowed_block_types_child', 11, 3);
 
-
-function showSvg($url)
-{
+function showSvg($url) {
     $response = wp_remote_get($url);
     if (is_array($response) && !is_wp_error($response)) {
         $svg = $response['body']; // use the content
     }
     return $svg;
 }
-
 
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('main-child', get_stylesheet_directory_uri() . '/js/main-child.js');

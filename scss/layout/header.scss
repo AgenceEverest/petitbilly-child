@@ -2,3 +2,31 @@
     display: flex;
     justify-content: flex-start;
 }
+
+.entry_title_home {
+    display: flex;
+    padding-top: 0 !important;
+    .title_home_wrapper {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 15%;
+        h1 {
+            color: $redPetitBilly;
+            font-size: 100px;
+        }
+        p {
+            font-family: 'Cafeteria-Bold';
+            font-size: 35px;
+            line-height: 1.3;
+        }
+        .cta-container {
+            margin-top: 1rem;
+        }
+    }
+    .home_image_wrapper {
+        width: 50%;
+        position: relative;
+    }
+}
