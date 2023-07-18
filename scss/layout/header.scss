@@ -36,6 +36,15 @@
         a {
             font-family: 'Cafeteria-Bold';
             color: $clearGreenBilly;
+            font-size: 20px;
+        }
+    }
+    #header_contact {
+        a {
+            font-size: 18px;
+        }
+        svg {
+            height: 40px;
         }
     }
 }
