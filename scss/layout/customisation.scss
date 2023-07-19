@@ -5,3 +5,17 @@ Fichier de customisation du CSS
 figure {
     background-color: transparent !important;
 }
+
+.fond_vert_fonce {
+    background-color: $darkGreenBilly;
+    h1, h2, h3, h4, h5, h6, div, p, ul, li, a {
+        color: white;
+    }
+}
+
+.fond_vert_clair {
+    background-color: $clearGreenBilly;
+    h1, h2, h3, h4, h5, h6, div, p, ul, li, a {
+        color: white;
+    }
+}
