@@ -206,6 +206,8 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 .block-recette-du-moment .content_width {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 760px) {
   .block-recette-du-moment .col_flexible {
@@ -241,7 +243,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 .block-recette-du-moment .green-edge {
   z-index: 1;
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: flex;
 }
 @media (max-width: 760px) {
@@ -381,7 +383,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   }
 }
 .block .green-edge, .block .green-edge-desktop-tall {
-  z-index: 1;
+  z-index: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -572,6 +574,39 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   height: auto;
   width: auto;
 }
+.postes-recherches {
+  display: flex;
+  justify-content: center;
+}
+.postes-recherches .poste-recherche {
+  padding: 4% 2%;
+  width: 31%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+}
+@media (max-width: 768px) {
+  .postes-recherches .poste-recherche {
+    width: 48%;
+  }
+}
+.postes-recherches .poste-recherche:nth-child(even) {
+  background: white;
+}
+.postes-recherches .poste-recherche:nth-child(even) h3 {
+  color: #00693E;
+}
+.postes-recherches .poste-recherche:nth-child(even) .description-du-poste p {
+  color: black;
+}
+.postes-recherches .poste-recherche:nth-child(odd) {
+  background-color: #8CC751;
+}
+.postes-recherches .poste-recherche:nth-child(odd) h3 {
+  color: white;
+}
+.postes-recherches .poste-recherche:nth-child(odd) .description-du-poste p {
+  color: white;
+}
 .cta-header-container {
   display: flex;
   justify-content: flex-start;
@@ -630,7 +665,8 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 #header #content_nav_header #search_trigger {
   height: 80px;
-  width: 30px;
+  width: 40px;
+  margin-right: 1rem;
 }
 #header #content_nav_header #search_trigger svg {
   width: 100%;
@@ -671,6 +707,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 } */
 .cta-container {
   display: flex;
+  padding-top: 1rem;
 }
 .cta-container.cta_align_left {
   justify-content: flex-start;
@@ -692,6 +729,9 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   color: white;
   font-size: 1.3rem;
   text-transform: uppercase;
+}
+.col_flexible_2 .col_flexible_item:nth-child(even) .cta-container {
+  padding-left: 2rem;
 }
 .cta-header {
   display: flex;
@@ -721,6 +761,18 @@ Fichier de customisation du CSS
 */
 figure {
   background-color: transparent !important;
+}
+.fond_vert_fonce {
+  background-color: #00693E;
+}
+.fond_vert_fonce h1, .fond_vert_fonce h2, .fond_vert_fonce h3, .fond_vert_fonce h4, .fond_vert_fonce h5, .fond_vert_fonce h6, .fond_vert_fonce div, .fond_vert_fonce p, .fond_vert_fonce ul, .fond_vert_fonce li, .fond_vert_fonce a {
+  color: white;
+}
+.fond_vert_clair {
+  background-color: #8CC751;
+}
+.fond_vert_clair h1, .fond_vert_clair h2, .fond_vert_clair h3, .fond_vert_clair h4, .fond_vert_clair h5, .fond_vert_clair h6, .fond_vert_clair div, .fond_vert_clair p, .fond_vert_clair ul, .fond_vert_clair li, .fond_vert_clair a {
+  color: white;
 }
 /*# sourceMappingURL=D:\wamp64\www\petitbilly/wp-content/themes/nanosite-proefficace-child/css/mainchild.css.map */
 /*# sourceMappingURL=mainchild.css.map */

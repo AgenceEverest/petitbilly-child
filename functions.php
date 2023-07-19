@@ -189,6 +189,16 @@ function my_acf_init_child()
             'icon'                => 'editor-table',
             'mode'                => 'edit',
         ));
+
+        acf_register_block(array(
+            'name'                => 'block-profil-type-recherche',
+            'title'                => __('Bloc - Profil type recherché'),
+            'description'        => __('Bloc - Profil type recherché'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
     }
 }
 function block_callback_child($block)
@@ -223,8 +233,8 @@ function my_plugin_allowed_block_types_child($allowed_block_types_all, $post) {
         'acf/block-equipes-metiers',
         'acf/block-dernieres-recettes',
         'acf/block-petit-billy-pour-des-fromages-uniques',
+        'acf/block-profil-type-recherche',
     );
-
     return $allowed_block_types;
 }
 
