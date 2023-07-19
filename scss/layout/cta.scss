@@ -45,6 +45,11 @@
     }
 }
 
+.col_flexible_2 .col_flexible_item:nth-child(even) {
+    .cta-container {
+        padding-left: 2rem;
+    }
+}
 
 .cta-header {
     display: flex;
