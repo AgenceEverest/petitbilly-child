@@ -98,7 +98,7 @@ export default {
     <div class="buttons-extrait">
       <p v-if="cpt.link" class="cta_center">
         <a target="_blank" :href="cpt.link"
-          >{{ texte_en_savoir_plus }}
+          ><span>{{ texte_en_savoir_plus }}</span>
           <svg
             preserveAspectRatio="none"
             id="fond-cta"
