@@ -27,6 +27,7 @@ get_header(); ?>
 					<?php endif; ?>
 				</div>
 				<div class="home_image_wrapper">
+					<?= showSvg(get_stylesheet_directory_uri() . '/svg/home-svg-left.svg') ?>
 					<?php if (get_field('image_dentete_onepage')) : ?>
 						<?php
 						$image = get_field('image_dentete_onepage');

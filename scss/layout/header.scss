@@ -31,13 +31,34 @@
     }
 
     .home_image_wrapper {
-        width: 50%;
         position: relative;
+        width: 50%;
+        #home-svg-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
     }
+
 }
 
 #header {
     height: 80px;
+
+    #close-burger {
+        display: none;
+    }
+
+    #search_icon_close {
+        width: 25px !important;
+    }
 
     #figure-logo-header {
         width: 100px;
@@ -73,6 +94,7 @@
             height: 80px;
             width: 40px;
             margin-right: 1rem;
+
             svg {
                 width: 100%;
                 height: 100%;

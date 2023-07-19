@@ -58,14 +58,15 @@
             <circle class="search_icon_cls" cx="33.97" cy="34.97" r="28.47" />
             <line class="search_icon_cls" x1="74" y1="75" x2="53.9" y2="54.9" />
         </svg> -->
-        <svg id="search_icon_close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+        <?= showSvg(get_stylesheet_directory_uri() . '/svg/cross.svg') ?>
+      <!--   <svg id="search_icon_close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
             <line class="search_icon_cls" x1="74" y1="75" x2="5.5" y2="6.5" />
             <line class="search_icon_cls" x1="5.5" y1="75" x2="74" y2="6.5" />
-        </svg>
+        </svg> -->
     </div>
     <nav tabindex="0" id="menu_mobile_trigger" <?php if (!$laisser_le_menu_mobile_disponible_sur_la_version_desktop) : ?> class="menu_mobile_trigger_noburger" <?php endif; ?><?php if ($laisser_le_menu_mobile_disponible_sur_la_version_desktop) : ?> class="content_hide_menu_search" <?php endif; ?>>
         <?= showSvg(get_stylesheet_directory_uri() . '/svg/menu-burger.svg') ?>
-
+        <?= showSvg(get_stylesheet_directory_uri() . '/svg/close-burger.svg') ?>
         <!--         <div id="burger">
             <span></span>
             <span></span>

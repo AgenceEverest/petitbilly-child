@@ -36,8 +36,7 @@ endif;
             endif;
             if ($marge_en_bas_du_bloc) :
                 echo ' padding_section_bottom';
-            endif; ?>
-">
+            endif; ?>">
     <?php if ($vague_au_dessus_du_bloc) : ?>
         <?= showSvg(get_stylesheet_directory_uri() . '/svg/marge_haute.svg') ?>
     <?php endif; ?>
@@ -56,7 +55,6 @@ endif;
             endif;
             echo " block block-profil-type-recherche'"; ?>>
             <div class="half-background">
-
             </div>
         <?php if ($liseret_vert_autour_du_bloc) : ?>
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge-desktop-tall') ?>

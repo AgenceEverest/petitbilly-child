@@ -1,0 +1,37 @@
+#menu-menu-footer-2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 10rem;
+    li {
+        width: 50%;
+    }
+}
+.aside_prefooter_col {
+    h3 {
+        color: white !important;
+        font-size: 1.5rem;
+    }
+}
+.aside_prefooter_col_1{
+    width: calc(20% - 2rem);}
+.aside_prefooter_col_2{
+    width: calc(30% - 2rem);
+    padding-top: 2rem;
+}
+
+#aside_prefooter {
+    background-color: $darkGreenBilly;
+}
+
+#footer {
+    background-color: white;
+    #footer_wrapper {
+        color: black !important;
+        #footer_content {
+            span {
+                color: black !important;
+            }
+        }
+    }
+}

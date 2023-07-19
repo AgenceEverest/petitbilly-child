@@ -251,3 +251,15 @@ function showSvg($url) {
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('main-child', get_stylesheet_directory_uri() . '/js/main-child.js');
 });
+
+// functions.php du thème enfant
+
+function mon_theme_enfant_register_menus() {
+    register_nav_menus(array(
+        'menu-footer-2' => 'Menu Footer 2',
+        'menu-footer-gauche' => 'Menu Footer Gauche',
+        'menu-footer-droite' => 'Menu Footer Droite',
+    ));
+}
+add_action('after_setup_theme', 'mon_theme_enfant_register_menus');
+

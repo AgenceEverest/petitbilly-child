@@ -574,25 +574,25 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   height: auto;
   width: auto;
 }
-.block-profil-type-recherche {
-  position: relative;
-}
 .block-profil-type-recherche .half-background {
   background-color: #00693E;
   position: absolute;
   width: 100%;
-  height: 60%;
+  height: 75%;
   top: 0;
+  z-index: 0;
 }
 .block-profil-type-recherche .postes-recherches {
+  z-index: 1;
+  position: relative;
   display: flex;
   justify-content: center;
 }
 .block-profil-type-recherche .postes-recherches .poste-recherche {
   padding: 5% 2%;
-  width: 31%;
-  margin-right: 1%;
-  margin-bottom: 1%;
+  width: 28%;
+  margin-right: 2%;
+  margin-bottom: 2%;
 }
 @media (max-width: 768px) {
   .block-profil-type-recherche .postes-recherches .poste-recherche {
@@ -618,6 +618,38 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 .block-profil-type-recherche .postes-recherches .poste-recherche:nth-child(odd) .description-du-poste p {
   color: white;
+}
+#menu-menu-footer-2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 10rem;
+}
+#menu-menu-footer-2 li {
+  width: 50%;
+}
+.aside_prefooter_col h3 {
+  color: white !important;
+  font-size: 1.5rem;
+}
+.aside_prefooter_col_1 {
+  width: calc(20% - 2rem);
+}
+.aside_prefooter_col_2 {
+  width: calc(30% - 2rem);
+  padding-top: 2rem;
+}
+#aside_prefooter {
+  background-color: #00693E;
+}
+#footer {
+  background-color: white;
+}
+#footer #footer_wrapper {
+  color: black !important;
+}
+#footer #footer_wrapper #footer_content span {
+  color: black !important;
 }
 .cta-header-container {
   display: flex;
@@ -647,11 +679,27 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   margin-top: 1rem;
 }
 .entry_title_home .home_image_wrapper {
-  width: 50%;
   position: relative;
+  width: 50%;
+}
+.entry_title_home .home_image_wrapper #home-svg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.entry_title_home .home_image_wrapper img {
+  width: 100%;
+  height: 100%;
 }
 #header {
   height: 80px;
+}
+#header #close-burger {
+  display: none;
+}
+#header #search_icon_close {
+  width: 25px !important;
 }
 #header #figure-logo-header {
   width: 100px;

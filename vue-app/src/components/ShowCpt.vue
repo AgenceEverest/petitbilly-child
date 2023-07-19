@@ -71,6 +71,9 @@ export default {
       }
 
       try {
+        console.log(
+          `${this.protocol}://${this.website}/wp-json/wp/v2/${cptNameForRequest}?per_page=100&_embed`
+        );
         this.cpts = await getApiData(
           `${this.protocol}://${this.website}/wp-json/wp/v2/${cptNameForRequest}?per_page=100&_embed`
         );

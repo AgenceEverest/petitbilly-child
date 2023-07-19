@@ -36,6 +36,13 @@ export default {
 
 <template>
   <div>
+    <div class="img-container">
+      <template v-if="cpt.hasOwnProperty('_embedded')">
+        <template v-if="cpt._embedded['wp:featuredmedia']">
+          <img :src="cpt._embedded['wp:featuredmedia'][0].source_url" alt="" />
+        </template>
+      </template>
+    </div>
     <div class="terms-container">
       <template v-if="cpt.acf.nouvelle_formation">
         <p v-if="cpt.acf.nouvelle_formation" class="nouvelle-formation">

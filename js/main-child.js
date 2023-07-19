@@ -27,9 +27,25 @@ function adaptGreenEdgeAccordingHeight() {
     })
 }
 
+function openCloseMenuBurger() {
+    const burgerIcon = document.querySelector('#burger');
+    const closeBurger = document.querySelector('#close-burger');
+    if (burgerIcon && closeBurger) {
+        burgerIcon.addEventListener('click', () => {
+            burgerIcon.style.display = 'none';
+            closeBurger.style.display = 'flex';
+        })
+        closeBurger.addEventListener('click', () => {
+            closeBurger.style.display = 'none';
+            burgerIcon.style.display = 'flex';
+        })
+    }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
     resizeButtonsBackgroundAccordingToLink()
     adaptGreenEdgeAccordingHeight()
+    openCloseMenuBurger()
 })
 
 
