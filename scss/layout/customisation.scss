@@ -7,20 +7,43 @@ figure {
 }
 
 
-.fond_blanc, #header_back {
+.fond_blanc,
+#header_back {
     background-color: $fondBlancCasse;
 }
 
 .fond_vert_fonce {
     background-color: $darkGreenBilly;
-    h1, h2, h3, h4, h5, h6, div, p, ul, li, a {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    div,
+    p,
+    ul,
+    li,
+    a {
         color: white;
     }
 }
 
 .fond_vert_clair {
     background-color: $clearGreenBilly;
-    h1, h2, h3, h4, h5, h6, div, p, ul, li, a {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    div,
+    p,
+    ul,
+    li,
+    a {
         color: white;
     }
 }
@@ -28,21 +51,24 @@ figure {
 
 .fond_vert_fonce {
     position: relative;
+
     .vague-haute {
         position: absolute;
         top: -20px;
         width: 130%;
+        left: -15%;
         display: flex;
         justify-content: center;
-       
+
     }
+
     .vague-basse {
         position: absolute;
         bottom: -20px;
         width: 130%;
+        left: -15%;
         display: flex;
         justify-content: center;
-      
+
     }
 }
-
