@@ -6,6 +6,11 @@ figure {
     background-color: transparent !important;
 }
 
+
+.fond_blanc {
+    background-color: $fondBlancCasse;
+}
+
 .fond_vert_fonce {
     background-color: $darkGreenBilly;
     h1, h2, h3, h4, h5, h6, div, p, ul, li, a {
