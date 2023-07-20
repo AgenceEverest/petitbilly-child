@@ -24,10 +24,10 @@
                     }
                     .term-bg {
                         width: 10rem;
-                        &:nth-child(1) {
+                        &:nth-child(even) {
                             fill: $darkGreenBilly;
                         }
-                        &:nth-child(2) {
+                        &:nth-child(odd) {
                             fill: $clearGreenBilly;
                         }
                     }
