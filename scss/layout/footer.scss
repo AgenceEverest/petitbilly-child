@@ -3,19 +3,24 @@
     flex-direction: column;
     flex-wrap: wrap;
     height: 6rem;
+
     li {
         width: 50%;
     }
 }
+
 .aside_prefooter_col {
     h3 {
         color: white !important;
         font-size: 1.5rem;
     }
 }
-.aside_prefooter_col_1{
-    width: calc(20% - 2rem);}
-.aside_prefooter_col_2{
+
+.aside_prefooter_col_1 {
+    width: calc(20% - 2rem);
+}
+
+.aside_prefooter_col_2 {
     width: calc(30% - 2rem);
     padding-top: 2rem;
 }
@@ -26,11 +31,14 @@
 
 #footer {
     background-color: white;
+
     #footer_wrapper {
         color: black !important;
+
         #footer_content {
             display: flex;
             justify-content: space-between;
+
             span {
                 color: black !important;
             }
@@ -40,4 +48,15 @@
 
 .lien-site-eco-concu {
     text-decoration: underline;
+}
+#footer_certification_wrapper {
+    justify-content: right;
+    .footer_certification {
+        height: 8rem;
+    }
+    
+}
+
+.aside_prefooter_col p.coordonnees_p_i svg {
+    color: white;
 }

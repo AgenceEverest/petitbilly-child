@@ -282,15 +282,11 @@ function acf_load_valeurs_nutritionelles($field)
     $field['choices'] = array();
 
     $valeurs = get_field('valeurs_nutritionnelles', 'option');
-    if (isset($valeurs)) {
         foreach ($valeurs as $valeur) :
-            if (isset($valeur)) :
                 foreach ($valeur as $value) :
                     $field['choices'][$value] = $value;
                 endforeach;
-            endif;
         endforeach;
-    }
     return $field;
 }
 
