@@ -1,23 +1,63 @@
 .block-recette {
-.recettes-caracteristiques-wrapper{
-    display: flex;
-    .col-gauche {
+    .recettes-caracteristiques-wrapper {
         display: flex;
         flex-direction: column;
-        width: 33%;
-    }
-    .col-droite {
-        width: 66%;
-        h3{
-            font-family: 'Cafeteria-Bold';
-        }
-        .liste-ingredients{
-            ul, li, a {
-                font-family: 'Cafeteria-Regular';
+        .part-1-block {
+            display: flex;
+            .col-gauche {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
 
+                .caracteristiques-recettes {
+                    padding: 10%;
+                    background-color: rgb(245, 245, 245);
+                    border-radius: 20px 0 0 20px;
+                    .svg-recette {
+                        margin-right: 0.5rem;
+                    }
+                    p {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 0.5rem;
+                    }
+                }
             }
-        
+
+            .col-droite {
+                width: 50%;
+                padding: 5%;
+                background-color: $darkGreenBilly;
+                border-radius: 0 20px 20px 0;
+
+                h3 {
+                    font-family: 'Cafeteria-Bold';
+                    color: white;
+                    font-size: 2rem;
+                }
+
+                .liste-ingredients {
+
+                    ul,
+                    li,
+                    a {
+                        font-family: 'Cafeteria-Regular';
+                        color: white;
+
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+
+                    li {
+                        list-style-type: disc;
+                        width: 50%;
+                        font-size: 20px;
+                    }
+                }
+            }
         }
     }
-}
 }

@@ -25,12 +25,12 @@
                 position: absolute;
                 top: 0;
                 right: 0;
-
+                padding-top: 1rem;
                 .term-wrapper {
                     position: relative;
                     display: flex;
                     justify-content: flex-end;
-
+                    padding-bottom: 0.6rem;
                     .term {
                         position: absolute;
                         left: 10%;
@@ -121,7 +121,15 @@
                     font-size: 19px;
                 }
             }
-
+            button {
+                &.active {
+                    path {
+                        :nth-child(1) {
+                            fill: $darkGreenBilly;
+                        }
+                    }
+                }
+            }
             .term-filter-bg {
                 fill: $darkGreenBilly;
             }
@@ -145,7 +153,15 @@
                     font-size: 19px;
                 }
             }
-
+            button {
+                &.active {
+                    path {
+                        :nth-child(1) {
+                            fill: $clearGreenBilly;
+                        }
+                    }
+                }
+            }
             .term-filter-bg {
                 fill: $clearGreenBilly;
             }

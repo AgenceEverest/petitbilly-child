@@ -767,20 +767,52 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 .block-recette .recettes-caracteristiques-wrapper {
   display: flex;
+  flex-direction: column;
 }
-.block-recette .recettes-caracteristiques-wrapper .col-gauche {
+.block-recette .recettes-caracteristiques-wrapper .part-1-block {
+  display: flex;
+}
+.block-recette .recettes-caracteristiques-wrapper .part-1-block .col-gauche {
   display: flex;
   flex-direction: column;
-  width: 33%;
+  width: 50%;
 }
-.block-recette .recettes-caracteristiques-wrapper .col-droite {
-  width: 66%;
+.block-recette .recettes-caracteristiques-wrapper .part-1-block .col-gauche .caracteristiques-recettes {
+  padding: 10%;
+  background-color: whitesmoke;
+  border-radius: 20px 0 0 20px;
 }
-.block-recette .recettes-caracteristiques-wrapper .col-droite h3 {
+.block-recette .recettes-caracteristiques-wrapper .part-1-block .col-gauche .caracteristiques-recettes .svg-recette {
+  margin-right: 0.5rem;
+}
+.block-recette .recettes-caracteristiques-wrapper .part-1-block .col-gauche .caracteristiques-recettes p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite {
+  width: 50%;
+  padding: 5%;
+  background-color: #00693E;
+  border-radius: 0 20px 20px 0;
+}
+.block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite h3 {
   font-family: "Cafeteria-Bold";
+  color: white;
+  font-size: 2rem;
 }
-.block-recette .recettes-caracteristiques-wrapper .col-droite .liste-ingredients ul, .block-recette .recettes-caracteristiques-wrapper .col-droite .liste-ingredients li, .block-recette .recettes-caracteristiques-wrapper .col-droite .liste-ingredients a {
+.block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite .liste-ingredients ul, .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite .liste-ingredients li, .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite .liste-ingredients a {
   font-family: "Cafeteria-Regular";
+  color: white;
+}
+.block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite .liste-ingredients ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite .liste-ingredients li {
+  list-style-type: disc;
+  width: 50%;
+  font-size: 20px;
 }
 #menu-menu-footer-2 {
   display: flex;

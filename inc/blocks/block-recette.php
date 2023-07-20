@@ -72,6 +72,7 @@ endif;
         <div class="content_width recettes-caracteristiques-wrapper">
             <?php $largeur_de_la_colonne_contenu = get_sub_field('largeur_de_la_colonne_contenu'); ?>
             <!-- Les 2 colonnes -->
+            <div class="part-1-block">
             <div class="col-gauche">
                 <div class="caracteristiques-recettes">
                     <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/difficulte-recette.svg') ?>
@@ -83,7 +84,6 @@ endif;
                     <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/temps-cuisson.svg') ?></span>
                         <?php echo $minutes_de_cuisson . ' '; ?><?php echo $texte_minutes_de_cuisson; ?></p>
                 </div>
-                <?php get_template_part('inc/content-builder-inc/cta-flex') ?>
             </div>
             <div class="col-droite">
                 <h3><?= $liste_des_ingredients_titre ?></h3>
@@ -91,6 +91,8 @@ endif;
                     <?= $liste_des_ingredients_wysiwyg ?>
                 </div>
             </div>
+            </div>
+            <?php get_template_part('inc/content-builder-inc/cta-flex') ?>
         </div>
     </div>
     <?php if ($vague_au_dessous_du_bloc) : ?>
