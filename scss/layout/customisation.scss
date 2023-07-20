@@ -30,6 +30,13 @@ figure {
     position: relative;
     .vague-haute {
         position: absolute;
+        top: -20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        svg {
+            width: 120%;
+        }
     }
 }
 
