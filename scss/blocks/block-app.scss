@@ -79,79 +79,107 @@
         display: flex;
         flex-direction: column;
 
-        .buttons {
-            display: flex;
+        .text-filter-container {
+            position: relative;
+            margin-bottom: 1rem;
+            .svg-loop-searchbox {
+                position: absolute;
+                top: 25%;
+                left: 2%;
+            }
+        }
+    }
 
-            &:nth-child(odd) {
-                .button-all-filters {
-                    svg {
-                        fill: $darkGreenBilly;
-                    }
+    .filter-input {
+        border: none;
+        z-index: 1;
+        position: absolute;
+        left: 6%;
+        top: 0;
+        height: 100%;
+        width: 35%;
+        background: transparent;
 
-                    span {
-                        color: white !important;
-                        font-size: 19px;
-                    }
-                }
+        &:focus-visible {
+            border: none;
+        }
 
-                .term-filter-bg {
+    }
+
+    .buttons {
+        display: flex;
+
+        &:nth-child(odd) {
+            .button-all-filters {
+                svg {
                     fill: $darkGreenBilly;
                 }
 
-                .button {
-                    span {
-                        color: $darkGreenBilly;
-                        font-size: 19px;
-                    }
+                span {
+                    color: white !important;
+                    font-size: 19px;
                 }
             }
 
-            &:nth-child(even) {
-                .button-all-filters {
-                    svg {
-                        fill: $clearGreenBilly;
-                    }
-                    span {
-                        color: white !important;
-                        font-size: 19px;
-                    }
-                }
-
-                .term-filter-bg {
-                    fill: $clearGreenBilly;
-                }
-
-                .button {
-                    span {
-                        color: $clearGreenBilly;
-                        font-size: 19px;
-                    }
-                }
+            .term-filter-bg {
+                fill: $darkGreenBilly;
             }
 
             .button {
-                margin-right: 1rem;
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                span {
+                    color: $darkGreenBilly;
+                    font-size: 19px;
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            .button-all-filters {
+                svg {
+                    fill: $clearGreenBilly;
+                }
 
                 span {
-                    position: absolute;
-                    font-family: 'Cafeteria-Bold' !important;
-                }
-
-                &:hover {
-                    cursor: pointer;
-                }
-
-                &.active {
-                    color: white;
+                    color: white !important;
+                    font-size: 19px;
                 }
             }
 
-            margin-bottom: 1rem;
+            .term-filter-bg {
+                fill: $clearGreenBilly;
+            }
+
+            .button {
+                span {
+                    color: $clearGreenBilly;
+                    font-size: 19px;
+                }
+            }
         }
+
+        .button {
+            margin-right: 1rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                position: absolute;
+                font-family: 'Cafeteria-Bold' !important;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.active {
+                color: white;
+            }
+        }
+
+        margin-bottom: 1rem;
     }
+}
 
 }
