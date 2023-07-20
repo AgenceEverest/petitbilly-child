@@ -129,19 +129,18 @@
             }
 
             .button {
+                &.active {
+                    span {
+                        color: white;
+                    }
+    
+                    .bg-button-filter {
+                        fill: $darkGreenBilly;
+                    }
+                }
                 span {
                     color: $darkGreenBilly;
                     font-size: 19px;
-                }
-            }
-
-            .button.active {
-                span {
-                    color: white;
-                }
-
-                .bg-button-filter {
-                    fill: $darkGreenBilly;
                 }
             }
         }
@@ -173,20 +172,21 @@
             }
 
             .button {
+                &.active {
+                    span {
+                        color: white;
+                    }
+    
+                    .bg-button-filter {
+                        fill: $clearGreenBilly;
+                    }
+                }
                 span {
                     color: $clearGreenBilly;
                     font-size: 19px;
                 }
             }
-            .button.active {
-                span {
-                    color: white;
-                }
-
-                .bg-button-filter {
-                    fill: $darkGreenBilly;
-                }
-            }
+           
         }
 
         .button {
