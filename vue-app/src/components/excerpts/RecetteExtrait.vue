@@ -63,6 +63,7 @@ export default {
               {{ term.name }}
             </span>
             <svg
+              preserveAspectRatio="none"
               class="term-bg"
               xmlns="http://www.w3.org/2000/svg"
               width="88.686"
