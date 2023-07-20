@@ -24,7 +24,10 @@
 
                     .term {
                         position: absolute;
-                        right: 0;
+                        left: 10%;
+                        top: 10%;
+                        color: white;
+                        font-family: 'Cafeteria-Bold' !important;
                     }
 
                     .term-bg {
@@ -38,6 +41,7 @@
                             fill: $darkGreenBilly;
                         }
                     }
+
                     &:nth-child(odd) {
                         .term-bg {
                             fill: $clearGreenBilly;
