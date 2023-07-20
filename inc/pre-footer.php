@@ -76,7 +76,7 @@
 						<div id="footer_certification_wrapper">
 							<?php while (have_rows('logos_certifications', 'option')) : the_row(); ?>
 								<?php $logo_de_la_certification = get_sub_field('logo_de_la_certification', 'option');
-								$size_logo_de_la_certification = 'thumbnail'; ?>
+								$size_logo_de_la_certification = 'medium'; ?>
 								<?php if (have_rows('informations_certification', 'option')) : ?>
 									<?php while (have_rows('informations_certification', 'option')) : the_row();
 										$nom_de_la_certification = get_sub_field('nom_de_la_certification', 'option');
