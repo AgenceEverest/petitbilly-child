@@ -11,7 +11,14 @@
             -webkit-box-shadow: 0px 6px 23px 8px rgba(0, 0, 0, 0.27);
             box-shadow: 0px 6px 23px 8px rgba(0, 0, 0, 0.27);
             position: relative;
-
+            h3 {
+                width: 100;
+                display: flex;
+                justify-content: center;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                color: $darkGreenBilly;
+            }
             .terms-container {
                 position: absolute;
                 top: 0;
@@ -69,10 +76,19 @@
     .filters {
         display: flex;
         flex-direction: column;
-
         .buttons {
             display: flex;
 
+            &:nth-child(even) {
+                .term-filter-bg {
+                    fill: $darkGreenBilly;
+                }
+            }
+            &:nth-child(odd) {
+                .term-filter-bg {
+                    fill: $clearGreenBilly;
+                }
+            }
             .button {
                 margin-right: 1rem;
 
