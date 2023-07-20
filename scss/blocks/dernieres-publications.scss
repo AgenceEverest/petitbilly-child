@@ -1,0 +1,79 @@
+#aside_actualites {
+    #aside_actualites_wrapper {
+        margin-top: 2rem;
+        .article_extrait {
+            background-color: white;
+        }
+    }
+    #aside_actualites_title {
+        font-size: 38px;
+        color: $darkGreenBilly;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .article_extrait_wrapper_text {
+        position: relative;
+        .article_extrait_post_title {
+            a {
+                color: $darkGreenBilly;
+                font-size: 30px;
+                font-family: 'Cafeteria-Bold' !important;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+        }
+        .desc {
+            font-size: 15px;
+            line-height: 1.5;       
+         }
+      
+        .entry_title_date {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 30%;
+            top: -20px;
+
+            .date-extrait {
+                position: absolute;
+                span {
+                    color: white;
+                    font-weight: bold;
+                    font-family: 'Cafeteria-Regular' !important;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .read-more {
+        font-size: 14px;
+        font-family: 'Roboto';
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem;
+        font-weight: bold;
+        color: $darkGreenBilly;
+        &::after {
+            content: '>';
+            padding-left: 0.5rem
+        }
+    }
+    .lire-les-publications {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        a {
+            position: absolute;
+            color: white;
+            font-family: 'Cafeteria-Bold' !important;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+    }
+}

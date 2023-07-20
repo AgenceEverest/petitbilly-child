@@ -78,11 +78,13 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   position: absolute;
   top: 0;
   right: 0;
+  padding-top: 1rem;
 }
 #block-app .results .cpt-extrait .terms-container .term-wrapper {
   position: relative;
   display: flex;
   justify-content: flex-end;
+  padding-bottom: 0.6rem;
 }
 #block-app .results .cpt-extrait .terms-container .term-wrapper .term {
   position: absolute;
@@ -152,6 +154,12 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 #block-app .buttons:nth-child(odd) .term-filter-bg {
   fill: #00693E;
 }
+#block-app .buttons:nth-child(odd) .button.active span {
+  color: white;
+}
+#block-app .buttons:nth-child(odd) .button.active .bg-button-filter {
+  fill: #00693E;
+}
 #block-app .buttons:nth-child(odd) .button span {
   color: #00693E;
   font-size: 19px;
@@ -163,7 +171,16 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   color: white !important;
   font-size: 19px;
 }
+#block-app .buttons:nth-child(even) button.active path :nth-child(1) {
+  fill: #8CC751;
+}
 #block-app .buttons:nth-child(even) .term-filter-bg {
+  fill: #8CC751;
+}
+#block-app .buttons:nth-child(even) .button.active span {
+  color: white;
+}
+#block-app .buttons:nth-child(even) .button.active .bg-button-filter {
   fill: #8CC751;
 }
 #block-app .buttons:nth-child(even) .button span {
@@ -720,6 +737,9 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   height: 100%;
   object-fit: cover;
 }
+#block-app .results .cpt-extrait .buttons-extrait {
+  padding-bottom: 1rem;
+}
 #block-app .results .cpt-extrait .buttons-extrait .cta_center {
   display: flex;
   justify-content: center;
@@ -814,6 +834,78 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   width: 50%;
   font-size: 20px;
 }
+#aside_actualites #aside_actualites_wrapper {
+  margin-top: 2rem;
+}
+#aside_actualites #aside_actualites_wrapper .article_extrait {
+  background-color: white;
+}
+#aside_actualites #aside_actualites_title {
+  font-size: 38px;
+  color: #00693E;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#aside_actualites .article_extrait_wrapper_text {
+  position: relative;
+}
+#aside_actualites .article_extrait_wrapper_text .article_extrait_post_title a {
+  color: #00693E;
+  font-size: 30px;
+  font-family: "Cafeteria-Bold" !important;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+#aside_actualites .article_extrait_wrapper_text .desc {
+  font-size: 15px;
+  line-height: 1.5;
+}
+#aside_actualites .article_extrait_wrapper_text .entry_title_date {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 30%;
+  top: -20px;
+}
+#aside_actualites .article_extrait_wrapper_text .entry_title_date .date-extrait {
+  position: absolute;
+}
+#aside_actualites .article_extrait_wrapper_text .entry_title_date .date-extrait span {
+  color: white;
+  font-weight: bold;
+  font-family: "Cafeteria-Regular" !important;
+  font-size: 15px;
+}
+#aside_actualites .read-more {
+  font-size: 14px;
+  font-family: "Roboto";
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  font-weight: bold;
+  color: #00693E;
+}
+#aside_actualites .read-more::after {
+  content: ">";
+  padding-left: 0.5rem;
+}
+#aside_actualites .lire-les-publications {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+#aside_actualites .lire-les-publications a {
+  position: absolute;
+  color: white;
+  font-family: "Cafeteria-Bold" !important;
+  font-size: 20px;
+  text-transform: uppercase;
+}
 #menu-menu-footer-2 {
   display: flex;
   flex-direction: column;
@@ -853,6 +945,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 .entry_title_home {
   display: flex;
   padding-top: 0 !important;
+  background-color: whitesmoke;
 }
 .entry_title_home .title_home_wrapper {
   width: 50%;
@@ -860,6 +953,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   justify-content: center;
   flex-direction: column;
   padding-left: 15%;
+  background-color: whitesmoke;
 }
 .entry_title_home .title_home_wrapper h1 {
   color: #c5191b;
@@ -937,6 +1031,19 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 #header_contact svg {
   height: 40px;
+}
+#header_contact .cta-container {
+  padding-top: 0 !important;
+}
+#search_box {
+  background-color: white;
+}
+#search_box #search_icon {
+  width: 80px;
+  height: 50px;
+}
+#burger_rs_accroche {
+  font-family: "Cafeteria-Bold";
 }
 /* .cta_btn_lead, .cta_primaire, .cta_secondaire {
     position: relative;
@@ -1016,6 +1123,9 @@ Fichier de customisation du CSS
 */
 figure {
   background-color: transparent !important;
+}
+.fond_blanc, #header_back {
+  background-color: whitesmoke;
 }
 .fond_vert_fonce {
   background-color: #00693E;
