@@ -1,0 +1,23 @@
+.block-recette {
+.recettes-caracteristiques-wrapper{
+    display: flex;
+    .col-gauche {
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+    }
+    .col-droite {
+        width: 66%;
+        h3{
+            font-family: 'Cafeteria-Bold';
+        }
+        .liste-ingredients{
+            ul, li, a {
+                font-family: 'Cafeteria-Regular';
+
+            }
+        
+        }
+    }
+}
+}

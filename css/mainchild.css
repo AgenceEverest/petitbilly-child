@@ -64,6 +64,42 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   width: 32%;
   -webkit-box-shadow: 0px 6px 23px 8px rgba(0, 0, 0, 0.27);
   box-shadow: 0px 6px 23px 8px rgba(0, 0, 0, 0.27);
+  position: relative;
+}
+#block-app .results .cpt-extrait h3 {
+  width: 100;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: #00693E;
+}
+#block-app .results .cpt-extrait .terms-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#block-app .results .cpt-extrait .terms-container .term-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+#block-app .results .cpt-extrait .terms-container .term-wrapper .term {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  color: white;
+  font-family: "Cafeteria-Bold" !important;
+  font-size: 19px;
+}
+#block-app .results .cpt-extrait .terms-container .term-wrapper .term-bg {
+  width: 8rem;
+}
+#block-app .results .cpt-extrait .terms-container .term-wrapper:nth-child(even) .term-bg {
+  fill: #00693E;
+}
+#block-app .results .cpt-extrait .terms-container .term-wrapper:nth-child(odd) .term-bg {
+  fill: #8CC751;
 }
 @media (max-width: 1280px) {
   #block-app .results .cpt-extrait {
@@ -80,19 +116,76 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   display: flex;
   flex-direction: column;
 }
-#block-app .filters .buttons {
+#block-app .filters .text-filter-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+#block-app .filters .text-filter-container .svg-loop-searchbox {
+  position: absolute;
+  top: 25%;
+  left: 2%;
+}
+#block-app .filter-input {
+  border: none;
+  z-index: 1;
+  position: absolute;
+  left: 6%;
+  top: 0;
+  height: 100%;
+  width: 35%;
+  background: transparent;
+}
+#block-app .filter-input:focus-visible {
+  outline: none;
+}
+#block-app .buttons {
   display: flex;
   margin-bottom: 1rem;
 }
-#block-app .filters .buttons .button {
-  margin-right: 1rem;
+#block-app .buttons:nth-child(odd) .button-all-filters svg {
+  fill: #00693E;
 }
-#block-app .filters .buttons .button:hover {
+#block-app .buttons:nth-child(odd) .button-all-filters span {
+  color: white !important;
+  font-size: 19px;
+}
+#block-app .buttons:nth-child(odd) .term-filter-bg {
+  fill: #00693E;
+}
+#block-app .buttons:nth-child(odd) .button span {
+  color: #00693E;
+  font-size: 19px;
+}
+#block-app .buttons:nth-child(even) .button-all-filters svg {
+  fill: #8CC751;
+}
+#block-app .buttons:nth-child(even) .button-all-filters span {
+  color: white !important;
+  font-size: 19px;
+}
+#block-app .buttons:nth-child(even) .term-filter-bg {
+  fill: #8CC751;
+}
+#block-app .buttons:nth-child(even) .button span {
+  color: #8CC751;
+  font-size: 19px;
+}
+#block-app .buttons .button {
+  margin-right: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#block-app .buttons .button span {
+  position: absolute;
+  font-family: "Cafeteria-Bold" !important;
+}
+#block-app .buttons .button:hover {
   cursor: pointer;
 }
-#block-app .filters .buttons .button.active {
+#block-app .buttons .button.active {
   color: white;
-  background-color: black;
 }
 .block-pourquoi-differents {
   background-color: #00693E;
@@ -618,6 +711,76 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 .block-profil-type-recherche .postes-recherches .poste-recherche:nth-child(odd) .description-du-poste p {
   color: white;
+}
+#block-app .results .cpt-extrait .img-container {
+  height: 230px;
+}
+#block-app .results .cpt-extrait .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#block-app .results .cpt-extrait .buttons-extrait .cta_center {
+  display: flex;
+  justify-content: center;
+}
+#block-app .results .cpt-extrait .buttons-extrait a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#block-app .results .cpt-extrait .buttons-extrait a span {
+  z-index: 1;
+  position: absolute;
+  font-family: "Cafeteria-Bold" !important;
+  color: white;
+}
+.valeurs {
+  width: calc(50% - 1rem);
+}
+.valeurs p {
+  font-family: "Arial";
+  font-size: 21px;
+  text-align: center;
+}
+.valeurs ul {
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.08);
+}
+.valeurs ul li:nth-child(odd) {
+  background-color: #F0EAEA;
+}
+.valeurs ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.valeurs ul li .valeur-nutritionnelle {
+  width: 50%;
+}
+.valeurs ul li .valeur-nutritionnelle-nom {
+  width: 50%;
+}
+.block-recette .recettes-caracteristiques-wrapper {
+  display: flex;
+}
+.block-recette .recettes-caracteristiques-wrapper .col-gauche {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+.block-recette .recettes-caracteristiques-wrapper .col-droite {
+  width: 66%;
+}
+.block-recette .recettes-caracteristiques-wrapper .col-droite h3 {
+  font-family: "Cafeteria-Bold";
+}
+.block-recette .recettes-caracteristiques-wrapper .col-droite .liste-ingredients ul, .block-recette .recettes-caracteristiques-wrapper .col-droite .liste-ingredients li, .block-recette .recettes-caracteristiques-wrapper .col-droite .liste-ingredients a {
+  font-family: "Cafeteria-Regular";
 }
 #menu-menu-footer-2 {
   display: flex;
