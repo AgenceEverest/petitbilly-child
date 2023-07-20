@@ -120,10 +120,7 @@
         <label for="s" style="opacity: 0; height: 0"><?php if ($rechercher_sur_le_site) : ?><?php echo $rechercher_sur_le_site; ?><?php endif; ?></label>
         <?php get_search_form(); ?>
         <div id="search_input_trigger">
-            <svg class="search_icon" id="search_icon_opened" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-                <circle class="search_icon_cls" cx="33.97" cy="34.97" r="28.47" />
-                <line class="search_icon_cls" x1="74" y1="75" x2="53.9" y2="54.9" />
-            </svg>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/search.svg') ?>
         </div>
     </div>
 </div>
