@@ -279,7 +279,9 @@ endif;
 	</div>
 
 	<?php if ($vague_au_dessous_du_bloc) : ?>
-		<?= showSvg(get_stylesheet_directory_uri() . '/svg/marge_basse.svg') ?>
+		   <div class="vague-basse">
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
+        </div> 
 	<?php endif; ?>
 
 </div>

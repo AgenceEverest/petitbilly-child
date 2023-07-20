@@ -40,7 +40,9 @@ endif;
             endif; ?>
 ">
     <?php if ($vague_au_dessus_du_bloc) : ?>
-        <?= showSvg(get_stylesheet_directory_uri() . '/svg/marge_haute.svg') ?>
+        <div class="vague-haute">
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
+        </div>
     <?php endif; ?>
     <div <?php echo " ";
             if ($ajouter_un_id_pour_le_css) :
@@ -114,6 +116,8 @@ endif;
     </div>
 
     <?php if ($vague_au_dessous_du_bloc) : ?>
-        <?= showSvg(get_stylesheet_directory_uri() . '/svg/marge_basse.svg') ?>
+        <div class="vague-basse">
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
+        </div>
     <?php endif; ?>
 </div>
