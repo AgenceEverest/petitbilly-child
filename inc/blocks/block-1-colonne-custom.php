@@ -39,6 +39,7 @@ endif;
             endif; ?>
 ">
     <?php if ($vague_au_dessus_du_bloc) : ?>
+        TESTGR
         <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
     <?php endif; ?>
     <div <?php if ($ajouter_un_id_pour_le_css) : echo " id='" . $ajouter_un_id_pour_le_css . "'";
