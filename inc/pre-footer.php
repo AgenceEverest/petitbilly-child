@@ -65,9 +65,8 @@
 				)); ?>
 				<?php $lien_vers_la_page_site_web_eco = get_field('lien_vers_la_page_site_web_eco-concu', 'option'); ?>
 				<?php if ($lien_vers_la_page_site_web_eco) : ?>
-					<a href="<?= get_permalink($lien_vers_la_page_site_web_eco->ID); ?>"><?= $lien_vers_la_page_site_web_eco->post_title ?></a>
+					<a class="lien-site-eco-concu" href="<?= get_permalink($lien_vers_la_page_site_web_eco->ID); ?>"><?= $lien_vers_la_page_site_web_eco->post_title ?></a>
 				<?php endif; ?>
-				<?php print_r(get_field('lien_vers_la_page_site_web_eco-concu', 'option')) ?>
 			</div>
 			<div class="aside_prefooter_col aside_prefooter_col_3">
 				<?php if (!$masquer_les_certifications) : ?>
@@ -82,7 +81,6 @@
 									<?php while (have_rows('informations_certification', 'option')) : the_row();
 										$nom_de_la_certification = get_sub_field('nom_de_la_certification', 'option');
 										$lien_vers_la_certification = get_sub_field('lien_vers_la_certification', 'option'); ?>
-
 										<figure class="footer_certification">
 											<?php if ($lien_vers_la_certification) : ?><a href="<?php echo $lien_vers_la_certification; ?>" target="_blank"><?php endif; ?>
 												<?php if ($nom_de_la_certification) : ?>
@@ -94,19 +92,13 @@
 												<?php endif; ?>
 												<?php if ($lien_vers_la_certification) : ?></a><?php endif; ?>
 										</figure>
-
 									<?php endwhile; ?>
 								<?php else : ?>
 									<figure class="footer_certification">
 										<?php echo wp_get_attachment_image($logo_de_la_certification, $size_logo_de_la_certification, ""); ?>
 									</figure>
 								<?php endif; ?>
-
-
 							<?php endwhile; ?>
-
-
-
 						</div>
 					<?php else : endif; ?>
 				<?php endif; ?>
