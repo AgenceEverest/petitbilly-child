@@ -120,7 +120,7 @@ function my_acf_init_child()
             'icon'                => 'editor-table',
             'mode'                => 'edit',
         ));
-        
+
         acf_register_block(array(
             'name'                => 'block-pourquoi-produits-differents',
             'title'                => __('Bloc Pourquoi nos produits sont différents ?'),
@@ -130,7 +130,7 @@ function my_acf_init_child()
             'icon'                => 'editor-table',
             'mode'                => 'edit',
         ));
-        
+
         acf_register_block(array(
             'name'                => 'block-nos-valeurs',
             'title'                => __('Bloc nos valeurs'),
@@ -223,7 +223,8 @@ function block_callback_child($block)
 
 // filtre les blocs : seuls les blocs déclarés par cette fonction seront affichés 
 // Il faut rajouter le bloc de notre thème enfant dans cette liste 
-function my_plugin_allowed_block_types_child($allowed_block_types_all, $post) {
+function my_plugin_allowed_block_types_child($allowed_block_types_all, $post)
+{
     $allowed_block_types = array(
         'core/paragraph',
         'acf/block-separateur',
@@ -251,7 +252,8 @@ function my_plugin_allowed_block_types_child($allowed_block_types_all, $post) {
 
 add_filter('allowed_block_types_all', 'my_plugin_allowed_block_types_child', 11, 3);
 
-function showSvg($url) {
+function showSvg($url)
+{
     $response = wp_remote_get($url);
     if (is_array($response) && !is_wp_error($response)) {
         $svg = $response['body']; // use the content
@@ -265,7 +267,8 @@ add_action('wp_enqueue_scripts', function () {
 
 // functions.php du thème enfant
 
-function mon_theme_enfant_register_menus() {
+function mon_theme_enfant_register_menus()
+{
     register_nav_menus(array(
         'menu-footer-2' => 'Menu Footer 2',
         'menu-footer-gauche' => 'Menu Footer Gauche',
@@ -281,13 +284,14 @@ function acf_load_valeurs_nutritionelles($field)
     $valeurs = get_field('valeurs_nutritionnelles', 'option');
     if (isset($valeurs)) {
         foreach ($valeurs as $valeur) :
-            foreach ($valeur as $value) :
-                $field['choices'][$value] = $value;
-            endforeach;
+            if (isset($valeur)) :
+                foreach ($valeur as $value) :
+                    $field['choices'][$value] = $value;
+                endforeach;
+            endif;
         endforeach;
     }
     return $field;
 }
 
 add_filter('acf/load_field/name=valeur_nutritionnelle_nom', 'acf_load_valeurs_nutritionelles');
-
