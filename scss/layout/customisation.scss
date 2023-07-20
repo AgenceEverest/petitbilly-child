@@ -59,7 +59,9 @@ figure {
         left: -15%;
         display: flex;
         justify-content: center;
-
+        svg {
+            width: 100%;
+        }
     }
 
     .vague-basse {
@@ -69,6 +71,8 @@ figure {
         left: -15%;
         display: flex;
         justify-content: center;
-
+        svg {
+            width: 100%;
+        }
     }
 }
