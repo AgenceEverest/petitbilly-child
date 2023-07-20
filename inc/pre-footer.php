@@ -63,6 +63,11 @@
 					'theme_location' => 'menu-footer-2',
 					// Autres paramètres de configuration du menu si nécessaire.
 				)); ?>
+				<?php $lien_vers_la_page_site_web_eco = get_field('lien_vers_la_page_site_web_eco-concu', 'option'); ?>
+				<?php if ($lien_vers_la_page_site_web_eco) : ?>
+					<a href="<?= get_permalink($lien_vers_la_page_site_web_eco->ID); ?>"><?= $lien_vers_la_page_site_web_eco->post_title ?></a>
+				<?php endif; ?>
+				<?php print_r(get_field('lien_vers_la_page_site_web_eco-concu', 'option')) ?>
 			</div>
 			<div class="aside_prefooter_col aside_prefooter_col_3">
 				<?php if (!$masquer_les_certifications) : ?>
