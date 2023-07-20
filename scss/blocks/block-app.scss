@@ -122,13 +122,11 @@
                 }
             }
             button {
-                &.active {
                     path {
                         :nth-child(1) {
                             fill: $darkGreenBilly;
                         }
                     }
-                }
             }
             .term-filter-bg {
                 fill: $darkGreenBilly;
