@@ -121,9 +121,10 @@
                     font-size: 19px;
                 }
             }
-            .button {
+            .button.active {
+                color: white;
              .bg-button-filter{
-                fill: red;
+                fill: $darkGreenBilly;
              }
                   
             }
