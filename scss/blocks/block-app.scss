@@ -83,22 +83,39 @@
                 .term-filter-bg {
                     fill: $darkGreenBilly;
                 }
+                .button {
+                    span {
+                        color: $darkGreenBilly;
+                    }
+                }
             }
             &:nth-child(odd) {
                 .term-filter-bg {
                     fill: $clearGreenBilly;
                 }
+                .button {
+                    span {
+                        color: $clearGreenBilly;
+                    }
+                }
             }
             .button {
                 margin-right: 1rem;
-
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                    position: absolute;
+                    font-family: 'Cafeteria-Bold' !important;
+                }
+        
                 &:hover {
                     cursor: pointer;
                 }
 
                 &.active {
                     color: white;
-                    background-color: black;
                 }
             }
 

@@ -63,7 +63,7 @@ export default {
 
 <template>
   <div class="filters">
-    <!-- Filtre avec boutons -->TESTGR
+    <!-- Filtre avec boutons -->
     <template v-if="this.type_de_filtre === 'boutons'">
       <div
         class="buttons"
