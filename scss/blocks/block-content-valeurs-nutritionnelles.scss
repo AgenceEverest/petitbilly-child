@@ -1,0 +1,35 @@
+.valeurs {
+    width: calc(50% - 1rem);
+
+    p {
+      font-family: $bold;
+      font-size: 21px;
+      text-align: center;
+    }
+
+    ul {
+      height: auto;
+      border-radius: 20px;
+      overflow: hidden;
+      -webkit-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 0px 20px 4px rgb(0 0 0 / 8%);
+
+      li:nth-child(odd) {
+        background-color: $clair2;
+      }
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+
+        .valeur-nutritionnelle {
+          width: 50%;
+        }
+
+        .valeur-nutritionnelle-nom {
+          width: 50%;
+        }
+      }
+    }
+  }

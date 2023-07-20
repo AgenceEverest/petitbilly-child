@@ -263,3 +263,20 @@ function mon_theme_enfant_register_menus() {
 }
 add_action('after_setup_theme', 'mon_theme_enfant_register_menus');
 
+function acf_load_valeurs_nutritionelles($field)
+{
+    $field['choices'] = array();
+
+    $valeurs = get_field('valeurs_nutritionnelles', 'option');
+    foreach ($valeurs as $valeur) :
+        foreach ($valeur as $value) :
+            $field['choices'][$value] = $value;
+        endforeach;
+    endforeach;
+
+
+    return $field;
+}
+
+add_filter('acf/load_field/name=valeur_nutritionnelle_nom', 'acf_load_valeurs_nutritionelles');
+
