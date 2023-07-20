@@ -31,22 +31,18 @@ figure {
     .vague-haute {
         position: absolute;
         top: -20px;
-        width: 100%;
+        width: 130%;
         display: flex;
         justify-content: center;
-        svg {
-            width: 120%;
-        }
+       
     }
     .vague-basse {
         position: absolute;
         bottom: -20px;
-        width: 100%;
+        width: 130%;
         display: flex;
         justify-content: center;
-        svg {
-            width: 120%;
-        }
+      
     }
 }
 
