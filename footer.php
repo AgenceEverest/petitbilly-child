@@ -89,7 +89,7 @@
             </span>
             <span id="menu-footer">
                 <?php $menuParameters = array(
-                    'theme_location'  => 'menu-footer-gauche',
+                    'theme_location'  => 'menu-footer-droite',
                     'container'       => false,
                     'echo'            => false,
                     'items_wrap'      => '%3$s',

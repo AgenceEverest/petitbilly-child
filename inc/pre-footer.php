@@ -60,7 +60,7 @@
 			</div>
 			<div class="aside_prefooter_col aside_prefooter_col_2">
 				<?php wp_nav_menu(array(
-					'theme_location' => 'nom-du-menu',
+					'theme_location' => 'menu-footer-2',
 					// Autres paramètres de configuration du menu si nécessaire.
 				)); ?>
 			</div>
