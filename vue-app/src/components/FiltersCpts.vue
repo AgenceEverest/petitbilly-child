@@ -80,7 +80,7 @@ export default {
               }
             }
           "
-          class="button"
+          class="button button-all-filters"
         >
           <span>
             {{ this.$props[`texte_tous_les_filtres_${index + 1}`] }}

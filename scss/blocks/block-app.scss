@@ -11,6 +11,7 @@
             -webkit-box-shadow: 0px 6px 23px 8px rgba(0, 0, 0, 0.27);
             box-shadow: 0px 6px 23px 8px rgba(0, 0, 0, 0.27);
             position: relative;
+
             h3 {
                 width: 100;
                 display: flex;
@@ -19,6 +20,7 @@
                 padding-bottom: 2rem;
                 color: $darkGreenBilly;
             }
+
             .terms-container {
                 position: absolute;
                 top: 0;
@@ -76,40 +78,69 @@
     .filters {
         display: flex;
         flex-direction: column;
+
         .buttons {
             display: flex;
 
-            &:nth-child(even) {
+            &:nth-child(odd) {
+                .button-all-filters {
+                    svg {
+                        fill: $darkGreenBilly;
+                    }
+
+                    span {
+                        color: white;
+                        font-size: 19px;
+                    }
+                }
+
                 .term-filter-bg {
                     fill: $darkGreenBilly;
                 }
+
                 .button {
                     span {
                         color: $darkGreenBilly;
+                        font-size: 19px;
                     }
                 }
             }
-            &:nth-child(odd) {
+
+            &:nth-child(even) {
+                .button-all-filters {
+                    svg {
+                        fill: $clearGreenBilly;
+                    }
+                    span {
+                        color: white;
+                        font-size: 19px;
+                    }
+                }
+
                 .term-filter-bg {
                     fill: $clearGreenBilly;
                 }
+
                 .button {
                     span {
                         color: $clearGreenBilly;
+                        font-size: 19px;
                     }
                 }
             }
+
             .button {
                 margin-right: 1rem;
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 span {
                     position: absolute;
                     font-family: 'Cafeteria-Bold' !important;
                 }
-        
+
                 &:hover {
                     cursor: pointer;
                 }
