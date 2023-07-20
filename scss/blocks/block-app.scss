@@ -122,15 +122,9 @@
                 }
             }
             button {
-                svg {
-                    g {
-                        path {                                fill: $darkGreenBilly;
-
-                            :nth-child(1) {
-                            }
-                        }
-                    }
-                }
+             .bg-button-filter{
+                fill: red;
+             }
                   
             }
             .term-filter-bg {
