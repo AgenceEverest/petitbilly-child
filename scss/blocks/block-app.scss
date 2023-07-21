@@ -216,10 +216,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         .load-more {
             color: white;
             font-family: 'Cafeteria-Bold' !important;
             font-size: 20px;
+            position: absolute;
         }
     }
 }
