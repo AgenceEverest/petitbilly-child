@@ -373,46 +373,24 @@ export default {
 </script>
 
 <template>
-  <FiltersCpts
-    v-show="isLoaded"
-    @handleClick="handleClick"
-    @filterElementsByKeyword="filterElementsByKeyword"
-    :filters="filters"
-    :champs_texte_pour_affiner="dataJson.champs_texte_pour_affiner"
-    :type_de_filtre="dataJson.type_de_filtre"
-    :texte_pour_le_label_1="dataJson.texte_pour_le_label_1"
-    :texte_pour_le_label_2="dataJson.texte_pour_le_label_2"
-    :texte_pour_le_label_3="dataJson.texte_pour_le_label_3"
-    :texte_pour_le_label_4="dataJson.texte_pour_le_label_4"
-    :texte_tous_les_filtres_1="dataJson.texte_tous_les_filtres_1"
+  <FiltersCpts v-show="isLoaded" @handleClick="handleClick" @filterElementsByKeyword="filterElementsByKeyword"
+    :filters="filters" :champs_texte_pour_affiner="dataJson.champs_texte_pour_affiner"
+    :type_de_filtre="dataJson.type_de_filtre" :texte_pour_le_label_1="dataJson.texte_pour_le_label_1"
+    :texte_pour_le_label_2="dataJson.texte_pour_le_label_2" :texte_pour_le_label_3="dataJson.texte_pour_le_label_3"
+    :texte_pour_le_label_4="dataJson.texte_pour_le_label_4" :texte_tous_les_filtres_1="dataJson.texte_tous_les_filtres_1"
     :texte_tous_les_filtres_2="dataJson.texte_tous_les_filtres_2"
     :texte_tous_les_filtres_3="dataJson.texte_tous_les_filtres_3"
-    :texte_tous_les_filtres_4="dataJson.texte_tous_les_filtres_4"
-  />
+    :texte_tous_les_filtres_4="dataJson.texte_tous_les_filtres_4" />
   <div v-show="isLoaded" :class="extraitPaddingTop">
     <div class="results">
-      <RecetteExtrait
-        v-show="cpt.show && cpt.display"
-        class="cpt-extrait"
-        v-for="cpt in cpts"
-        :key="cpt.id"
-        :cpt="cpt"
-        :texte_en_savoir_plus="dataJson.texte_en_savoir_plus"
-        :texte_pour_le_bandeau_de_nouvelle_formation="
-          dataJson.texte_pour_le_bandeau_de_nouvelle_formation
-        "
-        :filters="filters"
-        :protocol="protocol"
-        :website="website"
-        :activeTerms="activeTerms"
-      />
+      <RecetteExtrait v-show="cpt.show && cpt.display" class="cpt-extrait" v-for="cpt in cpts" :key="cpt.id" :cpt="cpt"
+        :texte_en_savoir_plus="dataJson.texte_en_savoir_plus" :texte_pour_le_bandeau_de_nouvelle_formation="dataJson.texte_pour_le_bandeau_de_nouvelle_formation
+          " :filters="filters" :protocol="protocol" :website="website" :activeTerms="activeTerms" />
     </div>
-    <div
-      @click="incrementmaxDisplayable"
-      v-if="hasMoreContent"
-      class="load-more"
-    >
-      {{ dataJson.load_more_text }}
+    <div class="load-more-container">
+      <div @click="incrementmaxDisplayable" v-if="hasMoreContent" class="load-more">
+        {{ dataJson.load_more_text }}
+      </div>
     </div>
   </div>
   <div v-show="!isLoaded" class="loader-container">

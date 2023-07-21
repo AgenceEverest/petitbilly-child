@@ -203,6 +203,9 @@
 .breadcrumb_top {
     padding-left: 10rem;
     background-color: $fondBlancCasse;
+    span, .breadcrumb_separator {
+        color: black !important;
+    }
 }
 
 .entry_title {
