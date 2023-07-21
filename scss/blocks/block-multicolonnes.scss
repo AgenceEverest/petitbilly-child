@@ -3,6 +3,9 @@
 }
 
 .multicolonnes_wrapper {
+    .multicolonnes_item {
+        border-radius: 20px;
+    }
     .avec_bordure {
         background-color: $clearGreenBilly !important;
         color: white;
