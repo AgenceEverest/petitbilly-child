@@ -207,5 +207,9 @@
 
 .entry_title  {
     color: $darkGreenBilly;
-    font-size: 50px;
+    .content_width {
+        h1 {
+            font-size: 50px !important;
+        }
+    }
 }
