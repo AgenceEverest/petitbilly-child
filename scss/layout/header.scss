@@ -62,7 +62,7 @@
                     left: -178px;
                     bottom: -170px;
                 }
-              
+
                 @media (max-width:1100px) {
                     left: -142px;
                     bottom: -121px;
@@ -205,11 +205,12 @@
     background-color: $fondBlancCasse;
 }
 
-.entry_title  {
-    color: $darkGreenBilly;
+.entry_title {
     .content_width {
         h1 {
             font-size: 50px !important;
+            color: $darkGreenBilly;
+            font-family: 'Cafeteria-Bold' !important;
         }
     }
 }
