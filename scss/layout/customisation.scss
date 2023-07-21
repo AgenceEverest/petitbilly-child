@@ -93,4 +93,17 @@ article {
 
 .share-date-container {
     margin-top: 2rem;
+    .article_share_date {
+        span {
+            font-family: "Cafeteria-Bold" !important;
+        }
+    }
+}
+
+.nav_blog_wrapper{
+    background-color: $fondBlancCasse;
+    ul, li, a, span{
+        font-family: "Cafeteria-Bold" !important;
+
+    }
 }
