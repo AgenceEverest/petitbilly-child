@@ -21,10 +21,24 @@ if (is_page() && $post->post_parent) : ?>
 <?php endif; ?>
 
 
-<!-- Single offres -->
+<!-- Single produits -->
 <?php
-if (is_singular('offres')) : ?>
-	<?php $page_qui_liste_les_offres = get_field('page_qui_liste_les_offres', 'option');
+if (is_singular('produits')) : ?>
+	<?php $page_qui_liste_les_offres = get_field('page_qui_liste_les_produits', 'option');
+	$page_qui_liste_les_offres_id = $page_qui_liste_les_offres->ID;
+	$page_qui_liste_les_offres_permalink = get_permalink($page_qui_liste_les_offres_id);
+	$page_qui_liste_les_offres_title = get_the_title($page_qui_liste_les_offres_id);
+	?>
+	<nav class="breadcrumb_top content_large">
+		<p class="legende"><a href="<?php bloginfo('url'); ?>"><?php echo $fil_ariane_accueil; ?></a><span class="breadcrumb_separator">›</span><a href="<?php echo $page_qui_liste_les_offres_permalink; ?>"><?php echo $page_qui_liste_les_offres_title; ?></a><span class="breadcrumb_separator">›</span><span aria-current='location'><?php the_title(); ?></span>
+		</p>
+	</nav>
+<?php endif; ?>
+
+<!-- Single recettes -->
+<?php
+if (is_singular('recettes')) : ?>
+	<?php $page_qui_liste_les_offres = get_field('page_qui_liste_les_recettes', 'option');
 	$page_qui_liste_les_offres_id = $page_qui_liste_les_offres->ID;
 	$page_qui_liste_les_offres_permalink = get_permalink($page_qui_liste_les_offres_id);
 	$page_qui_liste_les_offres_title = get_the_title($page_qui_liste_les_offres_id);
