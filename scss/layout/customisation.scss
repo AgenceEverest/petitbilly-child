@@ -4,10 +4,9 @@ Fichier de customisation du CSS
 
 figure {
     background-color: transparent !important;
-    border-radius: 20px;
-
+    border-radius: 20px !important;
     img {
-        border-radius: 20px;
+        border-radius: 20px !important;
     }
 }
 
