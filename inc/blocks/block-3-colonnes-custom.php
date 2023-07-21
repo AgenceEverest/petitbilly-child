@@ -42,7 +42,7 @@ endif;?>
 ">
     <?php if ($vague_au_dessus_du_bloc) : ?>
           <div class="vague-haute">
-            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-haute.svg') ?>
         </div>
     <?php endif; ?>
     <?php echo "<div "; ?>
@@ -156,7 +156,7 @@ endif;?>
 
 <?php if ($vague_au_dessous_du_bloc) : ?>
        <div class="vague-basse">
-            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-bas.svg') ?>
         </div> 
 <?php endif; ?>
 
