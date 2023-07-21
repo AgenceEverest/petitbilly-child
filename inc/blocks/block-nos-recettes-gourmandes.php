@@ -35,12 +35,11 @@ endif;
 <div class="<?php if ($couleur_de_fond_bloc) :
                 echo " " . $couleur_de_fond_bloc;
             endif;
-            if ($marge_en_haut_du_bloc) :
-                echo " padding_section_top";
-            endif;
-            if ($marge_en_bas_du_bloc) :
-                echo " padding_section_bottom";
-            endif; ?>
+            if ($marge_en_haut_du_bloc) : echo " margin_section_top";
+        endif;
+        if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
+        endif;
+            ?>
 ">
     <?php if ($vague_au_dessus_du_bloc) : ?>
           <div class="vague-haute">
@@ -56,12 +55,11 @@ endif;
                 echo " " . $cb_ajouter_une_classe_css . "";
             endif;
 
-            if ($padding_en_haut_du_bloc) :
-                echo " padding_section_top";
+            if ($padding_en_haut_du_bloc) : echo " padding_section_top";
             endif;
-            if ($padding_en_bas_du_bloc) :
-                echo " padding_section_bottom";
+            if ($padding_en_bas_du_bloc) : echo " padding_section_bottom";
             endif;
+
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
             if ($liseret_vert_autour_du_bloc) : echo " has-edge ";

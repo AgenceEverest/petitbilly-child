@@ -11,6 +11,8 @@ if (have_rows('block_3_colonnes_custom')) : the_row(); // il s'agit du nom du ch
     $couleur_de_fond_bloc = get_sub_field('couleur_de_fond_bloc');
     $marge_en_haut_du_bloc = get_sub_field('marge_en_haut_du_bloc');
     $marge_en_bas_du_bloc = get_sub_field('marge_en_bas_du_bloc');
+    $padding_en_haut_du_bloc = get_sub_field('padding_en_haut_du_bloc');
+    $padding_en_bas_du_bloc = get_sub_field('padding_en_bas_du_bloc');
     $cb_calltoaction = get_sub_field('cb_call-to-action');
     $cb_calltoaction_lien = get_sub_field('cb_call-to-action_lien');
     $cb_calltoaction_url = get_sub_field('cb_call-to-action_url');
@@ -23,8 +25,7 @@ if (have_rows('block_3_colonnes_custom')) : the_row(); // il s'agit du nom du ch
     $page_contact = get_sub_field('page_contact');
     $vague_au_dessus_du_bloc = get_sub_field('vague_au_dessus_du_bloc');
     $vague_au_dessous_du_bloc = get_sub_field('vague_au_dessous_du_bloc');
-    $padding_en_haut_du_bloc = get_sub_field('padding_en_haut_du_bloc');
-    $padding_en_bas_du_bloc = get_sub_field('padding_en_bas_du_bloc');
+
     $faire_passer_le_bloc_au_dessus_des_autres = get_sub_field('faire_passer_le_bloc_au_dessus_des_autres');
     $liseret_vert_autour_du_bloc = get_sub_field('liseret_vert_autour_du_bloc');
 
@@ -32,13 +33,12 @@ endif;
 ?>
 <div class="<?php if ($couleur_de_fond_bloc) : ?>
     <?php echo " " . $couleur_de_fond_bloc; ?>
-<?php endif; ?>
-<?php if ($marge_en_haut_du_bloc) : ?>
-    <?php echo " padding_section_top"; ?>
-<?php endif; ?>
-<?php if ($marge_en_bas_du_bloc) : ?>
-    <?php echo " padding_section_bottom"; ?>
-<?php endif; ?>
+<?php endif;
+
+if ($marge_en_haut_du_bloc) : echo " margin_section_top";
+endif;
+if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
+endif;?>
 ">
     <?php if ($vague_au_dessus_du_bloc) : ?>
           <div class="vague-haute">
@@ -50,22 +50,14 @@ endif;
         <?php echo " id='" . $ajouter_un_id_pour_le_css . "'"; ?>
     <?php endif; ?>
     <?php echo " class='"; ?>
-    <?php if ($marge_en_haut_du_bloc) : ?>
-        <?php echo " padding_section_top"; ?>
-    <?php endif; ?>
-    <?php if ($marge_en_bas_du_bloc) : ?>
-        <?php echo " padding_section_bottom"; ?>
-    <?php endif; ?>
     <?php if ($cb_ajouter_une_classe_css) : ?>
         <?php echo " " . $cb_ajouter_une_classe_css . ""; ?>
     <?php endif; ?>
+    <?php  if ($padding_en_haut_du_bloc) : echo " padding_section_top";
+		endif;
+		if ($padding_en_bas_du_bloc) : echo " padding_section_bottom";
+		endif;
 
-    <?php if ($padding_en_haut_du_bloc) : ?>
-        <?php echo " padding_section_top"; ?>
-    <?php endif; ?>
-    <?php if ($padding_en_bas_du_bloc) : ?>
-        <?php echo " padding_section_bottom"; ?>
-    <?php endif;
     		if ($liseret_vert_autour_du_bloc) : echo " has-edge ";
 		endif;
     ?>

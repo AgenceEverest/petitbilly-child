@@ -23,14 +23,12 @@ endif;
 <div class="<?php if ($couleur_de_fond_bloc) :
                 echo ' ' . $couleur_de_fond_bloc;
             endif;
-            if ($marge_en_haut_du_bloc) :
-                echo ' padding_section_top';
+            if ($marge_en_haut_du_bloc) : echo " margin_section_top";
             endif;
-            if ($marge_en_bas_du_bloc) :
-                echo ' padding_section_bottom';
+            if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
             endif; ?>">
     <?php if ($vague_au_dessus_du_bloc) : ?>
-          <div class="vague-haute">
+        <div class="vague-haute">
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
         </div>
     <?php endif; ?>
@@ -43,6 +41,7 @@ endif;
             endif;
             if ($padding_en_bas_du_bloc) : echo " padding_section_bottom";
             endif;
+
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
             echo " block-fromages-uniques'"; ?>>
@@ -80,8 +79,8 @@ endif;
             endif; ?>
         </div>
         <?php if ($vague_au_dessous_du_bloc) : ?>
-               <div class="vague-basse">
-            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
-        </div> 
+            <div class="vague-basse">
+                <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
+            </div>
         <?php endif; ?>
     </div>

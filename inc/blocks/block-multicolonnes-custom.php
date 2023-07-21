@@ -31,15 +31,14 @@ if (have_rows('block_multicolonnes_custom')) : the_row(); // il s'agit du nom du
 endif;
 ?>
 
-<div class="<?php if ($couleur_de_fond_bloc) : 
-     echo " " . $couleur_de_fond_bloc; 
- endif; 
- if ($marge_en_haut_du_bloc) : 
-     echo " padding_section_top"; 
- endif; 
- if ($marge_en_bas_du_bloc) : 
-     echo " padding_section_bottom"; 
- endif; ?>
+<div class="<?php if ($couleur_de_fond_bloc) :
+				echo " " . $couleur_de_fond_bloc;
+			endif;
+			if ($marge_en_haut_du_bloc) : echo " margin_section_top";
+		endif;
+		if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
+		endif;
+			?>
 ">
 	<?php if ($vague_au_dessus_du_bloc) : ?>
 		<?= showSvg(get_stylesheet_directory_uri() . '/svg/marge_haute.svg') ?>
@@ -52,22 +51,20 @@ endif;
 			if ($cb_ajouter_une_classe_css) :
 				echo " " . $cb_ajouter_une_classe_css . "";
 			endif;
-
-			if ($padding_en_haut_du_bloc) :
-				echo " padding_section_top";
+			if ($padding_en_haut_du_bloc) : echo " padding_section_top";
 			endif;
-			if ($padding_en_bas_du_bloc) :
-				echo " padding_section_bottom";
+			if ($padding_en_bas_du_bloc) : echo " padding_section_bottom";
 			endif;
-			if ($faire_passer_le_bloc_au_dessus_des_autres) : 
+	
+			if ($faire_passer_le_bloc_au_dessus_des_autres) :
 				echo " z-index-1";
 			endif;
 			if ($liseret_vert_autour_du_bloc) : echo " has-edge ";
-		endif;
+			endif;
 			echo " block'"; ?>>
 		<?php get_template_part('inc/dessin-en-fond'); ?>
 
-        <?php if ($liseret_vert_autour_du_bloc) : ?>
+		<?php if ($liseret_vert_autour_du_bloc) : ?>
 			<?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge-desktop-tall') ?>
 			<?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge') ?>
 		<?php endif; ?>
@@ -279,9 +276,9 @@ endif;
 	</div>
 
 	<?php if ($vague_au_dessous_du_bloc) : ?>
-		   <div class="vague-basse">
-            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
-        </div> 
+		<div class="vague-basse">
+			<?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
+		</div>
 	<?php endif; ?>
 
 </div>

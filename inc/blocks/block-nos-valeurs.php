@@ -32,16 +32,13 @@ endif;
 ?>
 <div class="<?php if ($couleur_de_fond_bloc) :
                 echo ' ' . $couleur_de_fond_bloc;
+            endif;            
+            if ($marge_en_haut_du_bloc) : echo " margin_section_top";
             endif;
-            if ($marge_en_haut_du_bloc) :
-                echo ' padding_section_top';
-            endif;
-            if ($marge_en_bas_du_bloc) :
-                echo ' padding_section_bottom';
-            endif; ?>
+            if ($marge_en_bas_du_bloc) : echo " margin_section_bottom"; endif; ?>
 ">
     <?php if ($vague_au_dessus_du_bloc) : ?>
-          <div class="vague-haute">
+        <div class="vague-haute">
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
         </div>
     <?php endif; ?>
@@ -54,15 +51,16 @@ endif;
             endif;
             if ($padding_en_bas_du_bloc) : echo " padding_section_bottom";
             endif;
+
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
             if ($liseret_vert_autour_du_bloc) : echo " has-edge ";
-        endif;
+            endif;
             echo " block block-nos-valeurs'"; ?>>
         <?php if ($liseret_vert_autour_du_bloc) : ?>
-			<?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge-desktop-tall') ?>
-			<?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge') ?>
-		<?php endif; ?>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge-desktop-tall') ?>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge') ?>
+        <?php endif; ?>
         <!-- titre avant les colonnes-->
         <?php $titre_avant_les_colonnes = get_sub_field('titre_avant_les_colonnes');
         $largeur_de_la_colonne_titre = get_sub_field('largeur_de_la_colonne_titre');
@@ -113,8 +111,8 @@ endif;
         </div>
     </div>
     <?php if ($vague_au_dessous_du_bloc) : ?>
-           <div class="vague-basse">
+        <div class="vague-basse">
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
-        </div> 
+        </div>
     <?php endif; ?>
 </div>

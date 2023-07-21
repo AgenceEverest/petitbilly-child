@@ -31,14 +31,12 @@ endif;
 ?>
 <div class="<?php if ($couleur_de_fond_bloc) : ?>
     <?php echo " " . $couleur_de_fond_bloc; ?>
-<?php endif; ?>
-<?php if ($marge_en_haut_du_bloc) : ?>
-    <?php echo " padding_section_top"; ?>
-<?php endif; ?>
-<?php if ($marge_en_bas_du_bloc) : ?>
-    <?php echo " padding_section_bottom"; ?>
-<?php endif; ?>
-">
+<?php endif;
+	if ($marge_en_haut_du_bloc) : echo " margin_section_top";
+endif;
+if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
+endif;
+?>">
 	<?php if ($vague_au_dessus_du_bloc) : ?>
 		<?= showSvg(get_stylesheet_directory_uri() . '/svg/marge_haute.svg') ?>
 	<?php endif; ?>
@@ -53,12 +51,11 @@ endif;
 			<?php echo " " . $cb_ajouter_une_classe_css . ""; ?>
 		<?php endif; ?>
 
-		<?php if ($padding_en_haut_du_bloc) : ?>
-			<?php echo " padding_section_top"; ?>
-		<?php endif; ?>
-		<?php if ($padding_en_bas_du_bloc) : ?>
-			<?php echo " padding_section_bottom"; ?>
-		<?php endif; ?>
+		<?php  if ($padding_en_haut_du_bloc) : echo " padding_section_top";
+		endif;
+		if ($padding_en_bas_du_bloc) : echo " padding_section_bottom";
+		endif;
+	?>
 		<?php
 		if ($faire_passer_le_bloc_au_dessus_des_autres) :
 			echo " z-index-1";

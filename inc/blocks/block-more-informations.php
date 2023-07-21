@@ -15,25 +15,32 @@ if (have_rows('block_more_informations')) : the_row(); // il s'agit du nom du ch
     $url_bouton_contact = get_field('url_du_bouton_contact', 'option');
     $texte_bouton_contact = get_field('texte_du_bouton_contact', 'option');
     $faire_passer_le_bloc_au_dessus_des_autres = get_sub_field('faire_passer_le_bloc_au_dessus_des_autres');
+    $marge_en_haut_du_bloc = get_sub_field('marge_en_haut_du_bloc');
+    $marge_en_bas_du_bloc = get_sub_field('marge_en_bas_du_bloc');
+    $padding_en_haut_du_bloc = get_sub_field('padding_en_haut_du_bloc');
+    $padding_en_bas_du_bloc = get_sub_field('padding_en_bas_du_bloc');
 endif;
 ?>
 
 
 <?php echo "<div "; ?>
-<?php if ($ajouter_un_id_pour_le_css) : ?>
-    <?php echo " id='" . $ajouter_un_id_pour_le_css . "'"; ?>
-<?php endif; ?>
-<?php echo " class='"; ?>
-<?php if ($cb_ajouter_une_classe_css) : ?>
-    <?php echo " " . $cb_ajouter_une_classe_css . ""; ?>
-<?php endif; ?>
-<?php if ($bloc_flottant) : ?>
-    <?php echo " bloc_flottant "; ?>
-<?php endif; ?>
-<?php if ($couleur_de_fond_bloc) : ?>
-    <?php echo " " . $couleur_de_fond_bloc; ?>
-<?php endif; ?>
-<?php
+<?php if ($ajouter_un_id_pour_le_css) : echo " id='" . $ajouter_un_id_pour_le_css . "'";
+endif;
+echo " class='";
+if ($cb_ajouter_une_classe_css) : echo " " . $cb_ajouter_une_classe_css . "";
+endif;
+if ($bloc_flottant) : echo " bloc_flottant ";
+endif;
+if ($padding_en_haut_du_bloc) : echo " padding_section_top";
+endif;
+if ($padding_en_bas_du_bloc) : echo " padding_section_bottom";
+endif;
+if ($marge_en_haut_du_bloc) : echo " margin_section_top";
+endif;
+if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
+endif;
+if ($couleur_de_fond_bloc) : echo " " . $couleur_de_fond_bloc;
+endif;
 if ($faire_passer_le_bloc_au_dessus_des_autres) :
     echo " z-index-1";
 endif;

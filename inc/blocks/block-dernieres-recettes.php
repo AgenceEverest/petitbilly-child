@@ -23,12 +23,21 @@ if (have_rows('dernieres_recettes')) : the_row(); // il s'agit du nom du champ d
     $couleur_de_fond_bloc = get_sub_field('couleur_de_fond_bloc');
     $marge_en_haut_du_bloc = get_sub_field('marge_en_haut_du_bloc');
     $marge_en_bas_du_bloc = get_sub_field('marge_en_bas_du_bloc');
+    $padding_en_haut_du_bloc = get_sub_field('padding_en_haut_du_bloc');
+    $padding_en_bas_du_bloc = get_sub_field('padding_en_bas_du_bloc');
     $nombre_de_recettes_a_afficher = get_sub_field('nombre_de_recettes_a_afficher');
     $liees_a_ce_produit = get_sub_field('liees_a_ce_produit');
     $texte_des_boutons_pour_chaque_recette = get_sub_field('texte_des_boutons_pour_chaque_recette');
 endif;
 ?>
-<div class="dernieres-recettes-container">
+<div class="dernieres-recettes-container
+<?php 
+if ($marge_en_haut_du_bloc) : echo " margin_section_top";
+endif;
+if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
+endif;
+?>
+">
     <?php
     if ($liees_a_ce_produit) {
         $args = array(
@@ -57,12 +66,11 @@ endif;
         echo " id='" . $ajouter_un_id_pour_le_css . "'";
     endif;
     echo " class='";
-    if ($marge_en_haut_du_bloc) :
-        echo " padding_section_top";
-    endif;
-    if ($marge_en_bas_du_bloc) :
-        echo " padding_section_bottom";
-    endif;
+    if ($padding_en_haut_du_bloc) : echo " padding_section_top";
+endif;
+if ($padding_en_bas_du_bloc) : echo " padding_section_bottom";
+endif;
+
     if ($couleur_de_fond_bloc) :
         echo " " . $couleur_de_fond_bloc;
     endif;

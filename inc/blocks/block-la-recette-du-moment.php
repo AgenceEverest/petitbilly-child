@@ -14,6 +14,8 @@ if (have_rows('block_recette_du_moment')) : the_row(); // il s'agit du nom du ch
 
     $vague_au_dessus_du_bloc = get_sub_field('vague_au_dessus_du_bloc');
     $vague_au_dessous_du_bloc = get_sub_field('vague_au_dessous_du_bloc');
+    $marge_en_haut_du_bloc = get_sub_field('marge_en_haut_du_bloc');
+    $marge_en_bas_du_bloc = get_sub_field('marge_en_bas_du_bloc');
     $padding_en_haut_du_bloc = get_sub_field('padding_en_haut_du_bloc');
     $padding_en_bas_du_bloc = get_sub_field('padding_en_bas_du_bloc');
     $faire_passer_le_bloc_au_dessus_des_autres = get_sub_field('faire_passer_le_bloc_au_dessus_des_autres');
@@ -27,15 +29,14 @@ endif;
 <div class="<?php if ($couleur_de_fond_bloc) :
                 echo " " . $couleur_de_fond_bloc;
             endif;
-            if ($marge_en_haut_du_bloc) :
-                echo " padding_section_top";
+            if ($marge_en_haut_du_bloc) : echo " margin_section_top";
             endif;
-            if ($marge_en_bas_du_bloc) :
-                echo " padding_section_bottom";
-            endif; ?>
+            if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
+            endif;
+            ?>
 ">
     <?php if ($vague_au_dessus_du_bloc) : ?>
-          <div class="vague-haute">
+        <div class="vague-haute">
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
         </div>
     <?php endif; ?>
@@ -47,13 +48,11 @@ endif;
             if ($cb_ajouter_une_classe_css) :
                 echo " " . $cb_ajouter_une_classe_css . "";
             endif;
+            if ($padding_en_haut_du_bloc) : echo " padding_section_top";
+            endif;
+            if ($padding_en_bas_du_bloc) : echo " padding_section_bottom";
+            endif;
 
-            if ($padding_en_haut_du_bloc) :
-                echo " padding_section_top";
-            endif;
-            if ($padding_en_bas_du_bloc) :
-                echo " padding_section_bottom";
-            endif;
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
             echo " block-recette-du-moment'"; ?>>
@@ -84,8 +83,8 @@ endif;
     </div>
 
     <?php if ($vague_au_dessous_du_bloc) : ?>
-           <div class="vague-basse">
+        <div class="vague-basse">
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
-        </div> 
+        </div>
     <?php endif; ?>
 </div>

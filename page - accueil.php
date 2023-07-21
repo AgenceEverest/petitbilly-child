@@ -10,18 +10,25 @@ get_header(); ?>
 	<section class="page_defaut">
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="entry_title_home">
+
 				<div class="title_home_wrapper">
+
 					<?php if (get_field('accroche_dentete')) : ?>
 						<h1><?php the_field('accroche_dentete') ?></h1>
 					<?php endif; ?>
 					<?php if (get_field('phrase_dintroduction_entete')) : ?>
-						<p><?php the_field('phrase_dintroduction_entete') ?></p>
+						<div class="phrase-dintroduction-entete">
+							<div class="chevre-home-wrapper">
+								<img src="<?= get_stylesheet_directory_uri() . '/img/chevre-home.png' ?>" alt="">
+							</div>
+							<?php the_field('phrase_dintroduction_entete') ?>
+						</div>
 					<?php endif; ?>
 					<?php if (get_field('call-to-action_dentete_texte')) : ?>
 						<div class="cta-container cta_align_left">
 							<p class="cta-bloc-flex cta_primaire">
 								<?= showSvg(get_stylesheet_directory_uri() . '/svg/fond-cta.svg') ?>
-								<a href="<?php the_field('call-to-action_dentete_hyperlien') ?>" ><?php the_field('call-to-action_dentete_texte') ?></a>
+								<a href="<?php the_field('call-to-action_dentete_hyperlien') ?>"><?php the_field('call-to-action_dentete_texte') ?></a>
 							</p>
 						</div>
 					<?php endif; ?>

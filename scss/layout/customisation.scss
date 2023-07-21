@@ -80,3 +80,27 @@ figure {
         }
     }
 }
+
+article {
+    background-color: $fondBlancCasse;
+}
+
+.padding_section_top {
+    padding-top: 3rem;
+}
+
+.padding_section_bottom {
+    padding-bottom: 3rem;
+}
+
+.margin_section_top {
+    margin-top: 3rem;
+}
+
+.margin_section_bottom {
+    margin-bottom: 3rem;
+}
+
+#header_back {
+    height: 80px;
+}

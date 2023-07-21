@@ -40,16 +40,12 @@ endif;
 ?>
 <div class="<?php if ($couleur_de_fond_bloc) :
                 echo ' ' . $couleur_de_fond_bloc;
-            endif;
-            if ($marge_en_haut_du_bloc) :
-                echo ' padding_section_top';
-            endif;
-            if ($marge_en_bas_du_bloc) :
-                echo ' padding_section_bottom';
-            endif; ?>
+            endif;            
+            if ($marge_en_haut_du_bloc) : echo " margin_section_top";  endif;
+            if ($marge_en_bas_du_bloc) : echo " margin_section_bottom"; endif; ?>
 ">
     <?php if ($vague_au_dessus_du_bloc) : ?>
-          <div class="vague-haute">
+        <div class="vague-haute">
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
         </div>
     <?php endif; ?>
@@ -75,31 +71,31 @@ endif;
             <?php $largeur_de_la_colonne_contenu = get_sub_field('largeur_de_la_colonne_contenu'); ?>
             <!-- Les 2 colonnes -->
             <div class="part-1-block">
-            <div class="col-gauche">
-                <div class="caracteristiques-recettes">
-                    <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/difficulte-recette.svg') ?>
-                        </span><?= $difficulte_de_la_recette; ?></p>
-                    <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/temps-preparation.svg') ?></span>
-                        <?php echo $minutes_de_preparation . ' '; ?><?php echo $texte_minutes_de_preparation; ?></p>
-                    <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/combien-personnes.svg') ?></span>
-                        <?php echo $nombre_de_personnes . ' '; ?><?php echo $texte_combien_de_personnes; ?></p>
-                    <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/temps-cuisson.svg') ?></span>
-                        <?php echo $minutes_de_cuisson . ' '; ?><?php echo $texte_minutes_de_cuisson; ?></p>
+                <div class="col-gauche">
+                    <div class="caracteristiques-recettes">
+                        <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/difficulte-recette.svg') ?>
+                            </span><?= $difficulte_de_la_recette; ?></p>
+                        <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/temps-preparation.svg') ?></span>
+                            <?php echo $minutes_de_preparation . ' '; ?><?php echo $texte_minutes_de_preparation; ?></p>
+                        <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/combien-personnes.svg') ?></span>
+                            <?php echo $nombre_de_personnes . ' '; ?><?php echo $texte_combien_de_personnes; ?></p>
+                        <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/temps-cuisson.svg') ?></span>
+                            <?php echo $minutes_de_cuisson . ' '; ?><?php echo $texte_minutes_de_cuisson; ?></p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-droite">
-                <h3><?= $liste_des_ingredients_titre ?></h3>
-                <div class="liste-ingredients">
-                    <?= $liste_des_ingredients_wysiwyg ?>
+                <div class="col-droite">
+                    <h3><?= $liste_des_ingredients_titre ?></h3>
+                    <div class="liste-ingredients">
+                        <?= $liste_des_ingredients_wysiwyg ?>
+                    </div>
                 </div>
-            </div>
             </div>
             <?php get_template_part('inc/content-builder-inc/cta-flex') ?>
         </div>
     </div>
     <?php if ($vague_au_dessous_du_bloc) : ?>
-           <div class="vague-basse">
+        <div class="vague-basse">
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague.svg') ?>
-        </div> 
+        </div>
     <?php endif; ?>
 </div>
