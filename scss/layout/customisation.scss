@@ -17,7 +17,7 @@ figure {
 }
 
 .fond_vert_fonce {
-    background-color: $darkGreenBilly;
+    background-color: $darkGreenBilly !important;
 
     h1,
     h2,
@@ -35,7 +35,7 @@ figure {
 }
 
 .fond_vert_clair {
-    background-color: $clearGreenBilly;
+    background-color: $clearGreenBilly !important; 
 
     h1,
     h2,
