@@ -8,8 +8,8 @@ figure {
 
 
 .fond_blanc,
-#header_back, .block {
-    background-color: $fondBlancCasse;
+#header_back, .block, body, .page_defaut .entry_title_bg, .page_les_actualites .entry_title_bg {
+    background-color: $fondBlancCasse !important;
 }
 
 .fond_vert_fonce {
