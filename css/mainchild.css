@@ -442,8 +442,18 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   margin-bottom: 10%;
   margin-top: 10%;
 }
+.block-nos-recettes-gourmandes h2, .block-nos-recettes-gourmandes h3, .block-nos-recettes-gourmandes p {
+  color: white;
+  margin-top: 1rem;
+}
+@media (max-width: 780px) {
+  .block-nos-recettes-gourmandes h2, .block-nos-recettes-gourmandes h3, .block-nos-recettes-gourmandes p {
+    width: 70%;
+  }
+}
 .block-nos-recettes-gourmandes h2, .block-nos-recettes-gourmandes h3, .block-nos-recettes-gourmandes p, .block-nos-recettes-gourmandes a {
   color: white;
+  margin-top: 1rem;
 }
 .block-nos-recettes-gourmandes .bg-block-nos-recettes-gourmandes {
   background-color: #00693E;
@@ -456,13 +466,37 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 .block-nos-recettes-gourmandes .col_flexible {
   z-index: 1;
 }
+@media (max-width: 780px) {
+  .block-nos-recettes-gourmandes .col_flexible {
+    flex-direction: column;
+  }
+}
+@media (max-width: 780px) {
+  .block-nos-recettes-gourmandes .col_flexible .col_flexible_wrapper {
+    justify-content: center;
+  }
+}
 .block-nos-recettes-gourmandes .nos-recettes-col-1 {
   width: 70%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 780px) {
+  .block-nos-recettes-gourmandes .nos-recettes-col-1 {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 .block-nos-recettes-gourmandes .nos-recettes-col-1 .recette-item {
   width: 31%;
+}
+@media (max-width: 780px) {
+  .block-nos-recettes-gourmandes .nos-recettes-col-1 .recette-item {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .block-nos-recettes-gourmandes .nos-recettes-col-1 .recette-img-container {
   height: 350px;
@@ -470,9 +504,22 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   margin: 0;
   border-radius: 5%;
 }
+@media (max-width: 780px) {
+  .block-nos-recettes-gourmandes .nos-recettes-col-1 .recette-img-container {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+  }
+}
 .block-nos-recettes-gourmandes .nos-recettes-col-1 .recette-img-container img {
-  width: auto;
+  width: 100%;
   height: 100%;
+}
+@media (max-width: 780px) {
+  .block-nos-recettes-gourmandes .nos-recettes-col-1 .recette-img-container img {
+    width: 100%;
+    height: auto;
+  }
 }
 .block-nos-recettes-gourmandes .nos-recettes-col-2 {
   display: flex;
@@ -481,6 +528,20 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   width: 30%;
   padding-top: 5%;
   padding-left: 5%;
+}
+.block-nos-recettes-gourmandes .nos-recettes-col-2 .cta-bloc-flex a {
+  /*        @media (max-width: 780px) {
+                    display: flex;
+                    justify-content: center;
+                } */
+}
+@media (max-width: 780px) {
+  .block-nos-recettes-gourmandes .nos-recettes-col-2 {
+    flex-direction: column;
+    padding-top: 0;
+    padding-left: 0;
+    width: 70%;
+  }
 }
 .block {
   position: relative;
@@ -1031,13 +1092,13 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 @media (max-width: 1400px) {
   .entry_title_home .title_home_wrapper .phrase-dintroduction-entete .chevre-home-wrapper {
     left: -178px;
-    bottom: -140px;
+    bottom: -170px;
   }
 }
 @media (max-width: 1100px) {
   .entry_title_home .title_home_wrapper .phrase-dintroduction-entete .chevre-home-wrapper {
     left: -142px;
-    bottom: -91px;
+    bottom: -121px;
   }
 }
 @media (max-width: 980px) {

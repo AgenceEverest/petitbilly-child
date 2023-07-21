@@ -3,9 +3,25 @@
     position: relative;
     margin-bottom: 10%;
     margin-top: 10%;
+
     h2,
     h3,
-    p, 
+    p {
+        color: white;
+        margin-top: 1rem;
+
+        @media (max-width: 780px) {
+            width: 70%;
+        }
+    }
+    
+    h2,
+    h3,
+    p {
+        color: white;
+        margin-top: 1rem;
+    }
+
     a {
         color: white;
     }
@@ -21,15 +37,37 @@
 
     .col_flexible {
         z-index: 1;
+
+        @media (max-width: 780px) {
+            flex-direction: column;
+        }
+
+        .col_flexible_wrapper {
+            @media (max-width: 780px) {
+                justify-content: center;
+            }
+        }
     }
 
     .nos-recettes-col-1 {
         width: 70%;
         display: flex;
         justify-content: space-around;
+        align-items: center;
+
+        @media (max-width: 780px) {
+            flex-direction: column;
+            width: 100%;
+        }
 
         .recette-item {
             width: 31%;
+
+            @media (max-width: 780px) {
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+            }
         }
 
         .recette-img-container {
@@ -37,9 +75,21 @@
             overflow: hidden;
             margin: 0;
             border-radius: 5%;
+
+            @media (max-width: 780px) {
+                width: 100%;
+                height: 250px;
+                border-radius: 20px;
+            }
+
             img {
-                width: auto;
+                width: 100%;
                 height: 100%;
+
+                @media (max-width: 780px) {
+                    width: 100%;
+                    height: auto;
+                }
             }
         }
     }
@@ -51,5 +101,21 @@
         width: 30%;
         padding-top: 5%;
         padding-left: 5%;
+
+        .cta-bloc-flex {
+            a {
+         /*        @media (max-width: 780px) {
+                    display: flex;
+                    justify-content: center;
+                } */
+            }
+        }
+
+        @media (max-width: 780px) {
+            flex-direction: column;
+            padding-top: 0;
+            padding-left: 0;
+            width: 70%;
+        }
     }
 }
