@@ -38,8 +38,8 @@ endif;
             if ($marge_en_bas_du_bloc) : echo " margin_section_bottom"; endif; ?>
 ">
     <?php if ($vague_au_dessus_du_bloc) : ?>
-        <div class="vague-haute">
-            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-haute.svg') ?>
+        <div class="vague-haut">
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-haut.svg') ?>
         </div>
     <?php endif; ?>
     <div <?php if ($ajouter_un_id_pour_le_css) : echo " id='" . $ajouter_un_id_pour_le_css . "'";

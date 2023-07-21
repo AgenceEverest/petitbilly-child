@@ -47,8 +47,8 @@ endif;
             endif;
             ?>">
     <?php if ($vague_au_dessus_du_bloc) : ?>
-        <div class="vague-haute">
-            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-haute.svg') ?>
+        <div class="vague-haut">
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-haut.svg') ?>
         </div>
     <?php endif; ?>
     <div <?php echo " ";

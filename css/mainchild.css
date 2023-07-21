@@ -451,9 +451,12 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
     width: 70%;
   }
 }
-.block-nos-recettes-gourmandes h2, .block-nos-recettes-gourmandes h3, .block-nos-recettes-gourmandes p, .block-nos-recettes-gourmandes a {
+.block-nos-recettes-gourmandes h2, .block-nos-recettes-gourmandes h3, .block-nos-recettes-gourmandes p {
   color: white;
   margin-top: 1rem;
+}
+.block-nos-recettes-gourmandes a {
+  color: white;
 }
 .block-nos-recettes-gourmandes .bg-block-nos-recettes-gourmandes {
   background-color: #00693E;
@@ -1297,28 +1300,7 @@ figure {
 .fond_vert_fonce .block {
   z-index: 1;
 }
-.fond_vert_fonce .vague-haute {
-  z-index: 0;
-  position: absolute;
-  top: -20px;
-  width: 130%;
-  left: -15%;
-  display: flex;
-  justify-content: center;
-}
-.fond_vert_fonce .vague-haute svg {
-  width: 100%;
-}
-.fond_vert_fonce .vague-basse {
-  z-index: 0;
-  position: absolute;
-  bottom: -20px;
-  width: 130%;
-  left: -15%;
-  display: flex;
-  justify-content: center;
-}
-.fond_vert_fonce .vague-basse svg {
+.vague-haut svg, .vague-basse svg {
   width: 100%;
 }
 article {

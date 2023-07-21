@@ -28,16 +28,14 @@ if (have_rows('block_profil_type_recherche')) : the_row(); // il s'agit du nom d
     $liseret_vert_autour_du_bloc = get_sub_field('liseret_vert_autour_du_bloc');
 endif;
 ?>
-<div class="<?php if ($couleur_de_fond_bloc) :
-                echo ' ' . $couleur_de_fond_bloc;
-            endif;
+<div class="<?php
             if ($marge_en_haut_du_bloc) : echo " margin_section_top";
             endif;
             if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
             endif; ?>">
     <?php if ($vague_au_dessus_du_bloc) : ?>
-        <div class="vague-haute">
-            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-haute.svg') ?>
+        <div class="vague-haut">
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-haut.svg') ?>
         </div>
     <?php endif; ?>
     <div <?php if ($ajouter_un_id_pour_le_css) : echo " id='" . $ajouter_un_id_pour_le_css . "'";
@@ -52,6 +50,9 @@ endif;
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
             if ($liseret_vert_autour_du_bloc) : echo " has-edge ";
+            endif;
+            if ($couleur_de_fond_bloc) :
+                echo ' ' . $couleur_de_fond_bloc;
             endif;
             echo " block block-profil-type-recherche'"; ?>>
         <div class="half-background">

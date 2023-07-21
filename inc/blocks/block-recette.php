@@ -38,15 +38,13 @@ if (have_rows('block_recette')) : the_row(); // il s'agit du nom du champ dans A
     $liste_des_ingredients_wysiwyg = get_sub_field('liste_des_ingredients_wysiwyg');
 endif;
 ?>
-<div class="<?php if ($couleur_de_fond_bloc) :
-                echo ' ' . $couleur_de_fond_bloc;
-            endif;            
+<div class="<?php             
             if ($marge_en_haut_du_bloc) : echo " margin_section_top";  endif;
             if ($marge_en_bas_du_bloc) : echo " margin_section_bottom"; endif; ?>
 ">
     <?php if ($vague_au_dessus_du_bloc) : ?>
-        <div class="vague-haute">
-            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-haute.svg') ?>
+        <div class="vague-haut">
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-haut.svg') ?>
         </div>
     <?php endif; ?>
     <div <?php if ($ajouter_un_id_pour_le_css) : echo " id='" . $ajouter_un_id_pour_le_css . "'";
@@ -59,6 +57,9 @@ endif;
             if ($padding_en_bas_du_bloc) : echo " padding_section_bottom";
             endif;
             if ($liseret_vert_autour_du_bloc) : echo " has-edge ";
+            endif;
+            if ($couleur_de_fond_bloc) :
+                echo ' ' . $couleur_de_fond_bloc;
             endif;
             echo " block block-recette'"; ?>>
         <?php if ($liseret_vert_autour_du_bloc) : ?>

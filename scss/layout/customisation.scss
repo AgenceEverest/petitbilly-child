@@ -54,30 +54,12 @@ figure {
     .block {
         z-index: 1;
     }
-    .vague-haute {
-        z-index: 0;
-        position: absolute;
-        top: -20px;
-        width: 130%;
-        left: -15%;
-        display: flex;
-        justify-content: center;
-        svg {
-            width: 100%;
-        }
-    }
+   
+}
 
-    .vague-basse {
-        z-index: 0;
-        position: absolute;
-        bottom: -20px;
-        width: 130%;
-        left: -15%;
-        display: flex;
-        justify-content: center;
-        svg {
-            width: 100%;
-        }
+.vague-haut, .vague-basse {
+    svg {
+        width: 100%;
     }
 }
 
