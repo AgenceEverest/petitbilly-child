@@ -19,7 +19,7 @@ if (is_singular('post')) : ?>
 				<?php $page_for_posts = get_option('page_for_posts');
 				$texte_bouton_de_retour_blog = get_field('texte_bouton_de_retour_blog', 'option'); ?>
 				<a href="<?php echo get_permalink($page_for_posts); ?>" class="nav_blog_link_item">
-					<span><?php if ($blog_retour) : ?><?php echo $blog_retour; ?><?php endif; ?> <br><?php echo $texte_bouton_de_retour_blog; ?></span>
+					<span><?php if ($blog_retour) : ?><?php echo $blog_retour; ?><?php endif; ?> <br><?= "AUX PRODUITS" ?></span>
 				</a>
 			</div>
 			<div id="nav_blog_right" class="nav_blog_item">
@@ -56,7 +56,7 @@ if (is_singular('recettes')) : ?>
 				$page_qui_liste_les_offres_id = $page_qui_liste_les_offres->ID;
 				$page_qui_liste_les_offres_permalink = get_permalink($page_qui_liste_les_offres_id); ?>
 				<a href="<?php echo $page_qui_liste_les_offres_permalink; ?>" class="nav_blog_link_item">
-					<span><?php if ($blog_retour) : ?><?php echo $blog_retour; ?><?php endif; ?><br><?php echo $texte_bouton_de_retour_offres; ?></span>
+					<span><?php if ($blog_retour) : ?><?php echo $blog_retour; ?><?php endif; ?><br><?= "AUX RECETTES" ?></span>
 				</a>
 			</div>
 			<div id="nav_blog_right" class="nav_blog_item">
