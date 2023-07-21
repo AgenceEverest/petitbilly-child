@@ -1,3 +1,13 @@
 .icon_multicolonnes  {
     background-color: transparent !important;
 }
+
+.multicolonnes_wrapper {
+    .avec_bordure {
+        background-color: $clearGreenBilly !important;
+        color: white;
+        ul, li, a, div, p {
+            color: white !important;
+        }
+    }
+}
