@@ -2,8 +2,10 @@
     .recettes-caracteristiques-wrapper {
         display: flex;
         flex-direction: column;
+
         .part-1-block {
             display: flex;
+
             .col-gauche {
                 display: flex;
                 flex-direction: column;
@@ -11,11 +13,13 @@
 
                 .caracteristiques-recettes {
                     padding: 10%;
-                    background-color: rgb(245, 245, 245);
+                    background-color: white;
                     border-radius: 20px 0 0 20px;
+
                     .svg-recette {
                         margin-right: 0.5rem;
                     }
+
                     p {
                         display: flex;
                         align-items: center;
