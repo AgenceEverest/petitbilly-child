@@ -35,7 +35,7 @@ function my_acf_init_child()
         // register block test
         acf_register_block(array(
             'name' => 'block-app',
-            'title' => __('Bloc App pour filtrer les posts'),
+            'title' => __('Bloc pour filtrer les posts (VueJS)'),
             'description' => __('Un bloc pour le theme enfant.'),
             'render_callback' => 'block_callback_child',
             'category' => 'layout',
