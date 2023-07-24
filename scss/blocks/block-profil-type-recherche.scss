@@ -19,15 +19,17 @@
         position: relative;
         display: flex;
         justify-content: space-between;
-
+        @media (max-width: 780px) {
+            flex-direction: column;
+        }
         .poste-recherche {
             padding: 5% 2%;
             width: 31%;
             margin-right: 2%;
             margin-bottom: 2%;
 
-            @media (max-width: 768px) {
-                width: 48%;
+            @media (max-width: 780px) {
+                width: 100%;
             }
 
             &:nth-child(even) {
