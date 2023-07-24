@@ -5,7 +5,7 @@ $mobileBreakpoint: 780px;
     &.has-edge {
         margin-top: 5%;
         margin-bottom: 5%;
-        @media (max-width: $mobileBreakpoint) {
+        @media (max-width: 1020px) {
             margin-top: 15%;
             margin-bottom: 15%;
         }
