@@ -95,8 +95,8 @@ endif;
                     </div>
             <?php endwhile;
             endif; ?>
-            <?php get_template_part('inc/content-builder-inc/cta-flex') ?>
         </div>
+        <?php get_template_part('inc/content-builder-inc/cta-flex') ?>
     </div>
     <?php if ($vague_au_dessous_du_bloc) : ?>
         <div class="vague-basse">
