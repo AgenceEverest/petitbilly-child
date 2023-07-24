@@ -16,10 +16,10 @@
         z-index: 1;
         position: relative;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         .poste-recherche {
             padding: 5% 2%;
-            width: 28%;
+            width: 31%;
             margin-right: 2%;
             margin-bottom: 2%;
             @media (max-width: 768px) {
