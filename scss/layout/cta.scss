@@ -25,9 +25,15 @@
     padding-top: 1rem;
     &.cta_align_left {
         justify-content: flex-start;
+        @media (max-width: 780px) {
+            justify-content: center;
+        }
     }
     &.cta_align_right {
         justify-content: flex-end;
+        @media (max-width: 780px) {
+            justify-content: center;
+        }
     }
     &.cta_align_center {
         justify-content: center;
@@ -49,6 +55,9 @@
 .col_flexible_2 .col_flexible_item:nth-child(even) {
     .cta-container {
         padding-left: 2rem;
+        @media (max-width: 780px) {
+            padding-left: 0rem;
+        }
     }
 }
 
