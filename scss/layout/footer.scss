@@ -49,12 +49,14 @@
 .lien-site-eco-concu {
     text-decoration: underline;
 }
+
 #footer_certification_wrapper {
     justify-content: right;
+
     .footer_certification {
         height: 8rem;
     }
-    
+
 }
 
 .aside_prefooter_col p.coordonnees_p_i svg {
@@ -64,16 +66,28 @@
 @media (max-width: 780px) {
     .aside_prefooter_wrapper {
         flex-direction: column;
+        align-items: flex-start;
 
     }
-    .aside_prefooter_col_1, .aside_prefooter_col_2 {
+
+    .aside_prefooter_col_1,
+    .aside_prefooter_col_2 {
         width: 100%;
+        align-items: flex-start;
     }
 
     .aside_prefooter_col {
         width: 100%;
+        align-items: flex-start;
     }
+
+    #menu-menu-footer-2 {
+        height: auto;
+        align-items: flex-start;
+    }
+
     #menu-menu-footer-2 li {
         width: 100%;
+        align-items: flex-start;
     }
 }
