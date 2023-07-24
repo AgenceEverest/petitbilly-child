@@ -16,6 +16,29 @@ figure {
     background-color: $fondBlancCasse !important;
 }
 
+.fond_blanc {
+    .col_flexible_bordure {
+        background-color: $darkGreenBilly;
+        color: white;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        div,
+        p,
+        ul,
+        li,
+        a {
+            color: white;
+            strong {
+                color: white;
+            }
+        }
+    }
+}
+
 .fond_vert_fonce {
     background-color: $darkGreenBilly !important;
 
@@ -31,6 +54,32 @@ figure {
     li,
     a {
         color: white;
+    }
+
+    .col_flexible_bordure {
+        background-color: white;
+        color: $darkGreenBilly;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        div,
+        p,
+        ul,
+        li,
+        a {
+            color: $darkGreenBilly;
+            strong {
+                color: $darkGreenBilly;
+            }
+        }
+    }
+
+    position: relative;
+    .block {
+        z-index: 1;
     }
 }
 
@@ -50,16 +99,29 @@ figure {
     a {
         color: white;
     }
-}
 
-
-.fond_vert_fonce {
-    position: relative;
-    .block {
-        z-index: 1;
+    .col_flexible_bordure {
+        background-color: white;
+        color: $darkGreenBilly;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        div,
+        p,
+        ul,
+        li,
+        a {
+            color: $darkGreenBilly;
+            strong {
+                color: $darkGreenBilly;
+            }
+        }
     }
-   
 }
+
 .vague-haut {
     bottom: -1px;
     position: relative;
