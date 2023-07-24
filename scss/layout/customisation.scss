@@ -60,7 +60,14 @@ figure {
     }
    
 }
-
+.vague-haut {
+    bottom: -1px;
+    position: relative;
+}
+.vague-basse {
+    top: -1px;
+    position: relative;
+}
 .vague-haut, .vague-basse {
     svg {
         width: 100%;
