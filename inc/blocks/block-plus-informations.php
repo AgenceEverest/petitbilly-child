@@ -10,7 +10,7 @@ if (have_rows('block_plus_informations')) : the_row(); // il s'agit du nom du ch
     $ajouter_un_id_pour_le_css = get_sub_field('ajouter_un_id_pour_le_css');
     $contenu_texte = get_sub_field('contenu_texte');
     $texte_call_to_action = get_sub_field('texte_call_to_action');
-    $url_page_contact = get_field('url_de_la_page_contact', 'option');
+    $url_page_contact = get_field('url_du_bouton_contact', 'option');
     $url_page_contact = $url_page_contact ? get_permalink($url_page_contact->ID) : '';
 endif;
 ?>
