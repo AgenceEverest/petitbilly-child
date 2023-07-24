@@ -25,7 +25,7 @@ figure {
         h3,
         h4,
         h5,
-        h6,
+        h6 
         div,
         p,
         ul,
@@ -58,21 +58,23 @@ figure {
 
     .col_flexible_bordure {
         background-color: white;
-        color: $darkGreenBilly;
+        color: black;
         h1,
         h2,
         h3,
         h4,
         h5,
-        h6,
+        h6 {
+            color:$darkGreenBilly;
+        }
         div,
         p,
         ul,
         li,
         a {
-            color: $darkGreenBilly;
+            color: black;
             strong {
-                color: $darkGreenBilly;
+                color: black;
             }
         }
     }
@@ -108,15 +110,17 @@ figure {
         h3,
         h4,
         h5,
-        h6,
+        h6{
+            color: $darkGreenBilly;
+        }
         div,
         p,
         ul,
         li,
         a {
-            color: $darkGreenBilly;
+            color: black;
             strong {
-                color: $darkGreenBilly;
+                color: black;
             }
         }
     }

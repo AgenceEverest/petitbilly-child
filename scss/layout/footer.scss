@@ -60,3 +60,20 @@
 .aside_prefooter_col p.coordonnees_p_i svg {
     color: white;
 }
+
+@media (max-width: 780px) {
+    .aside_prefooter_wrapper {
+        flex-direction: column;
+
+    }
+    .aside_prefooter_col_1, .aside_prefooter_col_2 {
+        width: 100%;
+    }
+
+    .aside_prefooter_col {
+        width: 100%;
+    }
+    #menu-menu-footer-2 li {
+        width: 100%;
+    }
+}
