@@ -1,10 +1,11 @@
-.block-profil-type-recherche{
+.block-profil-type-recherche {
     h2 {
         color: white !important;
         z-index: 1;
         position: relative;
     }
-    .half-background{
+
+    .half-background {
         background-color: $darkGreenBilly;
         position: absolute;
         width: 100%;
@@ -12,44 +13,57 @@
         top: 0;
         z-index: 0;
     }
+
     .postes-recherches {
         z-index: 1;
         position: relative;
         display: flex;
         justify-content: space-between;
+
         .poste-recherche {
             padding: 5% 2%;
             width: 31%;
             margin-right: 2%;
             margin-bottom: 2%;
+
             @media (max-width: 768px) {
                 width: 48%;
             }
-            &:nth-child(even){
-                background:white;
+
+            &:nth-child(even) {
+                background: white;
+
                 h3 {
                     color: $darkGreenBilly;
                     text-align: center;
                     padding-bottom: 1rem;
                 }
+
                 .description-du-poste {
                     p {
                         color: black;
                     }
                 }
-            };
-            &:nth-child(odd){
+            }
+
+            ;
+
+            &:nth-child(odd) {
                 background-color: $clearGreenBilly;
+
                 h3 {
                     color: white;
+                    padding-bottom: 1rem;
+                    text-align: center;
                 }
+
                 .description-du-poste {
                     p {
                         color: white;
                     }
                 }
             }
-      
+
         }
     }
 }
