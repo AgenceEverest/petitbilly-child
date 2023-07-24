@@ -1,7 +1,8 @@
 .block-profil-type-recherche{
     h2 {
-        color: white;
+        color: white !important;
         z-index: 1;
+        position: relative;
     }
     .half-background{
         background-color: $darkGreenBilly;
