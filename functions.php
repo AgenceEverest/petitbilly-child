@@ -256,6 +256,7 @@ function my_plugin_allowed_block_types_child($allowed_block_types_all, $post)
         'acf/block-petit-billy-pour-des-fromages-uniques',
         'acf/block-profil-type-recherche',
         'acf/block-recette',
+        'acf/block-plus-informations',
     );
     return $allowed_block_types;
 }

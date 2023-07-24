@@ -103,12 +103,39 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 #block-app .results .cpt-extrait .terms-container .term-wrapper:nth-child(odd) .term-bg {
   fill: #8CC751;
 }
+#block-app .results .cpt-extrait .img-container {
+  height: 230px;
+}
+#block-app .results .cpt-extrait .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#block-app .results .cpt-extrait .buttons-extrait {
+  padding-bottom: 1rem;
+}
+#block-app .results .cpt-extrait .buttons-extrait .cta_center {
+  display: flex;
+  justify-content: center;
+}
+#block-app .results .cpt-extrait .buttons-extrait a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#block-app .results .cpt-extrait .buttons-extrait a span {
+  z-index: 1;
+  position: absolute;
+  font-family: "Cafeteria-Bold" !important;
+  color: white;
+}
 @media (max-width: 1280px) {
   #block-app .results .cpt-extrait {
     width: 48%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   #block-app .results .cpt-extrait {
     margin-right: 0;
     width: 100%;
@@ -148,7 +175,6 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   fill: #00693E;
 }
 #block-app .buttons:nth-child(odd) .button-all-filters span {
-  color: white !important;
   font-size: 19px;
 }
 #block-app .buttons:nth-child(odd) .term-filter-bg {
@@ -168,7 +194,6 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   fill: #8CC751;
 }
 #block-app .buttons:nth-child(even) .button-all-filters span {
-  color: white !important;
   font-size: 19px;
 }
 #block-app .buttons:nth-child(even) button.active path :nth-child(1) {
@@ -204,13 +229,30 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 #block-app .buttons .button.active {
   color: white;
 }
+#block-app .load-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#block-app .load-more-container .load-more {
+  color: white;
+  font-family: "Cafeteria-Bold" !important;
+  font-size: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+#block-app .load-more-container svg {
+  cursor: pointer;
+}
 .block-pourquoi-differents {
   background-color: #00693E;
   padding-bottom: 280px;
   position: relative;
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 @media (max-width: 980px) {
   .block-pourquoi-differents {
@@ -285,7 +327,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-@media (max-width: 480px) {
+@media (max-width: 780px) {
   .block-nos-valeurs .valeurs {
     justify-content: center;
   }
@@ -423,7 +465,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 .block-recette-du-moment .col_flexible_wrapper .col-2 img {
   width: 70%;
-  border-radius: 5%;
+  border-radius: 20px;
 }
 @media (max-width: 980px) {
   .block-recette-du-moment .col_flexible_wrapper .col-2 img {
@@ -466,6 +508,11 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   top: 10%;
   z-index: 0;
 }
+@media (max-width: 780px) {
+  .block-nos-recettes-gourmandes .bg-block-nos-recettes-gourmandes {
+    top: 0;
+  }
+}
 .block-nos-recettes-gourmandes .col_flexible {
   z-index: 1;
 }
@@ -477,6 +524,8 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 @media (max-width: 780px) {
   .block-nos-recettes-gourmandes .col_flexible .col_flexible_wrapper {
     justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 .block-nos-recettes-gourmandes .nos-recettes-col-1 {
@@ -505,7 +554,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   height: 350px;
   overflow: hidden;
   margin: 0;
-  border-radius: 5%;
+  border-radius: 20px;
 }
 @media (max-width: 780px) {
   .block-nos-recettes-gourmandes .nos-recettes-col-1 .recette-img-container {
@@ -553,13 +602,13 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   margin-top: 5%;
   margin-bottom: 5%;
 }
-@media (max-width: 760px) {
+@media (max-width: 1020px) {
   .block.has-edge {
     margin-top: 15%;
     margin-bottom: 15%;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 780px) {
   .block {
     display: flex;
     align-items: center;
@@ -579,7 +628,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   padding-left: 5%;
   margin: auto;
 }
-@media (max-width: 760px) {
+@media (max-width: 780px) {
   .block .green-edge, .block .green-edge-desktop-tall {
     width: 150%;
     height: 110%;
@@ -647,13 +696,13 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   margin-top: 5%;
   margin-bottom: 5%;
 }
-@media (max-width: 760px) {
+@media (max-width: 780px) {
   .block-fromages-uniques.has-edge {
     margin-top: 15%;
     margin-bottom: 15%;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 780px) {
   .block-fromages-uniques {
     display: flex;
     align-items: center;
@@ -681,7 +730,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   padding-left: 0 !important;
   margin: auto;
 }
-@media (max-width: 760px) {
+@media (max-width: 780px) {
   .block-fromages-uniques .green-edge, .block-fromages-uniques .green-edge-desktop-tall {
     width: 150%;
     height: 110%;
@@ -758,6 +807,11 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   height: auto;
   width: auto;
 }
+.block-profil-type-recherche h2 {
+  color: white !important;
+  z-index: 1;
+  position: relative;
+}
 .block-profil-type-recherche .half-background {
   background-color: #00693E;
   position: absolute;
@@ -770,17 +824,24 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   z-index: 1;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+@media (max-width: 780px) {
+  .block-profil-type-recherche .postes-recherches {
+    flex-direction: column;
+  }
 }
 .block-profil-type-recherche .postes-recherches .poste-recherche {
   padding: 5% 2%;
-  width: 28%;
+  width: 31%;
   margin-right: 2%;
   margin-bottom: 2%;
 }
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .block-profil-type-recherche .postes-recherches .poste-recherche {
-    width: 48%;
+    width: 100%;
+    margin-bottom: 4%;
+    padding: 5% 5%;
   }
 }
 .block-profil-type-recherche .postes-recherches .poste-recherche:nth-child(even) {
@@ -799,35 +860,10 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 .block-profil-type-recherche .postes-recherches .poste-recherche:nth-child(odd) h3 {
   color: white;
+  padding-bottom: 1rem;
+  text-align: center;
 }
 .block-profil-type-recherche .postes-recherches .poste-recherche:nth-child(odd) .description-du-poste p {
-  color: white;
-}
-#block-app .results .cpt-extrait .img-container {
-  height: 230px;
-}
-#block-app .results .cpt-extrait .img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-#block-app .results .cpt-extrait .buttons-extrait {
-  padding-bottom: 1rem;
-}
-#block-app .results .cpt-extrait .buttons-extrait .cta_center {
-  display: flex;
-  justify-content: center;
-}
-#block-app .results .cpt-extrait .buttons-extrait a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-#block-app .results .cpt-extrait .buttons-extrait a span {
-  z-index: 1;
-  position: absolute;
-  font-family: "Cafeteria-Bold" !important;
   color: white;
 }
 .valeurs {
@@ -865,16 +901,17 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 .block-recette .recettes-caracteristiques-wrapper .part-1-block {
   display: flex;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-gauche {
   display: flex;
   flex-direction: column;
   width: 50%;
+  background-color: white;
 }
 .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-gauche .caracteristiques-recettes {
   padding: 10%;
-  background-color: whitesmoke;
-  border-radius: 20px 0 0 20px;
 }
 .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-gauche .caracteristiques-recettes .svg-recette {
   margin-right: 0.5rem;
@@ -888,7 +925,6 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   width: 50%;
   padding: 5%;
   background-color: #00693E;
-  border-radius: 0 20px 20px 0;
 }
 .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite h3 {
   font-family: "Cafeteria-Bold";
@@ -902,11 +938,37 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite .liste-ingredients ul {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite .liste-ingredients li {
   list-style-type: disc;
   width: 50%;
   font-size: 20px;
+}
+.icon_multicolonnes {
+  background-color: transparent !important;
+}
+.multicolonnes_wrapper .multicolonnes_item {
+  border-radius: 20px;
+}
+.multicolonnes_wrapper .avec_bordure {
+  background-color: #8CC751 !important;
+  color: white;
+}
+.multicolonnes_wrapper .avec_bordure ul, .multicolonnes_wrapper .avec_bordure li, .multicolonnes_wrapper .avec_bordure a, .multicolonnes_wrapper .avec_bordure div, .multicolonnes_wrapper .avec_bordure p {
+  color: white !important;
+}
+.block-plus-informations .col_flexible {
+  display: flex;
+}
+.block-plus-informations .col_flexible .wysiwyg-content {
+  width: 80%;
+}
+.block-plus-informations .col_flexible .cta-container {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #aside_actualites {
   background-color: whitesmoke;
@@ -1153,7 +1215,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   position: absolute;
   top: 20%;
   background: white;
-  border-radius: 50%;
+  border-radius: 50% !important;
   height: 112px;
 }
 #header #branding #content_header {
@@ -1199,6 +1261,24 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 #burger_rs_accroche {
   font-family: "Cafeteria-Bold";
+}
+.breadcrumb_top {
+  padding-left: 10rem;
+  background-color: whitesmoke;
+}
+.breadcrumb_top span, .breadcrumb_top .breadcrumb_separator {
+  color: black !important;
+}
+.entry_title .content_width h1 {
+  font-size: 50px !important;
+  color: #00693E;
+  font-family: "Cafeteria-Bold" !important;
+}
+.post_thumbnail_texte, .article_blog .entry_title .post_thumbnail, .post_thumbnail_bg {
+  background-color: whitesmoke;
+}
+.article_blog .entry_title .post_thumbnail {
+  padding-top: 0.5rem;
 }
 /* .cta_btn_lead, .cta_primaire, .cta_secondaire {
     position: relative;
@@ -1278,18 +1358,22 @@ Fichier de customisation du CSS
 */
 figure {
   background-color: transparent !important;
+  border-radius: 20px !important;
 }
-.fond_blanc, #header_back {
-  background-color: whitesmoke;
+figure img {
+  border-radius: 20px !important;
+}
+.fond_blanc, #header_back, .block, body, .page_defaut .entry_title_bg, .page_les_actualites .entry_title_bg {
+  background-color: whitesmoke !important;
 }
 .fond_vert_fonce {
-  background-color: #00693E;
+  background-color: #00693E !important;
 }
 .fond_vert_fonce h1, .fond_vert_fonce h2, .fond_vert_fonce h3, .fond_vert_fonce h4, .fond_vert_fonce h5, .fond_vert_fonce h6, .fond_vert_fonce div, .fond_vert_fonce p, .fond_vert_fonce ul, .fond_vert_fonce li, .fond_vert_fonce a {
   color: white;
 }
 .fond_vert_clair {
-  background-color: #8CC751;
+  background-color: #8CC751 !important;
 }
 .fond_vert_clair h1, .fond_vert_clair h2, .fond_vert_clair h3, .fond_vert_clair h4, .fond_vert_clair h5, .fond_vert_clair h6, .fond_vert_clair div, .fond_vert_clair p, .fond_vert_clair ul, .fond_vert_clair li, .fond_vert_clair a {
   color: white;
@@ -1320,6 +1404,18 @@ article {
 }
 #header_back {
   height: 80px;
+}
+.share-date-container {
+  margin-top: 2rem;
+}
+.share-date-container .article_share_date span {
+  font-family: "Cafeteria-Bold" !important;
+}
+.nav_blog_wrapper {
+  background-color: whitesmoke;
+}
+.nav_blog_wrapper ul, .nav_blog_wrapper li, .nav_blog_wrapper a, .nav_blog_wrapper span, .nav_blog_wrapper .nav_blog_title {
+  font-family: "Cafeteria-Bold" !important;
 }
 /*# sourceMappingURL=D:\wamp64\www\petitbilly/wp-content/themes/nanosite-proefficace-child/css/mainchild.css.map */
 /*# sourceMappingURL=mainchild.css.map */
