@@ -72,7 +72,7 @@ export default {
         </span>
       </template>
     </div>
-    <h3> <a :href="cpt.acf.lien_telechargement" class="lien-telechargement" target="_blank">{{ cpt.title.rendered }}</a>
+    <h3> <a :href="cpt.link" class="lien-telechargement" target="_blank">{{ cpt.title.rendered }}</a>
     </h3>
 
     <p v-if="cpt.acf.hasOwnProperty('description_extrait_de_la_page')" class="desc-page">
