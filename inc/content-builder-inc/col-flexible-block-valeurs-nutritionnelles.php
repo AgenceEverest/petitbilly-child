@@ -1,4 +1,4 @@
-<div class="valeurs">
+<div class="valeurs-nutritionnelles">
     <?php
     $titre_valeurs_nutritionnelles = get_sub_field('titre_valeurs_nutritionnelles');
     $sousTitreValeurs = get_sub_field('sous_titre_valeurs_nutritionnelles'); ?>

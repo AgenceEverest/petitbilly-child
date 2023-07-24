@@ -11,7 +11,13 @@
         }
     }
 }
-
+#menu-footer {
+    li {
+        a {
+            color: $darkGreenBilly;
+        }
+    }
+}
 .aside_prefooter_col {
     h3 {
         color: white !important;
@@ -51,6 +57,7 @@
 
 .lien-site-eco-concu {
     text-decoration: underline;
+    color:white;
 }
 
 #footer_certification_wrapper {
