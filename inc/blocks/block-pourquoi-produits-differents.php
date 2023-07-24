@@ -31,8 +31,10 @@ if (have_rows('block_pourquoi_produits_differents')) : the_row(); // il s'agit d
 endif;
 ?>
 <div class="<?php
-            if ($marge_en_haut_du_bloc) : echo " margin_section_top"; endif;
-            if ($marge_en_bas_du_bloc) : echo " margin_section_bottom"; endif; ?>
+            if ($marge_en_haut_du_bloc) : echo " margin_section_top";
+            endif;
+            if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
+            endif; ?>
 ">
     <?php if ($vague_au_dessus_du_bloc) : ?>
         <div class="vague-haut">
@@ -53,7 +55,8 @@ endif;
             if ($liseret_vert_autour_du_bloc) : echo " has-edge ";
             endif;
             if ($couleur_de_fond_bloc) :
-                echo ' ' . $couleur_de_fond_bloc; endif;
+                echo ' ' . $couleur_de_fond_bloc;
+            endif;
             echo " block block-pourquoi-differents'"; ?>>
         <?php if ($liseret_vert_autour_du_bloc) : ?>
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge-desktop-tall') ?>
@@ -100,9 +103,11 @@ endif;
                 <?php get_template_part('inc/content-builder-inc/cta-flex') ?>
             </div>
         </div>
-        <?php if ($vague_au_dessous_du_bloc) : ?>
-            <div class="vague-basse">
-                <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-bas.svg') ?>
-            </div>
-        <?php endif; ?>
+
     </div>
+    <?php if ($vague_au_dessous_du_bloc) : ?>
+        <div class="vague-basse">
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-bas.svg') ?>
+        </div>
+    <?php endif; ?>
+</div>
