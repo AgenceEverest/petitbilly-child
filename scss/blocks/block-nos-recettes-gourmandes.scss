@@ -14,7 +14,7 @@
             width: 70%;
         }
     }
-    
+
     h2,
     h3,
     p {
@@ -33,6 +33,10 @@
         height: 100%;
         top: 10%;
         z-index: 0;
+
+        @media (max-width: 780px) {
+            top: 0;
+        }
     }
 
     .col_flexible {
@@ -45,6 +49,8 @@
         .col_flexible_wrapper {
             @media (max-width: 780px) {
                 justify-content: center;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
             }
         }
     }
@@ -104,7 +110,7 @@
 
         .cta-bloc-flex {
             a {
-         /*        @media (max-width: 780px) {
+                /*        @media (max-width: 780px) {
                     display: flex;
                     justify-content: center;
                 } */
