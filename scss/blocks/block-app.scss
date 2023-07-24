@@ -4,6 +4,7 @@
         &::placeholder {
             color:$darkGreenBilly;
             font-family: 'Cafeteria-Regular' !important;
+            font-size: 22px;
         }
     }
     .results {
@@ -28,6 +29,7 @@
                 color: $darkGreenBilly;
                 a {
                     color: $darkGreenBilly;
+                    text-align: center;
                 }
             }
 
@@ -88,7 +90,9 @@
 
             .buttons-extrait {
                 padding-bottom: 1rem;
-
+                position: absolute;
+                bottom: 0;
+                width: 100%;
                 .cta_center {
                     display: flex;
                     justify-content: center;
