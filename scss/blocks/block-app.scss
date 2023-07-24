@@ -17,12 +17,15 @@
                 width: 100%;
                 display: flex;
                 justify-content: center;
-                padding-top: 2rem;
-                padding-bottom: 2rem;
+                padding: 2rem;
                 color: $darkGreenBilly;
                 a {
                     color: $darkGreenBilly;
                 }
+            }
+
+            .desc {
+                padding: 0rem 2rem 2rem 2rem;
             }
 
             .terms-container {
