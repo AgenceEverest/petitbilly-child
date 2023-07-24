@@ -221,3 +221,7 @@
 .post_thumbnail_texte, .article_blog .entry_title .post_thumbnail, .post_thumbnail_bg {
     background-color: $fondBlancCasse;
 }
+
+.article_blog .entry_title .post_thumbnail {
+    padding-top: 0.5rem;
+}
