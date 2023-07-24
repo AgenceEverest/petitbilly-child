@@ -13,12 +13,16 @@
             position: relative;
 
             h3 {
-                width: 100;
+                font-size: 26px;
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 padding-top: 2rem;
                 padding-bottom: 2rem;
                 color: $darkGreenBilly;
+                a {
+                    color: $darkGreenBilly;
+                }
             }
 
             .terms-container {

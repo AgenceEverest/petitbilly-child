@@ -39,7 +39,7 @@ export default {
     <div class="img-container">
       <template v-if="cpt.hasOwnProperty('_embedded')">
         <template v-if="cpt._embedded['wp:featuredmedia']">
-          <img :src="cpt._embedded['wp:featuredmedia'][0].source_url" alt="" />
+          <a target="_blank" :href="cpt.link"><img :src="cpt._embedded['wp:featuredmedia'][0].source_url" alt="" /></a>
         </template>
       </template>
     </div>
