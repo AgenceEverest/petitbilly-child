@@ -1,24 +1,30 @@
 .block-plus-informations {
     .col_flexible {
         display: flex;
+
         @media (max-width: 780px) {
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        .wysiwyg-content{
-            width:80%;
+
+        .wysiwyg-content {
+            width: 80%;
+
             @media (max-width: 780px) {
                 width: 100%;
             }
         }
+
         .cta-container {
             width: 20%;
             display: flex;
             justify-content: center;
             align-items: flex-start;
+
             @media (max-width: 780px) {
                 width: 100%;
+                justify-content: flex-start;
             }
         }
     }
