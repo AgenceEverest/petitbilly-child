@@ -21,7 +21,7 @@ endif;
     <div class="fond_vert_fonce block-plus-informations block">
         <div class="content_width col_flexible col_flexible_1">
             <div class="wysiwyg-content">
-                <?= $contenu_texte ?>
+                <?= $contenu_texte ? $contenu_texte : ''; ?>
             </div>
             <?php if ($url_page_contact) : ?>
                 <div class="cta-container cta-plus-informations">
