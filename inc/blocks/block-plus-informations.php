@@ -21,9 +21,11 @@ endif;
     <div class="fond_vert_fonce block-plus-informations block">
         <div class="content_width col_flexible col_flexible_1">
             <div class="wysiwyg-content">
-                <?= $contenu_texte ? $contenu_texte : ''; ?>
+                <?php if (isset($contenu_texte)):
+                    echo $contenu_texte;
+                    endif; ?>
             </div>
-            <?php if ($url_page_contact) : ?>
+            <?php if (isset($url_page_contact)) : ?>
                 <div class="cta-container cta-plus-informations">
                     <p class="cta-bloc-flex">
                         <?= showSvg(get_stylesheet_directory_uri() . '/svg/fond-cta.svg') ?>
