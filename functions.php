@@ -209,6 +209,16 @@ function my_acf_init_child()
             'icon'                => 'editor-table',
             'mode'                => 'edit',
         ));
+
+        acf_register_block(array(
+            'name'                => 'block-plus-informations',
+            'title'                => __('Bloc - Plus d\'informations'),
+            'description'        => __('Bloc - Plus d\'informations'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
     }
 }
 function block_callback_child($block)
