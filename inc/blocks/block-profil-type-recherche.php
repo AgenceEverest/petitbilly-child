@@ -24,7 +24,6 @@ if (have_rows('block_profil_type_recherche')) : the_row(); // il s'agit du nom d
     $vague_au_dessous_du_bloc = get_sub_field('vague_au_dessous_du_bloc');
     $padding_en_haut_du_bloc = get_sub_field('padding_en_haut_du_bloc');
     $padding_en_bas_du_bloc = get_sub_field('padding_en_bas_du_bloc');
-    $faire_passer_le_bloc_au_dessus_des_autres = get_sub_field('faire_passer_le_bloc_au_dessus_des_autres');
     $liseret_vert_autour_du_bloc = get_sub_field('liseret_vert_autour_du_bloc');
 endif;
 ?>
@@ -47,12 +46,9 @@ endif;
             endif;
             if ($padding_en_bas_du_bloc) : echo " padding_section_bottom";
             endif;
-            if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
-            endif;
             if ($liseret_vert_autour_du_bloc) : echo " has-edge ";
             endif;
-            if ($couleur_de_fond_bloc) :
-                echo ' ' . $couleur_de_fond_bloc;
+            if ($couleur_de_fond_bloc) : echo ' ' . $couleur_de_fond_bloc;
             endif;
             echo " block block-profil-type-recherche'"; ?>>
         <div class="half-background">
