@@ -127,11 +127,11 @@ figure {
 }
 
 .vague-haut {
-    bottom: -1px;
+    top: -10px;
     position: relative;
 }
 .vague-basse {
-    top: -1px;
+    bottom: -10px;
     position: relative;
 }
 .vague-haut, .vague-basse {
@@ -177,7 +177,6 @@ article {
     background-color: $fondBlancCasse;
     ul, li, a, span, .nav_blog_title{
         font-family: "Cafeteria-Bold" !important;
-
     }
 }
 

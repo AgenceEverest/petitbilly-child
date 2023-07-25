@@ -1,9 +1,10 @@
 <?php
 
 /**
- * Block Name: block-nos-engagements   
+ * Block Name: block-nos-engagements
  *
- * This is the template that displays the block-nos-engagements.
+ * This is the template that displays 
+ * 
  */
 if (have_rows('block_nos_engagements')) : the_row(); // il s'agit du nom du champ dans ACF qui contient les sous-champs
     $cb_ajouter_une_classe_css = get_sub_field('cb_ajouter_une_classe_css');
@@ -28,9 +29,14 @@ if (have_rows('block_nos_engagements')) : the_row(); // il s'agit du nom du cham
     $liseret_vert_autour_du_bloc = get_sub_field('liseret_vert_autour_du_bloc');
 endif;
 ?>
-<div class="<?php          
-            if ($marge_en_haut_du_bloc) : echo " margin_section_top";   endif;
-            if ($marge_en_bas_du_bloc) : echo " margin_section_bottom"; endif; ?>">
+<div class="<?php if ($couleur_de_fond_bloc) :
+                echo ' ' . $couleur_de_fond_bloc;
+            endif;
+            if ($marge_en_haut_du_bloc) : echo " margin_section_top";
+            endif;
+            if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
+            endif; ?>
+">
     <?php if ($vague_au_dessus_du_bloc) : ?>
         <div class="vague-haut">
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-haut.svg') ?>
@@ -49,34 +55,44 @@ endif;
             endif;
             if ($liseret_vert_autour_du_bloc) : echo " has-edge ";
             endif;
-            if ($couleur_de_fond_bloc) :
-                echo ' ' . $couleur_de_fond_bloc;
-            endif;  
-            echo " block'"; ?>>
-        <?php if ($liseret_vert_autour_du_bloc) : ?>
-            <?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge-desktop-tall') ?>
-            <?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge') ?>
-        <?php endif; ?>
+            echo " block block-nos-engagements'"; ?>>
+        <div class="feuille-blanche-haut-container feuille-blanche">
+            <img src="<?= get_stylesheet_directory_uri() . '/img/feuille-blanche-haut-gauche.png' ?>">
+        </div>
+        <div class="feuille-blanche-bas-container feuille-blanche">
+            <img src="<?= get_stylesheet_directory_uri() . '/img/feuille-blanche-bas-droite.png' ?>">
+        </div>
         <!-- titre avant les colonnes-->
         <?php $titre_avant_les_colonnes = get_sub_field('titre_avant_les_colonnes');
         $largeur_de_la_colonne_titre = get_sub_field('largeur_de_la_colonne_titre');
         $separateur_de_la_colonne_titre = get_sub_field('separateur_de_la_colonne_titre');
-        $colonne1 = get_sub_field('colonne_1');
         if ($titre_avant_les_colonnes) : ?>
-            <div class="content_width zone_texte_avant_colonnes<?php if (!$colonne1 and $separateur_de_la_colonne_titre == 'pas_de_separateur_titre') : ?> zone_texte_avant_colonnes_nopadding<?php endif; ?>">
+            <div class="content_width zone_texte_avant_colonnes<?php if ($separateur_de_la_colonne_titre == 'pas_de_separateur_titre') : ?> zone_texte_avant_colonnes_nopadding<?php endif; ?>">
                 <div class="<?php echo $largeur_de_la_colonne_titre; ?> entry-content">
                     <?php echo $titre_avant_les_colonnes; ?>
                 </div>
             </div>
-
-            <?php if ($separateur_de_la_colonne_titre != 'pas_de_separateur_titre') : ?>
-                <div class="content_width separateur_de_la_colonne_titre_wrapper_wrapper<?php if ($colonne1) : ?> separateur_de_la_colonne_titre_space<?php endif; ?>">
-                    <div class="separateur_de_la_colonne_titre_wrapper">
-                        <div class="separateur_de_la_colonne_titre <?php echo $separateur_de_la_colonne_titre; ?>"></div>
-                    </div>
-                </div>
-            <?php endif; ?>
         <?php endif; ?>
+
+        <div class="engagements content_width">
+            <?php if (have_rows('repeteur_engagement')) :
+                $i = 0;
+                while (have_rows('repeteur_engagement')) : the_row();
+                    $texte_engagement = get_sub_field('texte_engagement');
+                    $image_link = ($i % 2 === 0) ? '/img/valeur-vert-clair.png' : '/img/valeur-fond-blanc.png';
+                    $class_font = ($i % 2 === 0) ? 'fond-vert-clair' : 'fond-blanc';
+                    $image_link = get_stylesheet_directory_uri() . $image_link; ?>
+                    <div class="engagement <?= $class_font ?>">
+                        <img src="<?php echo $image_link; ?>">
+                        <h3><?php echo esc_html($texte_engagement); ?></h3>
+                    </div>
+            <?php $i++;
+                endwhile;
+            endif;  ?>
+
+
+        </div>
+
 
         <!-- colonnes -->
         <div class="content_width col_flexible col_flexible_1">
@@ -92,12 +108,12 @@ endif;
             </div>
 
 
-
             <?php get_template_part('inc/content-builder-inc/cta-flex') ?>
         </div>
     </div>
     <?php if ($vague_au_dessous_du_bloc) : ?>
         <div class="vague-basse">
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-bas.svg') ?>
-        </div> <?php endif; ?>
+        </div>
+    <?php endif; ?>
 </div>
