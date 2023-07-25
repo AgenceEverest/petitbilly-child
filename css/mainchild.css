@@ -360,7 +360,7 @@ h6 {
   }
 }
 .block-pourquoi-differents .differences .difference .difference-titre {
-  padding-bottom: 2rem;
+  padding: 1rem 1rem 2rem 1rem;
 }
 .block-pourquoi-differents .differences .difference:nth-child(even) {
   background-color: white;
@@ -1781,6 +1781,23 @@ article {
 }
 .nav_blog_wrapper ul, .nav_blog_wrapper li, .nav_blog_wrapper a, .nav_blog_wrapper span, .nav_blog_wrapper .nav_blog_title {
   font-family: "Cafeteria-Bold" !important;
+}
+.rs_link_item {
+  position: relative;
+  background-color: transparent;
+}
+.rs_link_item:hover {
+  background-color: transparent;
+}
+.rs_link_item .icone-rs {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+.rs_link_item .svg {
+  z-index: 1;
+  color: white;
 }
 /*# sourceMappingURL=D:\wamp64\www\petitbilly/wp-content/themes/nanosite-proefficace-child/css/mainchild.css.map */
 /*# sourceMappingURL=mainchild.css.map */

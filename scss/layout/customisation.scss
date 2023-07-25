@@ -180,3 +180,21 @@ article {
 
     }
 }
+
+.rs_link_item {
+    position: relative;
+    background-color: transparent;
+    &:hover {
+        background-color: transparent;
+    }
+    .icone-rs {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .svg {
+        z-index: 1;
+        color: white;
+    }
+}
