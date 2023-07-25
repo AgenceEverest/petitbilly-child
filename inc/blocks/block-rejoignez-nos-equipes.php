@@ -65,6 +65,8 @@ endif;
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge-desktop-tall') ?>
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge') ?>
         <?php endif; ?>
+        <?= showSvg(get_stylesheet_directory_uri() . '/svg/recette-moment-haut-gauche') ?>
+        <?= showSvg(get_stylesheet_directory_uri() . '/svg/recette-moment-bas-droit') ?>
         <!-- titre avant les colonnes-->
         <?php $titre_avant_les_colonnes = get_sub_field('titre_avant_les_colonnes');
         $largeur_de_la_colonne_titre = get_sub_field('largeur_de_la_colonne_titre');
@@ -108,7 +110,7 @@ endif;
             </div>
             <div class="col_flexible_wrapper">
                 <?php if (isset($titre_les_metiers_de_petit_billy)) : ?>
-                    <h3  class="surtitre-postes"><?= $titre_les_metiers_de_petit_billy ?></h3>
+                    <h3 class="surtitre-postes"><?= $titre_les_metiers_de_petit_billy ?></h3>
                 <?php endif; ?>
                 <?php if (have_rows('postes_petit_billy')) : ?>
                     <div class="postes">
@@ -133,5 +135,6 @@ endif;
     <?php if ($vague_au_dessous_du_bloc) : ?>
         <div class="vague-basse">
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/vague-bas.svg') ?>
-        </div> <?php endif; ?>
+        </div>
+    <?php endif; ?>
 </div>

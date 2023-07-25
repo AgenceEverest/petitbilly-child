@@ -1,17 +1,56 @@
 .rejoignez-nos-equipes {
-    svg {
-        z-index: 0;
+    position: relative;
+
+    @media (max-width: 1024px) {
+        padding-top: 2rem;
     }
-    .content_width {
+
+    #recette-moment-haut-gauche {
+        position: absolute;
+        top: -80px;
+        left: 20px;
+        z-index: 0;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    #recette-moment-bas-droit {
+        position: absolute;
+        bottom: -100px;
+        right: 0;
+        z-index: 0;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .green-edge-desktop-tall {
         z-index: 1;
+    }
+
+    .content_width {
+        z-index: 2;
         position: relative;
     }
+
     .col_flexible_wrapper {
         display: flex;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
 
         .col-1,
         .col-2 {
             width: 50%;
+
+            @media (max-width: 1024px) {
+                width: 100%;
+                padding-left: 0rem !important;
+            }
         }
 
         .col-2 {

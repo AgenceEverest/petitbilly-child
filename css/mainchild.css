@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-p {
+p, ul, li {
   font-family: "Roboto", sans-serif;
 }
-p strong {
+p strong, ul strong, li strong {
   font-family: "Roboto", sans-serif;
 }
 h1 {
@@ -1135,18 +1135,59 @@ h6 {
   font-size: 20px;
   text-transform: uppercase;
 }
-.rejoignez-nos-equipes svg {
+.rejoignez-nos-equipes {
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .rejoignez-nos-equipes {
+    padding-top: 2rem;
+  }
+}
+.rejoignez-nos-equipes #recette-moment-haut-gauche {
+  position: absolute;
+  top: -80px;
+  left: 20px;
   z-index: 0;
 }
-.rejoignez-nos-equipes .content_width {
+@media (max-width: 768px) {
+  .rejoignez-nos-equipes #recette-moment-haut-gauche {
+    display: none;
+  }
+}
+.rejoignez-nos-equipes #recette-moment-bas-droit {
+  position: absolute;
+  bottom: -100px;
+  right: 0;
+  z-index: 0;
+}
+@media (max-width: 768px) {
+  .rejoignez-nos-equipes #recette-moment-bas-droit {
+    display: none;
+  }
+}
+.rejoignez-nos-equipes .green-edge-desktop-tall {
   z-index: 1;
+}
+.rejoignez-nos-equipes .content_width {
+  z-index: 2;
   position: relative;
 }
 .rejoignez-nos-equipes .col_flexible_wrapper {
   display: flex;
 }
+@media (max-width: 1024px) {
+  .rejoignez-nos-equipes .col_flexible_wrapper {
+    flex-direction: column;
+  }
+}
 .rejoignez-nos-equipes .col_flexible_wrapper .col-1, .rejoignez-nos-equipes .col_flexible_wrapper .col-2 {
   width: 50%;
+}
+@media (max-width: 1024px) {
+  .rejoignez-nos-equipes .col_flexible_wrapper .col-1, .rejoignez-nos-equipes .col_flexible_wrapper .col-2 {
+    width: 100%;
+    padding-left: 0rem !important;
+  }
 }
 .rejoignez-nos-equipes .col_flexible_wrapper .col-2 {
   padding-left: 2rem;
@@ -1444,6 +1485,12 @@ h6 {
 #header #content_nav_header #search_trigger svg {
   width: 100%;
   height: 100%;
+}
+#menu-menu-mobile li a {
+  color: black !important;
+}
+#menu-menu-mobile .current_page_item a {
+  color: #00693E !important;
 }
 #menu-menu-principal li a, #menu-menu-mobile li a {
   font-family: "Cafeteria-Bold";

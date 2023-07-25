@@ -10,8 +10,8 @@ if (have_rows('block_plus_informations')) : the_row(); // il s'agit du nom du ch
     $ajouter_un_id_pour_le_css = get_sub_field('ajouter_un_id_pour_le_css');
     $contenu_texte = get_sub_field('contenu_texte');
     $texte_call_to_action = get_sub_field('texte_call_to_action');
-    $url_page_contact_value = get_field('url_de_la_page_contact', 'option');
-    $url_page_contact = $url_page_contact_value ? get_permalink($url_page_contact_value->ID) : '';
+    $url_de_la_page_value = get_sub_field('lien_vers_la_page');
+    $url_de_la_page = $url_de_la_page_value ? get_permalink($url_de_la_page_value->ID) : '';
 endif;
 ?>
 <div class="margin_section_top  margin_section_bottom">
@@ -25,11 +25,11 @@ endif;
                     echo $contenu_texte;
                     endif; ?>
             </div>
-            <?php if (isset($url_page_contact)) : ?>
+            <?php if (isset($url_de_la_page)) : ?>
                 <div class="cta-container cta-plus-informations">
                     <p class="cta-bloc-flex">
                         <?= showSvg(get_stylesheet_directory_uri() . '/svg/fond-cta.svg') ?>
-                        <a href="<?php echo $url_page_contact; ?>"><?php echo $texte_call_to_action; ?></a>
+                        <a href="<?php echo $url_de_la_page; ?>"><?php echo $texte_call_to_action; ?></a>
                     </p>
                 </div>
             <?php endif; ?>
