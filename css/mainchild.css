@@ -1238,6 +1238,22 @@ h6 {
 .rejoignez-nos-equipes .col_flexible_wrapper .postes .poste-container:nth-child(even) {
   background-color: #00693E;
 }
+.bloc_questions_reponses .question_reponse_title.active {
+  background-color: transparent;
+  color: white;
+}
+.bloc_questions_reponses .question_reponse_item {
+  position: relative;
+}
+.bloc_questions_reponses .question_reponse_item .fond-reponse {
+  position: absolute;
+  display: none;
+}
+.bloc_questions_reponses .question_reponse_item.active-question .fond-reponse {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
 #nf-form-title-2 {
   color: #00693E;
 }

@@ -1,0 +1,38 @@
+.bloc_questions_reponses {
+    .question_reponse_title {
+        z-index: 1;
+
+        &.active {
+            background-color: transparent;
+
+            h3 {
+                color: white;
+            }
+        }
+    }
+
+    .question_reponse_item {
+        position: relative;
+
+        .fond-reponse {
+            position: absolute;
+            display: none;
+        }
+
+        &.active-question {
+            .fond-reponse {
+                display: flex;
+                height: 100%;
+                width: 100%;
+                z-index: 0;
+            }
+        }
+    }
+
+    .question_reponse_wysiwyg {
+        z-index: 1;
+        p {
+            color: white;
+        }
+    }
+}
