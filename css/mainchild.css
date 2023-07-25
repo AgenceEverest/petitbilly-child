@@ -1238,12 +1238,33 @@ h6 {
 .rejoignez-nos-equipes .col_flexible_wrapper .postes .poste-container:nth-child(even) {
   background-color: #00693E;
 }
+.bloc_questions_reponses .question_reponse_title_icone {
+  background-color: transparent;
+  right: 0;
+  left: inherit;
+}
+.bloc_questions_reponses .question_reponse_title {
+  z-index: 1;
+  border: none;
+}
 .bloc_questions_reponses .question_reponse_title.active {
   background-color: transparent;
+  padding-top: 2rem;
+}
+.bloc_questions_reponses .question_reponse_title.active h3 {
   color: white;
+}
+.bloc_questions_reponses .question_reponse_title:hover {
+  background-color: transparent;
 }
 .bloc_questions_reponses .question_reponse_item {
   position: relative;
+  padding-bottom: 1.5rem;
+}
+.bloc_questions_reponses .question_reponse_item .marge-bas {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 .bloc_questions_reponses .question_reponse_item .fond-reponse {
   position: absolute;
@@ -1253,6 +1274,18 @@ h6 {
   display: flex;
   height: 100%;
   width: 100%;
+  z-index: 0;
+}
+.bloc_questions_reponses .question_reponse_item.active-question .marge-bas {
+  display: none;
+}
+.bloc_questions_reponses .question_reponse_wysiwyg {
+  z-index: 1;
+  position: relative;
+  border: none;
+}
+.bloc_questions_reponses .question_reponse_wysiwyg p {
+  color: white;
 }
 #nf-form-title-2 {
   color: #00693E;

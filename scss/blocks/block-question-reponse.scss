@@ -1,18 +1,35 @@
 .bloc_questions_reponses {
+    .question_reponse_title_icone {
+        background-color: transparent;
+        right: 0;
+        left: inherit;
+    }
+
     .question_reponse_title {
         z-index: 1;
-
+        border: none;
         &.active {
             background-color: transparent;
+            padding-top: 2rem;
 
             h3 {
                 color: white;
             }
         }
+        &:hover {
+           background-color: transparent;
+        }
     }
 
     .question_reponse_item {
         position: relative;
+        padding-bottom: 1.5rem;
+
+        .marge-bas {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
 
         .fond-reponse {
             position: absolute;
@@ -26,11 +43,17 @@
                 width: 100%;
                 z-index: 0;
             }
+            .marge-bas {
+                display: none;
+            }
+       
         }
     }
 
     .question_reponse_wysiwyg {
         z-index: 1;
+        position: relative;
+        border: none;
         p {
             color: white;
         }
