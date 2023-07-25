@@ -30,9 +30,7 @@ if (have_rows('block_nos_valeurs')) : the_row(); // il s'agit du nom du champ da
 
 endif;
 ?>
-<div class="<?php if ($couleur_de_fond_bloc) :
-                echo ' ' . $couleur_de_fond_bloc;
-            endif;            
+<div class="<?php         
             if ($marge_en_haut_du_bloc) : echo " margin_section_top";
             endif;
             if ($marge_en_bas_du_bloc) : echo " margin_section_bottom"; endif; ?>
@@ -51,7 +49,9 @@ endif;
             endif;
             if ($padding_en_bas_du_bloc) : echo " padding_section_bottom";
             endif;
-
+            if ($couleur_de_fond_bloc) :
+                echo ' ' . $couleur_de_fond_bloc;
+            endif;   
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
             endif;
             if ($liseret_vert_autour_du_bloc) : echo " has-edge ";

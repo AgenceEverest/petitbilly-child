@@ -20,9 +20,7 @@ if (have_rows('petit_billy_pour_des_fromages_uniques')) : the_row(); // il s'agi
     $liseret_vert_autour_du_bloc = get_sub_field('liseret_vert_autour_du_bloc');
 endif;
 ?>
-<div class="<?php if ($couleur_de_fond_bloc) :
-                echo ' ' . $couleur_de_fond_bloc;
-            endif;
+<div class="<?php
             if ($marge_en_haut_du_bloc) : echo " margin_section_top";
             endif;
             if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
@@ -43,6 +41,9 @@ endif;
             endif;
 
             if ($faire_passer_le_bloc_au_dessus_des_autres) : echo " z-index-1";
+            endif;
+            if ($couleur_de_fond_bloc) :
+                echo ' ' . $couleur_de_fond_bloc;
             endif;
             echo " block-fromages-uniques'"; ?>>
 
