@@ -1,19 +1,49 @@
-h2 {
-  font-size: 38px;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+p {
+  font-family: "Roboto", sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {
+p strong {
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  color: #00693E;
+  font-size: 50px;
+}
+.entry_title h1, .entry-content h1 {
+  color: #00693E;
+  font-size: 50px;
+}
+h2 {
+  color: #8CC751;
+}
+h1, h2 {
+  font-family: "Cafeteria-Black" !important;
+}
+h1 strong, h2 strong {
+  font-family: "Cafeteria-Black";
+  color: #00693E;
+}
+.entry-content h1, .entry-content h2 {
+  font-family: "Cafeteria-Black" !important;
+  color: #8CC751;
+}
+.entry-content h1 strong, .entry-content h2 strong {
+  font-family: "Cafeteria-Black";
+  color: #00693E;
+}
+h3, h4, h5, h6 {
   font-family: "Cafeteria-Bold" !important;
   color: #8CC751;
 }
-h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+h3 strong, h4 strong, h5 strong, h6 strong {
   font-family: "Cafeteria-Bold" !important;
   color: #00693E;
 }
-.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+.entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
   font-family: "Cafeteria-Bold" !important;
   color: #8CC751;
 }
-.entry-content h1 strong, .entry-content h2 strong, .entry-content h3 strong, .entry-content h4 strong, .entry-content h5 strong, .entry-content h6 strong {
+.entry-content h3 strong, .entry-content h4 strong, .entry-content h5 strong, .entry-content h6 strong {
   font-family: "Cafeteria-Bold" !important;
   color: #00693E;
 }
@@ -53,6 +83,27 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 .fond_clair2 .entry-content h1 strong, .fond_clair2 .entry-content h2 strong, .fond_clair2 .entry-content h3 strong, .fond_clair2 .entry-content h4 strong, .fond_clair2 .entry-content h5 strong, .fond_clair2 .entry-content h6 strong {
   color: white;
 }
+h2 {
+  font-size: 38px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 25px;
+}
+h5 {
+  font-size: 23px;
+}
+h6 {
+  font-size: 20px;
+}
+#block-app .filter-input::placeholder {
+  color: #00693E;
+  font-family: "Cafeteria-Regular" !important;
+  font-size: 22px;
+  padding-top: 0.5rem;
+}
 #block-app .results {
   display: flex;
   justify-content: center;
@@ -62,17 +113,25 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   width: 32%;
-  -webkit-box-shadow: 0px 6px 23px 8px rgba(0, 0, 0, 0.27);
-  box-shadow: 0px 6px 23px 8px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 0px 6px 23px 8px rgba(154, 154, 154, 0.27);
+  box-shadow: 0px 6px 23px 8px rgba(154, 154, 154, 0.27);
   position: relative;
+  padding-bottom: 6rem;
 }
 #block-app .results .cpt-extrait h3 {
-  width: 100;
+  font-size: 26px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem;
   color: #00693E;
+}
+#block-app .results .cpt-extrait h3 a {
+  color: #00693E;
+  text-align: center;
+}
+#block-app .results .cpt-extrait .desc-page {
+  padding: 0rem 2rem 2rem 2rem;
 }
 #block-app .results .cpt-extrait .terms-container {
   position: absolute;
@@ -113,6 +172,9 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 #block-app .results .cpt-extrait .buttons-extrait {
   padding-bottom: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 #block-app .results .cpt-extrait .buttons-extrait .cta_center {
   display: flex;
@@ -493,6 +555,11 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
     width: 70%;
   }
 }
+@media (max-width: 480px) {
+  .block-nos-recettes-gourmandes h2, .block-nos-recettes-gourmandes h3, .block-nos-recettes-gourmandes p {
+    width: 100%;
+  }
+}
 .block-nos-recettes-gourmandes h2, .block-nos-recettes-gourmandes h3, .block-nos-recettes-gourmandes p {
   color: white;
   margin-top: 1rem;
@@ -548,6 +615,11 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
     width: 70%;
     display: flex;
     flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .block-nos-recettes-gourmandes .nos-recettes-col-1 .recette-item {
+    width: 100%;
   }
 }
 .block-nos-recettes-gourmandes .nos-recettes-col-1 .recette-img-container {
@@ -653,12 +725,11 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   height: 150%;
 }
 .block-fromages-uniques {
-  background-color: white;
+  background-color: whitesmoke;
   padding-bottom: 280px;
   position: relative;
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
 }
 .block-fromages-uniques #recette-moment-bas-droit, .block-fromages-uniques #recette-moment-haut-gauche {
   position: absolute;
@@ -866,33 +937,33 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 .block-profil-type-recherche .postes-recherches .poste-recherche:nth-child(odd) .description-du-poste p {
   color: white;
 }
-.valeurs {
+.valeurs-nutritionnelles {
   width: calc(50% - 1rem);
 }
-.valeurs p {
+.valeurs-nutritionnelles p {
   font-family: "Arial";
   font-size: 21px;
   text-align: center;
 }
-.valeurs ul {
+.valeurs-nutritionnelles ul {
   height: auto;
   border-radius: 20px;
   overflow: hidden;
   -webkit-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.08);
 }
-.valeurs ul li:nth-child(odd) {
+.valeurs-nutritionnelles ul li:nth-child(odd) {
   background-color: #F0EAEA;
 }
-.valeurs ul li {
+.valeurs-nutritionnelles ul li {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 1rem;
 }
-.valeurs ul li .valeur-nutritionnelle {
+.valeurs-nutritionnelles ul li .valeur-nutritionnelle {
   width: 50%;
 }
-.valeurs ul li .valeur-nutritionnelle-nom {
+.valeurs-nutritionnelles ul li .valeur-nutritionnelle-nom {
   width: 50%;
 }
 .block-recette .recettes-caracteristiques-wrapper {
@@ -961,14 +1032,32 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 .block-plus-informations .col_flexible {
   display: flex;
 }
+@media (max-width: 780px) {
+  .block-plus-informations .col_flexible {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .block-plus-informations .col_flexible .wysiwyg-content {
   width: 80%;
+}
+@media (max-width: 780px) {
+  .block-plus-informations .col_flexible .wysiwyg-content {
+    width: 100%;
+  }
 }
 .block-plus-informations .col_flexible .cta-container {
   width: 20%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+@media (max-width: 780px) {
+  .block-plus-informations .col_flexible .cta-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
 #aside_actualites {
   background-color: whitesmoke;
@@ -1046,6 +1135,95 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   font-size: 20px;
   text-transform: uppercase;
 }
+.rejoignez-nos-equipes svg {
+  z-index: 0;
+}
+.rejoignez-nos-equipes .content_width {
+  z-index: 1;
+  position: relative;
+}
+.rejoignez-nos-equipes .col_flexible_wrapper {
+  display: flex;
+}
+.rejoignez-nos-equipes .col_flexible_wrapper .col-1, .rejoignez-nos-equipes .col_flexible_wrapper .col-2 {
+  width: 50%;
+}
+.rejoignez-nos-equipes .col_flexible_wrapper .col-2 {
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rejoignez-nos-equipes .col_flexible_wrapper .surtitre-postes {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #00693E;
+}
+.rejoignez-nos-equipes .col_flexible_wrapper .postes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.rejoignez-nos-equipes .col_flexible_wrapper .postes .poste-container {
+  width: calc(33.33% - 1rem);
+  padding: 5% 3%;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.rejoignez-nos-equipes .col_flexible_wrapper .postes .poste-container h4, .rejoignez-nos-equipes .col_flexible_wrapper .postes .poste-container p {
+  color: white;
+}
+.rejoignez-nos-equipes .col_flexible_wrapper .postes .poste-container h4 {
+  font-family: "Cafeteria-Bold" !important;
+  text-align: center;
+}
+.rejoignez-nos-equipes .col_flexible_wrapper .postes .poste-container p {
+  font-family: "Roboto", sans-serif !important;
+}
+@media (max-width: 1024px) {
+  .rejoignez-nos-equipes .col_flexible_wrapper .postes .poste-container {
+    width: 48%;
+  }
+}
+@media (max-width: 1024px) {
+  .rejoignez-nos-equipes .col_flexible_wrapper .postes .poste-container {
+    width: 100%;
+  }
+}
+.rejoignez-nos-equipes .col_flexible_wrapper .postes .poste-container:nth-child(odd) {
+  background-color: #8CC751;
+}
+.rejoignez-nos-equipes .col_flexible_wrapper .postes .poste-container:nth-child(even) {
+  background-color: #00693E;
+}
+#nf-form-title-2 {
+  color: #00693E;
+}
+.coldouble_contact_right {
+  background-color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+}
+.coldouble_contact_right label, .coldouble_contact_right li, .coldouble_contact_right a, .coldouble_contact_right p {
+  font-family: "Cafeteria-Bold";
+}
+.coldouble_contact_right label {
+  font-size: 20px !important;
+}
+.coldouble_contact_right .legende {
+  font-size: 18px !important;
+}
+.coldouble_contact_right #nf-field-12 {
+  background-color: #00693E !important;
+  color: white !important;
+  font-family: "Cafeteria-Bold";
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.coldouble_contact_right .nf-form-content .list-select-wrap .nf-field-element > div, .coldouble_contact_right .nf-form-content input:not([type=button]), .coldouble_contact_right .nf-form-content textarea {
+  background-color: #f5f5f5 !important;
+}
 #menu-menu-footer-2 {
   display: flex;
   flex-direction: column;
@@ -1054,6 +1232,12 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 #menu-menu-footer-2 li {
   width: 50%;
+}
+#menu-menu-footer-2 li a {
+  color: white;
+}
+#menu-footer li a {
+  color: #00693E;
 }
 .aside_prefooter_col h3 {
   color: white !important;
@@ -1084,6 +1268,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 .lien-site-eco-concu {
   text-decoration: underline;
+  color: white;
 }
 #footer_certification_wrapper {
   justify-content: right;
@@ -1093,6 +1278,28 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 .aside_prefooter_col p.coordonnees_p_i svg {
   color: white;
+}
+@media (max-width: 780px) {
+  .aside_prefooter_wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .aside_prefooter_col_1, .aside_prefooter_col_2 {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .aside_prefooter_col {
+    width: 100%;
+    align-items: flex-start;
+  }
+  #menu-menu-footer-2 {
+    height: auto;
+    align-items: flex-start;
+  }
+  #menu-menu-footer-2 li {
+    width: 100%;
+    align-items: flex-start;
+  }
 }
 .cta-header-container {
   display: flex;
@@ -1269,11 +1476,6 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 .breadcrumb_top span, .breadcrumb_top .breadcrumb_separator {
   color: black !important;
 }
-.entry_title .content_width h1 {
-  font-size: 50px !important;
-  color: #00693E;
-  font-family: "Cafeteria-Bold" !important;
-}
 .post_thumbnail_texte, .article_blog .entry_title .post_thumbnail, .post_thumbnail_bg {
   background-color: whitesmoke;
 }
@@ -1309,8 +1511,20 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 .cta-container.cta_align_left {
   justify-content: flex-start;
 }
+@media (max-width: 780px) {
+  .cta-container.cta_align_left {
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+}
 .cta-container.cta_align_right {
   justify-content: flex-end;
+}
+@media (max-width: 780px) {
+  .cta-container.cta_align_right {
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
 }
 .cta-container.cta_align_center {
   justify-content: center;
@@ -1329,6 +1543,12 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 .col_flexible_2 .col_flexible_item:nth-child(even) .cta-container {
   padding-left: 2rem;
+}
+@media (max-width: 780px) {
+  .col_flexible_2 .col_flexible_item:nth-child(even) .cta-container {
+    padding-left: 0rem;
+    margin-top: 1.5rem;
+  }
 }
 .cta-header {
   display: flex;
@@ -1353,6 +1573,13 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Cafeteria-Black";
+  src: url("../fonts/subset-Cafeteria-Black.woff2") format("woff2"), url("../fonts/subset-Cafeteria-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 /*
 Fichier de customisation du CSS
 */
@@ -1363,14 +1590,41 @@ figure {
 figure img {
   border-radius: 20px !important;
 }
-.fond_blanc, #header_back, .block, body, .page_defaut .entry_title_bg, .page_les_actualites .entry_title_bg {
+.fond_blanc, #header_back, body, .page_defaut .entry_title_bg, .page_les_actualites .entry_title_bg {
   background-color: whitesmoke !important;
+}
+.fond_blanc .col_flexible_bordure {
+  background-color: #00693E;
+  color: white;
+}
+.fond_blanc .col_flexible_bordure h1, .fond_blanc .col_flexible_bordure h2, .fond_blanc .col_flexible_bordure h3, .fond_blanc .col_flexible_bordure h4, .fond_blanc .col_flexible_bordure h5, .fond_blanc .col_flexible_bordure h6 div, .fond_blanc .col_flexible_bordure p, .fond_blanc .col_flexible_bordure ul, .fond_blanc .col_flexible_bordure li, .fond_blanc .col_flexible_bordure a {
+  color: white;
+}
+.fond_blanc .col_flexible_bordure h1 strong, .fond_blanc .col_flexible_bordure h2 strong, .fond_blanc .col_flexible_bordure h3 strong, .fond_blanc .col_flexible_bordure h4 strong, .fond_blanc .col_flexible_bordure h5 strong, .fond_blanc .col_flexible_bordure h6 div strong, .fond_blanc .col_flexible_bordure p strong, .fond_blanc .col_flexible_bordure ul strong, .fond_blanc .col_flexible_bordure li strong, .fond_blanc .col_flexible_bordure a strong {
+  color: white;
 }
 .fond_vert_fonce {
   background-color: #00693E !important;
+  position: relative;
 }
 .fond_vert_fonce h1, .fond_vert_fonce h2, .fond_vert_fonce h3, .fond_vert_fonce h4, .fond_vert_fonce h5, .fond_vert_fonce h6, .fond_vert_fonce div, .fond_vert_fonce p, .fond_vert_fonce ul, .fond_vert_fonce li, .fond_vert_fonce a {
   color: white;
+}
+.fond_vert_fonce .col_flexible_bordure {
+  background-color: white;
+  color: black;
+}
+.fond_vert_fonce .col_flexible_bordure h1, .fond_vert_fonce .col_flexible_bordure h2, .fond_vert_fonce .col_flexible_bordure h3, .fond_vert_fonce .col_flexible_bordure h4, .fond_vert_fonce .col_flexible_bordure h5, .fond_vert_fonce .col_flexible_bordure h6 {
+  color: #00693E;
+}
+.fond_vert_fonce .col_flexible_bordure div, .fond_vert_fonce .col_flexible_bordure p, .fond_vert_fonce .col_flexible_bordure ul, .fond_vert_fonce .col_flexible_bordure li, .fond_vert_fonce .col_flexible_bordure a {
+  color: black;
+}
+.fond_vert_fonce .col_flexible_bordure div strong, .fond_vert_fonce .col_flexible_bordure p strong, .fond_vert_fonce .col_flexible_bordure ul strong, .fond_vert_fonce .col_flexible_bordure li strong, .fond_vert_fonce .col_flexible_bordure a strong {
+  color: black;
+}
+.fond_vert_fonce .block {
+  z-index: 1;
 }
 .fond_vert_clair {
   background-color: #8CC751 !important;
@@ -1378,11 +1632,26 @@ figure img {
 .fond_vert_clair h1, .fond_vert_clair h2, .fond_vert_clair h3, .fond_vert_clair h4, .fond_vert_clair h5, .fond_vert_clair h6, .fond_vert_clair div, .fond_vert_clair p, .fond_vert_clair ul, .fond_vert_clair li, .fond_vert_clair a {
   color: white;
 }
-.fond_vert_fonce {
+.fond_vert_clair .col_flexible_bordure {
+  background-color: white;
+  color: #00693E;
+}
+.fond_vert_clair .col_flexible_bordure h1, .fond_vert_clair .col_flexible_bordure h2, .fond_vert_clair .col_flexible_bordure h3, .fond_vert_clair .col_flexible_bordure h4, .fond_vert_clair .col_flexible_bordure h5, .fond_vert_clair .col_flexible_bordure h6 {
+  color: #00693E;
+}
+.fond_vert_clair .col_flexible_bordure div, .fond_vert_clair .col_flexible_bordure p, .fond_vert_clair .col_flexible_bordure ul, .fond_vert_clair .col_flexible_bordure li, .fond_vert_clair .col_flexible_bordure a {
+  color: black;
+}
+.fond_vert_clair .col_flexible_bordure div strong, .fond_vert_clair .col_flexible_bordure p strong, .fond_vert_clair .col_flexible_bordure ul strong, .fond_vert_clair .col_flexible_bordure li strong, .fond_vert_clair .col_flexible_bordure a strong {
+  color: black;
+}
+.vague-haut {
+  bottom: -1px;
   position: relative;
 }
-.fond_vert_fonce .block {
-  z-index: 1;
+.vague-basse {
+  top: -1px;
+  position: relative;
 }
 .vague-haut svg, .vague-basse svg {
   width: 100%;

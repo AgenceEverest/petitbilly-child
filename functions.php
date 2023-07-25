@@ -219,6 +219,26 @@ function my_acf_init_child()
             'icon'                => 'editor-table',
             'mode'                => 'edit',
         ));
+
+        acf_register_block(array(
+            'name'                => 'block-nos-engagements',
+            'title'                => __('Bloc - Nos engagements'),
+            'description'        => __('Bloc - Nos engagements'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
+        
+        acf_register_block(array(
+            'name'                => 'block-rejoignez-nos-equipes',
+            'title'                => __('Bloc - Rejoignez nos équipes'),
+            'description'        => __('Bloc - Rejoignez nos équipes'),
+            'render_callback'    => 'block_callback',
+            'category'            => 'layout',
+            'icon'                => 'editor-table',
+            'mode'                => 'edit',
+        ));
     }
 }
 function block_callback_child($block)
@@ -257,6 +277,8 @@ function my_plugin_allowed_block_types_child($allowed_block_types_all, $post)
         'acf/block-profil-type-recherche',
         'acf/block-recette',
         'acf/block-plus-informations',
+        'acf/block-nos-engagements',
+        'acf/block-rejoignez-nos-equipes',
     );
     return $allowed_block_types;
 }
