@@ -161,6 +161,19 @@
     }
 }
 
+#menu-menu-mobile {
+    li {
+        a {
+            color: black;
+        }
+    }
+    .current_page_item{
+        a{
+            color: $darkGreenBilly;
+        }
+    }
+}
+
 #menu-menu-principal,
 #menu-menu-mobile {
     li {
