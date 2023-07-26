@@ -413,9 +413,6 @@ function custom_get_recettes_data()
 }
 
 
-
-
-
 add_action('rest_api_init', 'custom_register_produits_endpoint');
 
 function custom_register_produits_endpoint()

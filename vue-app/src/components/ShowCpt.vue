@@ -406,7 +406,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<!-- <style lang="scss">
 .loader-container {
   display: flex;
   justify-content: center;
@@ -468,3 +468,4 @@ export default {
   }
 }
 </style>
+ -->

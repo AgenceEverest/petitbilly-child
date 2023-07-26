@@ -1,6 +1,12 @@
 <script>
+import FondCta from "./FondCta.vue";
+import TermBg from "./TermBg.vue";
 export default {
   name: "RecetteExtrait",
+  components: {
+    FondCta,
+    TermBg,
+  },
   props: {
     cpt: {
       type: Object,
@@ -39,7 +45,9 @@ export default {
     <div class="img-container">
       <template v-if="cpt.thumbnail">
         <template v-if="cpt.thumbnail">
-          <a target="_blank" :href="cpt.link"><img :src="cpt.thumbnail" alt="" /></a>
+          <a target="_blank" :href="cpt.link"
+            ><img :src="cpt.thumbnail" alt=""
+          /></a>
         </template>
       </template>
     </div>
@@ -49,18 +57,15 @@ export default {
           {{ texte_pour_le_bandeau_de_nouvelle_formation }}
         </p>
       </template>
-      <div v-for="(taxo, index) in cpt.terms" :key="taxo" :class="'term-wrapper'">
+      <div
+        v-for="(taxo, index) in cpt.terms"
+        :key="taxo"
+        :class="'term-wrapper'"
+      >
         <span :class="'term term-' + index">
           {{ taxo }}
         </span>
-        <svg preserveAspectRatio="none" class="term-bg" xmlns="http://www.w3.org/2000/svg" width="88.686" height="38.778"
-          viewBox="0 0 88.686 38.778">
-          <g id="Groupe_1651" data-name="Groupe 1651" transform="translate(-14.46 9.184)">
-            <path id="Tracé_342" data-name="Tracé 342"
-              d="M25.743-.028C46.713-1.445,47,.568,61.609,1.985a130,130,0,0,0,22.921.475c.138.069,0,35.806,0,35.806H62.536c-13.372,0-20.435-1.109-33.856-2.016C7.71,34.834,7.983,39.736.235,32.083s-3.4-25.731,0-30.1S4.773,1.388,25.743-.028Z"
-              transform="translate(18.556 -8.673)" />
-          </g>
-        </svg>
+        <TermBg />
       </div>
       <template v-if="cpt.acf.champ_libre">
         <span v-if="cpt.acf.champ_libre" class="term term-libre">
@@ -68,8 +73,10 @@ export default {
         </span>
       </template>
     </div>
-    <h3> 
-      <a :href="cpt.permalink" class="lien-telechargement" target="_blank">{{ cpt.title }}</a>
+    <h3>
+      <a :href="cpt.permalink" class="lien-telechargement" target="_blank">{{
+        cpt.title
+      }}</a>
     </h3>
 
     <p v-if="cpt.acf.description_extrait_de_la_page" class="desc-page">
@@ -78,13 +85,9 @@ export default {
 
     <div class="buttons-extrait">
       <p v-if="cpt.permalink" class="cta_center">
-        <a target="_blank" :href="cpt.permalink"><span>{{ texte_en_savoir_plus }}</span>
-          <svg preserveAspectRatio="none" id="fond-cta" xmlns="http://www.w3.org/2000/svg" width="207.852" height="49.779"
-            viewBox="0 0 207.852 49.779">
-            <path id="Tracé_342" data-name="Tracé 342"
-              d="M65.823.109c49.139-1.819,49.813.766,84.042,2.584S179.388.16,194.784,7.383s7.607,26.36,1.449,33.947-12.86,7.938-44.195,7.938-47.884-1.424-79.333-2.588c-49.139-1.819-48.5,4.474-66.654-5.35s-7.97-33.03,0-38.637S16.684,1.927,65.823.109Z"
-              transform="translate(4.095 0.511)" fill="#c5191b" />
-          </svg>
+        <a target="_blank" :href="cpt.permalink"
+          ><span>{{ texte_en_savoir_plus }}</span>
+          <FondCta />
         </a>
       </p>
     </div>
