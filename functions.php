@@ -416,13 +416,6 @@ function custom_get_recettes_data()
 
 
 
-
-
-
-
-
-
-
 add_action('rest_api_init', 'custom_register_produits_endpoint');
 
 function custom_register_produits_endpoint()
@@ -441,55 +434,66 @@ function custom_get_produits_data()
         'posts_per_page' => -1,
     );
 
-    $produitss = get_posts($args);
+    $produits = get_posts($args);
 
     $data = array();
 
-    foreach ($produitss as $recette) {
-        $post_id = $recette->ID;
+    foreach ($produits as $produits) {
+        $post_id = $produits->ID;
 
-        // Récupérer les données spécifiques pour chaque recette.
+        // Récupérer les données spécifiques pour chaque produits.
         $title = get_the_title($post_id);
         $permalink = get_permalink($post_id);
         $thumbnail = get_the_post_thumbnail_url($post_id, 'thumbnail');
 
-        // Récupérer les termes de toutes les taxonomies liées au CPT "recettes".
+        // Récupérer les termes de toutes les taxonomies liées au CPT "produits".
         $taxonomies = get_object_taxonomies('produits', 'objects');
-        $terms_data = array();
+        $all_terms = array();
+        $taxonomy_terms = array();
 
         foreach ($taxonomies as $taxonomy) {
             $taxonomy_name = $taxonomy->name;
             $terms = get_the_terms($post_id, $taxonomy_name);
 
             if (!empty($terms)) {
-                $taxonomy_terms = array();
+                $taxonomy_terms_ids = array();
 
                 foreach ($terms as $term) {
-                    $taxonomy_terms[] = $term->name;
+                    $taxonomy_terms_ids[] = $term->term_id;
+                    $all_terms[] = $term->name;
                 }
 
-                $terms_data[$taxonomy_name] = $taxonomy_terms;
+                $taxonomy_terms[$taxonomy_name] = $taxonomy_terms_ids;
             }
         }
 
-        // Récupérer les champs ACF pour chaque recette (si ACF est activé).
+        // Récupérer les champs ACF pour chaque produits (si ACF est activé).
         if (function_exists('get_fields')) {
             $acf_data = get_fields($post_id);
         } else {
             $acf_data = array();
         }
 
-        // Créer un tableau avec toutes les données pour chaque recette.
+        // Créer un tableau avec toutes les données pour chaque produits.
         $produits_data = array(
             'title' => $title,
             'permalink' => $permalink,
             'thumbnail' => $thumbnail,
-            'terms' => $terms_data,
+            'terms' => $all_terms,
             'acf' => $acf_data,
         );
+
+        // Ajouter les données des taxonomies dans l'array $produits_data.
+        foreach ($taxonomy_terms as $taxonomy_name => $terms_ids) {
+            $produits_data[$taxonomy_name] = $terms_ids;
+        }
 
         $data[] = $produits_data;
     }
 
     return rest_ensure_response($data);
 }
+
+
+
+

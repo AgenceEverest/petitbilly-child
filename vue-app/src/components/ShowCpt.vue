@@ -72,13 +72,13 @@ export default {
 
       try {
         console.log(
-          `${this.protocol}://${this.website}/wp-json/wp/v2/${cptNameForRequest}?per_page=100&_embed`
+          `${this.protocol}://${this.website}/wp-json/custom/v1/${cptNameForRequest}`
         );
         this.cpts = await getApiData(
-          `${this.protocol}://${this.website}/wp-json/wp/v2/${cptNameForRequest}?per_page=100&_embed`
+          `${this.protocol}://${this.website}/wp-json/custom/v1/${cptNameForRequest}`
         );
 
-        this.cpts = this.reorganiseCpts(this.cpts);
+       // this.cpts = this.reorganiseCpts(this.cpts);
 
         //on récupère les taxonomies et les terms
         this.taxonomiesAndTerms = await getApiData(
