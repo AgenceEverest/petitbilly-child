@@ -229,7 +229,7 @@ function my_acf_init_child()
             'icon'                => 'editor-table',
             'mode'                => 'edit',
         ));
-        
+
         acf_register_block(array(
             'name'                => 'block-rejoignez-nos-equipes',
             'title'                => __('Bloc - Rejoignez nos équipes'),
@@ -315,11 +315,11 @@ function acf_load_valeurs_nutritionelles($field)
     $field['choices'] = array();
 
     $valeurs = get_field('valeurs_nutritionnelles', 'option');
-        foreach ($valeurs as $valeur) :
-                foreach ($valeur as $value) :
-                    $field['choices'][$value] = $value;
-                endforeach;
+    foreach ($valeurs as $valeur) :
+        foreach ($valeur as $value) :
+            $field['choices'][$value] = $value;
         endforeach;
+    endforeach;
     return $field;
 }
 
@@ -336,7 +336,8 @@ add_filter('acf/load_field/name=valeur_nutritionnelle_nom', 'acf_load_valeurs_nu
 
 add_action('rest_api_init', 'custom_register_recettes_endpoint');
 
-function custom_register_recettes_endpoint() {
+function custom_register_recettes_endpoint()
+{
     register_rest_route('custom/v1', 'recettes', array(
         'methods' => 'GET',
         'callback' => 'custom_get_recettes_data',
@@ -344,7 +345,8 @@ function custom_register_recettes_endpoint() {
     ));
 }
 
-function custom_get_recettes_data() {
+function custom_get_recettes_data()
+{
     $args = array(
         'post_type' => 'recettes',
         'posts_per_page' => -1,
@@ -396,9 +398,13 @@ function custom_get_recettes_data() {
             'permalink' => $permalink,
             'thumbnail' => $thumbnail,
             'terms' => $all_terms,
-            'taxonomy_terms' => $taxonomy_terms,
             'acf' => $acf_data,
         );
+
+        // Ajouter les données des taxonomies dans l'array $recette_data.
+        foreach ($taxonomy_terms as $taxonomy_name => $terms_ids) {
+            $recette_data[$taxonomy_name] = $terms_ids;
+        }
 
         $data[] = $recette_data;
     }
@@ -419,7 +425,8 @@ function custom_get_recettes_data() {
 
 add_action('rest_api_init', 'custom_register_produits_endpoint');
 
-function custom_register_produits_endpoint() {
+function custom_register_produits_endpoint()
+{
     register_rest_route('custom/v1', 'produits', array(
         'methods' => 'GET',
         'callback' => 'custom_get_produits_data',
@@ -427,7 +434,8 @@ function custom_register_produits_endpoint() {
     ));
 }
 
-function custom_get_produits_data() {
+function custom_get_produits_data()
+{
     $args = array(
         'post_type' => 'produits',
         'posts_per_page' => -1,
