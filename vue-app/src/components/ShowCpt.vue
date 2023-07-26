@@ -244,7 +244,7 @@ export default {
       this.displayed = 0;
       this.displayablePosts = 0;
       this.cpts.forEach((cpt) => {
-        const title = cpt.title.rendered.toLowerCase();
+        const title = cpt.title.toLowerCase();
 
         const checkMatch = (input) =>
           he.decode(input.toLowerCase()).includes(keyword.toLowerCase());
@@ -264,7 +264,7 @@ export default {
 
         const checkTerms = (terms) => {
           for (const key in terms) {
-            if (checkMatch(terms[key].name)) {
+            if (checkMatch(terms[key])) {
               return true;
             }
           }
