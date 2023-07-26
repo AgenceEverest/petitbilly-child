@@ -21,6 +21,9 @@ export default {
     texte_pour_le_bandeau_de_nouvelle_formation: {
       type: String,
     },
+    texte_bandeau_nouveau: {
+      type: String,
+    },
     filters: {
       type: Array,
     },
@@ -58,7 +61,7 @@ export default {
     <div class="terms-container">
       <template v-if="cpt.acf.nouvelle_recette">
         <p v-if="cpt.acf.nouvelle_recette" class="nouvelle_recette">
-          {{ decode(texte_pour_le_bandeau_de_nouvelle_formation) }}
+          {{ decode(texte_bandeau_nouveau) }}
         </p>
       </template>
       <div
