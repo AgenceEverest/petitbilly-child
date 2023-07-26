@@ -2,6 +2,7 @@
 import AllFilterSvg from "./excerpts/AllFilterSvg.vue";
 import SearchLoop from "./excerpts/SearchLoop.vue";
 import SearchBox from "./excerpts/SearchBox.vue";
+import he from "he";
 export default {
   name: "FiltersCpts",
   emits: ["handleClick", "filterElementsByKeyword"],
@@ -62,6 +63,11 @@ export default {
       userEntry: "",
     };
   },
+  methods: {
+    decode(string) {
+      return he.decode(string);
+    },
+  },
 };
 </script>
 
@@ -99,7 +105,7 @@ export default {
           :key="term.id"
         >
           <span>
-            {{ term.name }}
+            {{ decode(term.name) }}
           </span>
 
           <svg

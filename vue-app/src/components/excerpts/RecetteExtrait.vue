@@ -1,6 +1,7 @@
 <script>
 import FondCta from "./FondCta.vue";
 import TermBg from "./TermBg.vue";
+import he from "he";
 export default {
   name: "RecetteExtrait",
   components: {
@@ -36,6 +37,9 @@ export default {
         return new Intl.DateTimeFormat("fr-FR", options).format(date);
       }
     },
+    decode(string) {
+      return he.decode(string);
+    },
   },
 };
 </script>
@@ -54,7 +58,7 @@ export default {
     <div class="terms-container">
       <template v-if="cpt.acf.nouvelle_recette">
         <p v-if="cpt.acf.nouvelle_recette" class="nouvelle_recette">
-          {{ texte_pour_le_bandeau_de_nouvelle_formation }}
+          {{ decode(texte_pour_le_bandeau_de_nouvelle_formation) }}
         </p>
       </template>
       <div
@@ -63,30 +67,30 @@ export default {
         :class="'term-wrapper'"
       >
         <span :class="'term term-' + index">
-          {{ taxo }}
+          {{ decode(taxo) }}
         </span>
         <TermBg />
       </div>
       <template v-if="cpt.acf.champ_libre">
         <span v-if="cpt.acf.champ_libre" class="term term-libre">
-          {{ cpt.acf.champ_libre }}
+          {{ decode(cpt.acf.champ_libre) }}
         </span>
       </template>
     </div>
     <h3>
       <a :href="cpt.permalink" class="lien-telechargement" target="_blank">{{
-        cpt.title
+        decode(cpt.title)
       }}</a>
     </h3>
 
     <p v-if="cpt.acf.description_extrait_de_la_page" class="desc-page">
-      {{ cpt.acf.description_extrait_de_la_page }}
+      {{ decode(cpt.acf.description_extrait_de_la_page) }}
     </p>
 
     <div class="buttons-extrait">
       <p v-if="cpt.permalink" class="cta_center">
         <a target="_blank" :href="cpt.permalink"
-          ><span>{{ texte_en_savoir_plus }}</span>
+          ><span>{{ decode(texte_en_savoir_plus) }}</span>
           <FondCta />
         </a>
       </p>
