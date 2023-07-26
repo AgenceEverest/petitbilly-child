@@ -54,7 +54,9 @@ endif;
             endif;
             if ($liseret_vert_autour_du_bloc) : echo " has-edge ";
             endif;
-         
+            if ($couleur_de_fond_bloc) :
+                echo ' ' . $couleur_de_fond_bloc;
+            endif;
             echo " block block-pourquoi-differents'"; ?>>
         <?php if ($liseret_vert_autour_du_bloc) : ?>
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/green-edge-desktop-tall') ?>
