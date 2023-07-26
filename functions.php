@@ -330,12 +330,16 @@ add_filter('acf/load_field/name=valeur_nutritionnelle_nom', 'acf_load_valeurs_nu
 
 
 
+
+
+
 add_action('rest_api_init', 'custom_register_recettes_endpoint');
 
 function custom_register_recettes_endpoint() {
     register_rest_route('custom/v1', 'recettes', array(
         'methods' => 'GET',
         'callback' => 'custom_get_recettes_data',
+        'permission_callback' => '__return_true',
     ));
 }
 
@@ -359,20 +363,22 @@ function custom_get_recettes_data() {
 
         // Récupérer les termes de toutes les taxonomies liées au CPT "recettes".
         $taxonomies = get_object_taxonomies('recettes', 'objects');
-        $terms_data = array();
+        $all_terms = array();
+        $taxonomy_terms = array();
 
         foreach ($taxonomies as $taxonomy) {
             $taxonomy_name = $taxonomy->name;
             $terms = get_the_terms($post_id, $taxonomy_name);
 
             if (!empty($terms)) {
-                $taxonomy_terms = array();
+                $taxonomy_terms_ids = array();
 
                 foreach ($terms as $term) {
-                    $taxonomy_terms[] = $term->name;
+                    $taxonomy_terms_ids[] = $term->term_id;
+                    $all_terms[] = $term->name;
                 }
 
-                $terms_data[$taxonomy_name] = $taxonomy_terms;
+                $taxonomy_terms[$taxonomy_name] = $taxonomy_terms_ids;
             }
         }
 
@@ -388,7 +394,8 @@ function custom_get_recettes_data() {
             'title' => $title,
             'permalink' => $permalink,
             'thumbnail' => $thumbnail,
-            'terms' => $terms_data,
+            'terms' => $all_terms,
+            'taxonomy_terms' => $taxonomy_terms,
             'acf' => $acf_data,
         );
 
@@ -400,14 +407,13 @@ function custom_get_recettes_data() {
 
 
 
-
-
 add_action('rest_api_init', 'custom_register_produits_endpoint');
 
 function custom_register_produits_endpoint() {
     register_rest_route('custom/v1', 'produits', array(
         'methods' => 'GET',
         'callback' => 'custom_get_produits_data',
+        'permission_callback' => '__return_true',
     ));
 }
 
