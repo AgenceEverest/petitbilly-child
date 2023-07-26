@@ -1,4 +1,6 @@
 <script>
+import he from "he";
+
 export default {
   name: "FiltersCpts",
   emits: ["handleClick", "filterElementsByKeyword"],
@@ -54,6 +56,7 @@ export default {
       userEntry: "",
     };
   },
+ 
 };
 </script>
 
@@ -79,7 +82,7 @@ export default {
           class="button button-all-filters"
         >
           <span>
-            {{ this.$props[`texte_tous_les_filtres_${index + 1}`] }}
+            {{ he.decode(this.$props[`texte_tous_les_filtres_${index + 1}`]) }}
           </span>
           <svg
             preserveAspectRatio="none"
@@ -115,7 +118,7 @@ export default {
           :key="term.id"
         >
           <span>
-            {{ term.name }}
+            {{ he.decode(term.name) }}
           </span>
 
           <svg
