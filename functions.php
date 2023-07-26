@@ -333,6 +333,7 @@ add_filter('acf/load_field/name=valeur_nutritionnelle_nom', 'acf_load_valeurs_nu
 
 
 
+
 add_action('rest_api_init', 'custom_register_recettes_endpoint');
 
 function custom_register_recettes_endpoint() {
@@ -404,6 +405,15 @@ function custom_get_recettes_data() {
 
     return rest_ensure_response($data);
 }
+
+
+
+
+
+
+
+
+
 
 
 
