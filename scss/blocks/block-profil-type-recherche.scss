@@ -14,14 +14,22 @@
         z-index: 0;
     }
 
+    p {
+        position: relative;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+    }
+
     .postes-recherches {
         z-index: 1;
         position: relative;
         display: flex;
         justify-content: space-between;
+
         @media (max-width: 780px) {
             flex-direction: column;
         }
+
         .poste-recherche {
             padding: 5% 2%;
             width: 31%;
