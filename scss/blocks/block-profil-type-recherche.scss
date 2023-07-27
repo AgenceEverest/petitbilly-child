@@ -19,7 +19,7 @@
         color: white !important;
         font-family: 'Roboto', sans-serif;
         strong {
-            color: white;
+            color: white !important;
         }
     }
 
@@ -56,7 +56,7 @@
 
                 .description-du-poste {
                     p {
-                        color: black;
+                        color: black !important;
                     }
                 }
             }
@@ -67,14 +67,14 @@
                 background-color: $clearGreenBilly;
 
                 h3 {
-                    color: white;
+                    color: white !important;
                     padding-bottom: 1rem;
                     text-align: center;
                 }
 
                 .description-du-poste {
                     p {
-                        color: white;
+                        color: white !important;
                     }
                 }
             }
