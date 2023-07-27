@@ -339,7 +339,10 @@ h6 {
     flex-direction: column;
   }
 }
-.block-pourquoi-differents h2, .block-pourquoi-differents p {
+.block-pourquoi-differents h2, .block-pourquoi-differents h3, .block-pourquoi-differents h4, .block-pourquoi-differents h5, .block-pourquoi-differents h6, .block-pourquoi-differents p, .block-pourquoi-differents div, .block-pourquoi-differents ul, .block-pourquoi-differents li, .block-pourquoi-differents a {
+  color: white;
+}
+.block-pourquoi-differents h2 strong, .block-pourquoi-differents h3 strong, .block-pourquoi-differents h4 strong, .block-pourquoi-differents h5 strong, .block-pourquoi-differents h6 strong, .block-pourquoi-differents p strong, .block-pourquoi-differents div strong, .block-pourquoi-differents ul strong, .block-pourquoi-differents li strong, .block-pourquoi-differents a strong {
   color: white;
 }
 .block-pourquoi-differents .differences {

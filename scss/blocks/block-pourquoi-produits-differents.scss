@@ -14,6 +14,9 @@ $heightDifferences: 280px;
     }
     h2, h3, h4, h5, h6, p, div, ul, li, a {
         color: white;
+        strong {
+            color: white;
+        }
     }
     .differences {
         display: flex;

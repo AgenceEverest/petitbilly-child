@@ -1,5 +1,5 @@
 .block-profil-type-recherche {
-    h2 {
+    h2, h3, h4, h5, h6 {
         color: white !important;
         z-index: 1;
         position: relative;
@@ -16,8 +16,11 @@
 
     p {
         position: relative;
-        color: white;
+        color: white !important;
         font-family: 'Roboto', sans-serif;
+        strong {
+            color: white;
+        }
     }
 
     .postes-recherches {
