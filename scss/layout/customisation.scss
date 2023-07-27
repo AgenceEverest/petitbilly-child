@@ -17,6 +17,22 @@ figure {
 }
 
 .fond_blanc {
+    p {
+        color: black;
+        strong {
+            color: $darkGreenBilly;
+            font-family: 'Cafeteria-Bold';
+        }
+    }
+    .entry-content {
+        p {
+            color: black;
+            strong {
+                color: $darkGreenBilly;
+                font-family: 'Cafeteria-Bold';
+            }
+        }
+    }
     .col_flexible_bordure {
         background-color: $darkGreenBilly;
         color: white;
@@ -34,6 +50,22 @@ figure {
             color: white;
             strong {
                 color: white;
+            }
+        }
+        p {
+            color: white;
+            strong {
+                color: white;
+                font-weight: bold;
+            }
+        }
+        .entry-content {
+            p {
+                color: white;
+                strong {
+                    color: white;
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -56,6 +88,24 @@ figure {
         color: white;
     }
 
+    p {
+        color: white;
+        strong {
+            color: white;
+            font-weight: bold;
+        }
+    }
+    .entry-content {
+        p {
+            color: whiteblack;
+            strong {
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
+
+
     .col_flexible_bordure {
         background-color: white;
         color: black;
@@ -74,9 +124,27 @@ figure {
         a {
             color: black;
             strong {
-                color: black;
+                color:$darkGreenBilly;
             }
         }
+
+        p {
+            color:black;
+            strong {
+                color:$darkGreenBilly;
+                font-weight: bold;
+            }
+        }
+        .entry-content {
+            p {
+                color: black;
+                strong {
+                    color:$darkGreenBilly;
+                    font-weight: bold;
+                }
+            }
+        }
+    
     }
 
     position: relative;
@@ -102,6 +170,23 @@ figure {
         color: white;
     }
 
+    p {
+        color: white;
+        strong {
+            color: white;
+            font-weight: bold;
+        }
+    }
+    .entry-content {
+        p {
+            color: white;
+            strong {
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
+
     .col_flexible_bordure {
         background-color: white;
         color: $darkGreenBilly;
@@ -121,6 +206,23 @@ figure {
             color: black;
             strong {
                 color: black;
+            }
+        }
+
+        p {
+            color: black;
+            strong {
+                color: $darkGreenBilly;
+                font-weight: bold;
+            }
+        }
+        .entry-content {
+            p {
+                color: black;
+                strong {
+                    color: $darkGreenBilly;
+                    font-weight: bold;
+                }
             }
         }
     }
