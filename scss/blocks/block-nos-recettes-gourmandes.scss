@@ -7,7 +7,7 @@
     h2,
     h3,
     p {
-        color: white;
+        color: white !important;
         margin-top: 1rem;
 
         @media (max-width: 780px) {
@@ -22,7 +22,7 @@
     h2,
     h3,
     p {
-        color: white;
+        color: white !important;
         margin-top: 1rem;
     }
 
