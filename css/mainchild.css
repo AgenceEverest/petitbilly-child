@@ -398,7 +398,7 @@ h6 {
 }
 .block-pourquoi-differents .differences .difference .img-difference-wrapper img {
   height: auto;
-  width: auto;
+  width: 100%;
 }
 .block-nos-valeurs .valeurs {
   display: flex;
@@ -893,7 +893,7 @@ h6 {
 }
 .block-fromages-uniques .cartes .carte .img-difference-wrapper img {
   height: auto;
-  width: 100%;
+  width: auto;
 }
 .block-profil-type-recherche h2 {
   color: white !important;
