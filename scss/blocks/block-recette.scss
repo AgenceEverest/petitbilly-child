@@ -10,7 +10,7 @@
             .col-gauche {
                 display: flex;
                 flex-direction: column;
-                width: 30%;
+                width: 35%;
                 background-color: white;
 
                 .caracteristiques-recettes {
@@ -29,7 +29,7 @@
             }
 
             .col-droite {
-                width: 70%;
+                width: 65%;
                 padding: 5%;
                 background-color: $darkGreenBilly;
 
