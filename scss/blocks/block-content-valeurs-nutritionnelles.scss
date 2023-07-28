@@ -1,5 +1,19 @@
+.col_flexible_3 {
+  .valeurs-nutritionnelles {
+    width: calc(33.3333% - 1.333rem);  
+  }
+}
+.col_flexible_2 {
+  .valeurs-nutritionnelles {
+    width: calc(50% - 1rem);  
+  }
+}
+.col_flexible_1 {
+  .valeurs-nutritionnelles {
+    width: 100%;  
+  }
+}
 .valeurs-nutritionnelles {
-    width: calc(50% - 1rem);
 
     p {
       font-family: $bold;
