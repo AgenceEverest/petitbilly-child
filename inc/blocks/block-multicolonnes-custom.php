@@ -36,6 +36,9 @@ endif;
 		endif;
 		if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
 		endif;
+		if ($couleur_de_fond_bloc) :
+			echo ' ' . $couleur_de_fond_bloc . '_vague';
+		endif;
 			?>
 ">
 	<?php if ($vague_au_dessus_du_bloc) : ?>
