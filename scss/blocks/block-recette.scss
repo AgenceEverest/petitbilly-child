@@ -7,6 +7,16 @@
             display: flex;
             border-radius: 20px;
             overflow: hidden;
+            @media (max-width: 1024px) {
+                flex-direction: column;
+                margin-top: 1rem;
+                .col-gauche {
+                    width: 100%;
+                }
+                .col-droite {
+                    width: 100%;
+                }
+            }
             .col-gauche {
                 display: flex;
                 flex-direction: column;
