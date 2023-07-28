@@ -2,7 +2,6 @@
     <?php
     $titre_valeurs_nutritionnelles = get_sub_field('titre_valeurs_nutritionnelles');
     $sousTitreValeurs = get_sub_field('sous_titre_valeurs_nutritionnelles'); ?>
-    $unite_grammage = get_sub_field('unite_grammage'); ?>
     <h2><?= $titre_valeurs_nutritionnelles ?></h2>
     <p><?= $sousTitreValeurs ?></p>
     <?php if (have_rows('tableau_valeurs_nutritionnelles')) : ?>
