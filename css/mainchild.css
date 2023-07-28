@@ -1765,28 +1765,6 @@ h6 {
   font-size: 15px;
   color: #646464;
 }
-/* .cta_btn_lead, .cta_primaire, .cta_secondaire {
-    position: relative;
-    display: inline-block !important;
-    #fond-cta-wrapper {
-        position: relative;
-        z-index: 0;
-        #fond-cta {
-            position: absolute;
-        }
-        a {
-            position: absolute;
-            z-index: 1;
-            font-family: 'Cafeteria-Bold' !important;
-            background-color:transparent !important;
-         
-            &:hover {
-                background-color: transparent !important;
-            }
-        }
-    }
-   
-} */
 .cta-container {
   display: flex;
   padding-top: 1rem;
@@ -1827,6 +1805,8 @@ h6 {
   border-bottom: inherit !important;
   box-shadow: inherit !important;
   transition: inherit !important;
+  display: flex;
+  align-items: center;
 }
 .col_flexible_2 .col_flexible_item:nth-child(even) .cta-container {
   padding-left: 2rem;
@@ -1849,6 +1829,10 @@ h6 {
   border-bottom: inherit !important;
   box-shadow: inherit !important;
   transition: inherit !important;
+}
+.download_doc_size {
+  color: white;
+  font-family: "Cafeteria-Bold" !important;
 }
 @font-face {
   font-family: "Cafeteria-Regular";
