@@ -39,7 +39,9 @@
       &.first-element-green {
         li {
           color: $darkGreenBilly;
-          font-weight: bold;
+          span {
+            font-weight: bold;
+          }
         }
       }
       li:nth-child(odd) {
