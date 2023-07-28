@@ -1043,10 +1043,22 @@ h6 {
   border-radius: 20px;
   overflow: hidden;
 }
+@media (max-width: 1024px) {
+  .block-recette .recettes-caracteristiques-wrapper .part-1-block {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-gauche {
+    width: 100% !important;
+  }
+  .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite {
+    width: 100% !important;
+  }
+}
 .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-gauche {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 35%;
   background-color: white;
 }
 .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-gauche .caracteristiques-recettes {
@@ -1061,7 +1073,7 @@ h6 {
   margin-bottom: 0.5rem;
 }
 .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite {
-  width: 50%;
+  width: 65%;
   padding: 5%;
   background-color: #00693E;
 }
@@ -1077,12 +1089,23 @@ h6 {
 .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite .liste-ingredients ul {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 90%;
+}
+@media (max-width: 780px) {
+  .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite .liste-ingredients ul {
+    flex-direction: column;
+  }
 }
 .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite .liste-ingredients li {
   list-style-type: disc;
   width: 50%;
   font-size: 20px;
+  left: 15px;
+}
+@media (max-width: 780px) {
+  .block-recette .recettes-caracteristiques-wrapper .part-1-block .col-droite .liste-ingredients li {
+    width: 100%;
+  }
 }
 .icon_multicolonnes {
   background-color: transparent !important;
@@ -1499,6 +1522,7 @@ h6 {
 #footer #footer_wrapper #footer_content {
   display: flex;
   justify-content: space-between;
+  margin-right: 10rem;
 }
 #footer #footer_wrapper #footer_content span {
   color: black !important;
@@ -2056,6 +2080,11 @@ article {
 .nav_blog_wrapper ul, .nav_blog_wrapper li, .nav_blog_wrapper a, .nav_blog_wrapper span, .nav_blog_wrapper .nav_blog_title {
   font-family: "Cafeteria-Bold" !important;
 }
+.rs_link {
+  position: absolute;
+  bottom: 2rem;
+  right: 5rem;
+}
 .rs_link_item {
   position: relative;
   background-color: transparent;
@@ -2080,6 +2109,9 @@ article {
 }
 .copyright_image_txt {
   color: white !important;
+}
+.svg-tik-tok {
+  height: 1.2rem !important;
 }
 /*# sourceMappingURL=D:\wamp64\www\petitbilly/wp-content/themes/nanosite-proefficace-child/css/mainchild.css.map */
 /*# sourceMappingURL=mainchild.css.map */

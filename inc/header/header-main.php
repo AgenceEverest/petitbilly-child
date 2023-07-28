@@ -105,8 +105,10 @@
             <?php $page_twitter = get_field('page_twitter', 'option'); ?>
             <?php $page_linkedin = get_field('page_linkedin', 'option'); ?>
             <?php $page_instagram = get_field('page_instagram', 'option'); ?>
+            <?php $page_tiktok = get_field('page_tiktok', 'option'); ?>
+            <?php $page_youtube = get_field('page_youtube', 'option'); ?>
             <?php $accroche_menu_mobile_suiveznous = get_field('accroche_menu_mobile_suiveznous', 'option'); ?>
-            <?php if ($page_facebook || $page_twitter || $page_linkedin || $page_instagram) : ?>
+            <?php if ($page_facebook || $page_twitter || $page_linkedin || $page_instagram || $page_youtube || $page_tiktok) : ?>
                 <p id="burger_rs_accroche"><?php echo $accroche_menu_mobile_suiveznous; ?></p>
                 <?php get_template_part('inc/reseaux-sociaux'); ?>
             <?php endif; ?>

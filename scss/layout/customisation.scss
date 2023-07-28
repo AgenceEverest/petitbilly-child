@@ -342,7 +342,11 @@ article {
         font-family: "Cafeteria-Bold" !important;
     }
 }
-
+.rs_link {
+    position: absolute;
+    bottom: 2rem;
+    right: 5rem;
+}
 .rs_link_item {
     position: relative;
     background-color: transparent;
@@ -372,4 +376,8 @@ article {
 
 .copyright_image_txt{
     color: white !important
+}
+
+.svg-tik-tok {
+    height: 1.2rem !important;
 }
