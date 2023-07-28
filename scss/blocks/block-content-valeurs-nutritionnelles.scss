@@ -2,8 +2,13 @@
   .valeurs-nutritionnelles {
     width: calc(33.3333% - 1.333rem);
     h2 {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto', sans-serif !important;
+      color: black !important;
       font-size: 20px;
+      padding-bottom: 1rem;
+      text-align: center;
+      font-weight: bold;
+  
     }
   }
 }
