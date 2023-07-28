@@ -104,7 +104,7 @@
 
 
 
-    <p class="rs_link_footer">
+    <p class="rs_link_footer rs_link">
         <?php $page_facebook = get_field('page_facebook', 'option'); ?>
         <?php $page_twitter = get_field('page_twitter', 'option'); ?>
         <?php $page_linkedin = get_field('page_linkedin', 'option'); ?>

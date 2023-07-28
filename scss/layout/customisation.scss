@@ -105,6 +105,9 @@ body,
     li,
     a {
         color: white;
+        strong {
+            color: white;
+        }
     }
 
     p {
@@ -142,7 +145,10 @@ body,
         h4,
         h5,
         h6 {
-            color: $darkGreenBilly;
+            color: $clearGreenBilly;
+            strong {
+                color: $darkGreenBilly;
+            }
         }
 
         div,
@@ -205,6 +211,9 @@ body,
     li,
     a {
         color: white;
+        strong {
+            color: white;
+        }
     }
 
     p {
@@ -240,6 +249,9 @@ body,
         h5,
         h6 {
             color: $darkGreenBilly;
+            strong {
+                color: $darkGreenBilly;
+            }
         }
 
         div,
