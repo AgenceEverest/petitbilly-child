@@ -1,6 +1,7 @@
 .col_flexible_3 {
   .valeurs-nutritionnelles {
     width: calc(33.3333% - 1.333rem);
+
     h2 {
       font-family: 'Roboto', sans-serif !important;
       color: black !important;
@@ -8,58 +9,66 @@
       padding-bottom: 1rem;
       text-align: center;
       font-weight: bold;
-  
+
     }
   }
 }
+
 .col_flexible_2 {
   .valeurs-nutritionnelles {
-    width: calc(50% - 1rem);  
+    width: calc(50% - 1rem);
   }
 }
+
 .col_flexible_1 {
   .valeurs-nutritionnelles {
-    width: 100%;  
+    width: 100%;
   }
 }
+
 .valeurs-nutritionnelles {
 
-    p {
-      font-family: $bold;
-      font-size: 21px;
-      text-align: center;
-    }
+  p {
+    font-family: $bold;
+    font-size: 21px;
+    text-align: center;
+  }
 
-    ul {
-      height: auto;
-      border-radius: 20px;
-      overflow: hidden;
-      -webkit-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.25);
-      box-shadow: 0px 0px 20px 4px rgb(0 0 0 / 8%);
-      &.first-element-green {
-        li {
+  ul {
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 20px 4px rgb(0 0 0 / 8%);
+
+    &.first-element-green {
+      li {
+        &:nth-child(1) {
           color: $darkGreenBilly;
+
           span {
             font-weight: bold;
           }
         }
       }
-      li:nth-child(odd) {
-        background-color: $clair2;
+    }
+
+    li:nth-child(odd) {
+      background-color: $clair2;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+
+      .valeur-nutritionnelle {
+        width: 50%;
       }
 
-      li {
-        display: flex;
-        justify-content: space-between;
-        padding: 0.5rem 1rem;
-
-        .valeur-nutritionnelle {
-          width: 50%;
-        }
-
-        .valeur-nutritionnelle-nom {
-          width: 50%;
-        }
+      .valeur-nutritionnelle-nom {
+        width: 50%;
       }
     }
   }
+}
