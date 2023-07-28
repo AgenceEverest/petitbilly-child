@@ -167,8 +167,9 @@
             color: black !important;
         }
     }
-    .current_page_item{
-        a{
+
+    .current_page_item {
+        a {
             color: $darkGreenBilly !important;
         }
     }
@@ -216,28 +217,49 @@
 .breadcrumb_top {
     padding-left: 10rem;
     background-color: $fondBlancCasse;
-    span, .breadcrumb_separator {
+
+    span,
+    .breadcrumb_separator {
         color: black !important;
     }
 }
 
 
 
-.post_thumbnail_texte, .article_blog .entry_title .post_thumbnail, .post_thumbnail_bg {
+.post_thumbnail_texte,
+.article_blog .entry_title .post_thumbnail,
+.post_thumbnail_bg {
     background-color: $fondBlancCasse;
 }
 
 .article_blog .entry_title .post_thumbnail {
     padding-top: 0.5rem;
 }
+
 .type-post {
+    .post_thumbnail_texte_inner {
+        .legende {
+            display: flex;
+            justify-content: center;
+            padding-top: 2rem;
+
+            a {
+                font-family: 'Cafeteria-Bold' !important;
+                font-size: 23px !important;
+            }
+        }
+    }
+
     .post_thumbnail {
         flex-direction: column;
-        .post_thumbnail_image, .post_thumbnail_texte {
+
+        .post_thumbnail_image,
+        .post_thumbnail_texte {
             width: 100%;
         }
     }
 }
+
 .article_blog .entry_title .post_thumbnail_image figure {
     padding: inherit !important;
 }
@@ -255,4 +277,9 @@
 
 .article_blog .entry_title h1 {
     text-align: center;
+    margin-bottom: 1rem;
+}
+
+.article_blog .entry_title .post_thumbnail {
+    padding-bottom: 0rem !important;
 }
