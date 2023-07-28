@@ -28,12 +28,12 @@
         </a>
     <?php endif; ?>
     <?php if ($page_youtube) : ?><a href="<?php echo $page_youtube; ?>" class="rs_link_item" title="<?php if ($reseaux_sociaux_suivez_nous_sur) : ?><?php echo $reseaux_sociaux_suivez_nous_sur; ?><?php endif; ?> YouTube">
-            <?= apply_filters('add_svg', 'youtube'); ?>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/youtube.svg'); ?>
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/fonds-rs.svg'); ?>
         </a>
     <?php endif; ?>
     <?php if ($page_tiktok) : ?><a href="<?php echo $page_tiktok; ?>" class="rs_link_item" title="<?php if ($reseaux_sociaux_suivez_nous_sur) : ?><?php echo $reseaux_sociaux_suivez_nous_sur; ?><?php endif; ?> TikTok">
-            <?= apply_filters('add_svg', 'tiktok'); ?>
+            <?= showSvg(get_stylesheet_directory_uri() . '/svg/tiktok.svg'); ?>
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/fonds-rs.svg'); ?>
         </a>
     <?php endif; ?>
