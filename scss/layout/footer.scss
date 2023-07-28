@@ -49,6 +49,10 @@
             display: flex;
             justify-content: space-between;
             margin-right: 10rem;
+            @media (max-width: 780px) {
+                margin-right: inherit;
+                flex-direction: column;
+            }
             span {
                 color: black !important;
             }

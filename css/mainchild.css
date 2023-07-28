@@ -1524,6 +1524,12 @@ h6 {
   justify-content: space-between;
   margin-right: 10rem;
 }
+@media (max-width: 780px) {
+  #footer #footer_wrapper #footer_content {
+    margin-right: inherit;
+    flex-direction: column;
+  }
+}
 #footer #footer_wrapper #footer_content span {
   color: black !important;
 }
@@ -2080,10 +2086,21 @@ article {
 .nav_blog_wrapper ul, .nav_blog_wrapper li, .nav_blog_wrapper a, .nav_blog_wrapper span, .nav_blog_wrapper .nav_blog_title {
   font-family: "Cafeteria-Bold" !important;
 }
-.rs_link {
+.rs_link_footer {
   position: absolute;
   bottom: 2rem;
   right: 5rem;
+}
+@media (max-width: 780px) {
+  .rs_link_footer {
+    position: relative;
+    bottom: inherit !important;
+    right: inherit !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4rem;
+  }
 }
 .rs_link_item {
   position: relative;

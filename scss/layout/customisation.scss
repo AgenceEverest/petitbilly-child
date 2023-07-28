@@ -342,10 +342,20 @@ article {
         font-family: "Cafeteria-Bold" !important;
     }
 }
-.rs_link {
+
+.rs_link_footer {
     position: absolute;
     bottom: 2rem;
     right: 5rem;
+    @media (max-width: 780px) {
+        position: relative;
+        bottom: inherit !important;
+        right: inherit !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 4rem;
+    }
 }
 .rs_link_item {
     position: relative;
