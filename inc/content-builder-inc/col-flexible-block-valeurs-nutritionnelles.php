@@ -1,9 +1,11 @@
 <div class="valeurs-nutritionnelles">
     <?php
     $titre_valeurs_nutritionnelles = get_sub_field('titre_valeurs_nutritionnelles');
-    $sousTitreValeurs = get_sub_field('sous_titre_valeurs_nutritionnelles'); 
+    $sousTitreValeurs = get_sub_field('sous_titre_valeurs_nutritionnelles');
     $first_element_green = get_sub_field('first_element_green'); ?>
-    <h2><?= $titre_valeurs_nutritionnelles ?></h2>
+    <?php if ($titre_valeurs_nutritionnelles) : ?>
+        <h2><?= $titre_valeurs_nutritionnelles ?></h2>
+    <?php endif; ?>
     <p><?= $sousTitreValeurs ?></p>
     <?php if (have_rows('tableau_valeurs_nutritionnelles')) : ?>
         <ul class="<?= $first_element_green ? "first-element-green" : "" ?>">
