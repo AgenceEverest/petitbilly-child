@@ -38,9 +38,11 @@ if (have_rows('block_recette')) : the_row(); // il s'agit du nom du champ dans A
     $liste_des_ingredients_wysiwyg = get_sub_field('liste_des_ingredients_wysiwyg');
 endif;
 ?>
-<div class="<?php             
-            if ($marge_en_haut_du_bloc) : echo " margin_section_top";  endif;
-            if ($marge_en_bas_du_bloc) : echo " margin_section_bottom"; endif; ?>
+<div class="<?php
+            if ($marge_en_haut_du_bloc) : echo " margin_section_top";
+            endif;
+            if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
+            endif; ?>
 ">
     <?php if ($vague_au_dessus_du_bloc) : ?>
         <div class="vague-haut">
@@ -76,12 +78,18 @@ endif;
                     <div class="caracteristiques-recettes">
                         <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/difficulte-recette.svg') ?>
                             </span><?= $difficulte_de_la_recette; ?></p>
-                        <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/temps-preparation.svg') ?></span>
-                            <?php echo $minutes_de_preparation . ' '; ?><?php echo $texte_minutes_de_preparation; ?></p>
-                        <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/combien-personnes.svg') ?></span>
-                            <?php echo $nombre_de_personnes . ' '; ?><?php echo $texte_combien_de_personnes; ?></p>
-                        <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/temps-cuisson.svg') ?></span>
-                            <?php echo $minutes_de_cuisson . ' '; ?><?php echo $texte_minutes_de_cuisson; ?></p>
+                        <?php if ($minutes_de_preparation) : ?>
+                            <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/temps-preparation.svg') ?></span>
+                                <?php echo $minutes_de_preparation . ' '; ?><?php echo $texte_minutes_de_preparation; ?></p>
+                        <?php endif; ?>
+                        <?php if ($nombre_de_personnes) : ?>
+                            <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/combien-personnes.svg') ?></span>
+                                <?php echo $nombre_de_personnes . ' '; ?><?php echo $texte_combien_de_personnes; ?></p>
+                        <?php endif; ?>
+                        <?php if ($minutes_de_cuisson) : ?>
+                            <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/temps-cuisson.svg') ?></span>
+                                <?php echo $minutes_de_cuisson . ' '; ?><?php echo $texte_minutes_de_cuisson; ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="col-droite">
