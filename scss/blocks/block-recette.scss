@@ -11,10 +11,10 @@
                 flex-direction: column;
                 margin-top: 1rem;
                 .col-gauche {
-                    width: 100%;
+                    width: 100% !important;
                 }
                 .col-droite {
-                    width: 100%;
+                    width: 100% !important;
                 }
             }
             .col-gauche {
