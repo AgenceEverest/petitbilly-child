@@ -11,7 +11,7 @@
                 <li><span class="valeur-nutritionnelle-nom">
                         <?= get_sub_field('valeur_nutritionnelle_nom'); ?>
                     </span><span class="valeur-nutritionnelle">
-                        <?= get_sub_field('valeur_nutritionnelle') ?><?= get_sub_field('unite_grammage') ?>
+                        <?= get_sub_field('valeur_nutritionnelle') ?> <?= get_sub_field('unite_grammage') ?>
                     </span>
                 </li>
             <?php endwhile; ?>
