@@ -70,8 +70,16 @@
 
     .footer_certification {
         height: 8rem;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
     }
 
+}
+
+.aside_prefooter_col_3 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 
 .aside_prefooter_col p.coordonnees_p_i svg {
