@@ -63,12 +63,18 @@
                         display: flex;
                         flex-wrap: wrap;
                         width: 90%;
+                        @media (max-width: 780px) {
+                            flex-direction: column;
+                        }
                     }
 
                     li {
                         list-style-type: disc;
                         width: 50%;
                         font-size: 20px;
+                        @media (max-width: 780px) {
+                            width: 100%;
+                        }
                     }
                 }
             }
