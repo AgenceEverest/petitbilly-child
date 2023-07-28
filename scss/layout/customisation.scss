@@ -309,6 +309,26 @@ body,
     }
 }
 
+
+.fond_vert_fonce_vague {
+    .vague-svg{
+       fill: $darkGreenBilly;
+    }
+}
+
+
+.fond_vert_clair_vague {
+    .vague-svg{
+       fill: $clearGreenBilly;
+    }
+}
+
+.fond_blanc_vague {
+    .vague-svg{
+       fill: white;
+    }
+}
+
 article {
     background-color: $fondBlancCasse;
 }
