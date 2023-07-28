@@ -363,3 +363,13 @@ article {
         color: white;
     }
 }
+
+.copyright_image {
+    transform: rotate(270deg);
+    bottom: 1.5rem;
+    right: -0.3rem;
+}
+
+.copyright_image_txt{
+    color: white !important
+}

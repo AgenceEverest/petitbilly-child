@@ -230,3 +230,14 @@
 .article_blog .entry_title .post_thumbnail {
     padding-top: 0.5rem;
 }
+.type-post {
+    .figure {
+        padding: inherit !important;
+    }
+    .post_thumbnail {
+        flex-direction: column;
+        .post_thumbnail_image, .post_thumbnail_texte {
+            width: 100%;
+        }
+    }
+}
