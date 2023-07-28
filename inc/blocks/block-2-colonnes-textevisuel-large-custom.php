@@ -9,15 +9,7 @@ if (have_rows('block_2_colonnes_textevisuel_large_custom')) : the_row(); // il s
 	$cb_ajouter_une_classe_css = get_sub_field('cb_ajouter_une_classe_css');
 	$ajouter_un_id_pour_le_css = get_sub_field('ajouter_un_id_pour_le_css');
 	$couleur_de_fond_bloc = get_sub_field('couleur_de_fond_bloc');
-	$cb_calltoaction = get_sub_field('cb_call-to-action');
-	$cb_calltoaction_lien = get_sub_field('cb_call-to-action_lien');
-	$cb_calltoaction_url = get_sub_field('cb_call-to-action_url');
-	$cb_calltoaction_fichier = get_sub_field('cb_call-to-action_fichier');
-	$cb_calltoaction_fichier_size = filesize(get_attached_file($cb_calltoaction_fichier));
-	$cb_calltoaction_interne_externe = get_sub_field('lien_interne_ou_externe_');
-	$ouvrir_dans_un_nouvel_onglet = get_sub_field('ouvrir_dans_un_nouvel_onglet');
-	$alignement_du_bouton = get_sub_field('alignement_du_bouton');
-	$style_du_bouton = get_sub_field('style_du_bouton');
+	
 	$marge_en_haut_du_bloc = get_sub_field('marge_en_haut_du_bloc');
 	$marge_en_bas_du_bloc = get_sub_field('marge_en_bas_du_bloc');
 	$vague_au_dessus_du_bloc = get_sub_field('vague_au_dessus_du_bloc');
@@ -118,31 +110,8 @@ endif;
 				<div class="col_right_wide_imgleft_wrapper entry-content">
 					<?php the_sub_field('cb_contenu_texte'); ?>
 
-					<!-- Lien page contact pré-remplie -->
-					<?php if ($cb_calltoaction_interne_externe == 'page_contact') : ?>
-						<?php get_template_part('inc/content-builder-inc/cb-form-to-prefilled-form'); ?>
-					<?php endif; ?>
+					<?php get_template_part('inc/content-builder-inc/cta-flex') ?>
 
-					<!-- Lien interne  -->
-					<?php if ($cb_calltoaction_interne_externe == 'lien_interne') : ?>
-						<?php if ($cb_calltoaction_lien) : ?>
-							<p class="cta_btn_lead <?php echo $alignement_du_bouton; ?> <?php echo $style_du_bouton; ?>"><a href="<?php echo $cb_calltoaction_lien; ?>" <?php if ($ouvrir_dans_un_nouvel_onglet) : ?> target="_blank" <?php endif; ?>><?php echo $cb_calltoaction; ?></a></p>
-						<?php endif; ?>
-					<?php endif; ?>
-
-					<!-- Lien externe  -->
-					<?php if ($cb_calltoaction_interne_externe == 'lien_externe') : ?>
-						<?php if ($cb_calltoaction_url) : ?>
-							<p class="cta_btn_lead <?php echo $alignement_du_bouton; ?> <?php echo $style_du_bouton; ?>"><a href="<?php echo $cb_calltoaction_url; ?>" <?php if ($ouvrir_dans_un_nouvel_onglet) : ?> target="_blank" <?php endif; ?>><?php echo $cb_calltoaction; ?></a></p>
-						<?php endif; ?>
-					<?php endif; ?>
-
-					<!-- Fichier à télécharger  -->
-					<?php if ($cb_calltoaction_interne_externe == 'fichier_telechargement') : ?>
-						<?php if ($cb_calltoaction_fichier) : ?>
-							<p class="cta_btn_lead <?php echo $alignement_du_bouton; ?> <?php echo $style_du_bouton; ?>"><a href="<?php echo wp_get_attachment_url($cb_calltoaction_fichier); ?>" <?php if ($ouvrir_dans_un_nouvel_onglet) : ?> target="_blank" <?php endif; ?>><?php get_template_part('inc/arrow-download'); ?><?php echo $cb_calltoaction; ?> <span class="download_doc_size">- <?php echo size_format($cb_calltoaction_fichier_size, $decimals = 0); ?></span></a></p>
-						<?php endif; ?>
-					<?php endif; ?>
 
 					<div class="col_flexible_wrapper">
 						<!-- Colonne 1 -->
@@ -183,38 +152,8 @@ endif;
 			<div class="col_left_wide_imgright_wrapper entry-content">
 				<?php the_sub_field('cb_contenu_texte'); ?>
 				<!-- Lien page contact pré-remplie -->
-				<?php if ($cb_calltoaction_interne_externe == 'page_contact') : ?>
-					<?php get_template_part('inc/content-builder-inc/cb-form-to-prefilled-form'); ?>
-				<?php endif; ?>
-				<!-- Lien interne  -->
-				<?php if ($cb_calltoaction_interne_externe == 'lien_interne') : ?>
-					<?php if ($cb_calltoaction_lien) : ?>
-						<p class="cta_btn_lead <?php echo $alignement_du_bouton; ?> <?php echo $style_du_bouton; ?>"><a href="<?php echo $cb_calltoaction_lien; ?>" <?php if ($ouvrir_dans_un_nouvel_onglet) : ?> target="_blank" <?php endif; ?>><?php echo $cb_calltoaction; ?></a></p>
-					<?php endif; ?>
-				<?php endif; ?>
+				<?php get_template_part('inc/content-builder-inc/cta-flex') ?>
 
-				<!-- Lien externe  -->
-				<?php if ($cb_calltoaction_interne_externe == 'lien_externe') : ?>
-					<?php if ($cb_calltoaction_url) : ?>
-						<p class="cta_btn_lead <?php echo $alignement_du_bouton; ?> <?php echo $style_du_bouton; ?>"><a href="<?php echo $cb_calltoaction_url; ?>" <?php if ($ouvrir_dans_un_nouvel_onglet) : ?> target="_blank" <?php endif; ?>><?php echo $cb_calltoaction; ?></a></p>
-					<?php endif; ?>
-				<?php endif; ?>
-
-				<!-- Fichier à télécharger  -->
-
-				<?php if ($cb_calltoaction_interne_externe == 'fichier_telechargement') : ?>
-					<?php if ($cb_calltoaction_fichier) : ?>
-						<p class="cta_btn_lead <?php echo $alignement_du_bouton; ?> <?php echo $style_du_bouton; ?>"><a href="<?php echo wp_get_attachment_url($cb_calltoaction_fichier); ?>" <?php if ($ouvrir_dans_un_nouvel_onglet) : ?> target="_blank" <?php endif; ?>><?php get_template_part('inc/arrow-download'); ?><?php echo $cb_calltoaction; ?> <span class="download_doc_size">- <?php echo size_format($cb_calltoaction_fichier_size, $decimals = 0); ?></span></a></p>
-					<?php endif; ?>
-				<?php endif; ?>
-				<?php if (have_rows('colonne_1_colonne_flexible_clonable')) : ?>
-					<div class="col_flexible_wrapper">
-						<!-- Colonne 1 -->
-						<?php while (have_rows('colonne_1_colonne_flexible_clonable')) : the_row(); ?>
-							<?php get_template_part('inc/content-builder-inc/col-flexible-block'); ?>
-						<?php endwhile; ?>
-					</div>
-				<?php endif; ?>
 
 			</div>
 		</div>
