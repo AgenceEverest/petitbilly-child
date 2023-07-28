@@ -57,6 +57,7 @@
                 position: absolute;
                 color: white;
                 width: 50%;
+                transform: rotate(14deg);
                 font-size: 23px;
                 font-family: "Cafeteria-Regular";
 
@@ -72,7 +73,7 @@
             &.fond-blanc {
                 h3 {
                     color: $darkGreenBilly;
-                    color: black;
+                    transform: rotate(352deg);
                 }
             }
         }

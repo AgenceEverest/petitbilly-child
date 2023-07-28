@@ -3,34 +3,51 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
         @media (max-width: 780px) {
             justify-content: center;
         }
+
         .valeur {
             @media (max-width: 1200px) {
                 width: 40%;
             }
+
             @media (max-width: 780px) {
                 width: 60%;
             }
+
             width: 20%;
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
+
             img {
                 width: 130%;
+
                 @media (min-width: 480px) and (max-width: 1200px) {
                     width: 120%;
 
                 }
+
                 @media (max-width: 480px) {
                     width: 200%;
                 }
             }
+
             h3 {
                 position: absolute;
                 color: white;
+
+                &:nth-child(odd) {
+                    transform: rotate(14deg);
+
+                }
+
+                &:nth-child(even) {
+                    transform: rotate(352deg);
+                }
             }
         }
     }
