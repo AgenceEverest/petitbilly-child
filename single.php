@@ -7,7 +7,7 @@
 		<article id="post-container-<?php the_ID(); ?>" <?php post_class(); ?>>
 			
 			<?php get_template_part('inc/header/header-post'); ?>
-
+			<div class="publie-le"><?php get_field('publie_le', 'option') . ' ' . get_the_date() ?></div>
 			<?php if (the_content()) :
 				the_content();
 			endif; ?>
