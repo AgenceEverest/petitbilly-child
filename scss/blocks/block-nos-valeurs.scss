@@ -17,6 +17,19 @@
                 width: 60%;
             }
 
+            &:nth-child(odd) {
+                h3 {
+                    transform: rotate(14deg);
+                }
+
+            }
+
+            &:nth-child(even) {
+                h3 {
+                    transform: rotate(352deg);
+                }
+            }
+
             width: 20%;
             position: relative;
             display: flex;
@@ -40,14 +53,7 @@
                 position: absolute;
                 color: white;
 
-                &:nth-child(odd) {
-                    transform: rotate(14deg);
 
-                }
-
-                &:nth-child(even) {
-                    transform: rotate(352deg);
-                }
             }
         }
     }
