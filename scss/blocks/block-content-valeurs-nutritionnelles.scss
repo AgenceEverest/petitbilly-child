@@ -1,6 +1,10 @@
 .col_flexible_3 {
   .valeurs-nutritionnelles {
-    width: calc(33.3333% - 1.333rem);  
+    width: calc(33.3333% - 1.333rem);
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+    }
   }
 }
 .col_flexible_2 {
