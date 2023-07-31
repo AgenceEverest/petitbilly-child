@@ -334,34 +334,54 @@ export default {
       this.displayed = 0;
       this.cpts.forEach((cpt) => {
         const taxonomyFiltered = filter.taxonomy;
-        let termPresentInFilter;
+        let termActiveInFilter;
         let isAllButtonToggledInFilter;
         let isAllButtonToggledInOtherFilter;
-        let termPresentInOtherFilter;
+        let termActiveInOtherFilter;
         this.filters.forEach((innerFilter) => {
           if (innerFilter.taxonomy === taxonomyFiltered) {
             isAllButtonToggledInFilter = innerFilter.isAllButtonToggled;
-            termPresentInFilter = innerFilter.terms.find(
-              (term) => term.term_id === cpt[innerFilter.taxonomy][0]
-            );
+            if (cpt[innerFilter.taxonomy]) {
+              const termsIdsInCpt = Array.from(cpt[innerFilter.taxonomy]);
+              const activeTerms = innerFilter.terms.filter(
+                (term) => term.active
+              );
+
+              termActiveInFilter = activeTerms.some((term) =>
+                termsIdsInCpt.includes(term.term_id)
+              );
+            } else {
+              termActiveInFilter = false;
+            }
           } else {
             isAllButtonToggledInOtherFilter = innerFilter.isAllButtonToggled;
-            termPresentInOtherFilter = innerFilter.terms.find(
-              (term) => term.term_id === cpt[innerFilter.taxonomy][0]
-            );
+            if (cpt[innerFilter.taxonomy]) {
+              const termsIdsInCpt = Array.from(cpt[innerFilter.taxonomy]);
+              const activeTerms = innerFilter.terms.filter(
+                (term) => term.active
+              );
+
+              termActiveInOtherFilter = activeTerms.some((term) =>
+                termsIdsInCpt.includes(term.term_id)
+              );
+            } else {
+              termActiveInOtherFilter = false;
+            }
           }
         });
 
-        
-        if (
-          isAllButtonToggledInFilter ||
-          (termPresentInFilter.active && isAllButtonToggledInOtherFilter) ||
-          (termPresentInFilter.active && termPresentInOtherFilter.active)
-        ) {
+        if (isAllButtonToggledInFilter && isAllButtonToggledInOtherFilter) {
           cpt.show = true;
-          this.displayPostAccordingMaxDisplayable(cpt);
         } else {
-          cpt.show = false;
+          if (
+            (isAllButtonToggledInFilter && termActiveInOtherFilter) ||
+            (isAllButtonToggledInOtherFilter && termActiveInFilter) ||
+            (termActiveInFilter && termActiveInOtherFilter)
+          ) {
+            cpt.show = true;
+          } else {
+            cpt.show = false;
+          }
         }
         this.hasMoreContent = this.displayed < this.displayablePosts;
         this.recordFilteredCpts();
@@ -407,7 +427,6 @@ export default {
         :filters="filters"
         :protocol="protocol"
         :website="website"
-        :activeTerms="activeTerms"
       />
     </div>
     <div class="load-more-container">
