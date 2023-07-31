@@ -1440,7 +1440,7 @@ h6 {
   color: white;
   width: 50%;
   transform: rotate(14deg);
-  font-size: 23px;
+  font-size: 27px;
   font-family: "Cafeteria-Regular";
 }
 @media (max-width: 780px) {
@@ -1522,7 +1522,7 @@ h6 {
 #footer #footer_wrapper #footer_content {
   display: flex;
   justify-content: space-between;
-  margin-right: 10rem;
+  margin-right: 12rem;
 }
 @media (max-width: 780px) {
   #footer #footer_wrapper #footer_content {
@@ -1542,6 +1542,18 @@ h6 {
 }
 #footer_certification_wrapper .footer_certification {
   height: 8rem;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+.aside_prefooter_col_3 {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+@media (max-width: 768px) {
+  .aside_prefooter_col_3 {
+    justify-content: center;
+  }
 }
 .aside_prefooter_col p.coordonnees_p_i svg {
   color: white;
@@ -1690,7 +1702,17 @@ h6 {
   top: 20%;
   background: white;
   border-radius: 50% !important;
-  height: 112px;
+  height: 147px;
+}
+@media (max-width: 1024px) {
+  #header #figure-logo-header img {
+    height: 112px;
+  }
+}
+@media (max-width: 768px) {
+  #header #figure-logo-header img {
+    height: 90px;
+  }
 }
 #header #branding #content_header {
   height: 100%;
@@ -1947,6 +1969,9 @@ figure img {
 .fond_vert_fonce h1, .fond_vert_fonce h2, .fond_vert_fonce h3, .fond_vert_fonce h4, .fond_vert_fonce h5, .fond_vert_fonce h6, .fond_vert_fonce div, .fond_vert_fonce p, .fond_vert_fonce ul, .fond_vert_fonce li, .fond_vert_fonce a {
   color: white;
 }
+.fond_vert_fonce h1 strong, .fond_vert_fonce h2 strong, .fond_vert_fonce h3 strong, .fond_vert_fonce h4 strong, .fond_vert_fonce h5 strong, .fond_vert_fonce h6 strong, .fond_vert_fonce div strong, .fond_vert_fonce p strong, .fond_vert_fonce ul strong, .fond_vert_fonce li strong, .fond_vert_fonce a strong {
+  color: white;
+}
 .fond_vert_fonce p {
   color: white;
 }
@@ -1968,6 +1993,9 @@ figure img {
   color: black;
 }
 .fond_vert_fonce .col_flexible_bordure h1, .fond_vert_fonce .col_flexible_bordure h2, .fond_vert_fonce .col_flexible_bordure h3, .fond_vert_fonce .col_flexible_bordure h4, .fond_vert_fonce .col_flexible_bordure h5, .fond_vert_fonce .col_flexible_bordure h6 {
+  color: #8CC751;
+}
+.fond_vert_fonce .col_flexible_bordure h1 strong, .fond_vert_fonce .col_flexible_bordure h2 strong, .fond_vert_fonce .col_flexible_bordure h3 strong, .fond_vert_fonce .col_flexible_bordure h4 strong, .fond_vert_fonce .col_flexible_bordure h5 strong, .fond_vert_fonce .col_flexible_bordure h6 strong {
   color: #00693E;
 }
 .fond_vert_fonce .col_flexible_bordure div, .fond_vert_fonce .col_flexible_bordure p, .fond_vert_fonce .col_flexible_bordure ul, .fond_vert_fonce .col_flexible_bordure li, .fond_vert_fonce .col_flexible_bordure a {
@@ -2001,6 +2029,9 @@ figure img {
 .fond_vert_clair h1, .fond_vert_clair h2, .fond_vert_clair h3, .fond_vert_clair h4, .fond_vert_clair h5, .fond_vert_clair h6, .fond_vert_clair div, .fond_vert_clair p, .fond_vert_clair ul, .fond_vert_clair li, .fond_vert_clair a {
   color: white;
 }
+.fond_vert_clair h1 strong, .fond_vert_clair h2 strong, .fond_vert_clair h3 strong, .fond_vert_clair h4 strong, .fond_vert_clair h5 strong, .fond_vert_clair h6 strong, .fond_vert_clair div strong, .fond_vert_clair p strong, .fond_vert_clair ul strong, .fond_vert_clair li strong, .fond_vert_clair a strong {
+  color: white;
+}
 .fond_vert_clair p {
   color: white;
 }
@@ -2021,6 +2052,9 @@ figure img {
   color: #00693E;
 }
 .fond_vert_clair .col_flexible_bordure h1, .fond_vert_clair .col_flexible_bordure h2, .fond_vert_clair .col_flexible_bordure h3, .fond_vert_clair .col_flexible_bordure h4, .fond_vert_clair .col_flexible_bordure h5, .fond_vert_clair .col_flexible_bordure h6 {
+  color: #00693E;
+}
+.fond_vert_clair .col_flexible_bordure h1 strong, .fond_vert_clair .col_flexible_bordure h2 strong, .fond_vert_clair .col_flexible_bordure h3 strong, .fond_vert_clair .col_flexible_bordure h4 strong, .fond_vert_clair .col_flexible_bordure h5 strong, .fond_vert_clair .col_flexible_bordure h6 strong {
   color: #00693E;
 }
 .fond_vert_clair .col_flexible_bordure div, .fond_vert_clair .col_flexible_bordure p, .fond_vert_clair .col_flexible_bordure ul, .fond_vert_clair .col_flexible_bordure li, .fond_vert_clair .col_flexible_bordure a {
@@ -2055,6 +2089,18 @@ figure img {
 }
 .vague-haut svg, .vague-basse svg {
   width: 100%;
+}
+.vague-svg {
+  fill: #00693E;
+}
+.fond_vert_fonce_vague .vague-svg {
+  fill: #00693E;
+}
+.fond_vert_clair_vague .vague-svg {
+  fill: #8CC751;
+}
+.fond_blanc_vague .vague-svg {
+  fill: white;
 }
 article {
   background-color: whitesmoke;
@@ -2130,5 +2176,5 @@ article {
 .svg-tik-tok {
   height: 1.2rem !important;
 }
-/*# sourceMappingURL=D:\wamp64\www\petitbilly/wp-content/themes/nanosite-proefficace-child/css/mainchild.css.map */
+/*# sourceMappingURL=/home/clients/2cc33da28be56522f15859a1892eb9a4/sites/petitbilly.nanosite.tech/wp-content/themes/nanosite-proefficace-child/css/mainchild.css.map */
 /*# sourceMappingURL=mainchild.css.map */

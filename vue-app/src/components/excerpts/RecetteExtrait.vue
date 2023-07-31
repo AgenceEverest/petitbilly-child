@@ -41,7 +41,10 @@ export default {
       }
     },
     decode(string) {
-      return he.decode(string);
+      if (string) {
+        return he.decode(string);
+      }
+      return '';
     },
   },
 };

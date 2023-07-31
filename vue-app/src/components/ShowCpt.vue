@@ -351,6 +351,8 @@ export default {
             );
           }
         });
+
+        
         if (
           isAllButtonToggledInFilter ||
           (termPresentInFilter.active && isAllButtonToggledInOtherFilter) ||
