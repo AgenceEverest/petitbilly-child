@@ -44,7 +44,7 @@ export default {
       if (string) {
         return he.decode(string);
       }
-      return '';
+      return false;
     },
   },
 };
@@ -67,16 +67,15 @@ export default {
           {{ decode(texte_bandeau_nouveau) }}
         </p>
       </template>
-      <div
-        v-for="(taxo, index) in cpt.terms"
-        :key="taxo"
-        :class="'term-wrapper'"
-      >
-        <span :class="'term term-' + index">
-          {{ decode(taxo) }}
-        </span>
-        <TermBg />
-      </div>
+      <template v-for="(taxo, indexTaxo) in cpt.terms" :key="index">
+        <div v-for="(term, index) in taxo" :key="term" :class="'term-wrapper ' + indexTaxo">
+          <span :class="'term term-' + index">
+            {{ term }}
+          </span>
+          <TermBg />
+        </div>
+      </template>
+
       <template v-if="cpt.acf.champ_libre">
         <span v-if="cpt.acf.champ_libre" class="term term-libre">
           {{ decode(cpt.acf.champ_libre) }}

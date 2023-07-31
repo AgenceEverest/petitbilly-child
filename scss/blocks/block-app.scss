@@ -87,13 +87,13 @@
                 }
 
                 .term-wrapper {
-                    &:nth-child(even) {
+                    &.type_de_recette {
                         .term-bg {
                             fill: $darkGreenBilly;
                         }
                     }
 
-                    &:nth-child(odd) {
+                   &.specificite {
                         .term-bg {
                             fill: $clearGreenBilly;
                         }

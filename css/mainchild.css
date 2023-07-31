@@ -172,10 +172,10 @@ h6 {
 #block-app .results .cpt-extrait .terms-container .term-wrapper .term-bg {
   width: 8rem;
 }
-#block-app .results .cpt-extrait .terms-container .term-wrapper:nth-child(even) .term-bg {
+#block-app .results .cpt-extrait .terms-container .term-wrapper.type_de_recette .term-bg {
   fill: #00693E;
 }
-#block-app .results .cpt-extrait .terms-container .term-wrapper:nth-child(odd) .term-bg {
+#block-app .results .cpt-extrait .terms-container .term-wrapper.specificite .term-bg {
   fill: #8CC751;
 }
 #block-app .results .cpt-extrait .img-container {
@@ -2176,5 +2176,5 @@ article {
 .svg-tik-tok {
   height: 1.2rem !important;
 }
-/*# sourceMappingURL=/home/clients/2cc33da28be56522f15859a1892eb9a4/sites/petitbilly.nanosite.tech/wp-content/themes/nanosite-proefficace-child/css/mainchild.css.map */
+/*# sourceMappingURL=D:\wamp64\www\petitbilly/wp-content/themes/nanosite-proefficace-child/css/mainchild.css.map */
 /*# sourceMappingURL=mainchild.css.map */

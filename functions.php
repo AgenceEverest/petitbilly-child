@@ -378,12 +378,15 @@ function custom_get_recettes_data()
 
                 foreach ($terms as $term) {
                     $taxonomy_terms_ids[] = $term->term_id;
-                    $all_terms[] = $term->name;
+                    $all_terms[$taxonomy->name][] = $term->name;
                 }
 
                 $taxonomy_terms[$taxonomy_name] = $taxonomy_terms_ids;
             }
         }
+
+
+  
 
         // Récupérer les champs ACF pour chaque recette (si ACF est activé).
         if (function_exists('get_fields')) {
