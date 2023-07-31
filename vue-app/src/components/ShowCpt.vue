@@ -264,17 +264,19 @@ export default {
 
         const checkTerms = (terms) => {
           for (const key in terms) {
-            if (checkMatch(terms[key])) {
-              return true;
-            }
+            console.log(Array.from(terms[key]));
+            Array.from(terms[key]).forEach((term) => {
+              if (checkMatch(term)) {
+                return true;
+              }
+            });
           }
           return false;
         };
-
         let match =
           checkMatch(title) ||
           checkAcfFields(cpt.acf) ||
-          (cpt.terms.length > 0 && checkTerms(cpt.terms));
+          (Object.keys(cpt.terms).length > 0 && checkTerms(cpt.terms));
         cpt.display = match && cpt.show && cpt.display;
 
         if (cpt.display) {

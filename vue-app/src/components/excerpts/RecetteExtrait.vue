@@ -74,7 +74,7 @@ export default {
           :class="'term-wrapper ' + indexTaxo"
         >
           <span :class="'term term-' + index">
-            {{ term }}
+            {{ decode(term) }}
           </span>
           <TermBg />
         </div>
