@@ -67,8 +67,12 @@ export default {
           {{ decode(texte_bandeau_nouveau) }}
         </p>
       </template>
-      <template v-for="(taxo, indexTaxo) in cpt.terms" :key="index">
-        <div v-for="(term, index) in taxo" :key="term" :class="'term-wrapper ' + indexTaxo">
+      <template v-for="(taxo, indexTaxo) in cpt.terms" :key="indexTaxo">
+        <div
+          v-for="(term, index) in taxo"
+          :key="term"
+          :class="'term-wrapper ' + indexTaxo"
+        >
           <span :class="'term term-' + index">
             {{ term }}
           </span>
