@@ -164,7 +164,11 @@
             }
         }
 
-      
+        @media (max-width: 780px) {
+           .svg-searchbox {
+                width: 100% !important;
+           }
+        }
     }
 
     .filter-input {
