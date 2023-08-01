@@ -211,6 +211,7 @@
             span {
                 position: absolute;
                 font-family: 'Cafeteria-Bold' !important;
+                text-transform: uppercase;
             }
 
             &:hover {
@@ -311,7 +312,7 @@
             font-size: 20px;
             position: absolute;
             cursor: pointer;
-
+            text-transform: uppercase;
         }
 
         svg {
