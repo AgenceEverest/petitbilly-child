@@ -57,14 +57,16 @@
                 position: absolute;
                 left: -38%;
                 top: -90px;
-              @media (max-width: 980px) {
-                display: none;
-            } 
+
+                @media (max-width: 980px) {
+                    display: none;
+                }
             }
         }
 
         .cta-container {
             margin-top: 1rem;
+
             @media (max-width: 780px) {
                 justify-content: start !important;
             }
@@ -120,9 +122,11 @@
             background: white;
             border-radius: 50% !important;
             height: 147px;
+
             @media (max-width: 1024px) {
                 height: 112px;
             }
+
             @media (max-width: 768px) {
                 height: 90px;
             }
@@ -216,6 +220,11 @@
     padding-left: 10rem;
     background-color: $fondBlancCasse;
 
+    @media (max-width: 480px) {
+        padding-top: 3rem;
+        padding-left: 0rem;
+    }
+
     span,
     .breadcrumb_separator {
         color: black !important;
@@ -245,6 +254,18 @@
                 font-family: 'Cafeteria-Bold' !important;
                 font-size: 23px !important;
                 color: $darkGreenBilly;
+            }
+        }
+
+        @media (max-width: 780px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
             }
         }
     }

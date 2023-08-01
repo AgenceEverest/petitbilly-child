@@ -1806,6 +1806,12 @@ h6 {
   padding-left: 10rem;
   background-color: whitesmoke;
 }
+@media (max-width: 480px) {
+  .breadcrumb_top {
+    padding-top: 3rem;
+    padding-left: 0rem;
+  }
+}
 .breadcrumb_top span, .breadcrumb_top .breadcrumb_separator {
   color: black !important;
 }
@@ -1824,6 +1830,16 @@ h6 {
   font-family: "Cafeteria-Bold" !important;
   font-size: 23px !important;
   color: #00693E;
+}
+@media (max-width: 780px) {
+  .type-post .post_thumbnail_texte_inner h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .type-post .post_thumbnail_texte_inner h1 {
+    font-size: 1.5rem;
+  }
 }
 .type-post .post_thumbnail {
   flex-direction: column;
@@ -2236,6 +2252,11 @@ article {
 @media (max-width: 780px) {
   figure#logo_footer {
     margin: inherit !important;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .article_blog .entry_title .post_thumbnail_texte_inner {
+    background-color: transparent !important;
   }
 }
 /*# sourceMappingURL=D:\wamp64\www\petitbilly/wp-content/themes/nanosite-proefficace-child/css/mainchild.css.map */
