@@ -105,6 +105,7 @@ body,
     li,
     a {
         color: white;
+
         strong {
             color: white;
         }
@@ -146,6 +147,7 @@ body,
         h5,
         h6 {
             color: $clearGreenBilly;
+
             strong {
                 color: $darkGreenBilly;
             }
@@ -211,6 +213,7 @@ body,
     li,
     a {
         color: white;
+
         strong {
             color: white;
         }
@@ -249,6 +252,7 @@ body,
         h5,
         h6 {
             color: $darkGreenBilly;
+
             strong {
                 color: $darkGreenBilly;
             }
@@ -306,31 +310,33 @@ body,
 .vague-basse {
     svg {
         width: 100%;
+
         @media (max-width: 780px) {
-            width: 200%;        
+            width: 200%;
         }
     }
 }
-.vague-svg{
+
+.vague-svg {
     fill: $darkGreenBilly;
- }
+}
 
 .fond_vert_fonce_vague {
-    .vague-svg{
-       fill: $darkGreenBilly;
+    .vague-svg {
+        fill: $darkGreenBilly;
     }
 }
 
 
 .fond_vert_clair_vague {
-    .vague-svg{
-       fill: $clearGreenBilly;
+    .vague-svg {
+        fill: $clearGreenBilly;
     }
 }
 
 .fond_blanc_vague {
-    .vague-svg{
-       fill: white;
+    .vague-svg {
+        fill: white;
     }
 }
 
@@ -384,6 +390,7 @@ article {
     position: absolute;
     bottom: 2rem;
     right: 5rem;
+
     @media (max-width: 780px) {
         position: relative;
         bottom: inherit !important;
@@ -394,13 +401,13 @@ article {
         padding-bottom: 4rem;
     }
 }
+
 .rs_link_item {
     position: relative;
     background-color: transparent;
-    @media (max-width: 780px) {
-        height: 50px;
-        width: 50px;       
-    }
+    height: 50px;
+    width: 50px;
+
     &:hover {
         background-color: transparent;
     }
@@ -425,14 +432,15 @@ article {
     right: -0.3rem;
 }
 
-.copyright_image_txt{
+.copyright_image_txt {
     color: white !important
 }
 
 .svg-tik-tok {
     height: 1.2rem !important;
+
     path {
-        fill:white;
+        fill: white;
     }
 }
 
@@ -443,14 +451,14 @@ article {
 }
 
 
-@media (max-width:480px){
-    #charger_les_images_wrapper{
+@media (max-width:480px) {
+    #charger_les_images_wrapper {
         justify-content: flex-end !important;
     }
 }
 
 
-@media (max-width: 780px){
+@media (max-width: 780px) {
     figure#logo_footer {
         margin: inherit !important;
     }
