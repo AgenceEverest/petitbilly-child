@@ -441,3 +441,10 @@ article {
         justify-content: flex-end !important;
     }
 }
+
+
+@media (max-width: 780px){
+    figure#logo_footer {
+        margin: inherit !important;
+    }
+}
