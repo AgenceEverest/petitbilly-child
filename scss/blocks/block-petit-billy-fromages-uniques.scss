@@ -12,22 +12,26 @@ $heightDifferences: 280px;
         position: absolute;
         width: 15%;
         z-index: 1;
-
-        @media (max-width:780px) {
-            display: none !important;
-        }
     }
 
     #recette-moment-bas-droit {
         bottom: -25%;
         right: -5%;
         z-index: 0;
+        
+        @media (max-width: 780px) {
+            display: none !important;
+        }
     }
 
     #recette-moment-haut-gauche {
         top: -15%;
         left: -3%;
         z-index: 0;
+        
+        @media (max-width: 780px) {
+            display: none !important;
+        }
 
     }
 
