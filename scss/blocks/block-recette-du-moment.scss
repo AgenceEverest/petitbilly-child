@@ -6,7 +6,20 @@ $mobileBreakpoint: 760px;
         display: flex;
         align-items: center;
     }
-
+    .col_flexible_wrapper{
+        .cta-container {
+            position: absolute;
+            bottom: 0;
+            margin-left: 10%;
+            margin-bottom: 10%;
+            @media (max-width: $mobileBreakpoint) {
+                position: relative;
+                bottom: 0;
+                margin-left: 10%;
+                margin-bottom: 10%;
+            }
+        }
+    }
     .col_flexible {
         @media (max-width: $mobileBreakpoint) {
             flex-direction: column;
@@ -82,8 +95,7 @@ $mobileBreakpoint: 760px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            padding: 10%;
-
+            padding: 10% 10% 15% 10%;
             @media (max-width: $mobileBreakpoint) {
                 padding: 10% 0% 0% 0%;
             }

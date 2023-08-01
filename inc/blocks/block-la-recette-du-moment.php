@@ -76,13 +76,14 @@ endif;
                 <div class="col-1">
                     <?= $titre_recette_du_moment ?> <!-- champ ACF wysiwygf -->
                     <h3><strong><?= $nom_de_la_recette ?></strong></h3>
-                    <?php get_template_part('inc/content-builder-inc/cta-col') ?>
                 </div>
                 <div class="col-2">
                     <img src="<?= $visuel_recette_du_moment ?>" alt="<?= $nom_de_la_recette ?>">
                 </div>
+                <?php get_template_part('inc/content-builder-inc/cta-col') ?>
             </div>
         </div>
+
     </div>
 
     <?php if ($vague_au_dessous_du_bloc) : ?>

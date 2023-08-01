@@ -489,6 +489,12 @@ h6 {
   display: flex;
   align-items: center;
 }
+.block-recette-du-moment .col_flexible_wrapper .cta-container {
+  position: absolute;
+  bottom: 0;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
 @media (max-width: 760px) {
   .block-recette-du-moment .col_flexible {
     flex-direction: column;
@@ -556,7 +562,7 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 10%;
+  padding: 10% 10% 15% 10%;
 }
 @media (max-width: 760px) {
   .block-recette-du-moment .col_flexible_wrapper .col-1 {
@@ -1471,6 +1477,7 @@ h6 {
   transform: rotate(14deg);
   font-size: 27px;
   font-family: "Cafeteria-Regular";
+  text-align: center;
 }
 @media (max-width: 780px) {
   .block-nos-engagements .engagements .engagement h3 {
@@ -1672,7 +1679,7 @@ h6 {
 .entry_title_home .title_home_wrapper .phrase-dintroduction-entete .chevre-home-wrapper {
   width: 35%;
   position: absolute;
-  left: -35%;
+  left: -38%;
   top: -90px;
 }
 @media (max-width: 980px) {
