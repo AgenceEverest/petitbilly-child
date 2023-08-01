@@ -10,6 +10,9 @@ $heightDifferences: 280px;
         position: absolute;
         width: 15%;
         z-index: 1;
+        @media (max-width:480px) {
+            display: none;
+        }
     }
 
     #recette-moment-bas-droit {
