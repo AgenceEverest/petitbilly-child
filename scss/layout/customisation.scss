@@ -397,7 +397,10 @@ article {
 .rs_link_item {
     position: relative;
     background-color: transparent;
-
+    @media (max-width: 780px) {
+        height: 50px;
+        width: 50px;       
+    }
     &:hover {
         background-color: transparent;
     }
@@ -412,6 +415,7 @@ article {
     .svg {
         z-index: 1;
         color: white;
+        height: 1.2rem;
     }
 }
 
