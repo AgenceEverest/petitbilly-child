@@ -71,13 +71,9 @@
             width: 31%;
 
             @media (max-width: 780px) {
-                width: 70%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
-                margin-bottom: 1rem;
-            }
-            @media (max-width: 480px) {
-                width: 100%;
                 margin-bottom: 1rem;
             }
         }
