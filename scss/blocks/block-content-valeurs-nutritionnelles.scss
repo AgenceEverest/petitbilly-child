@@ -1,7 +1,9 @@
 .col_flexible_3 {
   .valeurs-nutritionnelles {
     width: calc(33.3333% - 1.333rem);
-
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
     h2 {
       font-family: 'Roboto', sans-serif !important;
       color: black !important;
