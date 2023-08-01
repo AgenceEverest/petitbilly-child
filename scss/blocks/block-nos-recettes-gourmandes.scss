@@ -63,7 +63,7 @@
         justify-content: space-around;
 
         @media (max-width: 1024px) {
-            flex-direction: column;
+            flex-direction: row;
             width: 100%;
         }
 
@@ -119,11 +119,11 @@
             }
         }
 
-        @media (max-width: 780px) {
+        @media (max-width: 1024px) {
             flex-direction: column;
             padding-top: 0;
             padding-left: 0;
-            width: 70%;
+            width: 100%;
         }
     }
 }
