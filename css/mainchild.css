@@ -98,6 +98,11 @@ h5 {
 h6 {
   font-size: 20px;
 }
+@media (max-width: 780px) {
+  #block-app #app {
+    padding: 0rem;
+  }
+}
 #block-app .filter-input::placeholder {
   color: #00693E;
   font-family: "Cafeteria-Regular" !important;
@@ -208,6 +213,7 @@ h6 {
   font-family: "Cafeteria-Bold" !important;
   color: white;
   font-size: 22px;
+  text-transform: uppercase;
 }
 @media (max-width: 1280px) {
   #block-app .results .cpt-extrait {
@@ -233,6 +239,11 @@ h6 {
   top: 25%;
   left: 2%;
 }
+@media (max-width: 780px) {
+  #block-app .filters .svg-searchbox {
+    width: 100% !important;
+  }
+}
 #block-app .filter-input {
   border: none;
   z-index: 1;
@@ -246,9 +257,40 @@ h6 {
 #block-app .filter-input:focus-visible {
   outline: none;
 }
+@media (max-width: 780px) {
+  #block-app .filter-input {
+    width: 90% !important;
+    left: 10%;
+  }
+}
 #block-app .buttons {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 1rem;
+}
+@media (max-width: 480px) {
+  #block-app .buttons {
+    justify-content: center;
+  }
+}
+#block-app .buttons .button {
+  margin-right: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+#block-app .buttons .button span {
+  position: absolute;
+  font-family: "Cafeteria-Bold" !important;
+  text-transform: uppercase;
+}
+#block-app .buttons .button:hover {
+  cursor: pointer;
+}
+#block-app .buttons .button.active {
+  color: white;
 }
 #block-app .buttons:nth-child(odd) .button-all-filters svg {
   fill: #00693E;
@@ -291,23 +333,6 @@ h6 {
   color: #8CC751;
   font-size: 19px;
 }
-#block-app .buttons .button {
-  margin-right: 1rem;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#block-app .buttons .button span {
-  position: absolute;
-  font-family: "Cafeteria-Bold" !important;
-}
-#block-app .buttons .button:hover {
-  cursor: pointer;
-}
-#block-app .buttons .button.active {
-  color: white;
-}
 #block-app .load-more-container {
   display: flex;
   justify-content: center;
@@ -321,6 +346,7 @@ h6 {
   font-size: 20px;
   position: absolute;
   cursor: pointer;
+  text-transform: uppercase;
 }
 #block-app .load-more-container svg {
   cursor: pointer;
@@ -361,13 +387,14 @@ h6 {
 }
 .block-pourquoi-differents .differences .difference {
   width: 22%;
-  height: 280px;
+  height: 330px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0px 49px 46px 32px rgba(0, 0, 0, 0.1);
   padding-bottom: 5rem;
+  position: relative;
 }
 @media (max-width: 980px) {
   .block-pourquoi-differents .differences .difference {
@@ -480,7 +507,7 @@ h6 {
 }
 @media (max-width: 780px) {
   .block-recette-du-moment #recette-moment-bas-droit {
-    width: 20%;
+    display: none !important;
   }
 }
 .block-recette-du-moment #recette-moment-haut-gauche {
@@ -490,7 +517,7 @@ h6 {
 }
 @media (max-width: 780px) {
   .block-recette-du-moment #recette-moment-haut-gauche {
-    width: 20%;
+    display: none !important;
   }
 }
 .block-recette-du-moment .green-edge {
@@ -533,7 +560,7 @@ h6 {
 }
 @media (max-width: 760px) {
   .block-recette-du-moment .col_flexible_wrapper .col-1 {
-    padding: 10% 20% 0% 20%;
+    padding: 10% 0% 0% 0%;
   }
 }
 .block-recette-du-moment .col_flexible_wrapper .col-2 {
@@ -581,11 +608,6 @@ h6 {
 }
 @media (max-width: 780px) {
   .block-nos-recettes-gourmandes h2, .block-nos-recettes-gourmandes h3, .block-nos-recettes-gourmandes p {
-    width: 70%;
-  }
-}
-@media (max-width: 480px) {
-  .block-nos-recettes-gourmandes h2, .block-nos-recettes-gourmandes h3, .block-nos-recettes-gourmandes p {
     width: 100%;
   }
 }
@@ -612,7 +634,7 @@ h6 {
 .block-nos-recettes-gourmandes .col_flexible {
   z-index: 1;
 }
-@media (max-width: 780px) {
+@media (max-width: 1024px) {
   .block-nos-recettes-gourmandes .col_flexible {
     flex-direction: column;
   }
@@ -629,10 +651,15 @@ h6 {
   display: flex;
   justify-content: space-around;
 }
+@media (max-width: 1024px) {
+  .block-nos-recettes-gourmandes .nos-recettes-col-1 {
+    flex-direction: row;
+    width: 100%;
+  }
+}
 @media (max-width: 780px) {
   .block-nos-recettes-gourmandes .nos-recettes-col-1 {
     flex-direction: column;
-    width: 100%;
   }
 }
 .block-nos-recettes-gourmandes .nos-recettes-col-1 .recette-item {
@@ -640,15 +667,9 @@ h6 {
 }
 @media (max-width: 780px) {
   .block-nos-recettes-gourmandes .nos-recettes-col-1 .recette-item {
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .block-nos-recettes-gourmandes .nos-recettes-col-1 .recette-item {
-    width: 100%;
     margin-bottom: 1rem;
   }
 }
@@ -689,12 +710,12 @@ h6 {
                     justify-content: center;
                 } */
 }
-@media (max-width: 780px) {
+@media (max-width: 1024px) {
   .block-nos-recettes-gourmandes .nos-recettes-col-2 {
     flex-direction: column;
     padding-top: 0;
     padding-left: 0;
-    width: 70%;
+    width: 100%;
   }
 }
 .block {
@@ -776,25 +797,20 @@ h6 {
   width: 15%;
   z-index: 1;
 }
+@media (max-width: 780px) {
+  .block-fromages-uniques #recette-moment-bas-droit, .block-fromages-uniques #recette-moment-haut-gauche {
+    display: none !important;
+  }
+}
 .block-fromages-uniques #recette-moment-bas-droit {
   bottom: -25%;
   right: -5%;
   z-index: 0;
 }
-@media (max-width: 780px) {
-  .block-fromages-uniques #recette-moment-bas-droit {
-    width: 20%;
-  }
-}
 .block-fromages-uniques #recette-moment-haut-gauche {
   top: -15%;
   left: -3%;
   z-index: 0;
-}
-@media (max-width: 780px) {
-  .block-fromages-uniques #recette-moment-haut-gauche {
-    width: 20%;
-  }
 }
 @media (max-width: 980px) {
   .block-fromages-uniques {
@@ -855,6 +871,11 @@ h6 {
   bottom: 15%;
   z-index: 1;
   width: 70%;
+}
+@media (max-width: 780px) {
+  .block-fromages-uniques .cartes {
+    width: 90%;
+  }
 }
 @media (max-width: 980px) {
   .block-fromages-uniques .cartes {
@@ -967,7 +988,7 @@ h6 {
   background: white;
 }
 .block-profil-type-recherche .postes-recherches .poste-recherche:nth-child(even) h3 {
-  color: #00693E;
+  color: #00693E !important;
   text-align: center;
   padding-bottom: 1rem;
 }
@@ -987,6 +1008,11 @@ h6 {
 }
 .col_flexible_3 .valeurs-nutritionnelles {
   width: calc(33.3333% - 1.333rem);
+}
+@media (max-width: 1024px) {
+  .col_flexible_3 .valeurs-nutritionnelles {
+    width: 100% !important;
+  }
 }
 .col_flexible_3 .valeurs-nutritionnelles h2 {
   font-family: "Roboto", sans-serif !important;
@@ -1281,6 +1307,7 @@ h6 {
   }
 }
 .rejoignez-nos-equipes .col_flexible_wrapper .col-2 {
+  margin-top: 1rem;
   padding-left: 2rem;
   display: flex;
   flex-direction: column;
@@ -1318,9 +1345,11 @@ h6 {
     width: 48%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 780px) {
   .rejoignez-nos-equipes .col_flexible_wrapper .postes .poste-container {
     width: 100%;
+    margin-right: 0rem !important;
+    padding: 5% 5%;
   }
 }
 .rejoignez-nos-equipes .col_flexible_wrapper .postes .poste-container:nth-child(odd) {
@@ -1350,7 +1379,7 @@ h6 {
 }
 .bloc_questions_reponses .question_reponse_item {
   position: relative;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.5rem !important;
 }
 .bloc_questions_reponses .question_reponse_item .marge-bas {
   width: 100%;
@@ -1489,9 +1518,15 @@ h6 {
   flex-direction: column;
   flex-wrap: wrap;
   height: 6rem;
+  margin-bottom: 1rem;
 }
 #menu-menu-footer-2 li {
   width: 50%;
+}
+@media (max-width: 480px) {
+  #menu-menu-footer-2 li {
+    margin-bottom: 1rem;
+  }
 }
 #menu-menu-footer-2 li a {
   color: white;
@@ -1522,7 +1557,7 @@ h6 {
 #footer #footer_wrapper #footer_content {
   display: flex;
   justify-content: space-between;
-  margin-right: 12rem;
+  margin-right: 16rem;
 }
 @media (max-width: 780px) {
   #footer #footer_wrapper #footer_content {
@@ -1552,7 +1587,7 @@ h6 {
 }
 @media (max-width: 768px) {
   .aside_prefooter_col_3 {
-    justify-content: center;
+    justify-content: start;
   }
 }
 .aside_prefooter_col p.coordonnees_p_i svg {
@@ -1637,20 +1672,8 @@ h6 {
 .entry_title_home .title_home_wrapper .phrase-dintroduction-entete .chevre-home-wrapper {
   width: 35%;
   position: absolute;
-  left: -224px;
-  bottom: -229px;
-}
-@media (max-width: 1400px) {
-  .entry_title_home .title_home_wrapper .phrase-dintroduction-entete .chevre-home-wrapper {
-    left: -178px;
-    bottom: -170px;
-  }
-}
-@media (max-width: 1100px) {
-  .entry_title_home .title_home_wrapper .phrase-dintroduction-entete .chevre-home-wrapper {
-    left: -142px;
-    bottom: -121px;
-  }
+  left: -35%;
+  top: -90px;
 }
 @media (max-width: 980px) {
   .entry_title_home .title_home_wrapper .phrase-dintroduction-entete .chevre-home-wrapper {
@@ -1659,6 +1682,11 @@ h6 {
 }
 .entry_title_home .title_home_wrapper .cta-container {
   margin-top: 1rem;
+}
+@media (max-width: 780px) {
+  .entry_title_home .title_home_wrapper .cta-container {
+    justify-content: start !important;
+  }
 }
 .entry_title_home .home_image_wrapper {
   position: relative;
@@ -1827,7 +1855,7 @@ h6 {
 @media (max-width: 780px) {
   .cta-container.cta_align_left {
     margin-top: 1.5rem;
-    justify-content: center;
+    justify-content: left;
   }
 }
 .cta-container.cta_align_right {
@@ -1836,7 +1864,7 @@ h6 {
 @media (max-width: 780px) {
   .cta-container.cta_align_right {
     margin-top: 1.5rem;
-    justify-content: center;
+    justify-content: right;
   }
 }
 .cta-container.cta_align_center {
@@ -2090,6 +2118,11 @@ figure img {
 .vague-haut svg, .vague-basse svg {
   width: 100%;
 }
+@media (max-width: 780px) {
+  .vague-haut svg, .vague-basse svg {
+    width: 200%;
+  }
+}
 .vague-svg {
   fill: #00693E;
 }
@@ -2151,6 +2184,8 @@ article {
 .rs_link_item {
   position: relative;
   background-color: transparent;
+  height: 50px;
+  width: 50px;
 }
 .rs_link_item:hover {
   background-color: transparent;
@@ -2164,6 +2199,7 @@ article {
 .rs_link_item .svg {
   z-index: 1;
   color: white;
+  height: 1.2rem;
 }
 .copyright_image {
   transform: rotate(270deg);
@@ -2175,6 +2211,22 @@ article {
 }
 .svg-tik-tok {
   height: 1.2rem !important;
+}
+.svg-tik-tok path {
+  fill: white;
+}
+.col_flexible_bordure .entry-content ul li:before {
+  color: white;
+}
+@media (max-width: 480px) {
+  #charger_les_images_wrapper {
+    justify-content: flex-end !important;
+  }
+}
+@media (max-width: 780px) {
+  figure#logo_footer {
+    margin: inherit !important;
+  }
 }
 /*# sourceMappingURL=D:\wamp64\www\petitbilly/wp-content/themes/nanosite-proefficace-child/css/mainchild.css.map */
 /*# sourceMappingURL=mainchild.css.map */
