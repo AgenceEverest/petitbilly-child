@@ -33,7 +33,6 @@
             @media (max-width: 780px) {
                 width: 70%;
             }
-
             width: 25%;
             position: relative;
             display: flex;
@@ -60,6 +59,7 @@
                 transform: rotate(14deg);
                 font-size: 27px;
                 font-family: "Cafeteria-Regular";
+                text-align: center;
 
                 @media (max-width: 780px) {
                     width: 60%;
