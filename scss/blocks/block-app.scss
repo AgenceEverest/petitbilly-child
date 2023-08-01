@@ -1,5 +1,9 @@
 #block-app {
-
+    #app {
+        @media (max-width: 780px){
+            padding: 0rem;
+        }
+    }
     .filter-input {
         &::placeholder {
             color: $darkGreenBilly;
