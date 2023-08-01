@@ -306,6 +306,9 @@ body,
 .vague-basse {
     svg {
         width: 100%;
+        @media (width: 780px) {
+            width: 200%;        
+        }
     }
 }
 .vague-svg{
