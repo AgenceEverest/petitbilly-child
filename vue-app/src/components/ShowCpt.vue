@@ -264,20 +264,21 @@ export default {
 
         const checkTerms = (terms) => {
           for (const key in terms) {
-            console.log(Array.from(terms[key]));
-            Array.from(terms[key]).forEach((term) => {
-              if (checkMatch(term)) {
-                return true;
+            const termsArray = Array.from(terms[key]);
+            for (let i = 0; i < termsArray.length; i++) {
+              if (checkMatch(termsArray[i])) {
+                return true; // Si un match est trouvé, retourner true directement.
               }
-            });
+            }
           }
-          return false;
+          return false; // Aucun match n'a été trouvé, retourner false.
         };
-        let match =
-          checkMatch(title) ||
-          checkAcfFields(cpt.acf) ||
-          (Object.keys(cpt.terms).length > 0 && checkTerms(cpt.terms));
-        cpt.display = match && cpt.show && cpt.display;
+
+        const termFound = cpt.terms ? checkTerms(cpt.terms) : false;
+
+        let match = checkMatch(title) || checkAcfFields(cpt.acf) || termFound;
+
+        cpt.display = match && cpt.show;
 
         if (cpt.display) {
           this.displayablePosts++;
@@ -294,15 +295,15 @@ export default {
     filterElementsByKeyword(keyword) {
       this.displayed = 0;
       this.displayablePosts = 0;
-      console.log("filtre par mots clés : ", keyword);
+      //  console.log("filtre par mots clés : ", keyword);
       if (this.lastKeyword.length < keyword.length) {
-        console.log("lutilisateur affine");
+        //   console.log("lutilisateur affine");
         this.userSearchOrDeleteKeyword(keyword);
       } else {
-        console.log("lutilisateur efface");
+        // console.log("lutilisateur efface");
         this.lastKeyword = keyword;
         if (keyword === "") {
-          console.log("le champ est de nouveau vide");
+          // console.log("le champ est de nouveau vide");
 
           const isAnyTermActive = this.isAnyTermActive();
 
@@ -321,7 +322,7 @@ export default {
           this.hasMoreContent = this.displayed < this.displayablePosts;
           return;
         } else {
-          console.log("l'utilisateur efface mais le champ n'est pas vide");
+          //   console.log("l'utilisateur efface mais le champ n'est pas vide");
           this.userSearchOrDeleteKeyword(keyword);
         }
       }
@@ -427,8 +428,6 @@ export default {
           dataJson.texte_pour_le_bandeau_de_nouvelle_formation
         "
         :filters="filters"
-        :protocol="protocol"
-        :website="website"
       />
     </div>
     <div class="load-more-container">
