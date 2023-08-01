@@ -14,9 +14,11 @@ $mobileBreakpoint: 760px;
             margin-bottom: 10%;
             @media (max-width: $mobileBreakpoint) {
                 position: relative;
-                bottom: 0;
-                margin-left: 10%;
-                margin-bottom: 10%;
+                bottom: 3rem;
+                margin-left: 0 !important;
+                margin-bottom: 0 !important;
+                justify-content: start;
+                display: flex;
             }
         }
     }
@@ -105,24 +107,16 @@ $mobileBreakpoint: 760px;
             display: flex;
             justify-content: center;
             align-items: center;
-            
-            @media (max-width: $mobileBreakpoint) {
-                padding: 10%;
+            @media (max-width: 780px) {
+                margin-top:2rem;
+                margin-bottom: 2rem;
             }
-
-            @media (max-width: 500px) {
-                padding-top: 10%;
-                padding-bottom: 10%;
-                padding-right: 0;
-                padding-left: 0;
-            }
-
             img {
                 width: 70%;
                 border-radius: 20px;
 
                 @media (max-width: 980px) {
-                    width: 80%;
+                    width: 100%;
                 }
 
                 @media (max-width: 500px) {
