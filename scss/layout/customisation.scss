@@ -425,3 +425,9 @@ article {
 .svg-tik-tok {
     height: 1.2rem !important;
 }
+
+.col_flexible_bordure {
+    .entry-content ul li:before {
+        color: white;
+    }
+}
