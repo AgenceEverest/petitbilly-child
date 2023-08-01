@@ -14,7 +14,7 @@ $heightDifferences: 280px;
         z-index: 1;
 
         @media (max-width:780px) {
-            display: none;
+            display: none !important;
         }
     }
 
