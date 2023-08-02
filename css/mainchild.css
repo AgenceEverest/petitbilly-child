@@ -1496,6 +1496,31 @@ h6 {
   color: #00693E;
   transform: rotate(352deg);
 }
+.col_flexible_image_wrapper .cadre_autour_image {
+  position: relative;
+}
+.col_flexible_image_wrapper .edge-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.col_flexible_image_wrapper .haut-gauche {
+  top: -30px;
+  left: -30px;
+}
+.col_flexible_image_wrapper .haut-droite {
+  top: -30px;
+  right: -30px;
+}
+.col_flexible_image_wrapper .bas-gauche {
+  bottom: -30px;
+  left: -30px;
+}
+.col_flexible_image_wrapper .bas-droite {
+  bottom: -30px;
+  right: -30px;
+}
 #nf-form-title-2 {
   color: #00693E;
 }

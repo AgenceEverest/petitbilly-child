@@ -1,0 +1,34 @@
+$deplacement: -30px;
+
+.col_flexible_image_wrapper {
+    .cadre_autour_image {
+        position: relative;
+    }
+
+    .edge-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .haut-gauche {
+        top: $deplacement;
+        left: $deplacement;
+    }
+
+    .haut-droite {
+        top: $deplacement;
+        right: $deplacement;
+    }
+
+    .bas-gauche {
+        bottom: $deplacement;
+        left: $deplacement;
+    }
+
+    .bas-droite {
+        bottom: $deplacement;
+        right: $deplacement;
+    }
+}
