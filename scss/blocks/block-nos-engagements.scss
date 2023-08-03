@@ -72,8 +72,10 @@
 
             &.fond-blanc {
                 h3 {
-                    color: $darkGreenBilly;
                     transform: rotate(352deg);
+                    a {
+                        color: $darkGreenBilly;
+                    }
                 }
             }
         }
