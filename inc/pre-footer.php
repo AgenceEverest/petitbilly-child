@@ -68,10 +68,13 @@
 			</div>
 			<div class="aside_prefooter_col aside_prefooter_col_2">
 				<?php if ($afficher_bouton_newsletter) : ?>
-					<p id="bouton-newlsetter" class="cta-bloc-flex ">
-						<?= showSvg(get_stylesheet_directory_uri() . '/svg/fond-cta.svg') ?>
-						<a><?= $texte_bouton_newsletter ?></a>
-					</p>
+					<div class="button-newsletter-container">
+						<p id="bouton-newlsetter" class="cta-bloc-flex ">
+							<?= showSvg(get_stylesheet_directory_uri() . '/svg/fond-cta.svg') ?>
+							<a><?= $texte_bouton_newsletter ?></a>
+						</p>
+					</div>
+
 				<?php endif; ?>
 				<?php wp_nav_menu(array(
 					'theme_location' => 'menu-footer-2',
