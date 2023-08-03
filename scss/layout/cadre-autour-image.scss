@@ -1,6 +1,7 @@
 $deplacement: -30px;
-
-.col_flexible_image_wrapper {
+.image_simple {
+    overflow: inherit;
+}
     .cadre_autour_image {
         position: relative;
     }
@@ -31,4 +32,3 @@ $deplacement: -30px;
         bottom: $deplacement;
         right: $deplacement;
     }
-}

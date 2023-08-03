@@ -27,9 +27,8 @@ if (have_rows('block_nos_engagements')) : the_row(); // il s'agit du nom du cham
     $padding_en_bas_du_bloc = get_sub_field('padding_en_bas_du_bloc');
     $faire_passer_le_bloc_au_dessus_des_autres = get_sub_field('faire_passer_le_bloc_au_dessus_des_autres');
     $liseret_vert_autour_du_bloc = get_sub_field('liseret_vert_autour_du_bloc');
-endif;
-?>
-<div class="<?php 
+endif; ?>
+<div class="<?php
             if ($marge_en_haut_du_bloc) : echo " margin_section_top";
             endif;
             if ($marge_en_bas_du_bloc) : echo " margin_section_bottom";
@@ -88,17 +87,15 @@ endif;
                     $class_font = ($i % 2 === 0) ? 'fond-vert-clair' : 'fond-blanc';
                     $image_link = get_stylesheet_directory_uri() . $image_link; ?>
                     <div class="engagement <?= $class_font ?>">
-                        <img src="<?php echo $image_link; ?>">
-                        <h3><?php echo esc_html($texte_engagement); ?></h3>
+                        <img src="<?= $image_link; ?>">
+                        <?php if ($texte_engagement) : ?>
+                            <h3><a href="<?= $texte_engagement['url'] ?>"><?= $texte_engagement['title'] ?></a></h3>
+                        <?php endif; ?>
                     </div>
             <?php $i++;
                 endwhile;
             endif;  ?>
-
-
         </div>
-
-
         <!-- colonnes -->
         <div class="content_width col_flexible col_flexible_1">
             <?php $largeur_de_la_colonne_contenu = get_sub_field('largeur_de_la_colonne_contenu'); ?>
