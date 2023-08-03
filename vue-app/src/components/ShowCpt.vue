@@ -237,12 +237,9 @@ export default {
     },
     userSearchOrDeleteKeyword(keyword) {
       this.lastKeyword = keyword;
-      // Si le mot-clé est vide (l'utilisateur a effacé son mot-clé), on réinitialise la liste des CPTs et on sort de la fonction
-      // Si le mot-clé est de longueur 1 (quand l'utilisateur a commencé à entrer une valeur),
-      // on supprime du tableau des CPT ceux qui ne sont pas visibles, dans le but de pouvoir revenir à l'état
-      // du premier filtre
       this.displayed = 0;
       this.displayablePosts = 0;
+
       this.cpts.forEach((cpt) => {
         const title = cpt.title.toLowerCase();
 
@@ -278,7 +275,7 @@ export default {
 
         let match = checkMatch(title) || checkAcfFields(cpt.acf) || termFound;
 
-        cpt.display = match && cpt.show;
+        cpt.display = match && cpt.show && cpt.display;
 
         if (cpt.display) {
           this.displayablePosts++;
@@ -295,24 +292,22 @@ export default {
     filterElementsByKeyword(keyword) {
       this.displayed = 0;
       this.displayablePosts = 0;
-      //  console.log("filtre par mots clés : ", keyword);
+      console.log("filtre par mots clés : ", keyword);
       if (this.lastKeyword.length < keyword.length) {
-        //   console.log("lutilisateur affine");
+        console.log("lutilisateur affine");
         this.userSearchOrDeleteKeyword(keyword);
       } else {
-        // console.log("lutilisateur efface");
+        console.log("lutilisateur efface");
         this.lastKeyword = keyword;
+        const isAnyTermActive = this.isAnyTermActive();
+
+        if (isAnyTermActive) {
+          this.cpts = JSON.parse(JSON.stringify(this.filteredCpts));
+        } else {
+          this.cpts = JSON.parse(JSON.stringify(this.originalCpts));
+        }
         if (keyword === "") {
-          // console.log("le champ est de nouveau vide");
-
-          const isAnyTermActive = this.isAnyTermActive();
-
-          if (isAnyTermActive) {
-            this.cpts = JSON.parse(JSON.stringify(this.filteredCpts));
-          } else {
-            this.cpts = JSON.parse(JSON.stringify(this.originalCpts));
-          }
-
+          console.log("le champ est de nouveau vide");
           this.cpts.forEach((cpt) => {
             if (cpt.show) {
               this.displayPostAccordingMaxDisplayable(cpt);
@@ -322,7 +317,7 @@ export default {
           this.hasMoreContent = this.displayed < this.displayablePosts;
           return;
         } else {
-          //   console.log("l'utilisateur efface mais le champ n'est pas vide");
+          console.log("l'utilisateur efface mais le champ n'est pas vide");
           this.userSearchOrDeleteKeyword(keyword);
         }
       }
@@ -375,6 +370,7 @@ export default {
 
         if (isAllButtonToggledInFilter && isAllButtonToggledInOtherFilter) {
           cpt.show = true;
+          this.displayPostAccordingMaxDisplayable(cpt);
         } else {
           if (
             (isAllButtonToggledInFilter && termActiveInOtherFilter) ||
@@ -382,6 +378,7 @@ export default {
             (termActiveInFilter && termActiveInOtherFilter)
           ) {
             cpt.show = true;
+            this.displayPostAccordingMaxDisplayable(cpt);
           } else {
             cpt.show = false;
           }

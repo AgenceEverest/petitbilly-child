@@ -2,7 +2,7 @@ export default function dataProperties() {
   return {
     cpts: [],
     cptName: "",
-    displayablePosts: 0, // correspond au nombre de posts qui ont show = true et toCome = true
+    displayablePosts: 0, // correspond au nombre de posts qui ont show = true
     displayed: 0,
     selected: "",
     filters: [],
