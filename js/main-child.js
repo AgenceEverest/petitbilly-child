@@ -74,23 +74,28 @@ function newsletter() {
     const buttonNewsletter = document.getElementById('bouton-newlsetter');
     const closeButton = document.getElementById('closeNewsletter');
     let newsletterOpened = false;
-    buttonNewsletter.addEventListener('click', () => {
-        if (!newsletterOpened) {
-            newsletterContainer.style.display = "block";
-            newsletterOpened = true;
-            document.getElementsByTagName('html')[0].style.overflowY = "hidden";
-        } else {
+    if (buttonNewsletter) {
+        buttonNewsletter.addEventListener('click', () => {
+            if (!newsletterOpened) {
+                newsletterContainer.style.display = "block";
+                newsletterOpened = true;
+                document.getElementsByTagName('html')[0].style.overflowY = "hidden";
+            } else {
+                newsletterContainer.style.display = "none";
+                newsletterOpened = false;
+                document.getElementsByTagName('html')[0].style.overflowY = "inherit";
+
+            }
+        });
+    }
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
             newsletterContainer.style.display = "none";
             newsletterOpened = false;
             document.getElementsByTagName('html')[0].style.overflowY = "inherit";
+        })
+    }
 
-        }
-    });
-    closeButton.addEventListener('click', () => {
-        newsletterContainer.style.display = "none";
-        newsletterOpened = false;
-        document.getElementsByTagName('html')[0].style.overflowY = "inherit";
-    })
 
 }
 
