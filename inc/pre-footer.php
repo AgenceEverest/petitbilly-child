@@ -68,10 +68,9 @@
 			</div>
 			<div class="aside_prefooter_col aside_prefooter_col_2">
 				<?php if ($afficher_bouton_newsletter) : ?>
-					<p id="bouton-newlsetter" class="cta_btn_lead cta_primaire">
-						<a>
-							<?= $texte_bouton_newsletter ?>
-						</a>
+					<p id="bouton-newlsetter" class="cta-bloc-flex ">
+						<?= showSvg(get_stylesheet_directory_uri() . '/svg/fond-cta.svg') ?>
+						<a><?= $texte_bouton_newsletter ?></a>
 					</p>
 				<?php endif; ?>
 				<?php wp_nav_menu(array(
