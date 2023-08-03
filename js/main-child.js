@@ -46,6 +46,51 @@ window.addEventListener('DOMContentLoaded', () => {
     resizeButtonsBackgroundAccordingToLink()
     adaptGreenEdgeAccordingHeight()
     openCloseMenuBurger()
+    displayIframe()
+    newsletter()
 })
 
+
+function displayIframe() {
+    iframeSwitch = document.getElementById('iframe_switch');
+    if (iframeSwitch) {
+        iframeSwitch.addEventListener('click', () => {
+            let iframeWrapper = document.getElementById('iframe-wrapper');
+            iframeWrapper.setAttribute('style', 'display: flex;');
+            let link = iframeSwitch.getAttribute('data-link');
+            console.log(iframeWrapper)
+            let iframeContainer = document.getElementById('iframe-container');
+            iframeContainer.setAttribute('src', link);
+            let ctaIframe = document.getElementById('cta-iframe');
+            ctaIframe.style.display = "none";
+
+        });
+    }
+}
+
+
+function newsletter() {
+    const newsletterContainer = document.getElementById('newsletter-container');
+    const buttonNewsletter = document.getElementById('bouton-newlsetter');
+    const closeButton = document.getElementById('closeNewsletter');
+    let newsletterOpened = false;
+    buttonNewsletter.addEventListener('click', () => {
+        if (!newsletterOpened) {
+            newsletterContainer.style.display = "block";
+            newsletterOpened = true;
+            document.getElementsByTagName('html')[0].style.overflowY = "hidden";
+        } else {
+            newsletterContainer.style.display = "none";
+            newsletterOpened = false;
+            document.getElementsByTagName('html')[0].style.overflowY = "inherit";
+
+        }
+    });
+    closeButton.addEventListener('click', () => {
+        newsletterContainer.style.display = "none";
+        newsletterOpened = false;
+        document.getElementsByTagName('html')[0].style.overflowY = "inherit";
+    })
+
+}
 
