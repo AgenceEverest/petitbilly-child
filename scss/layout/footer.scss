@@ -26,7 +26,16 @@
     position: relative;
     #bouton-newlsetter {
         position: absolute;
-        top: -50px;
+        top: -30px;
+        font-family: 'Cafeteria-Bold' !important;
+        a {
+            background-color: white;
+            color: $darkGreenBilly;
+            &:hover {
+                background-color: $darkGreenBilly;
+                color: white;
+            }
+        }
     }
     h3 {
         color: white !important;
