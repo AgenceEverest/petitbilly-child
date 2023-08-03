@@ -27,10 +27,21 @@
 .aside_prefooter_col {
     position: relative;
 
-    #bouton-newlsetter {
+    .button-newsletter-container {
         position: absolute;
         top: -30px;
+        #bouton-newlsetter {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                position: absolute;
+                font-family: 'Cafeteria-Bold' !important;
+            }
+        }
     }
+
 
     h3 {
         color: white !important;
