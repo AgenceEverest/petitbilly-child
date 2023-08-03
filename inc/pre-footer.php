@@ -3,9 +3,17 @@
 <?php $masquer_les_prestations = get_field('masquer_les_prestations', 'option'); ?>
 <?php $masquer_les_certifications = get_field('masquer_les_certifications', 'option'); ?>
 <?php $masquer_le_logo = get_field('masquer_le_logo', 'option'); ?>
-
+<?php $afficher_bouton_newsletter = get_field('afficher_bouton_newsletter', 'option'); ?>
+<?php $texte_bouton_newsletter = get_field('texte_bouton_newsletter', 'option'); ?>
+<?php $iframe_newsletter = get_field('iframe_newsletter', 'option'); ?>
 <?php if (!$masquer_le_prefooter) : ?>
 	<aside id="aside_prefooter" class="padding_section">
+		<div id="newsletter-container">
+			<div class="iframe-container">
+				<div href="#" class="close" id="closeNewsletter"></div>
+				<?= $iframe_newsletter ?>
+			</div>
+		</div>
 		<div id="aside_prefooter_wrapper" class="">
 			<div class="aside_prefooter_col aside_prefooter_col_1">
 				<?php if (!$masquer_les_coordonnees) : ?>
@@ -59,6 +67,13 @@
 				<?php endif; ?>
 			</div>
 			<div class="aside_prefooter_col aside_prefooter_col_2">
+				<?php if ($afficher_bouton_newsletter) : ?>
+					<p id="bouton-newlsetter" class="cta_btn_lead cta_primaire">
+						<a>
+							<?= $texte_bouton_newsletter ?>
+						</a>
+					</p>
+				<?php endif; ?>
 				<?php wp_nav_menu(array(
 					'theme_location' => 'menu-footer-2',
 					// Autres paramètres de configuration du menu si nécessaire.

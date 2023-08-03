@@ -23,6 +23,11 @@
 }
 
 .aside_prefooter_col {
+    position: relative;
+    #bouton-newlsetter {
+        position: absolute;
+        top: -50px;
+    }
     h3 {
         color: white !important;
         font-size: 1.5rem;
