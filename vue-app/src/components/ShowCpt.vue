@@ -180,7 +180,7 @@ export default {
           };
         }
       });
-      this.filterCpts(filter);
+      this.filterCpts();
       this.hasMoreContent = this.displayed < this.displayablePosts;
     },
     toggleTermClicked(termName, innerFilter) {
@@ -241,6 +241,7 @@ export default {
       this.displayablePosts = 0;
 
       this.cpts.forEach((cpt) => {
+        const initialDisplay = cpt.display; // conserver l'état initial de display
         const title = cpt.title.toLowerCase();
 
         const checkMatch = (input) =>
@@ -264,11 +265,11 @@ export default {
             const termsArray = Array.from(terms[key]);
             for (let i = 0; i < termsArray.length; i++) {
               if (checkMatch(termsArray[i])) {
-                return true; // Si un match est trouvé, retourner true directement.
+                return true;
               }
             }
           }
-          return false; // Aucun match n'a été trouvé, retourner false.
+          return false;
         };
 
         const termFound = cpt.terms ? checkTerms(cpt.terms) : false;
@@ -279,7 +280,11 @@ export default {
         if (cpt.show && match) {
           this.displayablePosts++;
         }
-        cpt.display = match && cpt.show && cpt.display;
+
+        if (initialDisplay) {
+          // vérifier si l'état initial était true
+          cpt.display = match && cpt.show;
+        }
 
         if (cpt.display) {
           if (this.displayed < this.maxDisplayable) {
@@ -292,6 +297,7 @@ export default {
 
       this.hasMoreContent = this.displayed < this.displayablePosts;
     },
+    // test
     filterElementsByKeyword(keyword) {
       this.displayed = 0;
       this.displayablePosts = 0;
@@ -330,22 +336,47 @@ export default {
         return filter.terms.some((term) => term.active === true);
       });
     },
-    filterCpts() {
+    /**
+     * Filtre les custom post types (CPTs) en fonction des taxonomies actives et des termes sélectionnés.
+     *
+     * Voici comment fonctionne cette méthode :
+     *
+     * Pour chaque CPT, elle passe en revue chaque filtre (lié à une taxonomie).
+     * Pour chaque filtre, elle vérifie si le bouton "Tout" est activé et si un ou plusieurs des termes actifs du filtre sont présents dans le CPT.
+     *
+     * Après avoir vérifié tous les filtres pour un CPT donné, elle vérifie si tous les boutons "Tout" des filtres sont activés ou si tous les filtres actifs sont satisfaits.
+     * Si l'une de ces conditions est vraie, le CPT est marqué comme devant être affiché (cpt.show = true).
+     *
+     * Ensuite, elle met à jour les compteurs de posts affichables et affichés (this.displayablePosts et this.displayed),
+     * ainsi que l'indicateur signalant s'il reste encore du contenu à afficher (this.hasMoreContent).
+     *
+     * Enfin, elle enregistre les CPTs filtrés pour une utilisation ultérieure (this.recordFilteredCpts()).
+     */ filterCpts() {
+      // Réinitialisation des compteurs pour les posts pouvant être affichés et les posts affichés
       this.displayablePosts = 0;
       this.displayed = 0;
 
+      // Boucle sur chaque CPT
       this.cpts.forEach((cpt) => {
         let termsActiveInFilters = {};
         let isAllButtonToggledInFilters = {};
 
+        // Boucle sur chaque filtre
         this.filters.forEach((innerFilter) => {
           const currentTaxonomy = innerFilter.taxonomy;
+
+          // Vérifie si le bouton "Tout" est activé pour ce filtre
           isAllButtonToggledInFilters[currentTaxonomy] =
             innerFilter.isAllButtonToggled;
 
           if (cpt[currentTaxonomy]) {
+            // Récupère les IDs des termes dans le CPT pour cette taxonomie
             const termsIdsInCpt = Array.from(cpt[currentTaxonomy]);
+
+            // Récupère les termes actifs dans le filtre
             const activeTerms = innerFilter.terms.filter((term) => term.active);
+
+            // Vérifie si un des termes actifs est dans le CPT
             termsActiveInFilters[currentTaxonomy] = activeTerms.some((term) =>
               termsIdsInCpt.includes(term.term_id)
             );
@@ -354,9 +385,12 @@ export default {
           }
         });
 
+        // Vérifie si tous les boutons "Tout" sont activés
         const allButtonsToggled = Object.values(
           isAllButtonToggledInFilters
         ).every((toggled) => toggled);
+
+        // Vérifie si tous les filtres actifs sont satisfaits
         const allActiveFiltersSatisfied = Object.keys(
           termsActiveInFilters
         ).every(
@@ -365,6 +399,7 @@ export default {
             termsActiveInFilters[taxonomy]
         );
 
+        // Si tous les boutons "Tout" sont activés ou si tous les filtres actifs sont satisfaits, affiche le CPT
         if (allButtonsToggled || allActiveFiltersSatisfied) {
           cpt.show = true;
           this.displayablePosts++;
@@ -375,7 +410,10 @@ export default {
           cpt.show = false;
         }
 
+        // Met à jour si il reste plus de contenu à afficher
         this.hasMoreContent = this.displayed < this.displayablePosts;
+
+        // Enregistre les CPTs filtrés pour une utilisation ultérieure
         this.recordFilteredCpts();
       });
     },
