@@ -367,10 +367,13 @@ export default {
             }
           }
         });
-
         if (isAllButtonToggledInFilter && isAllButtonToggledInOtherFilter) {
           cpt.show = true;
-          this.displayPostAccordingMaxDisplayable(cpt);
+          this.displayablePosts++;
+          if (cpt.display) {
+            this.displayed++;
+          }
+          //    this.displayPostAccordingMaxDisplayable(cpt);
         } else {
           if (
             (isAllButtonToggledInFilter && termActiveInOtherFilter) ||
@@ -378,11 +381,16 @@ export default {
             (termActiveInFilter && termActiveInOtherFilter)
           ) {
             cpt.show = true;
-            this.displayPostAccordingMaxDisplayable(cpt);
+            this.displayablePosts++;
+            if (cpt.display) {
+              this.displayed++;
+            }
+            //  this.displayPostAccordingMaxDisplayable(cpt);
           } else {
             cpt.show = false;
           }
         }
+
         this.hasMoreContent = this.displayed < this.displayablePosts;
         this.recordFilteredCpts();
       });
