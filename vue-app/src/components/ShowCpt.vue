@@ -330,74 +330,56 @@ export default {
         return filter.terms.some((term) => term.active === true);
       });
     },
-    filterCpts(filter) {
+    filterCpts() {
       this.displayablePosts = 0;
       this.displayed = 0;
+
       this.cpts.forEach((cpt) => {
-        const taxonomyFiltered = filter.taxonomy;
-        let termActiveInFilter;
-        let isAllButtonToggledInFilter;
-        let isAllButtonToggledInOtherFilter;
-        let termActiveInOtherFilter;
+        let termsActiveInFilters = {};
+        let isAllButtonToggledInFilters = {};
+
         this.filters.forEach((innerFilter) => {
-          if (innerFilter.taxonomy === taxonomyFiltered) {
-            isAllButtonToggledInFilter = innerFilter.isAllButtonToggled;
-            if (cpt[innerFilter.taxonomy]) {
-              const termsIdsInCpt = Array.from(cpt[innerFilter.taxonomy]);
-              const activeTerms = innerFilter.terms.filter(
-                (term) => term.active
-              );
+          const currentTaxonomy = innerFilter.taxonomy;
+          isAllButtonToggledInFilters[currentTaxonomy] =
+            innerFilter.isAllButtonToggled;
 
-              termActiveInFilter = activeTerms.some((term) =>
-                termsIdsInCpt.includes(term.term_id)
-              );
-            } else {
-              termActiveInFilter = false;
-            }
+          if (cpt[currentTaxonomy]) {
+            const termsIdsInCpt = Array.from(cpt[currentTaxonomy]);
+            const activeTerms = innerFilter.terms.filter((term) => term.active);
+            termsActiveInFilters[currentTaxonomy] = activeTerms.some((term) =>
+              termsIdsInCpt.includes(term.term_id)
+            );
           } else {
-            isAllButtonToggledInOtherFilter = innerFilter.isAllButtonToggled;
-            if (cpt[innerFilter.taxonomy]) {
-              const termsIdsInCpt = Array.from(cpt[innerFilter.taxonomy]);
-              const activeTerms = innerFilter.terms.filter(
-                (term) => term.active
-              );
-
-              termActiveInOtherFilter = activeTerms.some((term) =>
-                termsIdsInCpt.includes(term.term_id)
-              );
-            } else {
-              termActiveInOtherFilter = false;
-            }
+            termsActiveInFilters[currentTaxonomy] = false;
           }
         });
-        if (isAllButtonToggledInFilter && isAllButtonToggledInOtherFilter) {
+
+        const allButtonsToggled = Object.values(
+          isAllButtonToggledInFilters
+        ).every((toggled) => toggled);
+        const allActiveFiltersSatisfied = Object.keys(
+          termsActiveInFilters
+        ).every(
+          (taxonomy) =>
+            isAllButtonToggledInFilters[taxonomy] ||
+            termsActiveInFilters[taxonomy]
+        );
+
+        if (allButtonsToggled || allActiveFiltersSatisfied) {
           cpt.show = true;
           this.displayablePosts++;
           if (cpt.display) {
             this.displayed++;
           }
-          //    this.displayPostAccordingMaxDisplayable(cpt);
         } else {
-          if (
-            (isAllButtonToggledInFilter && termActiveInOtherFilter) ||
-            (isAllButtonToggledInOtherFilter && termActiveInFilter) ||
-            (termActiveInFilter && termActiveInOtherFilter)
-          ) {
-            cpt.show = true;
-            this.displayablePosts++;
-            if (cpt.display) {
-              this.displayed++;
-            }
-            //  this.displayPostAccordingMaxDisplayable(cpt);
-          } else {
-            cpt.show = false;
-          }
+          cpt.show = false;
         }
 
         this.hasMoreContent = this.displayed < this.displayablePosts;
         this.recordFilteredCpts();
       });
     },
+
     recordFilteredCpts() {
       this.filteredCpts = JSON.parse(JSON.stringify(this.cpts));
     },
