@@ -12,7 +12,7 @@ export default {
   <ShowCpt />
 </template>
 
-<style>
+<!-- <style>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 p,
 ul,
@@ -2559,3 +2559,4 @@ article {
 /*# sourceMappingURL=D:\wamp64\www\petitbilly/wp-content/themes/nanosite-proefficace-child/css/mainchild.css.map */
 /*# sourceMappingURL=mainchild.css.map */
 </style>
+ -->
