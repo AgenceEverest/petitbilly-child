@@ -274,9 +274,7 @@ export default {
         const termFound = cpt.terms ? checkTerms(cpt.terms) : false;
 
         let match = checkMatch(title) || checkAcfFields(cpt.acf) || termFound;
-        if (!match) {
-          cpt.show = false;
-        }
+        cpt.show = match;
 
         if (cpt.show && match) {
           this.displayablePosts++;
@@ -289,7 +287,6 @@ export default {
           } else {
             cpt.display = false;
           }
-
         }
       });
 
