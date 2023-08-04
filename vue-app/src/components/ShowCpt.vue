@@ -274,16 +274,22 @@ export default {
         const termFound = cpt.terms ? checkTerms(cpt.terms) : false;
 
         let match = checkMatch(title) || checkAcfFields(cpt.acf) || termFound;
+        if (!match) {
+          cpt.show = false;
+        }
 
+        if (cpt.show && match) {
+          this.displayablePosts++;
+        }
         cpt.display = match && cpt.show && cpt.display;
 
         if (cpt.display) {
-          this.displayablePosts++;
           if (this.displayed < this.maxDisplayable) {
             this.displayed++;
           } else {
             cpt.display = false;
           }
+
         }
       });
 
