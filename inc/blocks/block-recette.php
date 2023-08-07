@@ -82,15 +82,15 @@ endif;
                     <div class="caracteristiques-recettes">
                         <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/difficulte-recette.svg') ?>
                             </span><?= $difficulte_de_la_recette; ?></p>
-                        <?php if ($minutes_de_preparation) : ?>
+                        <?php if ($minutes_de_preparation && $texte_minutes_de_preparation) : ?>
                             <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/temps-preparation.svg') ?></span>
                                 <?php echo $minutes_de_preparation . ' '; ?><?php echo $texte_minutes_de_preparation; ?></p>
                         <?php endif; ?>
-                        <?php if ($nombre_de_personnes) : ?>
+                        <?php if ($nombre_de_personnes && $texte_combien_de_personnes) : ?>
                             <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/combien-personnes.svg') ?></span>
                                 <?php echo $nombre_de_personnes . ' '; ?><?php echo $texte_combien_de_personnes; ?></p>
                         <?php endif; ?>
-                        <?php if ($minutes_de_cuisson) : ?>
+                        <?php if ($minutes_de_cuisson && $texte_minutes_de_cuisson) : ?>
                             <p><span class="svg-recette"><?= file_get_contents(get_stylesheet_directory_uri() . '/svg/temps-cuisson.svg') ?></span>
                                 <?php echo $minutes_de_cuisson . ' '; ?><?php echo $texte_minutes_de_cuisson; ?></p>
                         <?php endif; ?>
