@@ -387,9 +387,9 @@ article {
 }
 
 .rs_link_footer {
-    position: absolute;
+/*     position: absolute;
     bottom: 2rem;
-    right: 5rem;
+    right: 5rem; */
 
     @media (max-width: 780px) {
         position: relative;
@@ -399,6 +399,7 @@ article {
         justify-content: center;
         align-items: center;
         padding-bottom: 4rem;
+        margin: auto;
     }
 }
 

@@ -70,12 +70,15 @@
 
     #footer_wrapper {
         color: black !important;
-
+        align-items: center;
+        flex-wrap: nowrap;
+        @media (max-width: 780px) {
+            flex-wrap: wrap;
+        }
         #footer_content {
             display: flex;
             justify-content: space-between;
-            margin-right: 16rem;
-
+            margin-right: 1rem;
             @media (max-width: 780px) {
                 margin-right: inherit;
                 flex-direction: column;

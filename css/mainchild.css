@@ -1493,8 +1493,10 @@ h6 {
   }
 }
 .block-nos-engagements .engagements .engagement.fond-blanc h3 {
-  color: #00693E;
   transform: rotate(352deg);
+}
+.block-nos-engagements .engagements .engagement.fond-blanc h3 a {
+  color: #00693E;
 }
 .image_simple {
   overflow: inherit;
@@ -1551,6 +1553,48 @@ h6 {
 .coldouble_contact_right .nf-form-content .list-select-wrap .nf-field-element > div, .coldouble_contact_right .nf-form-content input:not([type=button]), .coldouble_contact_right .nf-form-content textarea {
   background-color: #f5f5f5 !important;
 }
+#newsletter-container {
+  display: none;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+#newsletter-container .iframe-container {
+  height: 100%;
+  background: #0000009e;
+}
+#newsletter-container .iframe-container iframe {
+  height: 100%;
+}
+#newsletter-container .iframe-container .close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  background: white;
+  cursor: pointer;
+}
+#newsletter-container .iframe-container .close:hover {
+  opacity: 1;
+}
+#newsletter-container .iframe-container .close:before, #newsletter-container .iframe-container .close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+#newsletter-container .iframe-container .close:before {
+  transform: rotate(45deg);
+}
+#newsletter-container .iframe-container .close:after {
+  transform: rotate(-45deg);
+}
 #menu-menu-footer-2 {
   display: flex;
   flex-direction: column;
@@ -1572,6 +1616,26 @@ h6 {
 #menu-footer a {
   color: #00693E !important;
 }
+.aside_prefooter_col {
+  position: relative;
+}
+.aside_prefooter_col .button-newsletter-container {
+  position: absolute;
+  top: -30px;
+}
+.aside_prefooter_col .button-newsletter-container #bouton-newlsetter {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.aside_prefooter_col .button-newsletter-container #bouton-newlsetter a {
+  position: absolute;
+  font-family: "Cafeteria-Bold" !important;
+  font-size: 25px;
+  cursor: pointer;
+}
 .aside_prefooter_col h3 {
   color: white !important;
   font-size: 1.5rem;
@@ -1591,11 +1655,18 @@ h6 {
 }
 #footer #footer_wrapper {
   color: black !important;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+@media (max-width: 780px) {
+  #footer #footer_wrapper {
+    flex-wrap: wrap;
+  }
 }
 #footer #footer_wrapper #footer_content {
   display: flex;
   justify-content: space-between;
-  margin-right: 16rem;
+  margin-right: 1rem;
 }
 @media (max-width: 780px) {
   #footer #footer_wrapper #footer_content {
@@ -2220,9 +2291,9 @@ article {
   font-family: "Cafeteria-Bold" !important;
 }
 .rs_link_footer {
-  position: absolute;
-  bottom: 2rem;
-  right: 5rem;
+  /*     position: absolute;
+    bottom: 2rem;
+    right: 5rem; */
 }
 @media (max-width: 780px) {
   .rs_link_footer {
@@ -2233,6 +2304,7 @@ article {
     justify-content: center;
     align-items: center;
     padding-bottom: 4rem;
+    margin: auto;
   }
 }
 .rs_link_item {
