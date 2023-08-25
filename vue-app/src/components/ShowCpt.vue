@@ -181,7 +181,7 @@ export default {
         }
       });
       this.filterCpts();
-      this.hasMoreContent = this.displayed < this.displayablePosts;
+      // this.hasMoreContent = this.displayed < this.displayablePosts;
     },
     toggleTermClicked(termName, innerFilter) {
       let termsCopy = innerFilter.terms.map((term) => {
@@ -241,7 +241,6 @@ export default {
       this.displayablePosts = 0;
 
       this.cpts.forEach((cpt) => {
-        const initialDisplay = cpt.display; // conserver l'état initial de display
         const title = cpt.title.toLowerCase();
 
         const checkMatch = (input) =>
@@ -276,27 +275,16 @@ export default {
 
         let match = checkMatch(title) || checkAcfFields(cpt.acf) || termFound;
 
-        if (cpt.show && match) {
+        if (match) {
           this.displayablePosts++;
         }
 
-        if (initialDisplay) {
-          // vérifier si l'état initial était true
-          cpt.display = match && cpt.show;
-        }
-
-        if (cpt.display) {
-          if (this.displayed < this.maxDisplayable) {
-            this.displayed++;
-          } else {
-            cpt.display = false;
-          }
-        }
+        cpt.display = match;
+        this.displayed++;
       });
-
+      this.maxDisplayable = this.displayed;
       this.hasMoreContent = this.displayed < this.displayablePosts;
     },
-    // test
     filterElementsByKeyword(keyword) {
       this.displayed = 0;
       this.displayablePosts = 0;
@@ -376,7 +364,7 @@ export default {
             const activeTerms = innerFilter.terms.filter((term) => term.active);
 
             // Vérifie si un des termes actifs est dans le CPT
-            termsActiveInFilters[currentTaxonomy] = activeTerms.some((term) =>
+            termsActiveInFilters[currentTaxonomy] = activeTerms.every((term) =>
               termsIdsInCpt.includes(term.term_id)
             );
           } else {
@@ -401,10 +389,9 @@ export default {
         // Si tous les boutons "Tout" sont activés ou si tous les filtres actifs sont satisfaits, affiche le CPT
         if (allButtonsToggled || allActiveFiltersSatisfied) {
           cpt.show = true;
+          cpt.display = true;
           this.displayablePosts++;
-          if (cpt.display) {
-            this.displayed++;
-          }
+          this.displayed++;
         } else {
           cpt.show = false;
         }
@@ -415,6 +402,7 @@ export default {
         // Enregistre les CPTs filtrés pour une utilisation ultérieure
         this.recordFilteredCpts();
       });
+      this.maxDisplayable = this.displayed;
     },
 
     recordFilteredCpts() {
