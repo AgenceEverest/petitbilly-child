@@ -12,10 +12,10 @@ export default defineConfig({
     rollupOptions: {
       output: {
         entryFileNames: "assets/index.js",
-        assetFileNames: "assets/index.css",
       },
     },
   },
+  css: false,
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
