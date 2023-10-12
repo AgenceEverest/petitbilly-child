@@ -6,7 +6,7 @@
     <?php $page_youtube = get_field('page_youtube', 'option'); ?>
     <?php $page_tiktok = get_field('page_tiktok', 'option'); ?>
     <?php $reseaux_sociaux_suivez_nous_sur = get_field('reseaux_sociaux_suivez-nous_sur', 'option'); ?>
-    <?php if ($page_facebook) : ?><a href="<?php echo $page_facebook; ?>" class="rs_link_item" title="<?php if ($reseaux_sociaux_suivez_nous_sur) : ?><?php echo $reseaux_sociaux_suivez_nous_sur; ?><?php endif; ?> Facebook">
+    <?php if ($page_facebook) : ?>test<a href="<?php echo $page_facebook; ?>" class="rs_link_item" title="<?php if ($reseaux_sociaux_suivez_nous_sur) : ?><?php echo $reseaux_sociaux_suivez_nous_sur; ?><?php endif; ?> Facebook">
             <?= apply_filters('add_svg', 'facebook'); ?>
             <?= showSvg(get_stylesheet_directory_uri() . '/svg/fonds-rs.svg'); ?>
         </a>
