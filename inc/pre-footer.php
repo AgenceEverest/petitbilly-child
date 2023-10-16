@@ -81,7 +81,6 @@
 					// Autres paramètres de configuration du menu si nécessaire.
 				)); ?>
 				<?php $lien_vers_la_page_site_web_eco = get_field('lien_vers_la_page_site_web_eco-concu', 'option'); ?>
-				<?php print_r($lien_vers_la_page_site_web_eco); ?>
 				<?php if ($lien_vers_la_page_site_web_eco->post_status === 'public') : ?>
 					<a class="lien-site-eco-concu" href="<?= get_permalink($lien_vers_la_page_site_web_eco->ID); ?>"><?= $lien_vers_la_page_site_web_eco->post_title ?></a>
 				<?php endif; ?>
