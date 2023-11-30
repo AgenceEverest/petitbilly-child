@@ -1,0 +1,238 @@
+#easiformarea,
+#easiformWaiting{
+    width:100%;
+    max-width:800px;
+}
+#easiform{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#easiform *{
+    box-sizing: border-box;
+    position:relative;
+}
+
+/* Champs obligatoires */
+#easiform .mandatory{
+    position: absolute;
+    top: 0.1rem;
+    right: 0.25rem;
+    color: $red;
+    font-size: 1.4rem;
+}
+#mandatoryfieldmention{
+    color:$red;
+}
+
+/* Légende */
+#easiform .easitoolTipButton{
+    font-size: 0.85rem;
+    padding-top: 0.5rem;
+    display: block;
+}
+#easiform .easitoolTipText{
+    margin-left:0.5rem;
+}
+
+/* Champs */
+#easiform label{
+    display: block;
+    font-size: 1rem !important;
+    padding-bottom: 0.3rem;
+}
+#easiform select{
+    width:100%;
+    font-size:1rem;
+    line-height: 1.2;
+    height: 2.5rem;
+    background-color:#fff;
+    border:1px solid $clearGreenBilly;
+    border-radius:0.25rem!important;
+    font-family: $regular;
+    cursor:pointer;
+}
+#easiform input{
+    width:100%;
+    font-size:1rem;
+    padding: 0 0.5rem;
+    line-height: 1.2;
+    height: 2.5rem;
+    background-color:#fff;
+    border:1px solid $clearGreenBilly;
+    border-radius:0.25rem!important;
+    font-family:$regular;
+}
+#easiform input:focus,
+#easiform textarea:focus
+{outline:none;}
+#easiform textarea{
+    width:100%;
+    font-size:1rem;
+    padding:0.5rem;
+    height:6rem;
+    resize: none;
+    background-color:#fff;
+    border:1px solid $clearGreenBilly;
+    border-radius:0.25rem!important;
+    font-family: $regular;
+}
+
+
+
+
+/* Ligne 1 */
+#easi_fielddiv_Salutation{
+    width:calc(20% - 10px);
+    margin-bottom:15px;
+}
+/* Ligne 2 */
+#easi_fielddiv_LastName{
+    width:calc(40% - 10px);
+    margin-bottom:15px;
+}
+#easi_fielddiv_FirstName{
+    width:calc(40% - 10px);
+    margin-bottom:15px;
+}
+/* Ligne 3 */
+#easi_fielddiv_Email{
+    width:calc(50% - 7.5px);
+    margin-bottom:15px;
+}
+#easi_fielddiv_MobilePhoneNumber{
+    width:calc(50% - 7.5px);
+    margin-bottom:15px;
+}
+/* Ligne 4 */
+#easi_fielddiv_Address2{
+    width:100%;
+    margin-bottom:15px;
+}
+/* Ligne 5 */
+#easi_fielddiv_ZipCode{
+    width:calc(33.33% - 10px);
+    margin-bottom:15px;
+}
+#easi_fielddiv_City{
+    width:calc(33.33% - 10px);
+    margin-bottom:15px;
+}
+#easi_fielddiv_Country{
+    width:calc(33.33% - 10px);
+    margin-bottom:15px;
+}
+/* Ligne 6 */
+#easi_fielddiv_Category{
+    width:100%;
+    margin-bottom:15px;
+}
+
+/* Conditionnal */
+#easi_fielddiv_CS_ExpirationDate{
+    width:calc(50% - 7.5px);
+    margin-bottom:15px;
+}
+#easi_fielddiv_CS_ProductNumber{
+    width:calc(50% - 7.5px);
+    margin-bottom:15px;
+}
+
+
+/* Ligne 7 */
+#easi_fielddiv_CS_ProductCategory{
+    width:calc(33.33% - 10px);
+    margin-bottom:15px;
+}
+#easi_fielddiv_CS_ProductName{
+    width:calc(33.33% - 10px);
+    margin-bottom:15px;
+}
+#easi_fielddiv_CS_Brand{
+    width:calc(33.33% - 10px);
+    margin-bottom:15px;
+}
+/* Ligne 8 */
+#easi_fielddiv_CS_Packaging{
+    width:calc(33.33% - 10px);
+    margin-bottom:15px;
+}
+#easi_fielddiv_CS_EANCode{
+    width:calc(33.33% - 10px);
+    margin-bottom:15px;
+}
+#easi_fielddiv_CS_ShoppingStore{
+    width:calc(33.33% - 10px);
+    margin-bottom:15px;
+}
+/* Ligne 9 */
+#easi_fielddiv_Description{
+    width:100%;
+    margin-bottom:15px;
+}
+/* Ligne 10 */
+#easi_fielddiv_AttachedFiles{
+    width:100%;
+    margin-bottom:15px;
+}
+#easi_fielddiv_AttachedFiles input{
+    padding-top: 0.4rem;
+}
+
+
+#mandatoryfieldmention{
+    width:100%;
+    font-size: 0.85rem;
+}
+
+#additionnalInformation{
+    width:100%;
+    font-size: 0.85rem;
+}
+
+#validatebutton{
+    margin-top:1rem;
+    background-color:$darkGreenBilly;
+    font-family: "Cafeteria-Black";
+    color:#fff;
+    padding: 0.75rem 1.5rem;
+    border-radius:5px;
+    border:none;
+    font-size:1.5rem;
+    line-height:1;
+    transition:0.1s background-color ease-in-out;
+    &:hover{
+        background-color:$clearGreenBilly;
+        transition:0.1s background-color ease-in-out;
+    }
+}
+
+
+
+#easiformWaiting{
+    padding-top:1rem;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    #easi_fielddiv_Salutation,
+    #easi_fielddiv_LastName,
+    #easi_fielddiv_FirstName,
+    #easi_fielddiv_Email,
+    #easi_fielddiv_MobilePhoneNumber,
+    #easi_fielddiv_ZipCode,
+    #easi_fielddiv_City,
+    #easi_fielddiv_Country,
+    #easi_fielddiv_CS_ExpirationDate,
+    #easi_fielddiv_CS_ProductNumber,
+    #easi_fielddiv_CS_ProductCategory,
+    #easi_fielddiv_CS_ProductName,
+    #easi_fielddiv_CS_Brand,
+    #easi_fielddiv_CS_Packaging,
+    #easi_fielddiv_CS_EANCode,
+    #easi_fielddiv_CS_ShoppingStore{
+        width:100%;
+    }
+}
