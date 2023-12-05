@@ -188,6 +188,16 @@
 #additionnalInformation{
     width:100%;
     font-size: 0.85rem;
+    line-height: 1.5 !important;
+    & span{
+        line-height: 1.5 !important;
+         display: inline-block;
+    }
+    & strong{
+        font-family: "Cafeteria-Bold";
+        font-size:1.1rem;
+        font-weight: normal;;
+    }
 }
 
 #validatebutton{
