@@ -98,8 +98,7 @@ get_header(); ?>
 						</div>
 						<div class="coldouble_contact_right anim_right_left entry-content">
 							<h2 id="nf-form-title-2"><?php echo "$accroche_au_dessus_du_formulaire" ?></h2>
-							<script id="easiwebform-22" charset="utf-8" type="text/javascript" src="https://acc-olga.h1d3n0tsoo-staging-easiwebforms.net/static/shell.js"></script>
-							<script>
+							<script id="easiwebform-8" charset="utf-8" type="text/javascript" src=https://olga.easiwebforms.net/static/shell.js></script>							<script>
                                 function hideFields(hiddenDLC,hiddenNumber){
                                     hiddenDLC.style.display = "none";
                                     hiddenNumber.style.display = "none";
@@ -113,7 +112,7 @@ get_header(); ?>
                                     //Change in the select field "Motif" will trigger the change of display
                                     const selectField = document.getElementById("fld_Category");
                                     selectField.addEventListener("change",function(){
-                                        if(selectField.value==="54"){
+                                        if(selectField.value==="5"){
                                             hiddenDLC.style.display ="block";
                                             hiddenNumber.style.display ="block";
                                         } else {
@@ -123,8 +122,8 @@ get_header(); ?>
                                     })
                                 }
 								esw.forms.create({
-									"solutionId": "14b39703f50097dfbfae52f3d99b315df63c63ba",
-									"formId": "22",
+									"solutionId": "0c10a84f8057835ce70207a572052ed66cd1a043",
+									"formId": "8",
 									"language": "fr",
 									"buildinelement": null,
 									"callback": manageDisplay
