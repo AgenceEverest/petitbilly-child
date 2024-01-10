@@ -103,6 +103,21 @@ get_header(); ?>
                                     hiddenDLC.style.display = "none";
                                     hiddenNumber.style.display = "none";
                                 }
+
+								// Select options for "Petit Billy"
+								let categoriesProduitAConserver = ['Fromage']
+								let marquesAConserver = ['Petit Billy']
+								let conditionnementsAConserver = ['','200g','300g']
+								function conserverOptionsSelect(selectId, optionsAConserver) {
+									const select = document.getElementById(selectId)
+									const options = Array.from(select.options)
+									for (var option of options) {
+										if (!optionsAConserver.includes(option.value)) {
+											select.removeChild(option)
+										}
+									}
+								}
+
                                 function manageDisplay(){
                                     //Get the fields with dynamic display
                                     const hiddenDLC = document.getElementById("easi_fielddiv_CS_ExpirationDate");
@@ -120,6 +135,10 @@ get_header(); ?>
                                             hiddenNumber.style.display ="none";
                                         }
                                     })
+									conserverOptionsSelect("fld_CS_ProductCategory", categoriesProduitAConserver)
+									conserverOptionsSelect("fld_CS_Brand", marquesAConserver)
+									conserverOptionsSelect("fld_CS_Packaging", conditionnementsAConserver)
+
                                 }
 								esw.forms.create({
 									"solutionId": "0c10a84f8057835ce70207a572052ed66cd1a043",
