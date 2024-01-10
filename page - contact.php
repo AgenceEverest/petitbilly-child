@@ -107,7 +107,7 @@ get_header(); ?>
 								// Select options for "Petit Billy"
 								let categoriesProduitAConserver = ['Fromage']
 								let marquesAConserver = ['Petit Billy']
-								let conditionnementsAConserver = ['','200g','300g']
+								let conditionnementsAConserver = ['','200g','130g']
 								function conserverOptionsSelect(selectId, optionsAConserver) {
 									const select = document.getElementById(selectId)
 									const options = Array.from(select.options)
