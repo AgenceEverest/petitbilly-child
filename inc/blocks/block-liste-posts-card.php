@@ -12,7 +12,7 @@ $produit_nouveau = get_field("ce_produit_est-il_nouveau", get_the_ID());
     <a href="<?php the_permalink(); ?>">
         <figure>
             <?php if ($produit_nouveau) : ?>
-                <p>Nouveau</p>
+                <p class="liste_posts__card_nouveau legende">Nouveau</p>
             <?php endif; ?>
             
             <?php if ($image_url) : ?>
@@ -22,6 +22,5 @@ $produit_nouveau = get_field("ce_produit_est-il_nouveau", get_the_ID());
         </figure>
     </a>
     <h3 class="liste_posts__card_title"><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></h3>
-    <?php print_r($produit_nouveau); ?>
     <p class="liste_posts__card_cta legende"><a href="<?php echo $permalink; ?>">En savoir plus</a></p>
 </div>
