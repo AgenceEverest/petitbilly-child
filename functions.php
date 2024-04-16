@@ -28,202 +28,201 @@ function my_acf_init_child()
 {
     // check function exists
     if (function_exists('acf_register_block')) {
-        // register block app
-        acf_register_block(array(
-            'name' => 'block-app',
-            'title' => __('Bloc pour filtrer les posts (VueJS)'),
-            'description' => __('Un bloc pour le theme enfant.'),
-            'render_callback' => 'block_callback_child',
-            'category' => 'layout',
-            'icon' => 'image-flip-vertical',
-            'mode' => 'auto',
-        ));
 
+        $mode = 'edit',
 
         acf_register_block(array(
-            'name'                => 'block-dernieres-offres',
-            'title'                => __('Bloc dernires offres'),
-            'description'        => __('Un bloc listant les dernières offres.'),
-            'render_callback'    => 'block_callback_child',
-            'category'            => 'layout',
-            'icon'                => 'image-flip-vertical',
-            'mode' => 'auto',
-        ));
-        acf_register_block(array(
-            'name'                => 'block-1-colonne-custom',
-            'title'                => __('block 1 colonne'),
-            'description'        => __('Un bloc affichant une colonne.'),
-            'render_callback'    => 'block_callback_child',
-            'category'            => 'layout',
-            'icon'                => 'image-flip-vertical',
-            'mode' => 'auto',
-        ));
-        acf_register_block(array(
-            'name'                => 'block-2-colonnes-custom',
-            'title'                => __('block 2 colonnes flexibles'),
-            'description'        => __('Un bloc affichant deux colonnes.'),
-            'render_callback'    => 'block_callback_child',
-            'category'            => 'layout',
-            'icon'                => 'image-flip-vertical',
-            'mode' => 'auto',
-        ));
-        acf_register_block(array(
-            'name'                => 'block-3-colonnes-custom',
-            'title'                => __('block 3 colonnes flexibles'),
-            'description'        => __('Un bloc affichant trois colonnes.'),
-            'render_callback'    => 'block_callback_child',
-            'category'            => 'layout',
-            'icon'                => 'image-flip-vertical',
-            'mode' => 'auto',
-        ));
-        acf_register_block(array(
-            'name'                => 'block-2-colonnes-textevisuel-custom',
-            'title'                => __('block 2 colonne texte visuel'),
-            'description'        => __('Un bloc affichant un texte et un visuel'),
-            'render_callback'    => 'block_callback_child',
-            'category'            => 'layout',
-            'icon'                => 'image-flip-vertical',
-            'mode' => 'auto',
-        ));
-        acf_register_block(array(
-            'name'                => 'block-2-colonnes-textevisuel-large-custom',
-            'title'                => __('block 2 colonne texte visuel large'),
-            'description'        => __('Un bloc affichant un texte et un visuel prenant toute la largeur'),
-            'render_callback'    => 'block_callback_child',
-            'category'            => 'layout',
-            'icon'                => 'image-flip-vertical',
-            'mode' => 'auto',
-        ));
-
-        // register block-multicolonnes
-        acf_register_block(array(
-            'name'                => 'block-multicolonnes-custom',
-            'title'                => __('Multicolonnes (liste d\'éléments) (custom)'),
-            'description'        => __('Plusieurs colonnes de textes avec ou sans vignettes. Idéal pour présenter les membres d\'une équipe ou des références.'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode' => 'auto',
-        ));
-
-        // register block-multicolonnes
-        acf_register_block(array(
-            'name'                => 'block-more-informations',
-            'title'                => __('Bloc plus d\'informations'),
-            'description'        => __('Bloc montrant le texte "Plus d\'informations" et un lien vers la page "Contact""'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode' => 'auto',
+            'name'              => 'block-app',
+            'title'             => __('Bloc pour filtrer les posts (VueJS)'),
+            'description'       => __('Un bloc pour le theme enfant.'),
+            'render_callback'   => 'block_callback_child',
+            'category'          => 'layout',
+            'icon'              => 'image-flip-vertical',
+            'mode'              => $mode,
         ));
 
         acf_register_block(array(
-            'name'                => 'block-pourquoi-produits-differents',
-            'title'                => __('Bloc Pourquoi nos produits sont différents ?'),
-            'description'        => __('Bloc Pourquoi nos produits sont différents'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode' => 'auto',
+            'name'              => 'block-dernieres-offres',
+            'title'             => __('Bloc dernires offres'),
+            'description'       => __('Un bloc listant les dernières offres.'),
+            'render_callback'   => 'block_callback_child',
+            'category'          => 'layout',
+            'icon'              => 'image-flip-vertical',
+            'mode'              => $mode,
+        ));
+        acf_register_block(array(
+            'name'              => 'block-1-colonne-custom',
+            'title'             => __('block 1 colonne'),
+            'description'       => __('Un bloc affichant une colonne.'),
+            'render_callback'   => 'block_callback_child',
+            'category'          => 'layout',
+            'icon'              => 'image-flip-vertical',
+            'mode'              => $mode,
+        ));
+        acf_register_block(array(
+            'name'              => 'block-2-colonnes-custom',
+            'title'             => __('block 2 colonnes flexibles'),
+            'description'       => __('Un bloc affichant deux colonnes.'),
+            'render_callback'   => 'block_callback_child',
+            'category'          => 'layout',
+            'icon'              => 'image-flip-vertical',
+            'mode'              => $mode,
+        ));
+        acf_register_block(array(
+            'name'              => 'block-3-colonnes-custom',
+            'title'             => __('block 3 colonnes flexibles'),
+            'description'       => __('Un bloc affichant trois colonnes.'),
+            'render_callback'   => 'block_callback_child',
+            'category'          => 'layout',
+            'icon'              => 'image-flip-vertical',
+            'mode'              => $mode,
+        ));
+        acf_register_block(array(
+            'name'              => 'block-2-colonnes-textevisuel-custom',
+            'title'             => __('block 2 colonne texte visuel'),
+            'description'       => __('Un bloc affichant un texte et un visuel'),
+            'render_callback'   => 'block_callback_child',
+            'category'          => 'layout',
+            'icon'              => 'image-flip-vertical',
+            'mode'              => $mode,
+        ));
+        acf_register_block(array(
+            'name'              => 'block-2-colonnes-textevisuel-large-custom',
+            'title'             => __('block 2 colonne texte visuel large'),
+            'description'       => __('Un bloc affichant un texte et un visuel prenant toute la largeur'),
+            'render_callback'   => 'block_callback_child',
+            'category'          => 'layout',
+            'icon'              => 'image-flip-vertical',
+            'mode'              => $mode,
         ));
 
         acf_register_block(array(
-            'name'                => 'block-nos-valeurs',
-            'title'                => __('Bloc nos valeurs'),
-            'description'        => __('Bloc Nos valeurs'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode' => 'auto',
+            'name'              => 'block-multicolonnes-custom',
+            'title'             => __('Multicolonnes (liste d\'éléments) (custom)'),
+            'description'       => __('Plusieurs colonnes de textes avec ou sans vignettes. Idéal pour présenter les membres d\'une équipe ou des références.'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => $mode,
         ));
 
         acf_register_block(array(
-            'name'                => 'block-nos-recettes-gourmandes',
-            'title'                => __('Bloc nos recettes gourmandes'),
-            'description'        => __('Bloc Nos recettes gourmandes'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode' => 'auto',
-        ));
-        acf_register_block(array(
-            'name'                => 'block-la-recette-du-moment',
-            'title'                => __('Bloc La recette du moment'),
-            'description'        => __('Bloc La recette du moment'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode' => 'auto',
+            'name'              => 'block-more-informations',
+            'title'             => __('Bloc plus d\'informations'),
+            'description'       => __('Bloc montrant le texte "Plus d\'informations" et un lien vers la page "Contact""'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => $mode,
         ));
 
         acf_register_block(array(
-            'name'                => 'block-equipes-metiers',
-            'title'                => __('Bloc Nos équipes / Nos métiers'),
-            'description'        => __('Bloc Nos équipes / Nos métiers'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode' => 'auto',
+            'name'              => 'block-pourquoi-produits-differents',
+            'title'             => __('Bloc Pourquoi nos produits sont différents ?'),
+            'description'       => __('Bloc Pourquoi nos produits sont différents'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => $mode,
         ));
 
         acf_register_block(array(
-            'name'                => 'block-dernieres-recettes',
-            'title'                => __('Bloc Dernières recettes liées au produit'),
-            'description'        => __('Bloc Dernières recettes liées au produit'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode' => 'auto',
+            'name'              => 'block-nos-valeurs',
+            'title'             => __('Bloc nos valeurs'),
+            'description'       => __('Bloc Nos valeurs'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => $mode,
         ));
 
         acf_register_block(array(
-            'name'                => 'block-petit-billy-pour-des-fromages-uniques',
-            'title'                => __('Bloc - Petit Billy pour des fromages uniques'),
-            'description'        => __('Bloc - Petit Billy pour des fromages uniques'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode' => 'auto',
+            'name'              => 'block-nos-recettes-gourmandes',
+            'title'             => __('Bloc nos recettes gourmandes'),
+            'description'       => __('Bloc Nos recettes gourmandes'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => $mode,
+        ));
+        acf_register_block(array(
+            'name'              => 'block-la-recette-du-moment',
+            'title'             => __('Bloc La recette du moment'),
+            'description'       => __('Bloc La recette du moment'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => $mode,
         ));
 
         acf_register_block(array(
-            'name'                => 'block-profil-type-recherche',
-            'title'                => __('Bloc - Profil type recherché'),
-            'description'        => __('Bloc - Profil type recherché'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode' => 'auto',
+            'name'              => 'block-equipes-metiers',
+            'title'             => __('Bloc Nos équipes / Nos métiers'),
+            'description'       => __('Bloc Nos équipes / Nos métiers'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => $mode,
         ));
 
         acf_register_block(array(
-            'name'                => 'block-recette',
-            'title'                => __('Bloc - Recette'),
-            'description'        => __('Bloc - Recette'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode' => 'auto',
+            'name'              => 'block-dernieres-recettes',
+            'title'             => __('Bloc Dernières recettes liées au produit'),
+            'description'       => __('Bloc Dernières recettes liées au produit'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => $mode,
         ));
 
         acf_register_block(array(
-            'name'                => 'block-plus-informations',
-            'title'                => __('Bloc - Plus d\'informations'),
-            'description'        => __('Bloc - Plus d\'informations'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode' => 'auto',
+            'name'              => 'block-petit-billy-pour-des-fromages-uniques',
+            'title'             => __('Bloc - Petit Billy pour des fromages uniques'),
+            'description'       => __('Bloc - Petit Billy pour des fromages uniques'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => $mode,
         ));
 
         acf_register_block(array(
-            'name'                  => 'block-nos-engagements',
-            'title'                 => __('Bloc - Nos engagements'),
-            'description'           => __('Bloc - Nos engagements'),
-            'render_callback'       => 'block_callback',
-            'category'              => 'layout',
-            'icon'                  => 'editor-table',
-            'mode'                  => 'auto',
+            'name'              => 'block-profil-type-recherche',
+            'title'             => __('Bloc - Profil type recherché'),
+            'description'       => __('Bloc - Profil type recherché'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => $mode,
+        ));
+
+        acf_register_block(array(
+            'name'              => 'block-recette',
+            'title'             => __('Bloc - Recette'),
+            'description'       => __('Bloc - Recette'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => $mode,
+        ));
+
+        acf_register_block(array(
+            'name'              => 'block-plus-informations',
+            'title'             => __('Bloc - Plus d\'informations'),
+            'description'       => __('Bloc - Plus d\'informations'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => $mode,
+        ));
+
+        acf_register_block(array(
+            'name'              => 'block-nos-engagements',
+            'title'             => __('Bloc - Nos engagements'),
+            'description'       => __('Bloc - Nos engagements'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => $mode,
         ));
 
         acf_register_block(array(
@@ -233,7 +232,7 @@ function my_acf_init_child()
             'render_callback'   => 'block_callback',
             'category'          => 'layout',
             'icon'              => 'editor-table',
-            'mode'              => 'auto',
+            'mode'              => $mode,
         ));
 
         acf_register_block(array(
@@ -243,7 +242,7 @@ function my_acf_init_child()
 			'render_callback'	=> 'block_callback',
 			'category'			=> 'layout',
 			'icon'				=> 'editor-table',
-            'mode'              => 'auto', // permet d'ouvrir le bloc immédiatement, l'autre mode est "edit" ou "preview"
+            'mode'              => $mode, // permet d'ouvrir le bloc immédiatement, l'autre mode est "edit" ou "preview"
 		));
     }
 }
