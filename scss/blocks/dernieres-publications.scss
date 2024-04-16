@@ -12,21 +12,9 @@
         color: $darkGreenBilly;
         width: 100%;
         display: flex;
-        justify-content: center;
+        //justify-content: center;
     }
-    .read-more {
-        font-size: 14px;
-        font-family: 'Roboto';
-        position: absolute;
-        bottom: 1rem;
-        right: 2rem;
-        font-weight: bold;
-        color: $darkGreenBilly;
-        &::after {
-            content: '>';
-            padding-left: 0.5rem
-        }
-    }
+    
     .lire-les-publications {
         display: flex;
         justify-content: center;
@@ -77,6 +65,19 @@
                 font-family: 'Cafeteria-Regular' !important;
                 font-size: 15px;
             }
+        }
+    }
+    .read-more {
+        font-size: 14px;
+        font-family: 'Roboto';
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem;
+        font-weight: bold;
+        color: $darkGreenBilly;
+        &::after {
+            content: '>';
+            padding-left: 0.5rem
         }
     }
 }

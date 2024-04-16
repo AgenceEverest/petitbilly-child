@@ -30,7 +30,7 @@
 		</h2>
 		<?php $description_extrait_de_la_page = get_field('description_extrait_de_la_page', get_the_ID()); ?>
 		<p class="desc"><?= $description_extrait_de_la_page; ?></p>
+		<?php $calltoactiondesextraitsdarticles = get_field('call-to-action_des_extraits_darticles', 'option'); ?>
+		<a class="read-more" aria-hidden="true" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="btn btn_article_extrait"><?= $calltoactiondesextraitsdarticles; ?></a>
 	</div>
-	<?php $calltoactiondesextraitsdarticles = get_field('call-to-action_des_extraits_darticles', 'option'); ?>
-	<a class="read-more" aria-hidden="true" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="btn btn_article_extrait"><?= $calltoactiondesextraitsdarticles; ?></a>
 </article>
