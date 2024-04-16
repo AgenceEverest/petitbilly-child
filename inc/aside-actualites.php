@@ -22,7 +22,7 @@
 			</div>
 		</div>
 
-		<div id="aside_actualites_wrapper">
+		<div id="aside_actualites_wrapper" class="content_width">
 			<?php
 			$the_query = new WP_Query(array(
 				'post_type'         => 'post',
