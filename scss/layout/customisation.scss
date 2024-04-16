@@ -487,3 +487,49 @@ article {
 #coordonnees_image img {
     border-radius: 20px 20px 0 0!important;
 }
+
+
+
+.liste_posts{
+    &__card{
+        background-color:#fff;
+        // image
+        & figure{
+            & img{
+                border-radius: 0!important;
+            }
+        }
+        // Titre
+        // & .liste_posts__card_title{
+        //     font-size: 1.25rem;
+        //     line-height: 1.5;
+        //     & a{
+        //         color:$primaire;
+        //         transition:0.1s color ease-in-out;
+        //         &:hover{
+        //             color:$secondaire;
+        //             transition:0.1s color ease-in-out;
+        //         }
+        //     }
+        // }
+        // call to action
+        // & .liste_posts__card_cta{
+        //     position: absolute;
+        //     bottom: 1.5rem;
+        //     left: 1.5rem;
+        //     & a{
+        //         color:$primaire;
+        //         font-family: $black;
+        //         transition:0.1s color ease-in-out;
+        //         &::after{
+        //             content: "›";
+        //             margin-left: 0.3rem;
+        //         }
+        //         &:hover{
+        //             color:$secondaire;
+        //             transition:0.1s color ease-in-out; 
+        //         }
+        //     }
+        // }
+    }
+}
