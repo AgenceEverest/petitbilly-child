@@ -29,7 +29,7 @@ function my_acf_init_child()
     // check function exists
     if (function_exists('acf_register_block')) {
 
-        $mode = 'edit',
+        $mode = 'edit';
 
         acf_register_block(array(
             'name'              => 'block-app',
