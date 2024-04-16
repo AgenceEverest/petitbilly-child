@@ -14,6 +14,10 @@ function styles2_css()
 //la priorité à 99, c'est pour que main2.css soit chargé après main.css, de cette manière les règles CSS du thème enfant peuvent écraser celles du thème parent.
 add_action('wp_enqueue_scripts', 'styles2_css', 99);
 
+// On désactive certains imports ACF PHP du thème parent.
+define('DISABLE_ACF_BLOCK_1_COLONNE', true);
+
+
 /**
  * Si vous avez besoin d'ajouter des blocs ACF dans le thème enfant d'un site, il faut les ajouter ici, il su
  */
@@ -22,17 +26,7 @@ function my_acf_init_child()
 {
     // check function exists
     if (function_exists('acf_register_block')) {
-        // register block test
-        /* acf_register_block(array(
-            'name'                => 'block-pour-theme-enfant',
-            'title'                => __('Bloc theme enfant'),
-            'description'        => __('Un bloc pour le theme enfant.'),
-            'render_callback'    => 'block_callback_child',
-            'category'            => 'layout',
-            'icon'                => 'image-flip-vertical',
-            'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
-        )); */
-        // register block test
+        // register block app
         acf_register_block(array(
             'name' => 'block-app',
             'title' => __('Bloc pour filtrer les posts (VueJS)'),
