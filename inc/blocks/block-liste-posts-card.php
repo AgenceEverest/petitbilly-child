@@ -5,7 +5,7 @@ $image_url = get_the_post_thumbnail_url(get_the_ID(), 'image-principale-blog');
 $image_weight = $image_url ? apply_filters('get_weight_of_img', $image_url) : '0kb';
 $thumbnail_id = get_post_thumbnail_id(get_the_ID());
 $thumbnail_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); 
-$produit_nouveau = get_field("ce_produit_est-il_nouveau");
+$produit_nouveau = get_field("ce_produit_est-il_nouveau", get_the_ID());
 ?>
 
 <div class="liste_posts__card">
