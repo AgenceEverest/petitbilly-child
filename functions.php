@@ -16,6 +16,7 @@ add_action('wp_enqueue_scripts', 'styles2_css', 99);
 
 // On désactive certains imports ACF PHP du thème parent.
 define('DISABLE_ACF_BLOCK_1_COLONNE', true);
+define('DISABLE_ACF_BLOCK_2_COLONNES', true);
 
 
 /**
