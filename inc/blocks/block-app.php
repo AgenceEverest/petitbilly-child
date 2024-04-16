@@ -20,7 +20,7 @@ if (have_rows('block_app')) : the_row(); // il s'agit du nom du champ dans ACF q
     $data_json = htmlspecialchars(json_encode($filtered_fields), ENT_QUOTES, 'UTF-8');
 endif;
 wp_enqueue_script('vue-app-js', get_stylesheet_directory_uri() . '/vue-app/dist/assets/index.js');
-wp_enqueue_style('vue-app-css', get_stylesheet_directory_uri() . '/vue-app/dist/assets/index.css');
+//wp_enqueue_style('vue-app-css', get_stylesheet_directory_uri() . '/vue-app/dist/assets/index.css');
 ?>
 
 <div id="block-app" class=block-app-svg-wrapper <?php
