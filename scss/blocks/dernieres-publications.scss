@@ -31,6 +31,7 @@
 }
 
 
+
 .article_extrait_wrapper_text {
     position: relative;
     .article_extrait_post_title {
@@ -67,6 +68,12 @@
             }
         }
     }
+    
+}
+
+
+.article_extrait{
+    background-color:#fff;
     .read-more {
         font-size: 14px;
         font-family: 'Roboto';
@@ -80,9 +87,4 @@
             padding-left: 0.5rem
         }
     }
-}
-
-
-.article_extrait{
-    background-color:#fff;
 }
