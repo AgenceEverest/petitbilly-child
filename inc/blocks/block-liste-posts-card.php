@@ -14,6 +14,7 @@ $produit_nouveau = get_field("ce_produit_est-il_nouveau");
             <?php if ($produit_nouveau) : ?>
                 <p>Nouveau</p>
             <?php endif; ?>
+            <?php print_r($produit_nouveau) ?>
             <?php if ($image_url) : ?>
                 <div class="poids-image"><span class="poids-image-icone"><?php get_template_part('svg/symbole-feuille-nanosite'); ?></span><span class="poids-image-data"><?= $image_weight ?></span></div>
                 <img src="<?php echo $image_url; ?>" alt="<?php echo $thumbnail_alt; ?>">
