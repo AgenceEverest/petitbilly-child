@@ -500,18 +500,18 @@ article {
             }
         }
         // Titre
-        // & .liste_posts__card_title{
-        //     font-size: 1.25rem;
-        //     line-height: 1.5;
-        //     & a{
-        //         color:$primaire;
-        //         transition:0.1s color ease-in-out;
-        //         &:hover{
-        //             color:$secondaire;
-        //             transition:0.1s color ease-in-out;
-        //         }
-        //     }
-        // }
+        & .liste_posts__card_title{
+            font-size: 1.5rem;
+            //line-height: 1.5;
+            & a{
+                color:$secondaire;
+                //transition:0.1s color ease-in-out;
+                &:hover{
+                    color:$secondaire2;
+                    //transition:0.1s color ease-in-out;
+                }
+            }
+        }
         // call to action
         // & .liste_posts__card_cta{
         //     position: absolute;
