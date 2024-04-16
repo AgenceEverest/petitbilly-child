@@ -227,14 +227,24 @@ function my_acf_init_child()
         ));
 
         acf_register_block(array(
-            'name'                  => 'block-rejoignez-nos-equipes',
-            'title'                 => __('Bloc - Rejoignez nos équipes'),
-            'description'           => __('Bloc - Rejoignez nos équipes'),
-            'render_callback'       => 'block_callback',
-            'category'              => 'layout',
-            'icon'                  => 'editor-table',
-            'mode'                  => 'auto',
+            'name'              => 'block-rejoignez-nos-equipes',
+            'title'             => __('Bloc - Rejoignez nos équipes'),
+            'description'       => __('Bloc - Rejoignez nos équipes'),
+            'render_callback'   => 'block_callback',
+            'category'          => 'layout',
+            'icon'              => 'editor-table',
+            'mode'              => 'auto',
         ));
+
+        acf_register_block(array(
+			'name'				=> 'block-liste-posts',
+			'title'				=> __('Bloc liste de posts'),
+			'description'		=> __('Un bloc pour lister un type de posts.'),
+			'render_callback'	=> 'block_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'editor-table',
+            'mode'              => 'auto', // permet d'ouvrir le bloc immédiatement, l'autre mode est "edit" ou "preview"
+		));
     }
 }
 function block_callback_child($block)
@@ -275,6 +285,7 @@ function my_plugin_allowed_block_types_child($allowed_block_types_all, $post)
         'acf/block-plus-informations',
         'acf/block-nos-engagements',
         'acf/block-rejoignez-nos-equipes',
+        'acf/block-liste-posts',
     );
     return $allowed_block_types;
 }
