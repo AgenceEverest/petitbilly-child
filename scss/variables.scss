@@ -29,6 +29,9 @@ $secondaire1: #39C474 !default;
 $secondaire: #047C4E !default;
 $secondaire2: #193C2B !default;
 
+$primaireAlpha: rgba($primaire, 0.2);
+$secondaireAlpha: rgba($secondaire, 0.2);
+
 //alertes
 $red: #ff564a;
 $redlight: #ffbfbf;
