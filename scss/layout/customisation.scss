@@ -495,6 +495,7 @@ article {
         background-color:#fff;
         // image
         & figure{
+            aspect-ratio: 1.5;
             & .liste_posts__card_nouveau{
                 position:absolute;
                 color:#fff;
@@ -513,13 +514,10 @@ article {
             font-size: 1.5rem;
             font-size: 1.8rem;
             text-align: center;
-            //line-height: 1.5;
             & a{
                 color:$secondaire;
-                //transition:0.1s color ease-in-out;
                 &:hover{
                     color:$secondaire2;
-                    //transition:0.1s color ease-in-out;
                 }
             }
         }
@@ -532,15 +530,6 @@ article {
             & a{
                 color:$secondaire2;
                 font-family: $regular;
-                // transition:0.1s color ease-in-out;
-                // &::after{
-                //     content: "›";
-                //     margin-left: 0.3rem;
-                // }
-                // &:hover{
-                //     color:$secondaire;
-                //     transition:0.1s color ease-in-out; 
-                // }
             }
         }
     }
