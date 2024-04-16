@@ -36,7 +36,7 @@ function my_acf_init_child()
             'render_callback' => 'block_callback_child',
             'category' => 'layout',
             'icon' => 'image-flip-vertical',
-            'mode' => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
+            'mode' => 'auto',
         ));
 
 
@@ -47,7 +47,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback_child',
             'category'            => 'layout',
             'icon'                => 'image-flip-vertical',
-            'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
+            'mode' => 'auto',
         ));
         acf_register_block(array(
             'name'                => 'block-1-colonne-custom',
@@ -56,7 +56,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback_child',
             'category'            => 'layout',
             'icon'                => 'image-flip-vertical',
-            'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
+            'mode' => 'auto',
         ));
         acf_register_block(array(
             'name'                => 'block-2-colonnes-custom',
@@ -65,7 +65,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback_child',
             'category'            => 'layout',
             'icon'                => 'image-flip-vertical',
-            'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
+            'mode' => 'auto',
         ));
         acf_register_block(array(
             'name'                => 'block-3-colonnes-custom',
@@ -74,7 +74,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback_child',
             'category'            => 'layout',
             'icon'                => 'image-flip-vertical',
-            'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
+            'mode' => 'auto',
         ));
         acf_register_block(array(
             'name'                => 'block-2-colonnes-textevisuel-custom',
@@ -83,7 +83,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback_child',
             'category'            => 'layout',
             'icon'                => 'image-flip-vertical',
-            'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
+            'mode' => 'auto',
         ));
         acf_register_block(array(
             'name'                => 'block-2-colonnes-textevisuel-large-custom',
@@ -92,7 +92,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback_child',
             'category'            => 'layout',
             'icon'                => 'image-flip-vertical',
-            'mode'                => 'edit', // permet d'ouvrir le bloc immédiatement, l'autre mode est "preview"
+            'mode' => 'auto',
         ));
 
         // register block-multicolonnes
@@ -103,7 +103,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback',
             'category'            => 'layout',
             'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'mode' => 'auto',
         ));
 
         // register block-multicolonnes
@@ -114,7 +114,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback',
             'category'            => 'layout',
             'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'mode' => 'auto',
         ));
 
         acf_register_block(array(
@@ -124,7 +124,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback',
             'category'            => 'layout',
             'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'mode' => 'auto',
         ));
 
         acf_register_block(array(
@@ -134,7 +134,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback',
             'category'            => 'layout',
             'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'mode' => 'auto',
         ));
 
         acf_register_block(array(
@@ -144,7 +144,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback',
             'category'            => 'layout',
             'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'mode' => 'auto',
         ));
         acf_register_block(array(
             'name'                => 'block-la-recette-du-moment',
@@ -153,7 +153,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback',
             'category'            => 'layout',
             'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'mode' => 'auto',
         ));
 
         acf_register_block(array(
@@ -163,7 +163,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback',
             'category'            => 'layout',
             'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'mode' => 'auto',
         ));
 
         acf_register_block(array(
@@ -173,7 +173,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback',
             'category'            => 'layout',
             'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'mode' => 'auto',
         ));
 
         acf_register_block(array(
@@ -183,7 +183,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback',
             'category'            => 'layout',
             'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'mode' => 'auto',
         ));
 
         acf_register_block(array(
@@ -193,7 +193,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback',
             'category'            => 'layout',
             'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'mode' => 'auto',
         ));
 
         acf_register_block(array(
@@ -203,7 +203,7 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback',
             'category'            => 'layout',
             'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'mode' => 'auto',
         ));
 
         acf_register_block(array(
@@ -213,27 +213,27 @@ function my_acf_init_child()
             'render_callback'    => 'block_callback',
             'category'            => 'layout',
             'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'mode' => 'auto',
         ));
 
         acf_register_block(array(
-            'name'                => 'block-nos-engagements',
-            'title'                => __('Bloc - Nos engagements'),
-            'description'        => __('Bloc - Nos engagements'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'name'                  => 'block-nos-engagements',
+            'title'                 => __('Bloc - Nos engagements'),
+            'description'           => __('Bloc - Nos engagements'),
+            'render_callback'       => 'block_callback',
+            'category'              => 'layout',
+            'icon'                  => 'editor-table',
+            'mode'                  => 'auto',
         ));
 
         acf_register_block(array(
-            'name'                => 'block-rejoignez-nos-equipes',
-            'title'                => __('Bloc - Rejoignez nos équipes'),
-            'description'        => __('Bloc - Rejoignez nos équipes'),
-            'render_callback'    => 'block_callback',
-            'category'            => 'layout',
-            'icon'                => 'editor-table',
-            'mode'                => 'edit',
+            'name'                  => 'block-rejoignez-nos-equipes',
+            'title'                 => __('Bloc - Rejoignez nos équipes'),
+            'description'           => __('Bloc - Rejoignez nos équipes'),
+            'render_callback'       => 'block_callback',
+            'category'              => 'layout',
+            'icon'                  => 'editor-table',
+            'mode'                  => 'auto',
         ));
     }
 }
