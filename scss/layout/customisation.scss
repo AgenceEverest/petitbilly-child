@@ -502,8 +502,10 @@ article {
                 right:0;
                 top:0.75rem;
                 line-height:1;
-                padding:0.5rem 0.75rem;
+                padding:0.3rem 0.75rem;
                 background-color: $secondaire;
+                font-family: "Cafeteria-Bold" !important;
+                font-size: 1.2rem;
             }
             & img{
                 border-radius: 0!important;
