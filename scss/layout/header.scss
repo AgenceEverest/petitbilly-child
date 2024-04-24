@@ -289,14 +289,20 @@
     position: relative;
 }
 
-.article_blog .entry_title .post_thumbnail_texte_inner {
+.article_blog .type-post .entry_title .post_thumbnail_texte_inner {
     position: inherit !important;
     padding-left: inherit !important;
     transform: inherit !important;
 }
+// .type-post
+// .type-produit
+// .type-recettes
 
 .article_blog .entry_title h1 {
     text-align: center;
+}
+
+.article_blog .type-post .entry_title h1 {
     margin-bottom: 1rem;
 }
 
