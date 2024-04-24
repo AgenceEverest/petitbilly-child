@@ -513,8 +513,8 @@ article {
         }
         // Titre
         & .liste_posts__card_title{
-            font-size: 1.5rem;
             font-size: 1.8rem;
+            line-height: 1.2;
             text-align: center;
             & a{
                 color:$secondaire;
