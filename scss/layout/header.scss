@@ -301,10 +301,12 @@
 .article_blog .entry_title h1 {
     text-align: center;
     line-height: 1.15 !important;
+    padding:1rem 0;
 }
 
 .article_blog .type-post .entry_title h1 {
     margin-bottom: 1rem;
+    padding:0;
 }
 
 .article_blog .entry_title .post_thumbnail {
