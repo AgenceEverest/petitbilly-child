@@ -6,6 +6,7 @@ $image_weight = $image_url ? apply_filters('get_weight_of_img', $image_url) : '0
 $thumbnail_id = get_post_thumbnail_id(get_the_ID());
 $thumbnail_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); 
 $produit_nouveau = get_field("ce_produit_est-il_nouveau", get_the_ID());
+$poids_du_produit = get_field("poids_du_produit", get_the_ID());
 ?>
 
 <div class="liste_posts__card">
@@ -22,5 +23,8 @@ $produit_nouveau = get_field("ce_produit_est-il_nouveau", get_the_ID());
         </figure>
     </a>
     <h3 class="liste_posts__card_title"><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></h3>
+    <?php if($poids_du_produit): ?>
+        <p>Poids : <?php echo $poids_du_produit; ?></p>
+    <?php endif;?>
     <p class="liste_posts__card_cta legende"><a href="<?php echo $permalink; ?>">En savoir plus</a></p>
 </div>
