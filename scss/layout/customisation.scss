@@ -523,6 +523,10 @@ article {
                 }
             }
         }
+        & .liste_posts__card_weight{
+            text-align: center;
+            color:$clearGreenBilly;
+        }
         // call to action
         & .liste_posts__card_cta{
             position: absolute;

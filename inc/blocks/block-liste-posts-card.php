@@ -24,7 +24,7 @@ $poids_du_produit = get_field("poids_du_produit", get_the_ID());
     </a>
     <h3 class="liste_posts__card_title"><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></h3>
     <?php if($poids_du_produit): ?>
-        <p>Poids : <?php echo $poids_du_produit; ?></p>
+        <p class="liste_posts__card_weight"><?php echo $poids_du_produit; ?></p>
     <?php endif;?>
     <p class="liste_posts__card_cta legende"><a href="<?php echo $permalink; ?>">En savoir plus</a></p>
 </div>
