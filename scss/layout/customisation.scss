@@ -374,6 +374,9 @@ article {
     }
 }
 
+#nav_blog{
+    border-top:1px solid $darkGreenBilly;
+}
 .nav_blog_wrapper {
     background-color: $fondBlancCasse;
 
@@ -540,5 +543,13 @@ article {
                 font-family: $regular;
             }
         }
+    }
+}
+
+
+.single-produits .post_thumbnail{
+    flex-direction: row-reverse;
+    & .post_thumbnail_texte_inner{
+        padding-right:2rem;
     }
 }
