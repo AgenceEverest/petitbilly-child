@@ -1,82 +1,11 @@
 <?php get_template_part('inc/pre-footer'); ?>
-<?php $masquer_cookies = get_field("masquer_cookies", "option"); ?>
-<?php if ($masquer_cookies) : ?>
-    <div id="bandeau_cookies" tabindex="1">
-        <a tabindex="0" href="#global_content" class="skip_to_global_content">Passer au contenu principal</a>
-        <div id="bandeau_content">
-            <?php $nomCookies = get_field('nom_du_cookie', 'option'); ?>
-            <?php $texte_du_bandeau_cookies_ligne_1 = get_field('texte_du_bandeau_cookies_ligne_1', 'option'); ?>
-            <?php $texte_du_bandeau_cookies_ligne_2 = get_field('texte_du_bandeau_cookies_ligne_2', 'option'); ?>
-            <?php $duree_du_cookies = get_field('duree_du_cookies', 'option'); ?>
-            <?php $duree_reapparition_bandeau = get_field('duree_reapparition_bandeau', 'option'); ?>
-            <?php if ($texte_du_bandeau_cookies_ligne_1) : ?>
-                <?php $url_mentions_legales = get_field('url_mentions_legales', 'option'); ?>
-                <p tabindex="0" class="texte_bandeau_cookies" id="ligne_1_bandeau_cookies"><?php echo $texte_du_bandeau_cookies_ligne_1; ?></p>
-                <a tabindex="0" id="lien_texte_bandeau_cookie_ligne_2" target="_blank" href="<?php echo $url_mentions_legales ?>">
-                    <p class="texte_bandeau_cookies"><?php echo $texte_du_bandeau_cookies_ligne_2; ?></p>
-                </a>
-                <?php $accepter_cookies_selectionnes = get_field('accepter_cookies_selectionnes', 'option'); ?>
-                <?php $accepter_tous_cookies = get_field('accepter_tous_cookies', 'option'); ?>
-                <?php $refuser_cookies = get_field('refuser_cookies', 'option'); ?>
-                <?php $en_savoir_plus_cookies = get_field('en_savoir_plus_cookies', 'option'); ?>
-                <?php $choisir_lesquels_cookies = get_field('choisir_lesquels_cookies', 'option'); ?>
-                <?php $retour_texte = get_field('retour_texte', 'option'); ?>
-                <p id="boutons_bandeau" class="cta_btn_lead"><a tabindex="0" id="choisir_lesquels_cookies"><?php echo $choisir_lesquels_cookies; ?></a><a tabindex="0" id="refuser_cookies"><?php echo $refuser_cookies; ?></a><a tabindex="0" id="accepter_cookies"><?php echo $accepter_tous_cookies; ?></a>
-                </p>
-            <?php endif; ?>
-        </div>
-    </div>
-    <div tabindex="0" id="choisir_les_cookies">
-        <div id="choisir_les_cookies_content">
-            <p tabindex="0" id="texte_choisir_les_cookies"><?= get_field('texte_choisir_les_cookies', 'option') ?></p>
-            <?php
-            if ((get_field('google_analytics', 'option')) || (get_field('google_analytics_noscript', 'option'))) {
-            ?>
-                <div class="switch_choisir_les_cookies">
-                    <label tabindex="0" for="google_analytics_switch"><?= get_field('google_analytics_switch_label', 'option') ?></label>
-                    <div tabindex="-1" id="google_analytics_switch_label" class="switch">
-                        <input tabindex="-1" name="google_analytics_switch" id="google_analytics_switch" type="checkbox">
-                        <label tabindex="-1" for="google_analytics_switch" class="slider round"></label>
-                    </div>
-                </div>
-            <?php
-            }
-            ?>
-            <?php
-            if (get_field('google_ads', 'option')) {
-            ?>
-                <br aria-hidden="true" style="height: 0;position:absolute;"> <!-- nécessaire pour que les labels en dessous soient bien lus par les outils d'accessibilité -->
-                <div class="switch_choisir_les_cookies">
-                    <label tabindex="0" for="google_ads_switch"><?= get_field('google_ads_switch_label', 'option') ?></label>
-                    <div tabindex="-1" id="google_ads_switch_label" class="switch">
-                        <input tabindex="-1" name="google_ads_switch" id="google_ads_switch" type="checkbox">
-                        <label tabindex="-1" for="google_ads_switch" class="slider round"></label>
-                    </div>
-                </div>
-            <?php
-            }
-            ?>
-            <?php
-            if (get_field('pixel_facebook', 'option')) {
-            ?>
-                <br aria-hidden="true" style="height: 0;position:absolute;"> <!-- nécessaire pour que les labels en dessous soient bien lus par les outils d'accessibilité -->
-                <div class="switch_choisir_les_cookies">
-                    <label tabindex="0" for="pixel_facebook_switch"><?= get_field('facebook_switch_label', 'option') ?></label>
-                    <div tabindex="-1" id="pixel_facebook_switch_label" class="switch">
-                        <input tabindex="-1" name="pixel_facebook_switch" id="pixel_facebook_switch" type="checkbox">
-                        <label tabindex="-1" for="pixel_facebook_switch" class="slider round"></label>
-                    </div>
-                </div>
-            <?php
-            }
-            ?>
-            <div class="choisir_les_cookies_boutons">
-                <p class="cta_btn_lead">
-                    <a tabindex="0" id="retour_texte"><?php echo $retour_texte ?></a><a tabindex="0" id="accepter_cookies_selectionnes"><?php echo $accepter_cookies_selectionnes; ?></a>
-                </p>
-            </div>
-        </div>
-    </div>
+<?php $activer_le_bandeau_de_cookies_v2 = get_field('activer_le_bandeau_de_cookies_v2', 'option'); ?>
+<?php $masquer_cookies = get_field('masquer_cookies', 'option'); ?>
+<?php if ($activer_le_bandeau_de_cookies_v2 && $masquer_cookies === 'invisible') : ?>
+    <?php include(get_template_directory() . '/inc/content-builder-inc/cookie-banner-V2.php'); ?>
+<?php endif;
+if ($masquer_cookies === 'visible' && !$activer_le_bandeau_de_cookies_v2) : ?>
+    <?php include(get_template_directory() . '/inc/content-builder-inc/cookie-banner-V1.php'); ?>
 <?php endif; ?>
 
 
