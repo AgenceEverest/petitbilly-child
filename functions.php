@@ -20,7 +20,7 @@ define('DISABLE_ACF_CLONABLE_OPTIONS', true);
 define('DISABLE_ACF_BLOCK_1_COLONNE', true);
 define('DISABLE_ACF_BLOCK_2_COLONNES', true);
 define('DISABLE_ACF_BLOCK_3_COLONNES', true);
-
+define('DISABLE_ACF_BLOCK_MULTICOLONNES', true);
 
 /**
  * Si vous avez besoin d'ajouter des blocs ACF dans le thème enfant d'un site, il faut les ajouter ici, il su
